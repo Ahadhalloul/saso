@@ -8,9 +8,6 @@
   --light-gray-color: #5756568c;
   --blue-image-filter: brightness(0) saturate(100%) invert(40%) sepia(37%)
     saturate(4683%) hue-rotate(166deg) brightness(92%) contrast(101%);
-  /* -------------- */
-  --white: #fff;
-  --input-border: #e3e3e3;
 }
 * {
   margin: 0;
@@ -219,7 +216,16 @@ a {
 .header .user-functions > img {
   cursor: pointer;
 }
-
+.header .user-functions .user-img-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url("../assets/images/user-bg.png");
+  background-size: 100% 100%;
+}
+.header .user-functions .user-img-bg .user-img {
+  width: 100%;
+}
 /* --------- End header ------------------  */
 
 /* -------------- Start main ----------------------  */
