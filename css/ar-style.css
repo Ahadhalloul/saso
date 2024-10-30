@@ -51,7 +51,12 @@ ul li {
 a {
   text-decoration: none;
 }
-
+.pointer {
+  cursor: pointer;
+}
+.space-btw {
+  justify-content: space-between;
+}
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
@@ -106,6 +111,10 @@ a {
   margin-top: 10px;
   color: var(--light-gray-color);
 }
+.sidebar-container .sub-menu-list {
+  gap: 12px;
+}
+
 /* ----start collapsed sidebar--------  */
 .collapsed-sidebar {
   grid-area: sidebar;
