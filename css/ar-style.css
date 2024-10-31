@@ -452,6 +452,9 @@ a {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+.workshops-cards-container .card-content {
+  gap: 5px;
+}
 .workshops-cards-container .card-content div {
   justify-content: space-between;
 }
