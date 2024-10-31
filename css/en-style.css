@@ -249,12 +249,6 @@ a {
   padding: 20px;
 }
 /* -------------- End main ----------------------  */
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
 /* for small screen */
 @media screen and (max-width: 1270px) {
   .header .search {
@@ -268,3 +262,10 @@ a {
   }
 }
 /* -------------------------- */
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
