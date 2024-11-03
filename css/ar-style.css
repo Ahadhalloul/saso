@@ -159,6 +159,11 @@ a {
 .collapsed-sidebar ul li a:hover img {
   filter: var(--blue-image-filter);
 }
+
+.sm-screen-close-icon {
+  cursor: pointer;
+  display: none;
+}
 /* ----end collapsed sidebar--------  */
 /* ---------------End sidebar menu -----------------  */
 
@@ -505,6 +510,12 @@ a {
     min-width: 400px;
     height: 100vh;
     z-index: 3;
+  }
+  .collapse-icon {
+    display: none;
+  }
+  .sm-screen-close-icon {
+    display: block;
   }
   .overlay-bg {
     display: none;
