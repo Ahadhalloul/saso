@@ -151,6 +151,9 @@ a {
   margin-top: 10px;
   color: var(--light-gray-color);
 }
+.collapsed-sidebar ul li a:hover img {
+  filter: var(--blue-image-filter);
+}
 /* ----end collapsed sidebar--------  */
 /* ---------------End sidebar menu -----------------  */
 

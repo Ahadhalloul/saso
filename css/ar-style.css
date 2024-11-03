@@ -90,6 +90,7 @@ a {
 .sidebar-container .menu-content ul li a:hover {
   color: var(--secondary-text-color);
 }
+
 .sidebar-container .menu-content ul li a:hover img {
   filter: var(--blue-image-filter);
 }
@@ -154,6 +155,9 @@ a {
 .collapsed-sidebar .menu-content h5 {
   margin-top: 10px;
   color: var(--light-gray-color);
+}
+.collapsed-sidebar ul li a:hover img {
+  filter: var(--blue-image-filter);
 }
 /* ----end collapsed sidebar--------  */
 /* ---------------End sidebar menu -----------------  */
