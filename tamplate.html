@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" href="css/en-style.css" /> -->
   </head>
   <body>
+    <div class="overlay-bg"></div>
     <div class="container">
       <!-- -------------------Start sidebar menu --------------- -->
       <div class="sidebar-container flex-column" id="main-sidebar">
@@ -178,18 +179,33 @@
       <!-- -------------------End sidebar menu ----------------- -->
       <!-- ------------------ Start header ---------------------- -->
       <header class="header flex-row">
-        <div class="path flex-column">
-          <p>
-            اسم المنشأة <span class="blue-text"> / </span
-            ><a href="" class="active">لوحة التحكم</a>
-          </p>
-          <h2>لوحة التحكم</h2>
+        <div class="flex-row gap-30">
+          <div class="logo-menu-icons">
+            <img
+              class="md-screen-menu-icon"
+              src="/assets/icons/iconoir_sidebar-collapse.png"
+              alt=""
+            />
+            <img src="assets/logos/logo-medium.png" alt="logo" />
+          </div>
+          <div class="path flex-column">
+            <p>
+              اسم المنشأة <span class="blue-text"> / </span
+              ><a href="" class="active">لوحة التحكم</a>
+            </p>
+            <h2>لوحة التحكم</h2>
+          </div>
         </div>
         <div class="user-functions flex-row">
           <div class="search flex-row">
             <img src="./assets/icons/searchnormal1.svg" alt="" />
             <input type="text" placeholder="البحث" />
           </div>
+          <img
+            class="search-icon"
+            src="assets/icons/searchnormal2.svg"
+            alt=""
+          />
           <img src="/assets/icons/hugeicons_settings-01.svg" alt="" />
           <img src="/assets/icons/iconoir_accessibility.svg" alt="" />
           <div class="language flex-row">

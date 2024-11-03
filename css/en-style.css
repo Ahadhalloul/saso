@@ -238,6 +238,12 @@ a {
 .header .user-functions .user-img-bg .user-img {
   width: 100%;
 }
+.header .search-icon {
+  display: none;
+}
+.header .logo-menu-icons {
+  display: none;
+}
 /* --------- End header ------------------  */
 
 /* -------------- Start main ----------------------  */
@@ -252,7 +258,8 @@ a {
   padding: 20px;
 }
 /* -------------- End main ----------------------  */
-/* for small screen */
+
+/* for medium screen */
 @media screen and (max-width: 1270px) {
   .header .search {
     width: 200px;
@@ -264,6 +271,66 @@ a {
     width: 250px;
   }
 }
+@media screen and (max-width: 1300px) {
+  .sidebar-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 400px;
+    height: 100vh;
+    z-index: 3;
+  }
+  .overlay-bg {
+    display: none;
+    background-color: #21252952;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+  }
+  .stop-scroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .collapsed-sidebar {
+    display: none;
+  }
+  .header .logo-menu-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-right: 30px;
+  }
+  .header .search {
+    display: none;
+  }
+  .header .search-icon {
+    display: block;
+  }
+  .header .user-info h5 {
+    display: none;
+  }
+  .header .user-info {
+    width: 70px;
+    justify-content: space-between;
+  }
+}
+
+/* for small/mobile screen  */
+@media screen and (max-width: 767px) {
+  .header .path,
+  .header .search-icon,
+  .header .language,
+  .header .user-functions > img {
+    display: none;
+  }
+
+  .sidebar-container {
+    min-width: 300px;
+  }
+}
+/* ----------------------- */
 /* -------------------------- */
 
 .hide {
