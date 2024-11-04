@@ -57,6 +57,15 @@ a {
 .space-btw {
   justify-content: space-between;
 }
+.gap-12 {
+  gap: 12px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-30 {
+  gap: 30px;
+}
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
@@ -78,6 +87,7 @@ a {
 }
 .sidebar-container .menu-content {
   padding: 30px;
+  padding-right: 15px;
   gap: 10px;
   line-height: 2.5;
 }
@@ -96,13 +106,14 @@ a {
 .sidebar-container .menu-content ul li a.active {
   color: var(--secondary-text-color);
   position: relative;
+  font-weight: 700;
 }
 .sidebar-container .menu-content ul li a.active::before {
   position: absolute;
   content: "";
   background-color: var(--secondary-text-color);
   width: 6px;
-  height: 100%;
+  height: 92%;
   top: 0;
   left: -30px;
 }
@@ -113,9 +124,45 @@ a {
   margin-top: 10px;
   color: var(--light-gray-color);
 }
+
 .sidebar-container .sub-menu-list {
-  gap: 12px;
+  margin-bottom: 30px;
 }
+.sidebar-container .sub-menu-list li a {
+  padding-right: 30px;
+  position: relative;
+}
+.sidebar-container .sub-menu-list li a:hover,
+.sidebar-container .sub-menu-list li a.active {
+  color: var(--secondary-text-color);
+  position: relative;
+}
+.sidebar-container .sub-menu-list li a:hover::before,
+.sidebar-container .sub-menu-list li a.active::before {
+  position: absolute;
+  content: "";
+  background-color: var(--secondary-text-color);
+  width: 6px;
+  height: 92%;
+  top: 0;
+  left: -30px;
+}
+.sidebar-container .sub-menu-list li a:hover::after,
+.sidebar-container .sub-menu-list li a.active::after {
+  position: absolute;
+  content: "";
+  background-color: #0090b415;
+  width: 112%;
+  height: 92%;
+  top: 0;
+  left: -30px;
+}
+
+.sidebar-container .menu-list li a.active .sub-menu-icon img {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
 /* ----start collapsed sidebar--------  */
 .collapsed-sidebar {
   grid-area: sidebar;

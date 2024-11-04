@@ -26,3 +26,27 @@ mdScreenMenuIcon.addEventListener("click", () => {
   overlayBg.classList.add("show");
   body.classList.add("stop-scroll");
 });
+// ----------------------------// ----------------------------
+// move active style on the menu list items
+let menuList = document.querySelectorAll(
+  ".sidebar-container .menu-content ul li a"
+);
+menuList.forEach((element) => {
+  element.addEventListener("click", () => {
+    menuList.forEach((e) => {
+      e.classList.remove("active");
+    });
+    element.classList.add("active");
+  });
+});
+// services sub menu expand
+let servicesSubMenu = document.querySelector("#services-sub-menu");
+let servicesList = document.querySelector("#services-list");
+
+servicesSubMenu.addEventListener("click", () => {
+  servicesSubMenu.classList.add("active");
+  servicesList.classList.toggle("hide");
+});
+
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
