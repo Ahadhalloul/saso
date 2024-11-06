@@ -37,7 +37,9 @@ let subMenuList = document.querySelectorAll(
 
 let servicesSubMenu = document.querySelector("#services-sub-menu");
 let servicesList = document.querySelector("#services-list");
-
+let subMenuArrow = document.querySelector(
+  ".sidebar-container .menu-list li a .sub-menu-icon img "
+);
 menuList.forEach((element) => {
   element.addEventListener("click", () => {
     menuList.forEach((e) => {
@@ -62,6 +64,7 @@ subMenuList.forEach((element) => {
 // services sub menu expand
 servicesSubMenu.addEventListener("click", () => {
   servicesList.classList.toggle("hide");
+  subMenuArrow.classList.toggle("flip-img-y");
 });
 
 // ----------------------------// ----------------------------
