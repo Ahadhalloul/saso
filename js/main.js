@@ -45,10 +45,16 @@ menuList.forEach((element) => {
     menuList.forEach((e) => {
       e.classList.remove("active");
     });
-    subMenuList.forEach((e) => {
-      e.classList.remove("active");
-    });
+
     element.classList.add("active");
+
+    if (!(element.id == "services-sub-menu")) {
+      servicesList.classList.add("hide");
+      subMenuArrow.classList.remove("flip-img-y");
+    } else if (element.id == "services-sub-menu") {
+      servicesList.classList.toggle("hide");
+      subMenuArrow.classList.toggle("flip-img-y");
+    }
   });
 });
 
@@ -59,12 +65,6 @@ subMenuList.forEach((element) => {
     });
     element.classList.add("active");
   });
-});
-
-// services sub menu expand
-servicesSubMenu.addEventListener("click", () => {
-  servicesList.classList.toggle("hide");
-  subMenuArrow.classList.toggle("flip-img-y");
 });
 
 // ----------------------------// ----------------------------
