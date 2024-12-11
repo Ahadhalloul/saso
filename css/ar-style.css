@@ -499,9 +499,12 @@ a {
   font-size: 24px;
 }
 .charts-cards-container .card-head .filter-icon {
-  padding: 2px 8px;
-  border-radius: var(--defult-border-radius);
+  padding: 5px 8px;
+  border-radius: var(--sm-border-radius);
   cursor: pointer;
+}
+.charts-cards-container .card-head .filter-icon img {
+  vertical-align: middle;
 }
 .charts-cards-container .services-list-card .card-head div {
   gap: 15px;
@@ -574,8 +577,9 @@ a {
 }
 .charts-cards-container .chart-card .chart-content .ratio {
   font-size: 10px;
+  font-weight: 500;
   padding: 3px 8px;
-  border-radius: var(--defult-border-radius);
+  border-radius: 16px;
 }
 .charts-cards-container .consults-charts-content {
   padding: 20px;
