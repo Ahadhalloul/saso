@@ -79,6 +79,10 @@ a {
   width: 300px;
   background-color: var(--secondary-bg-color);
   direction: rtl;
+  overflow: scroll;
+}
+.sidebar-container::-webkit-scrollbar {
+  display: none;
 }
 .sidebar-container .sidebar-head {
   padding: 40px 30px;
@@ -638,7 +642,27 @@ a {
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1366px) {
+  .charts-cards-container .card-head h3,
+  .workshops-container .workshop-head h3 {
+    font-size: 20px;
+  }
+  .workshops-cards-container .card-head h4 {
+    font-size: 16px;
+  }
+  .charts-cards-container .services-list .service-item h6 {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .services-list .service-item {
+    gap: 5px;
+  }
+  .consults-charts-content div {
+    gap: 10px;
+  }
+  .header h2 {
+    font-size: 24px;
+  }
   .header .search {
     width: 200px;
   }
@@ -648,8 +672,29 @@ a {
   .sidebar-container {
     width: 250px;
   }
+  .workshops-cards-container .card-content div .status p {
+    white-space: nowrap;
+  }
+  .header .user-info {
+    gap: 7px;
+  }
+  .header .user-info h5,
+  .services-list .service-item p {
+    white-space: nowrap;
+  }
+  .sidebar-container .menu-content ul li a {
+    font-size: 15px;
+  }
 }
-@media screen and (max-width: 1300px) {
+
+@media screen and (max-width: 1208px) {
+  .header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header .path {
+    display: none;
+  }
   .sidebar-container {
     display: none;
     position: fixed;
@@ -720,7 +765,6 @@ a {
 
 /* for small/mobile screen  */
 @media screen and (max-width: 767px) {
-  .header .path,
   .header .search-icon,
   .header .language,
   .header .user-functions > img {
