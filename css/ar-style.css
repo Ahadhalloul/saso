@@ -134,7 +134,7 @@ a {
   background-color: #9da4ae;
   width: 7px;
   height: 26px;
-  top: 7px;
+  top: 6px;
   right: 0px;
   border-radius: 9px;
 }
@@ -153,7 +153,7 @@ a {
   background-color: var(--secondary-text-color);
   width: 7px;
   height: 26px;
-  top: 7px;
+  top: 6px;
   right: 0px;
   border-radius: 9px;
 }
@@ -560,7 +560,6 @@ a {
 }
 .charts-cards-container .services-list-card .employee-list-imgs {
   gap: 13px;
-  align-items: flex-start;
 }
 .charts-cards-container .services-list-card .employee-list-imgs div {
   align-items: center;
@@ -684,6 +683,44 @@ a {
   color: #1849a9;
 }
 
+.charts-cards-container .measurement-list-card {
+  grid-column: span 2;
+}
+.measurement-list-card .measurement-chart img {
+  max-width: 520px;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+.measurement-list-card .services-list {
+  /* width: 400px; */
+}
+.no-service-box {
+  margin: 60px auto;
+  text-align: center;
+}
+.no-service-box .btn {
+  margin-top: 30px;
+  width: 84px;
+  align-items: center;
+}
+.no-service-box p {
+  color: #6a7383;
+  font-size: 12px;
+}
+.charts-cards-container .card {
+  min-height: 400px;
+}
+.employee-list-imgs .add-img-icon {
+  border: 1px solid #d2d6db;
+  border-radius: var(--sm-border-radius);
+  padding: 4px 4px 0px;
+}
+.employee-list-imgs .add-img-icon img {
+  border: none;
+  width: 22px;
+  height: 22px;
+}
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
@@ -714,9 +751,7 @@ a {
   .header .user-info {
     width: 150px;
   }
-  .sidebar-container {
-    width: 250px;
-  }
+
   .workshops-cards-container .card-content div .status p {
     white-space: nowrap;
   }
@@ -745,7 +780,6 @@ a {
     position: fixed;
     right: 0;
     top: 0;
-    width: 260px;
     height: 100vh;
     z-index: 3;
   }
@@ -806,6 +840,9 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  .charts-cards-container .measurement-list-card {
+    grid-column: span 1;
+  }
 }
 
 /* for small/mobile screen  */
@@ -824,11 +861,6 @@ a {
   .main-container .workshops-cards-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-  }
-
-  .sidebar-container .sub-menu-list li a:hover::after,
-  .sidebar-container .sub-menu-list li a.active::after {
-    width: 112%;
   }
 }
 /* ----------------------- */
