@@ -76,7 +76,7 @@ a {
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
-  width: 260px;
+  width: 280px;
   background-color: var(--secondary-bg-color);
   direction: rtl;
   overflow: scroll;
@@ -172,7 +172,7 @@ a {
   margin-bottom: 30px;
 }
 .sidebar-container div .sub-menu-list li a {
-  padding-right: 30px;
+  padding-right: 56px;
   position: relative;
   font-weight: 400;
 }
@@ -216,7 +216,7 @@ a {
   transform: scaleY(-1);
 }
 .sidebar-container .drawer-line img {
-  width: 95%;
+  width: 98%;
 }
 /* ----start collapsed sidebar--------  */
 .collapsed-sidebar {
