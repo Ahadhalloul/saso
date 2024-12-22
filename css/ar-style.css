@@ -434,6 +434,10 @@ a {
   color: #1849a9;
   border: 1px solid #b2ddff;
 }
+.light-info-bg img {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(75%) saturate(2606%)
+    hue-rotate(213deg) brightness(74%) contrast(91%);
+}
 .info-border {
   border: 1px solid #0091b4;
 }
@@ -590,7 +594,7 @@ a {
 }
 .charts-cards-container .services-list .service-item h6 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .charts-cards-container .services-list .service-item div:first-child div {
   gap: 10px;
@@ -623,7 +627,7 @@ a {
   font-size: 13px;
   color: var(--gray-text-color);
 }
-.charts-cards-container .chart-card .chart-content .ratio {
+.charts-cards-container .ratio {
   font-size: 10px;
   font-weight: 500;
   padding: 3px 8px;
@@ -724,6 +728,22 @@ a {
   width: 22px;
   height: 22px;
 }
+.consults-chart .chart-content {
+  font-size: 13px;
+}
+.charts-cards-container .consults-list-card {
+  grid-column: span 2;
+}
+.consults-list-card .services-list {
+  width: 100%;
+  margin-top: 20px;
+}
+.consults-chart {
+  width: 100%;
+}
+.consults-chart img {
+  max-width: 100%;
+}
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
@@ -767,6 +787,9 @@ a {
   }
   .sidebar-container .menu-content ul li a {
     font-size: 15px;
+  }
+  .card .consults-content {
+    gap: 5px;
   }
 }
 
@@ -836,7 +859,8 @@ a {
   }
   .main-container .charts-cards-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 0;
+    /* grid-template-rows: 1fr 1fr 1fr; */
   }
 
   .main-container .workshops-cards-container {
@@ -873,6 +897,12 @@ a {
   }
   .charts-cards-container .measurement-list-card .services-list {
     width: 100%;
+  }
+  .charts-cards-container .consults-content {
+    flex-direction: column;
+  }
+  .consults-chart {
+    margin-top: 30px;
   }
 }
 /* ----------------------- */
