@@ -686,14 +686,17 @@ a {
 .charts-cards-container .measurement-list-card {
   grid-column: span 2;
 }
+.measurement-list-card .measurement-chart {
+  width: 100%;
+}
 .measurement-list-card .measurement-chart img {
-  max-width: 520px;
+  width: 100%;
 }
 .no-wrap {
   white-space: nowrap;
 }
 .measurement-list-card .services-list {
-  /* width: 400px; */
+  width: 100%;
 }
 .no-service-box {
   margin: 60px auto;
@@ -861,6 +864,15 @@ a {
   .main-container .workshops-cards-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+  }
+
+  .charts-cards-container .measurement-list-card > div:nth-child(3) {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .charts-cards-container .measurement-list-card .services-list {
+    width: 100%;
   }
 }
 /* ----------------------- */
