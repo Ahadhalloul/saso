@@ -1024,6 +1024,9 @@ a {
 .charts-cards-container .services-list-card .employee-list-imgs {
   /* gap: -4px; */
   margin-top: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  direction: ltr;
 }
 .charts-cards-container .services-list-card .employee-list-imgs div {
   margin-left: -6px;
