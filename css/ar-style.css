@@ -880,12 +880,13 @@ a {
   border-radius: 50%;
 }
 .status {
-  padding: 0px 9px;
+  padding: 2px 9px;
   border-radius: var(--sm-border-radius);
   width: fit-content;
   display: flex;
   flex-direction: row;
   gap: 5px;
+  margin-left: 15px;
 }
 .status p {
   font-size: 10px;
@@ -979,18 +980,54 @@ a {
 .charts-cards-container .services-list-card .card-head div {
   gap: 15px;
 }
-.charts-cards-container .services-list-card .employee-list-imgs {
-  gap: 13px;
+
+.employee-list-imgs div:not(:last-child) {
+  min-width: 34px;
+  min-height: 34px;
+  border: 2px solid white;
+  border-radius: 50%;
 }
-.charts-cards-container .services-list-card .employee-list-imgs div {
+.employee-list-imgs .users-numbers {
+  background-color: #f3f4f6;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 5px;
+  min-width: 37px;
+  min-height: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+.employee-list-imgs .users-numbers p {
+  color: #161616;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 .charts-cards-container .employee-list-imgs img {
+  width: 100%;
+}
+.employee-list-imgs .add-img-icon {
+  border: 1px solid #d2d6db;
+  border-radius: var(--sm-border-radius);
+  padding: 4px;
+  margin-right: 17px;
   width: 32px;
   height: 32px;
-  border: 2px solid var(--praimary-color);
-  border-radius: 50%;
+  margin-top: -3px;
+}
+.employee-list-imgs .add-img-icon img {
+  width: 22px;
+  height: 22px;
+}
+.charts-cards-container .services-list-card .employee-list-imgs {
+  /* gap: -4px; */
+  margin-top: 15px;
+}
+.charts-cards-container .services-list-card .employee-list-imgs div {
+  margin-left: -6px;
+  /* gap: -4px; */
 }
 .charts-cards-container .employee-list-imgs div h6 {
   font-size: 10px;
@@ -1015,10 +1052,7 @@ a {
   font-weight: 600;
 }
 .charts-cards-container .services-list .service-item div:first-child div {
-  gap: 10px;
-}
-.charts-cards-container .services-list .service-item div:last-child {
-  gap: 15px;
+  gap: 8px;
 }
 
 .charts-cards-container .chart-card .card-head {
@@ -1083,7 +1117,12 @@ a {
   height: 24px;
 }
 .workshops-cards-container .card-head {
+  margin-bottom: 15px;
+}
+.workshops-cards-container .card-head p {
+  margin-top: 5px;
   margin-bottom: 10px;
+  color: #1f2a37;
 }
 .workshops-cards-container .card-head h4 {
   font-size: 20px;
@@ -1136,16 +1175,7 @@ a {
 .charts-cards-container .card {
   min-height: 360px;
 }
-.employee-list-imgs .add-img-icon {
-  border: 1px solid #d2d6db;
-  border-radius: var(--sm-border-radius);
-  padding: 4px 4px 0px;
-}
-.employee-list-imgs .add-img-icon img {
-  border: none;
-  width: 22px;
-  height: 22px;
-}
+
 .consults-chart .chart-content {
   font-size: 13px;
 }
@@ -1162,6 +1192,30 @@ a {
 .consults-chart img {
   max-width: 100%;
 }
+.news-list-card .news-content {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.news-list-card .news-content .news-img {
+  width: 120px;
+  margin-left: 10px;
+}
+.news-list-card .news-content .news-img img {
+  width: 100%;
+  vertical-align: middle;
+}
+.read-more {
+  color: #1b8354;
+  text-decoration-line: underline;
+}
+.news-list-card .news-content h5 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.charts-cards-container .services-list-card.facility-emp .services-list {
+  gap: 14px;
+}
+
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
@@ -1419,7 +1473,7 @@ a {
   border-radius: 4px;
   background-color: #ffff;
   color: #161616;
-  border: solid 1px #D2D6DB;
+  border: solid 1px #d2d6db;
   transition: background-color 0.3s ease-in-out;
   display: block;
 }
@@ -1428,9 +1482,8 @@ a {
   width: 16px;
 }
 .btn-secondary-outline:hover {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
-
 
 /* --buttons-- */
 
@@ -1895,7 +1948,7 @@ nav .pagination .more .page-link {
   margin-top: 20px;
   background-color: white;
   /* box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06); */
-  border: 1px solid var(--Border-border-neutral-primary, #D2D6DB);
+  border: 1px solid var(--Border-border-neutral-primary, #d2d6db);
 }
 .primary-cards .con-card .card-body {
   padding: 0;
