@@ -869,11 +869,12 @@ a {
   background-color: #f7d54d;
 }
 .blue-bg {
-  background-color: #0091b4;
+  background-color: #1849a9;
 }
 .green-bg {
   background-color: #559a38;
 }
+
 .sm-circle {
   width: 10px;
   height: 10px;
@@ -1043,6 +1044,7 @@ a {
 .charts-cards-container .services-list .service-item {
   justify-content: space-between;
   margin-top: 3px;
+  gap: 15px;
 }
 .charts-cards-container .services-list .service-item p {
   font-size: 12px;
@@ -1122,7 +1124,7 @@ a {
 .workshops-cards-container .card-head {
   margin-bottom: 15px;
 }
-.workshops-cards-container .card-head p {
+.workshops-cards-container .card-head > p {
   margin-top: 5px;
   margin-bottom: 10px;
   color: #1f2a37;
@@ -1219,6 +1221,81 @@ a {
   gap: 14px;
 }
 
+.available-sessions-container {
+  width: 100%;
+}
+.available-sessions-container .sessions-head {
+  justify-content: space-between;
+  margin-top: var(--defult-cards-gap);
+  margin: 25px 0px;
+}
+.available-sessions-container .sessions-head h3 {
+  color: var(--secondary-text-color);
+  font-size: 24px;
+}
+.available-sessions-container .sessions-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: var(--defult-cards-gap);
+}
+.available-sessions-container .icon-bg {
+  border-radius: 50%;
+  padding: 12px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.available-sessions-container .icon-bg img {
+  width: 24px;
+  height: 24px;
+}
+.sessions-cards-container .card-head {
+  margin-bottom: 15px;
+}
+.sessions-cards-container .card-head > p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #1f2a37;
+}
+.sessions-cards-container .card-head h4 {
+  font-size: 20px;
+}
+.sessions-cards-container .card-content {
+  gap: 20px;
+}
+
+.sessions-cards-container .card-content div h4 {
+  font-size: 11px;
+  color: var(--text-display);
+  font-weight: 800;
+}
+.sessions-cards-container .card-content div p {
+  color: var(--text-display);
+  font-size: 10px;
+}
+.sessions-cards-container .card-content div .status p {
+  color: #1849a9;
+}
+
+.booked-session-container {
+  margin-top: 25px;
+}
+
+.booked-session-container .more-details {
+  background-color: #f3f4f6;
+  padding: 6px 12px;
+}
+.booked-session-container .services-list-card .services-list {
+  gap: 15px;
+}
+.btn-disabled {
+  background-color: #e5e7eb;
+  color: #9da4ae;
+  border: none;
+}
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
@@ -1345,6 +1422,11 @@ a {
   .charts-cards-container .measurement-list-card {
     grid-column: span 1;
   }
+
+  .available-sessions-container .sessions-cards-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 /* for small/mobile screen  */
@@ -1379,6 +1461,10 @@ a {
   .consults-chart {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .available-sessions-container .sessions-cards-container {
+    grid-template-columns: 1fr;
   }
 }
 /* ----------------------- */
