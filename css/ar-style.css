@@ -1217,7 +1217,7 @@ a {
   margin-top: 10px;
   font-weight: 400;
 }
-.charts-cards-container .services-list-card.facility-emp .services-list {
+.charts-cards-container.facility-emp .services-list-card .services-list {
   gap: 14px;
 }
 
@@ -1299,6 +1299,30 @@ a {
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
+@media screen and (max-width: 1700px) {
+  .consults-chart {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1570px) {
+  .booked-session-container {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .booked-session-container .consults-chart {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .charts-cards-container.facility-emp {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .consults-chart {
+    flex-direction: row;
+  }
+}
+
 @media screen and (max-width: 1366px) {
   .charts-cards-container .card-head h3,
   .workshops-container .workshop-head h3 {
