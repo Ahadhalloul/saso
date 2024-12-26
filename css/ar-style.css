@@ -912,14 +912,22 @@ a {
   cursor: pointer;
 }
 .btn-primary {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   background-color: var(--praimary-color);
   color: white;
   border: none;
 }
 .btn-secondary {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   background-color: transparent;
   color: var(--text-display);
   border: 1px solid #d2d6db;
+}
+.btn-neutral {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background-color: #0D121C;
+  color: #fff;
+  border: 1px solid transparent;
 }
 .functions-icon {
   padding: 8px;
@@ -1515,6 +1523,20 @@ a {
   align-items: center;
   gap: 16px;
 }
+.title-page .btn-icon {
+  border: solid 1px #D2D6DB;
+  background-color: #fff;
+  padding: 8px;
+  min-width: 32px;
+  display: flex;
+}
+.title-page .btn-icon:hover {
+  background-color: #f3f4f6;
+}
+.title-page img {
+  height: 16px;
+  width: 16px;
+}
 .title-page .title h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -2045,7 +2067,8 @@ nav .pagination .more .page-link {
 }
 /* ---------------------- */
 
-/* --------------------- */
+/* ----------primary-cards----------- */
+
 .primary-cards .row {
   margin-left: -8px;
   margin-right: -8px;
@@ -2139,4 +2162,369 @@ nav .pagination .more .page-link {
 .primary-cards .active {
   border: 2px solid #1f2a37;
 }
+
+.primary-cards.border-solid-none .con-card {
+  border: solid 0px !important;
+  margin-bottom: 24px;
+}
+.primary-cards.shadow .con-card {
+  border: solid 1px transparent !important;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06) !important;
+}
+.primary-cards.shadow .con-card:hover {
+  border: 1px solid var(--Border-border-neutral-primary, #d2d6db) !important;
+  box-shadow: none !important;
+}
+.border-solid-none .con-card .text {
+  margin-bottom: 0px !important;
+}
+.primary-cards.border-solid-none  .con-card .title {
+  margin-bottom: .5rem;
+}
 /* -------------cards---------------Mlewis- */
+
+/* -------------tabs---------------Mlewis- */
+.service-title h5 {
+  color:#161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.service-description {
+  display: flex;
+  gap: 64px;
+  margin-left: 48px;
+}
+.service-description p {
+  color: #1F2A37;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 18px;
+  font-weight: 300;
+}
+.service-description .plan-card {
+  background-color: #F3FCF6;
+  border: solid 1px #067647;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  gap: 20px;
+  min-width: max-content;
+  height: fit-content;
+}
+.service-description .plan-card img {
+  height: 3.25rem;
+  width: 3.25rem;
+}
+.service-description .plan-card .text span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6A7383;
+}
+.service-description .plan-card .text p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #161616;
+}
+
+/* Tabs Styles */
+
+.tab-buttons {
+  display: flex;
+  gap: 32px;
+  margin: 32px 0px;
+}
+
+.tab-btn {
+  cursor: pointer;
+  background-color: transparent;
+  padding-bottom: 8px;
+  border: solid 0px;
+  border-radius: 0px;
+  border-bottom: solid 3px transparent;
+  color: #384250;
+  font-family: "IBM Plex Sans Arabic";
+  padding: 16px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+}
+.tab-btn i.icon-tab {
+  background-image: url(../assets/images/tabs-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;  
+  width: 15px;  
+}
+.tab-btn i.icon-related{
+  background-image: url(../assets/images/icon-related.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;  
+  width: 15px;  
+}
+
+.tab-btn.active,  .tab-btn:hover {
+  background-color: transparent;
+  border: solid 0px;
+  border-radius: 0px;
+  border-bottom: solid 3px #1B8354;
+  color: #161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+
+/* Collapsible Styles */
+/* Accordion Styles */
+.accordion {
+  background: #fff;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-top: 1px solid #D2D6DB;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  background-color: transparent;
+  color: #1F2A37;
+  cursor: pointer;
+  padding: 16px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "IBM Plex Sans Arabic";
+  transition: background-color 0.3s ease;
+  display: flex;
+  border: solid 1px transparent;
+}
+
+.accordion-header:focus {
+  border: solid 1px #1F2A37;
+  box-shadow: none;
+}
+
+.accordion-item:has(.accordion-content.open) {
+  background-color: #E5E7EB;
+}
+
+.accordion-header:hover {
+  background-color: #E5E7EB;
+}
+.accordion-header::after {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  content: "";
+  background-image: url(../assets/images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item:has(.accordion-content.open) .accordion-header::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 16px;
+  background-color: #fff;
+  display: none;
+  border-top: 1px solid #ddd;
+  padding-left: 48px;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1F2A37;
+  line-height: 24px;
+}
+.accordion-content .cta {
+  justify-content: end;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.accordion-content .cta button {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 16px;
+}
+
+/* Open State for Content */
+.accordion-content.open {
+  display: block;
+}
+
+.accordion-content ul li {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.accordion-content ul li i.icon-url {
+  background-image: url(../assets/images/icon-url.svg);
+  height: 16px;
+  width: 16px;
+  display: block;
+}
+
+.accordion-content ul.url-list li:first-child {
+  margin-top: 0px;
+}
+
+.accordion-content ul.url-list li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1B8354;
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-dialog-centered {
+  margin: auto;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: start;
+}
+.modal-footer {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+.modal-footer .btn {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.modal-footer .btn i.leading-icon-w {
+  background-image: url(../assets/images/Leading-Icon-w.svg);
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.modal-footer .btn i.leading-icon-b {
+  background-image: url(../assets/images/Leading-Icon-b.svg);
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.modal-header .btn-close {
+  padding: 0;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.modal-header img {
+  background-color: #F9FAFB;
+  border-radius: 100px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+}
+.modal-header .btn-close i.icon-close {
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-image: url(../assets/images/close-modal-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.modal-footer {
+  border-bottom: none;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.modal-body h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2A37;
+  margin: 8px 0px;
+  text-align: end;
+}
+.modal-body p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #384250;
+  margin-bottom: 16px;
+  text-align: end;
+}
+
+/* Open Modal Transition */
+.modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+/* -------------tabs---------------Mlewis- */
+
