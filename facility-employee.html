@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/ar-style.css" />
     <!-- -------------- english page style ------------- -->
     <!-- <link rel="stylesheet" href="css/en-style.css" /> -->
+    <!-- ------------chart js library ------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="overlay-bg"></div>
@@ -497,8 +499,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="chart">
-                  <img src="/assets/images/chart7.png" alt="" />
+                <div class="chart" style="max-width: 240px; margin: auto">
+                  <canvas id="workshopChart"></canvas>
                 </div>
               </div>
             </div>
@@ -612,7 +614,7 @@
           <!-- ------------ -->
         </div>
         <!-- end charts statistics cards -->
-        <!-- start workshops section -->
+        <!-- start Knowledge Transfer Center section -->
         <div class="workshops-container">
           <div class="workshop-head flex-row">
             <h3>مركز نقل المعرفة</h3>
@@ -762,13 +764,15 @@
             </div>
           </div>
         </div>
-        <!-- end workshops section -->
+        <!-- end Knowledge Transfer Center section -->
       </main>
       <!-- ------------------ End main ---------------------- -->
 
       <!-- ------------------------------------------------------ -->
     </div>
+    <!----------- chart js  ---------->
+    <script src="/js/charts.js"></script>
     <!-- --------- main javascript -------- -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

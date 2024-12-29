@@ -1498,7 +1498,7 @@ table.files-table tr:first-child td {
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1710px) {
   .consults-chart {
     flex-direction: column-reverse;
   }
