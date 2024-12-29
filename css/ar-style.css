@@ -1494,7 +1494,11 @@ table.files-table tr:first-child td {
   justify-content: center;
   margin-bottom: 10px;
 }
-
+.charts-cards-container.facility-emp .chart,
+.charts-cards-container.booked-session-container .chart {
+  max-width: 220px;
+  margin: auto;
+}
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
