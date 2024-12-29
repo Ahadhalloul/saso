@@ -916,7 +916,7 @@ a {
   padding: 20px;
 }
 .btn {
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: var(--sm-border-radius);
   cursor: pointer;
 }
@@ -934,7 +934,7 @@ a {
 }
 .btn-neutral {
   font-family: "IBM Plex Sans Arabic", sans-serif;
-  background-color: #0D121C;
+  background-color: #0d121c;
   color: #fff;
   border: 1px solid transparent;
 }
@@ -1466,12 +1466,49 @@ table.files-table tr:first-child td {
 .surveys-card .card .status {
   margin-left: 7px;
 }
+
+.quick-links-container {
+  width: 100%;
+}
+.quick-links-container .sessions-head {
+  justify-content: space-between;
+  margin-top: var(--defult-cards-gap);
+  margin: 25px 0px;
+}
+.quick-links-container .sessions-head h3 {
+  color: var(--secondary-text-color);
+  font-size: 24px;
+}
+.quick-links-container .sessions-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: var(--defult-cards-gap);
+}
+.quick-links-container .icon-bg {
+  border-radius: 50%;
+  padding: 12px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 /* -------------- End main ----------------------  */
 
 /* for medium screen */
 @media screen and (max-width: 1700px) {
   .consults-chart {
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1610px) {
+  .orders-beneficiaries-container .service-item .item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    gap: 5px;
   }
 }
 @media screen and (max-width: 1570px) {
@@ -1540,8 +1577,22 @@ table.files-table tr:first-child td {
   .orders-beneficiaries-container {
     grid-template-columns: 1fr;
   }
-  .employees-files-container .employees-cards-container {
+  .employees-files-container .employees-cards-container,
+  .surveys-files-container .surveys-cards-container {
     grid-template-columns: repeat(2, auto);
+  }
+  .employees-files-container,
+  .surveys-files-container {
+    flex-direction: column;
+  }
+  .employee-card,
+  .files-card,
+  .surveys-card {
+    width: 100%;
+  }
+  .orders-beneficiaries-container .service-item .item {
+    flex-direction: row;
+    width: 450px;
   }
 }
 
@@ -1623,9 +1674,9 @@ table.files-table tr:first-child td {
     grid-column: span 1;
   }
 
-  .available-sessions-container .sessions-cards-container {
+  .available-sessions-container .sessions-cards-container,
+  .quick-links-container .sessions-cards-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 }
 
@@ -1663,8 +1714,22 @@ table.files-table tr:first-child td {
     margin-bottom: 30px;
   }
 
-  .available-sessions-container .sessions-cards-container {
+  .available-sessions-container .sessions-cards-container,
+  .quick-links-container .sessions-cards-container {
     grid-template-columns: 1fr;
+  }
+  .orders-beneficiaries-container .service-item .item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .employees-files-container .employees-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .surveys-cards-container {
+    grid-template-columns: 1fr !important;
   }
 }
 /* ----------------------- */
@@ -1692,7 +1757,7 @@ table.files-table tr:first-child td {
   gap: 16px;
 }
 .title-page .btn-icon {
-  border: solid 1px #D2D6DB;
+  border: solid 1px #d2d6db;
   background-color: #fff;
   padding: 8px;
   min-width: 32px;
@@ -2337,7 +2402,8 @@ nav .pagination .more .page-link {
 }
 .primary-cards.shadow .con-card {
   border: solid 1px transparent !important;
-  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06) !important;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06) !important;
 }
 .primary-cards.shadow .con-card:hover {
   border: 1px solid var(--Border-border-neutral-primary, #d2d6db) !important;
@@ -2346,14 +2412,14 @@ nav .pagination .more .page-link {
 .border-solid-none .con-card .text {
   margin-bottom: 0px !important;
 }
-.primary-cards.border-solid-none  .con-card .title {
-  margin-bottom: .5rem;
+.primary-cards.border-solid-none .con-card .title {
+  margin-bottom: 0.5rem;
 }
 /* -------------cards---------------Mlewis- */
 
 /* -------------tabs---------------Mlewis- */
 .service-title h5 {
-  color:#161616;
+  color: #161616;
   font-family: "IBM Plex Sans Arabic";
   font-size: 1.125rem;
   font-weight: 600;
@@ -2365,13 +2431,13 @@ nav .pagination .more .page-link {
   margin-left: 48px;
 }
 .service-description p {
-  color: #1F2A37;
+  color: #1f2a37;
   font-family: "IBM Plex Sans Arabic";
   font-size: 18px;
   font-weight: 300;
 }
 .service-description .plan-card {
-  background-color: #F3FCF6;
+  background-color: #f3fcf6;
   border: solid 1px #067647;
   padding: 24px;
   border-radius: 16px;
@@ -2387,7 +2453,7 @@ nav .pagination .more .page-link {
 .service-description .plan-card .text span {
   font-size: 18px;
   font-weight: 500;
-  color: #6A7383;
+  color: #6a7383;
 }
 .service-description .plan-card .text p {
   font-size: 18px;
@@ -2425,22 +2491,23 @@ nav .pagination .more .page-link {
   background-image: url(../assets/images/tabs-icon.svg);
   background-repeat: no-repeat;
   display: block;
-  height: 15px;  
-  width: 15px;  
+  height: 15px;
+  width: 15px;
 }
-.tab-btn i.icon-related{
+.tab-btn i.icon-related {
   background-image: url(../assets/images/icon-related.svg);
   background-repeat: no-repeat;
   display: block;
-  height: 15px;  
-  width: 15px;  
+  height: 15px;
+  width: 15px;
 }
 
-.tab-btn.active,  .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
   background-color: transparent;
   border: solid 0px;
   border-radius: 0px;
-  border-bottom: solid 3px #1B8354;
+  border-bottom: solid 3px #1b8354;
   color: #161616;
   font-family: "IBM Plex Sans Arabic";
   font-size: 14px;
@@ -2463,7 +2530,7 @@ nav .pagination .more .page-link {
 }
 
 .accordion-item {
-  border-top: 1px solid #D2D6DB;
+  border-top: 1px solid #d2d6db;
 }
 
 .accordion-item:last-child {
@@ -2472,7 +2539,7 @@ nav .pagination .more .page-link {
 
 .accordion-header {
   background-color: transparent;
-  color: #1F2A37;
+  color: #1f2a37;
   cursor: pointer;
   padding: 16px;
   border: none;
@@ -2486,16 +2553,16 @@ nav .pagination .more .page-link {
 }
 
 .accordion-header:focus {
-  border: solid 1px #1F2A37;
+  border: solid 1px #1f2a37;
   box-shadow: none;
 }
 
 .accordion-item:has(.accordion-content.open) {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
 
 .accordion-header:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
 .accordion-header::after {
   flex-shrink: 0;
@@ -2525,7 +2592,7 @@ nav .pagination .more .page-link {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
-  color: #1F2A37;
+  color: #1f2a37;
   line-height: 24px;
 }
 .accordion-content .cta {
@@ -2565,7 +2632,7 @@ nav .pagination .more .page-link {
 .accordion-content ul.url-list li a {
   font-size: 16px;
   font-weight: 400;
-  color: #1B8354;
+  color: #1b8354;
   text-decoration: underline;
 }
 
@@ -2642,7 +2709,7 @@ nav .pagination .more .page-link {
   cursor: pointer;
 }
 .modal-header img {
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   border-radius: 100px;
   padding: 10px;
   height: 40px;
@@ -2668,7 +2735,7 @@ nav .pagination .more .page-link {
 .modal-body h5 {
   font-size: 18px;
   font-weight: 600;
-  color: #1F2A37;
+  color: #1f2a37;
   margin: 8px 0px;
   text-align: end;
 }
@@ -2688,11 +2755,10 @@ nav .pagination .more .page-link {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 /* -------------tabs---------------Mlewis- */
-
