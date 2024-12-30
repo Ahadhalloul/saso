@@ -883,7 +883,13 @@ a {
 .green-bg {
   background-color: #559a38;
 }
-
+.red-bg {
+  background-color: #d92d20;
+}
+.light-red-bg {
+  background-color: #d92c2015;
+  color: #d92d20;
+}
 .sm-circle {
   width: 10px;
   height: 10px;
@@ -1498,6 +1504,27 @@ table.files-table tr:first-child td {
 .charts-cards-container.booked-session-container .chart {
   max-width: 220px;
   margin: auto;
+}
+.charts-cards-container.facility-rep .chart {
+  max-width: 300px;
+  margin: auto;
+}
+.charts-cards-container.facility-rep .chart.sessions {
+  max-width: 220px;
+}
+.charts-cards-container.facility-rep .measurement-chart {
+  max-width: 550px;
+}
+.charts-cards-container.facility-rep .measurement-chart p {
+  font-size: 10px;
+  color: #687588;
+  white-space: nowrap;
+}
+.charts-cards-container.facility-rep .measurement-chart .ratio {
+  font-size: 9px;
+}
+.charts-cards-container.facility-rep .measurement-chart .chart-footer {
+  margin-top: 20px;
 }
 /* -------------- End main ----------------------  */
 

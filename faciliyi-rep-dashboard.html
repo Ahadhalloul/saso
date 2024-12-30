@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/ar-style.css" />
     <!-- -------------- english page style ------------- -->
     <!-- <link rel="stylesheet" href="css/en-style.css" /> -->
+    <!-- ------------chart js library ------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="overlay-bg"></div>
@@ -320,7 +322,7 @@
         </div>
         <!-- end numeric statistics small cards -->
         <!-- start charts statistics cards -->
-        <div class="charts-cards-container">
+        <div class="charts-cards-container facility-rep">
           <!-- first card -->
           <div class="services-list-card card flex-column">
             <div class="card-head flex-row">
@@ -482,7 +484,7 @@
               </div>
             </div>
             <div class="chart">
-              <img src="assets/images/chart1.png" alt="" />
+              <canvas id="qualityAreaChart"></canvas>
             </div>
           </div>
           <!-- ------------ -->
@@ -497,8 +499,8 @@
                 <img src="/assets/icons/filter-outline.svg" alt="" />
               </div>
             </div>
-            <div class="chart">
-              <img src="assets/images/chart2.png" alt="" />
+            <div class="chart sessions">
+              <canvas id="consultantsChart"></canvas>
             </div>
             <div class="flex-column gap-10 consults-charts-content">
               <div class="chart-content flex-row">
@@ -791,8 +793,34 @@
                   </div>
                 </div>
               </div>
-              <div class="measurement-chart">
-                <img src="/assets/images/chart3.png" alt="" />
+              <div class="measurement-chart chart">
+                <canvas id="biDirectionalBarChart"></canvas>
+                <div class="chart-footer flex-row gap-10">
+                  <div class="flex-row gap-5">
+                    <div class="sm-circle green-bg"></div>
+                    <p>مواصفة متوافقة</p>
+                    <h6>17</h6>
+                    <div class="light-green-bg ratio">70%</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="sm-circle red-bg"></div>
+                    <p>مواصفة غير متوافقة</p>
+                    <h6>3</h6>
+                    <div class="light-red-bg ratio">70%</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="sm-circle green-bg"></div>
+                    <p>منتج مؤهل</p>
+                    <h6>17</h6>
+                    <div class="light-green-bg ratio">70%</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="sm-circle red-bg"></div>
+                    <p>منتج غير مؤهل</p>
+                    <h6>3</h6>
+                    <div class="light-red-bg ratio">70%</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -929,7 +957,156 @@
 
       <!-- ------------------------------------------------------ -->
     </div>
+    <!-----------charts js  ---------->
+    <script>
+      // ----start radar chart---------
+      const qualityAreasChart = document.getElementById("qualityAreaChart");
+      const radarChart = new Chart(qualityAreasChart, {
+        type: "radar",
+        data: {
+          labels: [
+            "تحليل",
+            "تدريب",
+            "تنفيذ",
+            "مستوى النضج",
+            "شهادات",
+            "مواصفات",
+          ],
+          datasets: [
+            {
+              label: "",
+              data: [0, 9, 2, 5, 0, 2],
+              backgroundColor: ["rgba(27, 131, 84, 0.25)"],
+              borderColor: ["#1B8354"],
+              pointBackgroundColor: "rgba(27, 131, 84, 0.25)",
+              pointBorderColor: "#1B8354",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            r: {
+              pointLabels: {
+                font: {
+                  size: 16,
+                },
+              },
+              ticks: {
+                //   color: "#fff",
+                //   backdropColor: "#1849A9",
+                //   backdropPadding: 5,
+              },
+            },
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          elements: {
+            line: {
+              borderWidth: 4,
+            },
+            point: {
+              pointBorderWidth: 5,
+              pointRadius: 6,
+            },
+          },
+        },
+      });
+      // ----end radar chart---------
+      // ----start consultant pie chart ---------
+      const consultantsChart = document.getElementById("consultantsChart");
+      const doughnutChart = new Chart(consultantsChart, {
+        type: "doughnut",
+        data: {
+          labels: ["جلسات اكتملت", "جلسات لم تكتمل"],
+          datasets: [
+            {
+              label: "",
+              data: [17, 3],
+              backgroundColor: ["#1B8354", "#F7D54D"],
+              borderWidth: 8,
+              borderRadius: 8,
+              hoverBorderColor: "#fff",
+              cutout: "65%",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+        },
+      });
+      // ----end consultants pie chart---------
+
+      const managementQualityChart = document.getElementById(
+        "biDirectionalBarChart"
+      );
+
+      const biDirectionalBarChart = new Chart(managementQualityChart, {
+        type: "bar",
+        data: {
+          labels: ["يناير", "فبراير", "مارس", "ابريل"],
+          datasets: [
+            {
+              label: "مواصفة غير متوافقة",
+              data: [-30, -45, 30, 60],
+              backgroundColor: "#D92D20",
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+            },
+            {
+              label: "مواصفة متوافقة",
+              data: [70, -55, 40, 20],
+              backgroundColor: "#1B8354",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+              // position: "bottom",
+            },
+            tooltip: {
+              callbacks: {
+                label: (tooltipItem) => {
+                  const value = tooltipItem.raw;
+                  return `${tooltipItem.dataset.label}: ${Math.abs(value)}`;
+                },
+              },
+            },
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              ticks: {
+                display: false,
+                // callback: (value) => Math.abs(value), // Display absolute values on X-axis
+              },
+            },
+          },
+        },
+      });
+    </script>
+
     <!-- --------- main javascript -------- -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
