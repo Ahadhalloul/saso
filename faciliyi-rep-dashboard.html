@@ -1082,15 +1082,9 @@
           plugins: {
             legend: {
               display: false,
-              // position: "bottom",
             },
             tooltip: {
-              callbacks: {
-                label: (tooltipItem) => {
-                  const value = tooltipItem.raw;
-                  return `${tooltipItem.dataset.label}: ${Math.abs(value)}`;
-                },
-              },
+              enabled: false,
             },
           },
           scales: {
