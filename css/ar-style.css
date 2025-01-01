@@ -813,7 +813,7 @@ a {
   color: #945c01;
 }
 .light-gray-bg {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa !important;
 }
 
 /* --- status colors --- */
@@ -891,14 +891,22 @@ a {
   color: #d92d20;
 }
 .black-bg {
-  background-color: #0d121c;
-  color: #fff;
+  background-color: #0d121c !important;
+  color: #fff !important;
 }
 .sm-circle {
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
+.red-star {
+  color: #b42318;
+  margin-left: 5px;
+}
+.no-border {
+  border: none !important;
+}
+/* ----------  */
 .status {
   padding: 2px 9px;
   border-radius: var(--sm-border-radius);
@@ -1739,6 +1747,110 @@ table .status {
   background-color: transparent;
 }
 
+/* -----popup screen ---- */
+
+/* to stop scroll page in popup  */
+.stop-scroll-popup {
+  overflow: hidden;
+}
+
+.popup-container {
+  position: absolute;
+  background-color: #000000b2;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+}
+
+.popup-card {
+  z-index: 2;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+}
+.popup-card div {
+  width: 100%;
+}
+.popup-card .icon-bg {
+  background-color: #f9fafb;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+.popup-card .time {
+  background-color: #f9fafb;
+  border: solid 1px #e5e7eb;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #1f2a37;
+  font-size: 16px;
+  font-weight: 500;
+  width: max-content;
+  cursor: pointer;
+}
+.popup-card p {
+  color: #161616;
+  font-size: 14px;
+  font-weight: 400;
+  width: 330px;
+}
+.input {
+  border: 1px solid #9da4ae;
+  border-radius: var(--sm-border-radius);
+  padding: 8px 16px;
+}
+.input input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.input input::placeholder {
+  color: #6c737f;
+  font-size: 16px;
+  font-weight: 400;
+}
+.input input:focus {
+  outline: none;
+}
+.popup-card .btn-cont {
+  justify-content: flex-end;
+}
+.popup-card .btn-cont .btn {
+  background-color: transparent;
+  border: 1px solid #d2d6db;
+  color: #161616;
+  font-size: 16px;
+  font-weight: 500;
+}
+.popup-card.select-time-popup {
+}
+.popup-card.success-add-popup {
+  border-top: 8px solid #079454c5;
+}
+.popup-card.success-add-popup p {
+  width: 311px;
+  color: #384250;
+}
+.popup-card.success-add-popup .btn-cont {
+  flex-direction: column;
+  margin-top: 10px;
+}
+.popup-card.success-add-popup .btn-cont .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---------------------  */
 /* ---------------end consultant services details-------------------------- */
 
 /* -------------- End main ----------------------  */

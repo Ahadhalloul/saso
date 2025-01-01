@@ -72,23 +72,23 @@ subMenuList.forEach((element) => {
 const tabButtons = document.querySelectorAll(".tab-btn");
 const tabs = document.querySelectorAll(".tab");
 
-tabButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        // Remove active class from all buttons and tabs
-        tabButtons.forEach(btn => btn.classList.remove("active"));
-        tabs.forEach(tab => tab.classList.remove("active"));
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove active class from all buttons and tabs
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabs.forEach((tab) => tab.classList.remove("active"));
 
-        // Add active class to the clicked button and corresponding tab
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
-    });
+    // Add active class to the clicked button and corresponding tab
+    button.classList.add("active");
+    document.getElementById(button.dataset.tab).classList.add("active");
+  });
 });
 
 // Collapsible Sections Functionality
 // document.querySelectorAll(".accordion-header").forEach(button => {
 //   button.addEventListener("click", () => {
 //       const targetContent = document.getElementById(button.dataset.target);
-      
+
 //       // Close other open accordions
 //       document.querySelectorAll(".accordion-content").forEach(content => {
 //           if (content !== targetContent) {
@@ -101,12 +101,12 @@ tabButtons.forEach(button => {
 //   });
 // });
 
-document.querySelectorAll(".accordion-header").forEach(button => {
+document.querySelectorAll(".accordion-header").forEach((button) => {
   button.addEventListener("click", () => {
     const targetContent = document.getElementById(button.dataset.target);
 
     // Close other open accordions
-    document.querySelectorAll(".accordion-content").forEach(content => {
+    document.querySelectorAll(".accordion-content").forEach((content) => {
       if (content !== targetContent) {
         content.classList.remove("open");
       }
@@ -117,31 +117,44 @@ document.querySelectorAll(".accordion-header").forEach(button => {
   });
 });
 
-
 // Get the modal elements
-const modal = document.getElementById('modal');
-const openModalButtons = document.querySelectorAll('#openModal'); // Select all buttons with id "openModal"
-const closeModalButtons = document.querySelectorAll('#closeModal, #closeModalFooter');
+const modal = document.getElementById("modal");
+const openModalButtons = document.querySelectorAll("#openModal"); // Select all buttons with id "openModal"
+const closeModalButtons = document.querySelectorAll(
+  "#closeModal, #closeModalFooter"
+);
 
 // Open modal function
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        modal.classList.add('show');
-    });
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    modal.classList.add("show");
+  });
 });
 
 // Close modal function
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        modal.classList.remove('show');
-    });
+closeModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
 });
 
 // Close modal when clicking outside the modal dialog
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.classList.remove('show');
-    }
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.remove("show");
+  }
 });
 
 // ----------------------------// ----------------------------
+//--------------- popup cards ------------
+const addTimeCard = document.querySelector("#select-time-popup");
+const successAddCard = document.querySelector("#success-add-popup");
+const addTimeBtn = document.querySelector("#add-time-btn");
+
+addTimeBtn.addEventListener("click", () => {
+  addTimeCard.classList.add("hide");
+  successAddCard.classList.remove("hide");
+  console.log("test");
+});
+// --------------------------------------
+// -------------------------------------
