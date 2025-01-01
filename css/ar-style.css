@@ -927,11 +927,11 @@ a {
   direction: rtl;
 }
 .main-container .card {
-  border-radius: var(--defult-border-radius);
+  border-radius: 16px;
   background-color: var(--secondary-bg-color);
   width: 100%;
   box-shadow: var(--box-shadow);
-  padding: 20px;
+  padding: 16px;
 }
 .btn {
   padding: 8px 16px;
@@ -2175,7 +2175,7 @@ table .status {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: 4px;
   background-color: #1b8354;
   border: solid 0px;
@@ -2198,7 +2198,7 @@ table .status {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: 4px;
   background-color: #ffff;
   color: #161616;
@@ -2214,18 +2214,31 @@ table .status {
   background-color: #f3f4f6;
 }
 
+.btn-secondary-outline-icon {
+  padding: 11px;
+  border-radius: 4px;
+  background-color: #ffff;
+  border: solid 1px #d2d6db;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+}
+
+.btn-secondary-outline-icon:hover {
+  background-color: #f3f4f6;
+}
+
 /* --buttons-- */
 
 /* -------------cards---------------Mlewis- */
 
 .card-title {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
-.card-title h5 {
+.card-title .title-text h5 {
   margin: 0;
   font-weight: 700;
   font-size: 20px;
@@ -2235,6 +2248,12 @@ table .status {
 .card-title .title-btn {
   display: flex;
   gap: 16px;
+}
+
+.card-title:not(:has(.title-text)) .title-btn {
+  display: flex;
+  justify-content: end;
+  width: -webkit-fill-available;
 }
 
 .card-title .title-btn .view-all {
@@ -2853,6 +2872,10 @@ nav .pagination .more .page-link {
   align-items: center;
   gap: 4px;
 }
+.tab-buttons-2 {
+  border-bottom: solid 3px #D2D6DB;
+  margin-top: 0px;
+}
 .tab-btn i.icon-tab {
   background-image: url(../assets/images/tabs-icon.svg);
   background-repeat: no-repeat;
@@ -2878,6 +2901,19 @@ nav .pagination .more .page-link {
   font-family: "IBM Plex Sans Arabic";
   font-size: 14px;
   font-weight: 600;
+}
+
+.tab-buttons-2 .tab-btn.active,
+.tab-buttons-2 .tab-btn:hover {
+  background-color: transparent;
+  border: solid 0px;
+  border-radius: 0px;
+  border-bottom: solid 3px #1b8354;
+  color: #161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: -3px;
 }
 
 /* Tab Content */
@@ -3128,3 +3164,231 @@ nav .pagination .more .page-link {
   }
 }
 /* -------------tabs---------------Mlewis- */
+
+/* -------------advisors-card---------------Mlewis- */
+.advisors {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.advisors-card {
+  background-color: #fff;
+  border: 1px solid rgba(185, 204, 209, 0.50);;
+  border-radius: 16px;
+  text-align: center;
+  padding: 24px 16px;
+  transition: transform 0.2s;
+  margin-bottom: 16px;
+  display: block;
+}
+
+
+.advisors-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advisors-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.advisors-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2A37;
+}
+
+.advisors-card .divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 20px 0;
+}
+
+.advisors-card .action {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 5px 12px;
+  border: solid 1px #E5E7EB;
+}
+
+.advisors-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #161616;
+}
+
+.advisors-card .action img {
+  width: 25px;
+}
+@media (min-width: 1200px) {
+  .col-lg-2-5 {
+    flex: 0 0 calc(100% / 5); /* Divide the row into 5 equal parts */
+    max-width: calc(100% / 5);
+  }
+}
+/* -------------advisors-card---------------Mlewis- */
+
+/* -------------form---------------Mlewis- */
+
+.form-label {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #161616;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.form-select {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: .375rem 1rem .375rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6C737F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url(../assets/images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: left .75rem center;
+  background-size: 1.25rem 1.25rem;
+  border: 1px solid #9DA4AE;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.form-select:focus-visible {
+  box-shadow: none;
+  background-color: #F3F4F6;
+  outline: none;
+}
+.form-select:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #161616 !important;
+  background-color: #F3F4F6;
+  outline: none;
+}
+.form-select:visited {
+  box-shadow: none;
+  border-bottom: 2px solid #161616 !important;
+  background-color: #F3F4F6;
+  outline: none;
+}
+
+/* -------------form---------------Mlewis- */
+
+/* -------------filter-card---------------Mlewis- */
+.filter-cards .row {
+  flex-wrap: inherit;
+  align-items: end;
+  margin-bottom: 24px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .filter-cards .row {
+    flex-wrap: inherit;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+}
+/* -------------advisors-card---------------Mlewis- */
+
+/* -------------advisors-card-info---------------Mlewis- */
+.layout-3-9 .row {
+  margin: 0 -0.5rem;
+}
+.layout-3-9 .row .col-lg-3 .card {
+  height: 100%;
+}
+.advisor-card-info {
+  text-align: center;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(22, 22, 22, 0.20);
+}
+
+.advisor-info {
+  margin-top: 20px;
+}
+
+.advisor-info .role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #737B8B;
+}
+
+.advisor-info .name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 9px 0px;
+}
+
+.advisor-info .department {
+  font-size: 14px;
+  color: #666;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 20px 0;
+}
+
+.webex-section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 5px 12px;
+  border: solid 1px #E5E7EB;
+}
+
+.webex-section img {
+  width: 25px;
+}
+
+@media (max-width: 992px) {
+  .layout-3-9 .col-lg-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+/* -------------advisors-card-info---------------Mlewis- */
