@@ -1798,6 +1798,9 @@ table .status {
   width: max-content;
   cursor: pointer;
 }
+.popup-time-con {
+  flex-wrap: wrap;
+}
 .popup-card p {
   color: #161616;
   font-size: 14px;
@@ -1832,8 +1835,6 @@ table .status {
   font-size: 16px;
   font-weight: 500;
 }
-.popup-card.select-time-popup {
-}
 .popup-card.success-add-popup {
   border-top: 8px solid #079454c5;
 }
@@ -1851,6 +1852,134 @@ table .status {
 }
 
 /* ---------------------  */
+.cards-container.sessions-details-con {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: var(--defult-cards-gap);
+}
+.sessions-details-con .user {
+  width: 100%;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.sessions-details-con .user-info {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.sessions-details-con .user-info .user-img {
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.sessions-details-con .user-info .user-img img {
+  width: 100%;
+}
+.sessions-details-con .user-info h4 {
+  color: #737b8b;
+  font-size: 14px;
+  font-weight: 700;
+}
+.webex-logo {
+  border: 1px solid #e5e7eb;
+  padding: 3px 8px;
+  border-radius: var(--sm-border-radius);
+}
+.session-details-card .icon-bg {
+  background-color: #f3fcf6;
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+}
+.session-details-card .card-content {
+  margin: 25px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.gray-text {
+  color: #6a7383;
+}
+.session-details-card .card-content .time {
+  padding: 3px 15px;
+  color: #1f2a37;
+  font-size: 16px;
+  font-weight: 500;
+  width: max-content;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #dadde1;
+  background: #f3f4f6;
+}
+.session-details-card h4 {
+  color: #161616;
+  font-size: 14px;
+  font-weight: 700;
+}
+.session-details-card .text-area {
+  width: 100%;
+}
+.session-details-card .text-area textarea:focus {
+  outline: none;
+}
+.session-details-card input::placeholder {
+  font-size: 16px;
+}
+
+input.radio-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #6c737f;
+  accent-color: #1b8354;
+}
+
+.session-details-card .text-area textarea {
+  width: 100%;
+  height: 75px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: var(--sm-border-radius);
+  border: 1px solid #9da4ae;
+}
+.session-details-card .attached-files-con {
+  grid-column: span 2;
+}
+.session-details-card .attached-files {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+.session-details-card .attached-files .input {
+  border-radius: var(--Radius-radius-sm, 4px);
+  border: 1px solid var(--Border-border-neutral-primary, #d2d6db);
+  background: var(--Background-background-neutral-100, #f3f4f6);
+}
+.attached-files-con .upload-files-con {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: var(--sm-border-radius);
+  border: 1px dashed #d2d6db;
+  background: #f3f4f6;
+  margin-bottom: 20px;
+}
+.session-details-card .btn {
+  font-size: 16px;
+}
+
 /* ---------------end consultant services details-------------------------- */
 
 /* -------------- End main ----------------------  */
@@ -2040,6 +2169,11 @@ table .status {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width: 900px) {
+  .cards-container.sessions-details-con {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* for small/mobile screen  */
 @media screen and (max-width: 767px) {
@@ -2091,6 +2225,13 @@ table .status {
   }
   .surveys-cards-container {
     grid-template-columns: 1fr !important;
+  }
+  .popup-card {
+    padding: 12px;
+    margin: 15px;
+  }
+  .popup-card p {
+    width: 280px;
   }
 }
 /* ----------------------- */
@@ -2873,7 +3014,7 @@ nav .pagination .more .page-link {
   gap: 4px;
 }
 .tab-buttons-2 {
-  border-bottom: solid 3px #D2D6DB;
+  border-bottom: solid 3px #d2d6db;
   margin-top: 0px;
 }
 .tab-btn i.icon-tab {
@@ -3172,7 +3313,7 @@ nav .pagination .more .page-link {
 }
 .advisors-card {
   background-color: #fff;
-  border: 1px solid rgba(185, 204, 209, 0.50);;
+  border: 1px solid rgba(185, 204, 209, 0.5);
   border-radius: 16px;
   text-align: center;
   padding: 24px 16px;
@@ -3180,7 +3321,6 @@ nav .pagination .more .page-link {
   margin-bottom: 16px;
   display: block;
 }
-
 
 .advisors-card:hover {
   transform: scale(1.05);
@@ -3197,7 +3337,7 @@ nav .pagination .more .page-link {
 .advisors-card h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #1F2A37;
+  color: #1f2a37;
 }
 
 .advisors-card .divider {
@@ -3216,7 +3356,7 @@ nav .pagination .more .page-link {
   margin: 0 auto;
   border-radius: 4px;
   padding: 5px 12px;
-  border: solid 1px #E5E7EB;
+  border: solid 1px #e5e7eb;
 }
 
 .advisors-card p {
@@ -3252,38 +3392,38 @@ nav .pagination .more .page-link {
   display: block;
   height: 40px;
   width: 100%;
-  padding: .375rem 1rem .375rem 2.25rem;
+  padding: 0.375rem 1rem 0.375rem 2.25rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #6C737F;
+  color: #6c737f;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: #fff;
   background-image: url(../assets/images/select-arrow.svg);
   background-repeat: no-repeat;
-  background-position: left .75rem center;
+  background-position: left 0.75rem center;
   background-size: 1.25rem 1.25rem;
-  border: 1px solid #9DA4AE;
+  border: 1px solid #9da4ae;
   border-radius: 4px;
   box-shadow: none;
 }
 .form-select:focus-visible {
   box-shadow: none;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   outline: none;
 }
 .form-select:focus {
   box-shadow: none;
   border-bottom: 2px solid #161616 !important;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   outline: none;
 }
 .form-select:visited {
   box-shadow: none;
   border-bottom: 2px solid #161616 !important;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   outline: none;
 }
 
@@ -3339,7 +3479,7 @@ nav .pagination .more .page-link {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 4px solid rgba(22, 22, 22, 0.20);
+  border: 4px solid rgba(22, 22, 22, 0.2);
 }
 
 .advisor-info {
@@ -3349,7 +3489,7 @@ nav .pagination .more .page-link {
 .advisor-info .role {
   font-size: 14px;
   font-weight: 600;
-  color: #737B8B;
+  color: #737b8b;
 }
 
 .advisor-info .name {
@@ -3379,7 +3519,7 @@ nav .pagination .more .page-link {
   margin: 0 auto;
   border-radius: 4px;
   padding: 5px 12px;
-  border: solid 1px #E5E7EB;
+  border: solid 1px #e5e7eb;
 }
 
 .webex-section img {

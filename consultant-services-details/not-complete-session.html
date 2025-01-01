@@ -9,72 +9,7 @@
     <!-- -------------- english page style ------------- -->
     <!-- <link rel="stylesheet" href="css/en-style.css" /> -->
   </head>
-  <!-- add stop-scroll-popup class when popup appear  -->
-  <body class="stop-scroll-popup">
-    <!----- start popup cards--- -->
-    <div class="popup-container">
-      <!-- select time popup  -->
-      <div class="popup-card select-time-popup" id="select-time-popup">
-        <div class="flex-column gap-8">
-          <div class="flex-row space-btw">
-            <img class="icon-bg" src="../assets/icons/add-circle.svg" alt="" />
-            <img src="../assets/icons/close-icon.svg" alt="" />
-          </div>
-          <h4>٢٤ ديسمبر، ٢٠٢٤</h4>
-        </div>
-        <div class="flex-column gap-8">
-          <p>
-            <span class="red-star">*</span>موعد الجلسة (بتوقيت المملكة العربية
-            السعودية)
-          </p>
-          <div class="popup-time-con flex-row gap-8">
-            <div class="time">١٠:٢٠ ص</div>
-            <div class="time">١٠:٢٠ ص</div>
-            <div class="time">١٠:٢٠ ص</div>
-            <div class="time">١٠:٢٠ ص</div>
-            <div class="time">١٠:٢٠ ص</div>
-            <div class="time">١٠:٢٠ ص</div>
-          </div>
-        </div>
-        <div class="flex-column gap-8">
-          <p>الوقت الإضافي (بتوقيت المملكة العربية السعودية)</p>
-          <div class="input">
-            <input type="text" placeholder="قم بكتابة الوقت الإضافي" />
-          </div>
-        </div>
-        <div class="flex-row gap-8 btn-cont">
-          <button class="btn">الغاء</button>
-          <button class="btn black-bg flex-row gap-5" id="add-time-btn">
-            <img src="../assets/icons/right-arrow.svg" alt="" />اضافة
-          </button>
-        </div>
-      </div>
-      <!-- -----------------------------------  -->
-      <!-- successful add popup  -->
-      <div class="popup-card success-add-popup hide" id="success-add-popup">
-        <div class="">
-          <img
-            class="icon-bg light-success-bg"
-            src="../assets/icons/success-2.svg"
-            alt=""
-          />
-        </div>
-        <div class="flex-column gap-8">
-          <h4>تم اضافة جلستك بنجاح</h4>
-          <p>
-            يكتب المحتوى الإضافي هنا في حال ان رسالة الاشعار أو التنبيه تحتاج
-            الى شرح أو تفصيل.
-          </p>
-        </div>
-        <div class="flex-row gap-8 btn-cont">
-          <button class="btn">اضافة موعد جديد</button>
-          <button class="btn no-border light-gray-bg">الغاء</button>
-        </div>
-      </div>
-      <!-- --------------------------  -->
-    </div>
-    <!----- end popup cards--- -->
-    <!-- ------------------  -->
+  <body>
     <div class="overlay-bg"></div>
     <div class="container">
       <!-- -------------------Start sidebar menu --------------- -->
@@ -364,100 +299,67 @@
               <div class="flex-row space-btw">
                 <h3>جميع الجلسات</h3>
                 <div class="flex-row gap-12">
-                  <button class="functions-btn">
+                  <button class="functions-btn selected">
                     <img src="../assets/icons/pause-icon.svg" alt="" />
                   </button>
-                  <button class="functions-btn selected">
+                  <button class="functions-btn">
                     <img src="../assets/icons/calander-6.svg" alt="" />
                   </button>
                 </div>
               </div>
               <!------ table ------>
               <div class="table-responsive">
-                <table class="table sessions-dates-table">
+                <table class="table">
                   <thead>
                     <tr>
-                      <th colspan="7">
-                        <div class="flex-row">
-                          <img src="../assets/icons/pre-arrow.svg" alt="" />
-                          <h4>يوليو</h4>
-                          <h4>٢٠٢٥</h4>
-
-                          <img src="../assets/icons/next-arrow.svg" alt="" />
-                        </div>
-                      </th>
+                      <th>اسم المستفيد</th>
+                      <th>وسيلة التواصل</th>
+                      <th>حالة الجلسة</th>
+                      <th>تاريخ الحجز</th>
+                      <th>ميعاد الجلسة</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>الأحد</td>
-                      <td>الاثنين</td>
-                      <td>الثلاثاء</td>
-                      <td>الاربعاء</td>
-                      <td>الخميس</td>
-                      <td>الجمعة</td>
-                      <td>السبت</td>
-                    </tr>
-                    <tr>
                       <td>
-                        <div>
-                          <h4>١</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>٢</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>٣</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="status light-error-bg">
+                          <p>لم تكتمل</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٤</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٥</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٦</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
                           </div>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <h4>٧</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
                           </div>
                         </div>
                       </td>
@@ -465,65 +367,43 @@
 
                     <tr>
                       <td>
-                        <div>
-                          <h4>٨</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>٩</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>١٠</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>١١</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>١٢</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>١٣</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
                           </div>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <h4>١٤</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
                           </div>
                         </div>
                       </td>
@@ -531,64 +411,43 @@
 
                     <tr>
                       <td>
-                        <div>
-                          <h4>١٥</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>١٦</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>١٧</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>١٨</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>١٩</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٢٠</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
                           </div>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <h4>٢١</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
                           </div>
                         </div>
                       </td>
@@ -596,92 +455,307 @@
 
                     <tr>
                       <td>
-                        <div>
-                          <h4>٢٢</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>٢٣</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
                         </div>
                       </td>
                       <td>
-                        <div>
-                          <h4>٢٤</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٢٥</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٢٦</h4>
-                          <div class="flex-column">
-                            <div class="time">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٢٧</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
                           </div>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <h4>٢٨</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
                           </div>
                         </div>
                       </td>
                     </tr>
+
                     <tr>
                       <td>
-                        <div>
-                          <h4>٢٩</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٣٠</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
-                          </div>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
                         </div>
                       </td>
 
                       <td>
-                        <div>
-                          <h4>٣١</h4>
-                          <div class="flex-column">
-                            <div class="time disabled">١٠:٣٠ ص</div>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="text">
+                          <p>حسن يوسف علي</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="communication">
+                          <span class="webex-tag">
+                            Webex
+                            <img src="../assets/icons/monitor.svg" alt="" />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="status light-success-bg">
+                          <p>اكتملت</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="text">
+                          <p>٢٤ /١٢/ ٢٠٢٤</p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="time">
+                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="flex-row gap-30">
+                          <div class="action-table">
+                            <button class="btn primary">تفاصيل الجلسة</button>
+                          </div>
+                          <div class="functions-icon light-gray-bg">
+                            <img src="../assets/icons/more-vert.svg" alt="" />
                           </div>
                         </div>
                       </td>
@@ -691,6 +765,44 @@
               </div>
 
               <!-- end table  -->
+              <div
+                class="cardfooter d-flex justify-content-end align-items-center"
+              >
+                <nav
+                  class="pag-table d-flex align-items-center"
+                  aria-label="Pagination"
+                >
+                  <ul
+                    class="pagination pagination-sm justify-content-center gap-2 my-0 px-0"
+                  >
+                    <li class="page-item">
+                      <a class="page-link Previous" href="#">
+                        <img src="../assets/icons/pre-arrow.svg" alt="" />
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item more">
+                      <a class="page-link" href="#">...</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">999</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link Next" href="#">
+                        <img src="../assets/icons/next-arrow.svg" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
           <!-- ----end session dates card ----- -->
