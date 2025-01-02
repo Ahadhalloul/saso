@@ -840,6 +840,18 @@
 
       <!-- ------------------------------------------------------ -->
     </div>
+    <!-- //--------------- select time popup cards ------------ -->
+    <script>
+      const addTimeCard = document.querySelector("#select-time-popup");
+      const successAddCard = document.querySelector("#success-add-popup");
+      const addTimeBtn = document.querySelector("#add-time-btn");
+
+      addTimeBtn.addEventListener("click", () => {
+        addTimeCard.classList.add("hide");
+        successAddCard.classList.remove("hide");
+      });
+    </script>
+    <!-- // -------------------------------------- -->
     <!-- --------- main javascript -------- -->
     <script src="../js/main.js"></script>
   </body>

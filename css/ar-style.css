@@ -850,7 +850,7 @@ a {
 }
 
 .light-info-bg {
-  background-color: #eff8ff;
+  background-color: #eff8ff !important;
   color: #1849a9;
   border: 1px solid #b2ddff;
 }
@@ -1835,20 +1835,28 @@ table .status {
   font-size: 16px;
   font-weight: 500;
 }
-.popup-card.success-add-popup {
+.popup-card.success-add-popup,
+.popup-card.confirm-send-popup {
   border-top: 8px solid #079454c5;
 }
-.popup-card.success-add-popup p {
+.popup-card.success-add-popup p,
+.popup-card.send-problem-popup p,
+.popup-card.confirm-send-popup p {
   width: 311px;
   color: #384250;
 }
-.popup-card.success-add-popup .btn-cont {
+.popup-card.success-add-popup .btn-cont,
+.popup-card.send-problem-popup .btn-cont {
   flex-direction: column;
   margin-top: 10px;
 }
-.popup-card.success-add-popup .btn-cont .btn {
+.popup-card.success-add-popup .btn-cont .btn,
+.popup-card.send-problem-popup .btn-cont .btn {
   width: 100%;
   justify-content: center;
+}
+.popup-card.send-problem-popup {
+  border-top: 8px solid #1570efbb;
 }
 
 /* ---------------------  */
@@ -2232,6 +2240,12 @@ input.radio-btn {
   }
   .popup-card p {
     width: 280px;
+  }
+  .session-details-card .card-content {
+    grid-template-columns: 1fr;
+  }
+  .session-details-card .attached-files-con {
+    grid-column: span 1;
   }
 }
 /* ----------------------- */

@@ -146,15 +146,3 @@ window.addEventListener("click", (event) => {
 });
 
 // ----------------------------// ----------------------------
-//--------------- popup cards ------------
-const addTimeCard = document.querySelector("#select-time-popup");
-const successAddCard = document.querySelector("#success-add-popup");
-const addTimeBtn = document.querySelector("#add-time-btn");
-
-addTimeBtn.addEventListener("click", () => {
-  addTimeCard.classList.add("hide");
-  successAddCard.classList.remove("hide");
-  console.log("test");
-});
-// --------------------------------------
-// -------------------------------------
