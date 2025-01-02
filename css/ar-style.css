@@ -493,6 +493,9 @@ a {
 .gap-5 {
   gap: 5px;
 }
+.gap-20 {
+  gap: 20px;
+}
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
@@ -805,7 +808,7 @@ a {
   color: #0091b4;
 }
 .light-green-bg {
-  background-color: #ecfdf3;
+  background-color: #ecfdf3 !important;
   color: #1b8354;
 }
 .light-yellow-bg {
@@ -954,6 +957,12 @@ a {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   background-color: #0d121c;
   color: #fff;
+  border: 1px solid transparent;
+}
+.btn-gray {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background-color: #f3f4f6;
+  color: #161616;
   border: 1px solid transparent;
 }
 .functions-icon {
@@ -1759,7 +1768,7 @@ table .status {
   background-color: #000000b2;
   min-width: 100%;
   min-height: 100vh;
-  z-index: 1;
+  z-index: 21;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1897,7 +1906,8 @@ table .status {
   padding: 3px 8px;
   border-radius: var(--sm-border-radius);
 }
-.session-details-card .icon-bg {
+.session-details-card .icon-bg,
+.session-recommendation-card .icon-bg {
   background-color: #f3fcf6;
   border-radius: 50%;
   padding: 10px;
@@ -1929,10 +1939,16 @@ table .status {
   font-size: 14px;
   font-weight: 700;
 }
-.session-details-card .text-area {
+.session-details-card .text-area,
+.text-area {
   width: 100%;
 }
-.session-details-card .text-area textarea:focus {
+textarea,
+textarea::placeholder {
+  word-spacing: -5px;
+}
+.session-details-card .text-area textarea:focus,
+.text-area textarea:focus {
   outline: none;
 }
 .session-details-card input::placeholder {
@@ -1947,9 +1963,10 @@ input.radio-btn {
   accent-color: #1b8354;
 }
 
-.session-details-card .text-area textarea {
+.session-details-card .text-area textarea,
+.text-area textarea {
   width: 100%;
-  height: 75px;
+  height: 80px;
   padding: 12px 16px;
   font-size: 16px;
   font-weight: 400;
@@ -1965,7 +1982,7 @@ input.radio-btn {
   gap: 15px;
   margin-top: 10px;
 }
-.session-details-card .attached-files .input {
+.attached-files .input {
   border-radius: var(--Radius-radius-sm, 4px);
   border: 1px solid var(--Border-border-neutral-primary, #d2d6db);
   background: var(--Background-background-neutral-100, #f3f4f6);
@@ -1987,7 +2004,114 @@ input.radio-btn {
 .session-details-card .btn {
   font-size: 16px;
 }
-
+.span-2 {
+  grid-column: span 2;
+}
+.session-recommendation-card .card-content {
+  margin: 30px 0px;
+}
+.recommendation-textarea-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.facility-standard .numbers div {
+  border-radius: var(--sm-border-radius);
+  border: 1px solid #d2d6db;
+  padding: 8px 16px;
+}
+.facility-standard h3 {
+  color: #161616;
+  font-size: 16px;
+}
+.facility-standard > div > div:last-child {
+  padding: 8px 16px;
+  border-radius: var(--sm-border-radius);
+}
+/*-- progress box -- */
+.session-recommendation-card .progress-indicator {
+  border-radius: 4px;
+  border: 1px solid #067647;
+  background: #f7fdf5;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 25px 0px;
+}
+.progressbar-container {
+  width: 650px;
+  z-index: 1;
+}
+.progressbar li {
+  width: 200px;
+  position: relative;
+  /* text-align: end; */
+  text-align: center;
+  list-style: none;
+  white-space: nowrap;
+  color: #6c737f;
+}
+.progressbar li.active {
+  color: var(--primary-text-color);
+}
+.progressbar {
+  display: flex;
+  counter-reset: step;
+  gap: 20px;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #d2d6db;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 27px;
+  background: #f7fdf5;
+  color: #bebebe;
+  text-align: center;
+  font-weight: bold;
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #d2d6db;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li.active:before {
+  border: 3px solid #1b8354;
+  color: #1b8354;
+}
+.progressbar li.done:before {
+  border: 3px solid #1b8354;
+  background-color: #1b8354;
+  content: "✔";
+  color: #fff;
+}
+.session-recommendation-card .card-content {
+  display: grid;
+  gap: 30px;
+}
+.session-recommendation-card .card-content .attached-files-con {
+  grid-column: span 2;
+}
+.session-recommendation-card .card-content .attached-files-con .attached-files {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.session-recommendation-card .user-recommendation-card {
+  width: 55%;
+}
+/* ------------------  */
 /* ---------------end consultant services details-------------------------- */
 
 /* -------------- End main ----------------------  */
@@ -2178,7 +2302,8 @@ input.radio-btn {
   }
 }
 @media screen and (max-width: 900px) {
-  .cards-container.sessions-details-con {
+  .cards-container.sessions-details-con,
+  .recommendation-textarea-con {
     grid-template-columns: 1fr;
   }
 }
@@ -2226,6 +2351,18 @@ input.radio-btn {
     align-items: flex-start;
     width: auto;
   }
+  .session-recommendation-card .card-content {
+    grid-template-columns: 1fr;
+  }
+  .session-recommendation-card .card-content .attached-files-con {
+    grid-column: span 1;
+  }
+  .session-recommendation-card
+    .card-content
+    .attached-files-con
+    .attached-files {
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   .employees-files-container .employees-cards-container {
@@ -2246,6 +2383,12 @@ input.radio-btn {
   }
   .session-details-card .attached-files-con {
     grid-column: span 1;
+  }
+  .facility-standard .numbers div {
+    padding: 4px 8px;
+  }
+  .facility-standard .numbers {
+    gap: 10px;
   }
 }
 /* ----------------------- */
