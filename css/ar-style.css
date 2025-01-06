@@ -818,7 +818,15 @@ a {
 .light-gray-bg {
   background-color: #f8f9fa !important;
 }
-
+/* --- status-rounded colors --- */
+.active-bg {
+  background-color: #ecfdf3;
+  color: #085D3A;
+}
+.not-active-bg {
+  background-color: #F9FAFB;
+  color: #1F2A37;
+}
 /* --- status colors --- */
 .light-neutral-bg {
   color: #1f2a37;
@@ -922,6 +930,20 @@ a {
 .status p {
   font-size: 10px;
   font-weight: 700;
+}
+/* ----------  */
+.status-rounded {
+  padding: 2px 8px;
+  border-radius: 50px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-left: 15px;
+}
+.status-rounded p {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .main-container {
@@ -2500,6 +2522,28 @@ input.radio-btn {
   font-size: 1.5rem;
   font-weight: 600;
   color: #484848;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.title-page .title h2 span {
+  font-size: .75rem;
+  font-weight: 500;
+  color: #085D3A;
+  background-color: #ECFDF3;
+  border: solid 1px #ABEFC6;
+  border-radius: 4px;
+  padding: 5px 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+}
+.title-page .title h2 span i.fast-icon {
+  background-image: url(../assets/images/fast-icon.svg);
+  height: 14px;
+  width: 14px;
+  display: block;
 }
 
 .cta {
@@ -2610,9 +2654,28 @@ input.radio-btn {
   color: #000;
 }
 
+.card-title .title-text p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
 .card-title .title-btn {
   display: flex;
   gap: 16px;
+}
+
+.card-title .title-btn .btn-neutral {
+  background-color: #0d121c;
+  padding: 7px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.card-title .title-btn .btn-neutral:hover {
+  background-color: #1F2A37;
 }
 
 .card-title:not(:has(.title-text)) .title-btn {
@@ -2783,12 +2846,20 @@ nav .pagination .more .page-link {
   border-left: 0;
 }
 
+.table thead tr th:first-child:has(.form-check) {
+  width: 50px;
+}
+
 .table thead tr th:last-child {
   border-top-left-radius: 8px;
   border-top-right-radius: 0;
   border-left: solid 1px #e5e7eb;
   border-right: 0;
   text-align: end;
+}
+
+.without-cta thead tr th:last-child {
+  text-align: start;
 }
 
 .table tbody tr {
@@ -2834,10 +2905,30 @@ nav .pagination .more .page-link {
   display: flex;
 }
 
+.table thead tr th input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.table thead tr th input[type="checkbox"]:checked {
+  background-color: #1B8354;
+  border-color: #1B8354;
+  background-image: url("../assets/images/ok.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .table tbody tr td input[type="checkbox"]:checked {
-  background-color: #19697c;
-  border-color: #19697c;
-  background-image: url("../images/ok.svg");
+  background-color: #1B8354;
+  border-color: #1B8354;
+  background-image: url("../assets/images/ok.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -2888,6 +2979,13 @@ nav .pagination .more .page-link {
   font-size: 16px;
   font-weight: 400;
   color: #161616;
+  width: max-content;
+}
+
+.table tbody tr td .text p a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1B8354;
   width: max-content;
 }
 
@@ -2962,6 +3060,22 @@ nav .pagination .more .page-link {
   box-shadow: none;
   border: 0;
   display: flex;
+}
+
+.table tbody tr td .info span.info-tag {
+  background-color: #F9FAFB;
+  border: solid 1px #E5E7EB;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #1F2A37;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .table tbody tr td .action-table .btn.primary {
@@ -3180,6 +3294,9 @@ nav .pagination .more .page-link {
   gap: 64px;
   margin-left: 48px;
 }
+.service-description .p {
+  width: -webkit-fill-available;
+}
 .service-description p {
   color: #1f2a37;
   font-family: "IBM Plex Sans Arabic";
@@ -3250,6 +3367,27 @@ nav .pagination .more .page-link {
 }
 .tab-btn i.icon-related {
   background-image: url(../assets/images/icon-related.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.calendar-icon-tab {
+  background-image: url(../assets/images/calender-icon-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.user-icon-tab {
+  background-image: url(../assets/images/user-icon-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.skills-icon-tab {
+  background-image: url(../assets/images/skills-icon-tab.svg);
   background-repeat: no-repeat;
   display: block;
   height: 15px;
@@ -3605,10 +3743,73 @@ nav .pagination .more .page-link {
 .form-label {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #161616;
   margin-bottom: 8px;
   display: inline-block;
+}
+
+.form-label span.required {
+  font-size: 14px;
+  font-weight: 400;
+  color: #B42318;
+}
+
+.form-label span.label-info {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6A7383;
+}
+
+.form-label[aria-disabled="true"] {
+  color: #9DA4AE;
+}
+
+.form-label[aria-disabled="true"] span {
+  color: #9DA4AE;
+}
+
+.form-input {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: .375rem 1rem .375rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6C737F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #9DA4AE;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.form-input:disabled {
+  color: #9DA4AE;
+  border: 1px solid #9DA4AE;
+}
+
+.form-input-textarea {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  display: block;
+  height: auto;
+  width: 100%;
+  padding: .375rem 1rem .375rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6C737F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #9DA4AE;
+  border-radius: 4px;
+  box-shadow: none;
 }
 
 .form-select {
@@ -3633,18 +3834,26 @@ nav .pagination .more .page-link {
   border-radius: 4px;
   box-shadow: none;
 }
-.form-select:focus-visible {
+
+.form-select:disabled {
+  color: #9DA4AE;
+  background-color: #fff;
+  background-image: url(../assets/images/select-arrow-disabled.svg);
+  border: 1px solid #9DA4AE;
+}
+
+.form-select:focus-visible, .form-input:focus-visible, .form-input-textarea:focus-visible {
   box-shadow: none;
   background-color: #f3f4f6;
   outline: none;
 }
-.form-select:focus {
+.form-select:focus, .form-input:focus, .form-input-textarea:focus {
   box-shadow: none;
   border-bottom: 2px solid #161616 !important;
   background-color: #f3f4f6;
   outline: none;
 }
-.form-select:visited {
+.form-select:visited, .form-input:visited, .form-input-textarea:visited {
   box-shadow: none;
   border-bottom: 2px solid #161616 !important;
   background-color: #f3f4f6;
@@ -3697,6 +3906,15 @@ nav .pagination .more .page-link {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.advisor-card-info .selected-date {
+  text-align: center;
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .avatar img {
@@ -3756,3 +3974,277 @@ nav .pagination .more .page-link {
   }
 }
 /* -------------advisors-card-info---------------Mlewis- */
+
+/* -------------advisors-card-info---------------Mlewis- */
+.tab-body {
+  border-radius: 16px;
+  padding: 16px;
+  border: solid 1px #D2D6DB;
+}
+
+.select-date {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-date {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  border-bottom: solid 1px #D2D2D2;
+  padding-bottom: 16px;
+}
+
+.selected-date .selected-date-icon {
+  background-image: url(../assets/images/selected-date.svg);
+  height: 24px;
+  width: 24px;
+  display: block;
+}
+
+.selected-date h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2D2B2B;
+}
+
+.select-date .select-date-icon {
+  background-color: #F3FCF6;
+  padding: 11px;
+  border-radius: 50%;
+  display: flex;
+}
+.reservation-report {
+  border-radius: 16px;
+  padding: 16px;
+  border: solid 1px #D2D6DB;
+}
+form .form-group {
+  margin-bottom: 24px;
+}
+form .form-group .time-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+form .form-group .time-list span.info-tag {
+  font-size: 16px;
+  font-weight: 400;
+  color: #161616;
+  background-color: #F3F4F6;
+  border: solid 1px #DADDE1;
+  border-radius: 6px;
+  padding: 7px 25px;
+}
+.file-upload-container {
+  border: 2px dashed #D2D6DB;
+  padding: 24px;
+  text-align: center;
+  background: #F3F4F6;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.file-upload-container:hover {
+  background: #F6FEF9;
+  border: 2px dashed #067647;
+}
+
+.file-upload-container .content {
+  margin: 1.25rem 0;
+}
+.file-upload-container .content span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1F2A37;
+  margin-bottom: 8px;
+  display: block;
+}
+.file-upload-container .content p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #384250;
+}
+
+.file-upload-container input[type="file"] {
+  display: none;
+}
+
+.uploaded-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F3F4F6;
+  border: solid 1px #D2D6DB;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+.uploaded-file .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.uploaded-file .info .success-up-icon {
+  background-image: url(../assets/images/success-up-icon.svg);
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.uploaded-file .delete-icon {
+  background-image: url(../assets/images/button-close-icon.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.message-form h5 {
+  color: #2D2B2B;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+}
+
+/* -------------advisors-card-info---------------Mlewis- */
+/* -------------modal-message---------------Mlewis- */
+.modal-message .modal-content {
+  border-top: solid 8px #51B488;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 16px;
+}
+.modal-message .modal-body {
+  margin: 16px 0;
+}
+.modal-message .icon-container {
+  display: contents;
+}
+.modal-message .modal-body h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1F2A37;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
+.modal-message .modal-body p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #384250;
+  margin-bottom: 0;
+  direction: rtl;
+  text-align: start;
+}
+.modal-message .modal-footer button {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+/* -------------modal-message---------------Mlewis- */
+/* -------------session-recommendations---------------Mlewis- */
+.session-recommendations {
+    border-radius: 16px;
+    padding: 16px;
+    border: solid 1px #D2D6DB;
+}
+.session-recommendations .content-text {
+  margin-bottom: 16px;
+}
+.session-recommendations .content-text:last-child {
+  margin-bottom: 16px;
+}
+.session-recommendations .content-text h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 8px;
+}
+.session-recommendations .content-text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #979797;
+  margin-bottom: 8px;
+}
+
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  margin-top: 16px;
+}
+.file-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.file-size {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0 0;
+}
+
+.file-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background-color: #e0f7e9;
+  border-radius: 50%;
+}
+
+.file-icon svg {
+  width: 38px;
+  height: 38px;
+  fill: #1abc9c;
+}
+
+.time-info-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.time-info-tag .info-tag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2C2C2C;
+  border: solid 1px #DADDE1;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 7px 15px;
+}
+/* -------------session-recommendations---------------Mlewis- */
