@@ -940,6 +940,7 @@ a {
   padding: 8px 16px;
   border-radius: var(--sm-border-radius);
   cursor: pointer;
+  white-space: nowrap;
 }
 .btn-primary {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -1337,6 +1338,9 @@ a {
   background-color: #f3f4f6;
   padding: 6px 12px;
 }
+.booked-session-container .status.more-details {
+  margin-left: 0;
+}
 .booked-session-container .services-list-card .services-list {
   gap: 15px;
 }
@@ -1539,7 +1543,13 @@ table.files-table tr:first-child td {
   max-width: 220px;
 }
 .charts-cards-container.facility-rep .measurement-chart {
+  width: 100%;
+}
+.charts-cards-container.facility-rep .measurement-chart.dual-bar-chart {
   max-width: 550px;
+}
+.charts-cards-container.facility-rep .measurement-chart.dual-bar-chart canvas {
+  width: 100%;
 }
 .charts-cards-container.facility-rep .measurement-chart p {
   font-size: 10px;
@@ -1551,6 +1561,7 @@ table.files-table tr:first-child td {
 }
 .charts-cards-container.facility-rep .measurement-chart .chart-footer {
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 /* ------------start consultant services details------------------ */
@@ -1562,8 +1573,11 @@ table.files-table tr:first-child td {
 .primary-cards.services-cards {
   margin-bottom: 30px;
 }
+.primary-cards.services-cards .consultant-service-card {
+  cursor: pointer;
+}
 .primary-cards .disabled-card {
-  background-color: #e5e7eb;
+  background-color: #e5e7eb !important;
 }
 .primary-cards .disabled-card h5,
 .primary-cards .disabled-card p {
@@ -2041,17 +2055,21 @@ input.radio-btn {
   margin: 25px 0px;
 }
 .progressbar-container {
-  width: 650px;
+  width: 50%;
   z-index: 1;
 }
 .progressbar li {
-  width: 200px;
+  width: 30%;
   position: relative;
   /* text-align: end; */
-  text-align: center;
+  /* text-align: center; */
   list-style: none;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   color: #6c737f;
+}
+.progressbar li:nth-child(2) {
+  width: 40%;
+  /* white-space: nowrap; */
 }
 .progressbar li.active {
   color: var(--primary-text-color);
@@ -2059,7 +2077,7 @@ input.radio-btn {
 .progressbar {
   display: flex;
   counter-reset: step;
-  gap: 20px;
+  gap: 5px;
 }
 .progressbar li:before {
   content: counter(step);
@@ -2068,7 +2086,7 @@ input.radio-btn {
   height: 30px;
   border: 3px solid #d2d6db;
   display: block;
-  margin: 0 auto 10px auto;
+  /* margin: 0 auto 10px auto; */
   border-radius: 50%;
   line-height: 27px;
   background: #f7fdf5;
@@ -2080,10 +2098,11 @@ input.radio-btn {
   content: "";
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: #d2d6db;
   top: 15px;
-  left: -50%;
+  /* left: -50%; */
+  right: 0;
   z-index: -1;
 }
 .progressbar li.active:before {
@@ -2095,6 +2114,9 @@ input.radio-btn {
   background-color: #1b8354;
   content: "✔";
   color: #fff;
+}
+.progressbar li.done:after {
+  background-color: #1b8354;
 }
 .session-recommendation-card .card-content {
   display: grid;
@@ -2110,6 +2132,34 @@ input.radio-btn {
 }
 .session-recommendation-card .user-recommendation-card {
   width: 55%;
+}
+/*---------- more time box ------------ */
+.more-time {
+  background-color: #f3f4f6;
+  padding: 2px 8px 0px 8px;
+  border-radius: var(--sm-border-radius);
+  position: relative;
+}
+.more-time .more-time-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 4px;
+  border: 1px solid #d2d6db;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.05),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 12px;
+}
+.more-time .more-time-box h4 {
+  white-space: nowrap;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.more-time .more-time-box .time {
+  cursor: pointer;
 }
 /* ------------------  */
 /* ---------------end consultant services details-------------------------- */
@@ -2138,8 +2188,11 @@ input.radio-btn {
   .booked-session-container .consults-chart {
     flex-direction: row;
   }
+  .progressbar-container {
+    width: 70%;
+  }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .charts-cards-container.facility-emp {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -2218,7 +2271,7 @@ input.radio-btn {
   }
 }
 
-@media screen and (max-width: 1208px) {
+@media screen and (max-width: 1280px) {
   .header {
     margin-left: 0;
     margin-right: 0;
@@ -2300,8 +2353,11 @@ input.radio-btn {
   .quick-links-container .sessions-cards-container {
     grid-template-columns: 1fr 1fr;
   }
+  .progressbar-container {
+    width: 80%;
+  }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
   .cards-container.sessions-details-con,
   .recommendation-textarea-con {
     grid-template-columns: 1fr;
@@ -2309,7 +2365,7 @@ input.radio-btn {
 }
 
 /* for small/mobile screen  */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header .search-icon,
   .header .language,
   .header .user-functions > img {
@@ -2363,6 +2419,9 @@ input.radio-btn {
     .attached-files {
     grid-template-columns: 1fr;
   }
+  .progressbar-container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 600px) {
   .employees-files-container .employees-cards-container {
@@ -2389,6 +2448,14 @@ input.radio-btn {
   }
   .facility-standard .numbers {
     gap: 10px;
+  }
+  .progressbar-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .orders-beneficiaries-container .service-item .item > div {
+    flex-wrap: wrap;
   }
 }
 /* ----------------------- */
