@@ -2546,6 +2546,26 @@ input.radio-btn {
   display: block;
 }
 
+.select-date span {
+  font-size: .75rem;
+  font-weight: 500;
+  color: #085D3A;
+  background-color: #ECFDF3;
+  border: solid 1px #ABEFC6;
+  border-radius: 4px;
+  padding: 5px 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+}
+.select-date span i.done-icon {
+  background-image: url(../assets/images/done-icon.svg);
+  height: 14px;
+  width: 14px;
+  display: block;
+}
+
 .cta {
   display: flex;
   align-items: center;
@@ -3802,6 +3822,8 @@ nav .pagination .more .page-link {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
   color: #6C737F;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3810,6 +3832,13 @@ nav .pagination .more .page-link {
   border: 1px solid #9DA4AE;
   border-radius: 4px;
   box-shadow: none;
+}
+
+
+.form-input-textarea::placeholder {
+  letter-spacing: normal;
+  word-spacing: normal;
+  color: #6C737F;
 }
 
 .form-select {
@@ -3988,7 +4017,13 @@ nav .pagination .more .page-link {
   flex-direction: row-reverse;
   justify-content: start;
   align-items: center;
+  border-bottom: 3px solid #D2D6DB;
+  padding-bottom: 8px;
   gap: 10px;
+}
+
+.select-date h2 {
+  font-size: 18px;
 }
 
 .selected-date {
@@ -4042,6 +4077,11 @@ form .form-group .time-list span.info-tag {
   border: solid 1px #DADDE1;
   border-radius: 6px;
   padding: 7px 25px;
+}
+.form-group p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #161616;
 }
 .file-upload-container {
   border: 2px dashed #D2D6DB;
@@ -4179,6 +4219,14 @@ form .form-group .time-list span.info-tag {
   font-size: 16px;
   font-weight: 400;
   color: #979797;
+  margin-bottom: 8px;
+}
+
+.session-recommendations .form-group {
+  margin-bottom: 24px;
+}
+
+.session-recommendations .form-group h4 {
   margin-bottom: 8px;
 }
 
