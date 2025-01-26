@@ -818,6 +818,15 @@ a {
 .light-gray-bg {
   background-color: #f8f9fa !important;
 }
+.rating + .light-gray-bg  {
+  padding: 0px !important;
+}
+.rating + .light-gray-bg button {
+  background-color: #f8f9fa !important;
+}
+.rating + .light-gray-bg button:hover {
+  background-color: #E5E7EB !important;
+}
 /* --- status-rounded colors --- */
 .active-bg {
   background-color: #ecfdf3;
@@ -843,7 +852,7 @@ a {
 }
 .light-warning-bg {
   background-color: #d9ab4915;
-  color: #93370d;
+  color: #93370D;
   border: 1px solid #fedf89;
 }
 .light-warning-bg > img {
@@ -2051,6 +2060,7 @@ input.radio-btn {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+
 .facility-standard .numbers div {
   border-radius: var(--sm-border-radius);
   border: 1px solid #d2d6db;
@@ -2060,10 +2070,132 @@ input.radio-btn {
   color: #161616;
   font-size: 16px;
 }
+.facility-standard .title {
+  color: #161616;
+  font-size: 16px;
+  width: 30ch;
+  text-overflow: ellipsis;
+}
+@media (max-width: 767px) {
+  .facility-standard .flex-row {
+      flex-wrap: wrap;
+  }
+  .facility-standard .flex-row .title {
+    width: 100%;
+    flex: 1 1 100%;
+    text-align: start;
+}
+}
 .facility-standard > div > div:last-child {
   padding: 8px 16px;
   border-radius: var(--sm-border-radius);
 }
+.questionnaire h4 {
+  color: #161616;
+  font-size: 16px;
+  font-weight: 500;
+}
+.questionnaire p {
+  color: #838383;
+  font-size: 14px;
+  font-weight: 300;
+}
+.facility-standard .rating.numbers {
+  border: 0px;
+  padding: 0px;
+}
+.facility-standard .rating.numbers div {
+  border-radius: var(--sm-border-radius);
+  border: 1px solid transparent;
+  background-color: #F3F4F6;
+  color: #161616;
+  padding: 8px 16px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.facility-standard .rating div:hover, .facility-standard .rating div.active {
+  color: white;
+  background-color: var(--secondary-text-color);
+  border-color: transparent;
+}
+
+.facility-standard button {
+  border-color: transparent;
+}
+
+/*-- Toast -- */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+  transition: opacity 0.5s ease-in-out;
+  direction: rtl;
+  z-index: 999;
+}
+.toast.success {
+  border-right: solid 8px #079455;
+}
+.toast.failure {
+  border-right: solid 8px #ffc107;
+}
+.toast.error {
+  border-right: solid 8px #dc3545;
+}
+.toast .toast-head {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+}
+.toast.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.toast .icon {
+  color: #28a745;
+  font-size: 20px;
+}
+.toast .message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.toast .message .message-text .message-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1F2A37;
+  margin-bottom: 4px;
+}
+.toast .message .message-text .message-p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #384250;
+  margin-bottom: 4px;
+}
+.toast .message .toast-icon {
+  background-color: #ECFDF3;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 100px;
+}
+.toast .message .toast-icon img {
+  height: 20px;
+  width: 20px;
+}
+.toast .close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+}
+
 /*-- progress box -- */
 .session-recommendation-card .progress-indicator {
   border-radius: 4px;
@@ -3408,6 +3540,34 @@ nav .pagination .more .page-link {
 }
 .tab-btn i.skills-icon-tab {
   background-image: url(../assets/images/skills-icon-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.all-tab {
+  background-image: url(../assets/icons/all-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.warning-tab {
+  background-image: url(../assets/icons/warning-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.done-tab {
+  background-image: url(../assets/icons/done-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.error-tab {
+  background-image: url(../assets/icons/error-tab.svg);
   background-repeat: no-repeat;
   display: block;
   height: 15px;

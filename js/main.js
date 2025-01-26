@@ -182,6 +182,44 @@ consultantServiceCard.forEach((e) => {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+// <!-- Rating -->
+document.querySelectorAll(".rating").forEach(rating => {
+  rating.addEventListener("click", function (event) {
+      let target = event.target.closest("div[data-value]");
+      if (target) {
+          let numbers = Array.from(this.children);
+          
+          numbers.forEach(num => num.classList.remove("active"));
+          
+          target.classList.add("active");
+      }
+  });
+});
+
+document.querySelectorAll(".light-gray-bg button").forEach(button => {
+  button.addEventListener("click", function () {
+
+    let parentRow = this.closest(".flex-row"); 
+      if (parentRow) {
+          let rating = parentRow.querySelector(".rating");
+          if (rating) {
+              rating.querySelectorAll("div[data-value]").forEach(num => {
+                  num.classList.remove("active"); 
+              });
+          }
+      }
+  });
+});
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
+// <!-- Toast -->
+function closeToast() {
+  document.getElementById("toast").classList.add("hidden");
+}
+
+setTimeout(closeToast, 5000); // Auto close after 5 seconds
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
 // <!-- more time dropdown box toggle -->
 const moreTimeBtn = document.querySelector("#more-time-btn");
 const moreTimeBox = document.querySelector("#more-time-box");
@@ -197,3 +235,4 @@ window.addEventListener("click", function (e) {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+
