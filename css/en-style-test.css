@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: start;
 }
 
 /* -----------Grid System----------- */
@@ -438,19 +439,22 @@
 
 html {
   scroll-behavior: smooth;
+  direction: ltr;
 }
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   overflow-x: hidden;
   color: var(--primary-text-color);
+  direction: ltr;
 }
+
 .container {
   display: grid;
   grid-template-areas:
-    "header sidebar"
-    "main sidebar";
+    "sidebar header "
+    "sidebar main ";
   grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   min-height: 100vh;
   background-color: var(--primary-bg-color);
 }
@@ -499,9 +503,9 @@ a {
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
-  width: 280px;
+  width: 300px;
   background-color: var(--secondary-bg-color);
-  direction: rtl;
+  direction: ltr;
   overflow: scroll;
   box-shadow: 0px 4px 16px 0px rgba(87, 86, 86, 0.07);
 }
@@ -543,13 +547,15 @@ a {
   gap: 12px;
   color: var(--primary-text-color);
   font-weight: 600;
-  padding-right: 20px;
-  padding-left: 8px;
+  padding-left: 20px;
+  padding-right: 8px;
+  flex-direction: row;
 }
 .sidebar-container .menu-content ul li a:hover {
   background-color: #f3f4f6;
   border-radius: var(--sm-border-radius);
   position: relative;
+  flex-direction: row;
 }
 .sidebar-container .menu-content ul li a:hover::before {
   position: absolute;
@@ -558,7 +564,7 @@ a {
   width: 7px;
   height: 26px;
   top: 6px;
-  right: 0px;
+  left: 0px;
   border-radius: 9px;
 }
 
@@ -577,7 +583,7 @@ a {
   width: 7px;
   height: 26px;
   top: 6px;
-  right: 0px;
+  left: 0px;
   border-radius: 9px;
 }
 .sidebar-container .menu-content ul li a.active img {
@@ -612,7 +618,7 @@ a {
   width: 7px;
   height: 26px;
   top: 7px;
-  right: 0px;
+  left: 0px;
   border-radius: 9px;
 }
 
@@ -630,7 +636,7 @@ a {
   width: 7px;
   height: 26px;
   top: 7px;
-  right: 0px;
+  left: 0px;
   border-radius: 9px;
 }
 
@@ -715,7 +721,7 @@ a {
   padding: 20px;
   justify-content: space-between;
   text-align: right;
-  direction: rtl;
+  direction: ltr;
   box-shadow: 0px 4px 16px 0px rgba(87, 86, 86, 0.07);
 }
 .header h2 {
@@ -743,8 +749,8 @@ a {
   width: 300px;
 }
 .header .search input {
-  text-align: right;
-  margin-right: 12px;
+  text-align: start;
+  margin-left: 12px;
   border: none;
   width: 100%;
 }
@@ -934,7 +940,7 @@ a {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .status p {
   font-size: 10px;
@@ -948,7 +954,7 @@ a {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .status-rounded p {
   font-size: 14px;
@@ -958,7 +964,7 @@ a {
 .main-container {
   grid-area: main;
   margin: 0 15px 30px;
-  direction: rtl;
+  direction: ltr;
 }
 .main-container .card {
   border-radius: 16px;
@@ -1011,6 +1017,7 @@ a {
   gap: var(--defult-cards-gap);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  direction: ltr;
 }
 .statistics-cards-container .card {
   justify-content: space-between;
@@ -1034,6 +1041,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: var(--defult-cards-gap);
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .charts-cards-container .services-list-card .services-list {
   margin-top: 20px;
@@ -1089,7 +1097,7 @@ a {
   border: 1px solid #d2d6db;
   border-radius: var(--sm-border-radius);
   padding: 4px;
-  margin-right: 17px;
+  margin-left: 17px;
   width: 32px;
   height: 32px;
   margin-top: -3px;
@@ -1102,11 +1110,11 @@ a {
   /* gap: -4px; */
   margin-top: 15px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   direction: ltr;
 }
 .charts-cards-container .services-list-card .employee-list-imgs div {
-  margin-left: -6px;
+  margin-right: -6px;
   /* gap: -4px; */
 }
 .charts-cards-container .employee-list-imgs div h6 {
@@ -1182,11 +1190,13 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .workshops-container .workshops-cards-container .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .workshops-container .icon-bg {
   border-radius: 50%;
@@ -1215,6 +1225,7 @@ a {
 }
 .workshops-cards-container .card-content {
   gap: 20px;
+  width: 100%;
 }
 
 .workshops-cards-container .card-content div h4 {
@@ -1251,7 +1262,7 @@ a {
 }
 .no-service-box .btn {
   margin-top: 30px;
-  width: 84px;
+  width: max-content;
   align-items: center;
 }
 .no-service-box p {
@@ -1280,11 +1291,11 @@ a {
 }
 .news-list-card .news-content {
   margin-top: 20px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .news-list-card .news-content .news-img {
   width: 120px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .news-list-card .news-content .news-img img {
   width: 100%;
@@ -1318,13 +1329,14 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .available-sessions-container .icon-bg {
   border-radius: 50%;
   padding: 12px;
   width: 45px;
   height: 45px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
@@ -1370,7 +1382,7 @@ a {
   padding: 6px 12px;
 }
 .booked-session-container .status.more-details {
-  margin-left: 0;
+  margin-right: 0;
 }
 .booked-session-container .services-list-card .services-list {
   gap: 15px;
@@ -1418,6 +1430,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 
 .employee-card .card .icon-bg img,
@@ -1480,10 +1493,12 @@ a {
   font-size: 14px;
   font-weight: 400;
 }
+
 table.files-table {
   width: 100%;
   margin-top: 25px;
   text-align: center;
+  direction: ltr;
 }
 table.files-table thead th > div {
   justify-content: center;
@@ -1521,7 +1536,7 @@ table.files-table tr:first-child td {
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   padding-top: 12px;
   margin-bottom: 25px;
@@ -1550,13 +1565,14 @@ table.files-table tr:first-child td {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .quick-links-container .icon-bg {
   border-radius: 50%;
   padding: 12px;
   width: 45px;
   height: 45px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
@@ -1622,11 +1638,16 @@ table.files-table tr:first-child td {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .card-head.head-nav {
   border-bottom: 3px solid #d2d6db;
   padding-bottom: 5px;
   margin-top: 10px;
+}
+.card-head .flex-column {
+  display: flex;
+  align-items: flex-start;
 }
 .card-head.head-nav div h6 {
   color: #384250;
@@ -1746,6 +1767,9 @@ table .status {
   align-items: center;
   gap: 15px;
 }
+.table.sessions-dates-table thead tr th div img {
+  transform: scale(-1);
+}
 .table.sessions-dates-table thead tr th:last-child {
   border-top-right-radius: 5px;
   border-right: 1px solid #e5e7eb;
@@ -1817,7 +1841,7 @@ table .status {
   display: flex;
   align-items: center;
   justify-content: center;
-  direction: rtl;
+  direction: ltr;
 }
 
 .popup-card {
@@ -1833,6 +1857,9 @@ table .status {
 }
 .popup-card div {
   width: 100%;
+}
+.popup-card .flex-column {
+  direction: ltr;
 }
 .popup-card .icon-bg {
   background-color: #f9fafb;
@@ -1870,6 +1897,7 @@ table .status {
   width: 100%;
   border: none;
   background-color: transparent;
+  direction: ltr;
 }
 .input input::placeholder {
   color: #6c737f;
@@ -1888,6 +1916,9 @@ table .status {
   color: #161616;
   font-size: 16px;
   font-weight: 500;
+}
+.popup-card .btn-cont .btn img {
+  transform: scale(-1);
 }
 .popup-card.success-add-popup,
 .popup-card.confirm-send-popup {
@@ -1918,6 +1949,7 @@ table .status {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: var(--defult-cards-gap);
+  direction: ltr;
 }
 .sessions-details-con .user {
   width: 100%;
@@ -1963,6 +1995,8 @@ table .status {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
+  direction: ltr;
+  justify-content: start;
 }
 
 .gray-text {
@@ -1983,6 +2017,15 @@ table .status {
   color: #161616;
   font-size: 14px;
   font-weight: 700;
+}
+.attached-files-con h4 {
+  color: #161616;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.session-details-card .gray-text {
+  text-align: center;
 }
 .session-details-card .text-area,
 .text-area {
@@ -2017,6 +2060,7 @@ input.radio-btn {
   font-weight: 400;
   border-radius: var(--sm-border-radius);
   border: 1px solid #9da4ae;
+  direction: ltr;
 }
 .session-details-card .attached-files-con {
   grid-column: span 2;
@@ -2026,6 +2070,7 @@ input.radio-btn {
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin-top: 10px;
+  direction: ltr;
 }
 .attached-files .input {
   border-radius: var(--Radius-radius-sm, 4px);
@@ -2049,6 +2094,7 @@ input.radio-btn {
 .session-details-card .btn {
   font-size: 16px;
 }
+
 .span-2 {
   grid-column: span 2;
 }
@@ -2059,6 +2105,7 @@ input.radio-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  direction: ltr;
 }
 
 .facility-standard .numbers div {
@@ -2104,6 +2151,10 @@ input.radio-btn {
   border: 0px;
   padding: 0px;
 }
+.facility-standard .rating-v.numbers {
+  border: 0px;
+  padding: 0px;
+}
 .facility-standard .rating.numbers div {
   border-radius: var(--sm-border-radius);
   border: 1px solid transparent;
@@ -2119,7 +2170,6 @@ input.radio-btn {
   background-color: #104631;
   border-color: transparent;
 }
-
 .facility-standard .rating-v div:hover {
   color: #161616;
   background-color: #F3F4F6;
@@ -2145,22 +2195,23 @@ input.radio-btn {
   border-radius: 8px;
   box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
   transition: opacity 0.5s ease-in-out;
-  direction: rtl;
+  direction: ltr;
   z-index: 999;
 }
 .toast.success {
-  border-right: solid 8px #079455;
+  border-left: solid 8px #079455;
 }
 .toast.failure {
-  border-right: solid 8px #ffc107;
+  border-left: solid 8px #ffc107;
 }
 .toast.error {
-  border-right: solid 8px #dc3545;
+  border-left: solid 8px #dc3545;
 }
 .toast .toast-head {
   display: flex;
   align-items: self-start;
   justify-content: space-between;
+  direction: ltr;
 }
 .toast.hidden {
   opacity: 0;
@@ -2174,6 +2225,7 @@ input.radio-btn {
   display: flex;
   align-items: center;
   gap: 12px;
+  direction: ltr;
 }
 .toast .message .message-text .message-title {
   font-size: 16px;
@@ -2337,6 +2389,7 @@ input.radio-btn {
 .session-recommendation-card .card-content {
   display: grid;
   gap: 30px;
+  direction: ltr;
 }
 .session-recommendation-card .card-content .attached-files-con {
   grid-column: span 2;
@@ -2345,6 +2398,7 @@ input.radio-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  direction: ltr;
 }
 .session-recommendation-card .user-recommendation-card {
   width: 55%;
@@ -2688,6 +2742,7 @@ input.radio-btn {
 
 .title-page {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 1.0625rem;
@@ -2695,6 +2750,7 @@ input.radio-btn {
 }
 .title-page .title {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
 }
@@ -2717,6 +2773,7 @@ input.radio-btn {
   font-weight: 600;
   color: #484848;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
 }
@@ -2729,7 +2786,7 @@ input.radio-btn {
   border-radius: 4px;
   padding: 5px 8px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   gap: 4px;
 }
@@ -2749,7 +2806,7 @@ input.radio-btn {
   border-radius: 4px;
   padding: 5px 8px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   gap: 4px;
 }
@@ -2762,6 +2819,7 @@ input.radio-btn {
 
 .cta {
   display: flex;
+  flex-direction:row-reverse;
   align-items: center;
   gap: 16px;
 }
@@ -2807,7 +2865,7 @@ input.radio-btn {
   transition: background-color 0.3s ease-in-out;
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   gap: 6px;
 }
 .btn-primary-text img {
@@ -2856,6 +2914,7 @@ input.radio-btn {
 
 .card-title {
   display: flex;
+  flex-direction:row-reverse;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -2866,6 +2925,7 @@ input.radio-btn {
   font-weight: 700;
   font-size: 20px;
   color: #000;
+  direction: ltr;
 }
 
 .card-title .title-text p {
@@ -2873,6 +2933,7 @@ input.radio-btn {
   font-weight: 600;
   font-size: 16px;
   color: #000;
+  direction: ltr;
 }
 
 .card-title .title-btn {
@@ -2894,7 +2955,8 @@ input.radio-btn {
 
 .card-title:not(:has(.title-text)) .title-btn {
   display: flex;
-  justify-content: end;
+  flex-direction:row-reverse;
+  justify-content: start;
   width: -webkit-fill-available;
 }
 
@@ -2921,7 +2983,7 @@ input.radio-btn {
 
 .cardfooter {
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
   padding: 20px 0px;
   margin-top: 16px;
@@ -2935,6 +2997,7 @@ input.radio-btn {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction:row-reverse;
   gap: 16px;
   justify-content: center;
 }
@@ -2986,7 +3049,7 @@ nav .pagination .page-item .Next {
 }
 
 nav .pagination .page-item .Next i.next-io {
-  transform: scaleX(-1);
+  transform: scaleX(1);
   display: block;
   background-image: url(../../saso/assets/images/next.svg);
   height: 20px;
@@ -3002,7 +3065,7 @@ nav .pagination .page-item .Previous {
 }
 
 nav .pagination .page-item .Previous i.previous-io {
-  transform: scaleX(-1);
+  transform: scaleX(1);
   display: block;
   background-image: url(../../saso/assets/images/Previous.svg);
   height: 20px;
@@ -3040,7 +3103,7 @@ nav .pagination .more .page-link {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  direction: rtl;
+  direction: ltr;
   margin-bottom: 0px;
 }
 
@@ -3051,30 +3114,31 @@ nav .pagination .more .page-link {
   font-size: 0.75rem;
   color: #384250;
   text-align: start;
+  direction: ltr;
 }
 
 .table thead tr th:first-child {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 0;
-  border-right: solid 1px #e5e7eb;
-  border-left: 0;
-}
-
-.table thead tr th:first-child:has(.form-check) {
-  width: 50px;
-  border-left: solid 1px #D2D6DB;
-}
-
-.table thead tr th:last-child {
   border-top-left-radius: 8px;
   border-top-right-radius: 0;
   border-left: solid 1px #e5e7eb;
   border-right: 0;
+}
+
+.table thead tr th:first-child:has(.form-check) {
+  width: 50px;
+  border-right: solid 1px #D2D6DB;
+}
+
+.table thead tr th:last-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0;
+  border-right: solid 1px #e5e7eb;
+  border-left: 0;
   text-align: end;
 }
 
 .without-cta thead tr th:last-child {
-  text-align: start;
+  text-align: end;
 }
 
 .table tbody tr {
@@ -3097,21 +3161,22 @@ nav .pagination .more .page-link {
   align-content: center;
   border-bottom: solid 1px #e5e7eb;
   width: max-content;
+  direction: ltr;
 }
 
 .table tbody tr td:first-child {
-  border-right: solid 1px #e5e7eb;
-  border-left: solid 1px #D2D6DB;
+  border-left: solid 1px #e5e7eb;
+  border-right: solid 1px #D2D6DB;
 }
 
 .table tbody tr td:first-child:not(:has(.form-check *)) {
-  border-right: solid 1px #e5e7eb;
-  border-left: solid 1px transparent;
+  border-left: solid 1px #e5e7eb;
+  border-right: solid 1px transparent;
 }
 
 .table tbody tr td:last-child {
-  border-left: solid 1px #e5e7eb;
-  border-right: 0;
+  border-right: solid 1px #e5e7eb;
+  border-left: 0;
 }
 
 .table tbody tr td input[type="checkbox"] {
@@ -3169,7 +3234,7 @@ nav .pagination .more .page-link {
 }
 
 .table tbody tr td .time {
-  display: flex;
+  display: inline-flex;
   gap: 8px;
 }
 
@@ -3184,7 +3249,8 @@ nav .pagination .more .page-link {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
+  direction: ltr;
   width: max-content;
 }
 
@@ -3199,7 +3265,7 @@ nav .pagination .more .page-link {
   font-size: 16px;
   font-weight: 400;
   color: #161616;
-  width: max-content;
+  width: auto;
 }
 
 .table tbody tr td .text p a {
@@ -3238,9 +3304,10 @@ nav .pagination .more .page-link {
   font-size: 12px;
   font-weight: 500;
   display: flex;
+  flex-direction:row-reverse;
+  direction: ltr;
   align-items: center;
   gap: 8px;
-  flex-direction: row-reverse;
 }
 
 .table tbody tr td .communication span.webex-tag i.video-call {
@@ -3266,6 +3333,7 @@ nav .pagination .more .page-link {
 
 .table tbody tr td .action-table {
   display: flex;
+  flex-direction:row-reverse;
   gap: 10px;
   justify-content: end;
 }
@@ -3290,10 +3358,10 @@ nav .pagination .more .page-link {
   color: #1F2A37;
   font-size: 12px;
   font-weight: 500;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   width: -moz-max-content;
   width: max-content;
 }
@@ -3346,13 +3414,13 @@ nav .pagination .more .page-link {
 }
 
 .table tbody tr:last-child td:first-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0;
 }
 
 .table tbody tr:last-child td:last-child {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0;
 }
 
 /* Media Query for responsiveness */
@@ -3388,6 +3456,7 @@ nav .pagination .more .page-link {
 
 .primary-cards .row:first-child {
   margin-top: -20px;
+  direction: ltr;
 }
 
 .primary-cards .con-card {
@@ -3405,6 +3474,7 @@ nav .pagination .more .page-link {
 }
 .primary-cards .con-card .card-body {
   padding: 0;
+  direction: ltr;
 }
 .primary-cards .con-card .icon-container {
   margin-bottom: 1.5rem;
@@ -3512,7 +3582,8 @@ nav .pagination .more .page-link {
 .service-description {
   display: flex;
   gap: 64px;
-  margin-left: 48px;
+  margin-right: 48px;
+  direction: ltr;
 }
 .service-description .p {
   width: -webkit-fill-available;
@@ -3552,6 +3623,7 @@ nav .pagination .more .page-link {
 
 .tab-buttons {
   display: flex;
+  flex-direction:row-reverse;
   gap: 32px;
   margin: 32px 0px;
 }
@@ -3570,7 +3642,7 @@ nav .pagination .more .page-link {
   font-weight: 500;
   transition: background-color 0.3s ease;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   gap: 4px;
 }
@@ -3703,6 +3775,7 @@ nav .pagination .more .page-link {
   transition: background-color 0.3s ease;
   display: flex;
   border: solid 1px transparent;
+  direction: ltr;
 }
 
 .accordion-header:focus {
@@ -3721,7 +3794,7 @@ nav .pagination .more .page-link {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
-  margin-right: auto;
+  margin-left: auto;
   content: "";
   background-image: url(../assets/images/arrow-down.svg);
   background-repeat: no-repeat;
@@ -3738,7 +3811,7 @@ nav .pagination .more .page-link {
   background-color: #fff;
   display: none;
   border-top: 1px solid #ddd;
-  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .accordion-content p {
@@ -3825,7 +3898,7 @@ nav .pagination .more .page-link {
 
 .modal-header {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   justify-content: space-between;
   align-items: start;
 }
@@ -3844,12 +3917,14 @@ nav .pagination .more .page-link {
   gap: 4px;
 }
 .modal-footer .btn i.leading-icon-w {
+  transform: scale(-1);
   background-image: url(../assets/images/Leading-Icon-w.svg);
   display: block;
   height: 20px;
   width: 20px;
 }
 .modal-footer .btn i.leading-icon-b {
+  transform: scale(-1);
   background-image: url(../assets/images/Leading-Icon-b.svg);
   display: block;
   height: 20px;
@@ -3867,6 +3942,7 @@ nav .pagination .more .page-link {
   padding: 10px;
   height: 40px;
   width: 40px;
+  transform: scale(-1);
 }
 .modal-header .btn-close i.icon-close {
   display: block;
@@ -3948,17 +4024,19 @@ nav .pagination .more .page-link {
   font-size: 18px;
   font-weight: 600;
   color: #1f2a37;
+  text-align: center;
 }
 
 .advisors-card .divider {
   height: 1px;
   background-color: #eee;
   margin: 20px 0;
+  width: 100%;
 }
 
 .advisors-card .action {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -3994,7 +4072,8 @@ nav .pagination .more .page-link {
   font-weight: 400;
   color: #161616;
   margin-bottom: 8px;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction:row-reverse;
 }
 
 .form-label span.required {
@@ -4022,7 +4101,7 @@ nav .pagination .more .page-link {
   display: block;
   height: 40px;
   width: 100%;
-  padding: .375rem 1rem .375rem 2.25rem;
+  padding: .375rem 2.25rem .375rem 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4034,6 +4113,7 @@ nav .pagination .more .page-link {
   border: 1px solid #9DA4AE;
   border-radius: 4px;
   box-shadow: none;
+  direction: ltr;
 }
 
 .form-input:disabled {
@@ -4046,7 +4126,7 @@ nav .pagination .more .page-link {
   display: block;
   height: auto;
   width: 100%;
-  padding: .375rem 1rem .375rem 2.25rem;
+  padding: .375rem 2.25rem .375rem 1rem ;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4060,6 +4140,7 @@ nav .pagination .more .page-link {
   border: 1px solid #9DA4AE;
   border-radius: 4px;
   box-shadow: none;
+  direction: ltr;
 }
 
 
@@ -4074,7 +4155,7 @@ nav .pagination .more .page-link {
   display: block;
   height: 40px;
   width: 100%;
-  padding: 0.375rem 1rem 0.375rem 2.25rem;
+  padding: 0.375rem 2.25rem 0.375rem 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4090,6 +4171,8 @@ nav .pagination .more .page-link {
   border: 1px solid #9da4ae;
   border-radius: 4px;
   box-shadow: none;
+  direction: ltr;
+  text-align: end;
 }
 
 .form-select:disabled {
@@ -4153,6 +4236,7 @@ nav .pagination .more .page-link {
 /* -------------advisors-card-info---------------Mlewis- */
 .layout-3-9 .row {
   margin: 0 -0.5rem;
+  flex-direction: row;
 }
 .layout-3-9 .row .col-lg-3 .card {
   height: 100%;
@@ -4163,6 +4247,8 @@ nav .pagination .more .page-link {
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: start;
+  align-items: center;
 }
 .advisor-card-info .selected-date {
   text-align: center;
@@ -4189,28 +4275,32 @@ nav .pagination .more .page-link {
   font-size: 14px;
   font-weight: 600;
   color: #737b8b;
+  text-align: center;
 }
 
 .advisor-info .name {
   font-size: 20px;
   font-weight: 600;
   margin: 9px 0px;
+  text-align: center;
 }
 
 .advisor-info .department {
   font-size: 14px;
   color: #666;
+  text-align: center; 
 }
 
 .divider {
   height: 1px;
   background-color: #eee;
   margin: 20px 0;
+  width: 100%;
 }
 
 .webex-section {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -4219,6 +4309,7 @@ nav .pagination .more .page-link {
   border-radius: 4px;
   padding: 5px 12px;
   border: solid 1px #e5e7eb;
+  direction: ltr;
 }
 
 .webex-section img {
@@ -4242,12 +4333,13 @@ nav .pagination .more .page-link {
 .select-date {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   justify-content: start;
   align-items: center;
   border-bottom: 3px solid #D2D6DB;
   padding-bottom: 8px;
   gap: 10px;
+  direction: ltr;
 }
 
 .select-date h2 {
@@ -4257,7 +4349,7 @@ nav .pagination .more .page-link {
 .selected-date {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   justify-content: start;
   align-items: center;
   gap: 10px;
@@ -4296,6 +4388,7 @@ form .form-group .time-list {
   display: flex;
   align-items: center;
   gap: 16px;
+  direction: ltr;
 }
 form .form-group .time-list span.info-tag {
   font-size: 16px;
@@ -4334,11 +4427,13 @@ form .form-group .time-list span.info-tag {
   color: #1F2A37;
   margin-bottom: 8px;
   display: block;
+  text-align: center;
 }
 .file-upload-container .content p {
   font-size: 12px;
   font-weight: 400;
   color: #384250;
+  text-align: center;
 }
 
 .file-upload-container input[type="file"] {
@@ -4354,11 +4449,13 @@ form .form-group .time-list span.info-tag {
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 24px;
+  direction: ltr;
 }
 .uploaded-file .info {
   display: flex;
   align-items: center;
   gap: 10px;
+  direction: ltr;
 }
 
 .uploaded-file .info .success-up-icon {
@@ -4388,6 +4485,7 @@ form .form-group .time-list span.info-tag {
   display: flex;
   justify-content: start;
   gap: 16px;
+  direction: ltr;
 }
 
 /* -------------advisors-card-info---------------Mlewis- */
@@ -4416,7 +4514,7 @@ form .form-group .time-list span.info-tag {
   font-weight: 400;
   color: #384250;
   margin-bottom: 0;
-  direction: rtl;
+  direction: ltr;
   text-align: start;
 }
 .modal-message .modal-footer button {
@@ -4468,6 +4566,7 @@ form .form-group .time-list span.info-tag {
   background-color: #fff;
   transition: transform 0.2s;
   margin-top: 16px;
+  direction: ltr;
 }
 .file-card:hover {
   transform: scale(1.05);
@@ -4524,164 +4623,59 @@ form .form-group .time-list span.info-tag {
   padding: 7px 15px;
 }
 /* -------------session-recommendations---------------Mlewis- */
-
-/* -------------Date Picker---------------Mlewis- */
-/* RTL for Arabic, LTR for English */
-.date-picker-wrapper.lang-ar {
-  direction: rtl;
-  text-align: right;
-}
-
-.date-picker-wrapper.lang-en {
-  direction: ltr;
-  text-align: left;
-}
-
-/* Date Picker Styles */
-.date-picker-wrapper {
-  position: relative;
-  width: 424px;
-}
-
-.date-picker-container {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  gap: 8px;
-  justify-content: space-between;
-  padding: 5px 16px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.date-picker-container i.arrow-dropdown {
-  width: 18px;
-  height: 18px;
-  background-image: url(../assets/icons/arrowdown2.png);
-  background-repeat: no-repeat;
-  background-position-y: center;
-}
-.date-picker-container img {
-  width: 20px;
-  height: 20px;
-}
-
-/* Dropdown Calendar */
-.calendar-dropdown {
+#dateInput {
   position: absolute;
-  top: 50px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 5px 16px;
+    height: 36px;
+    width: 100%;
+    left: 0;
+    min-width: -moz-available;
+    min-width: -webkit-fill-available;
+}
+.date-picker-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 16px;
+  background-color: #fff;
+}
+
+.date-picker-container img {
+  width: 12px;
+  height: 8px;
+}
+.date-picker-container img.calander {
+  width: 22px;
+  height: 22px;
+}
+.date-picker-dropdown {
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
   display: none;
   z-index: 10;
-}
-/* Calendar Header */
-.calendar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-/* Navigation Buttons */
-.navegate {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-arrow {
-  background: transparent;
+.date-picker-container.active .date-picker-dropdown {
+  display: block;
+}
+
+.date-picker-dropdown input {
+  width: 100%;
   border: none;
+  font-size: 16px;
+  padding: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* Month-Year Selector */
-#monthYearSelect {
-  width: max-content;
-  padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: normal;
-  box-shadow: none;
-  outline: none;
-}
-#monthYearSelect:focus {
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-/* Days of the Week */
-.days-of-week {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-  margin-bottom: 10px;
-  color: #64748B;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-/* Days Grid */
-.days-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  text-align: center;
-}
-
-.days-grid button {
-  background: none;
-  border: none;
-  padding: 10px 0;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: #161616;
-  font-size: 1rem;
-  font-weight: normal;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Hover Effect */
-.days-grid button:hover {
-  background-color: #E5E7EB;
-}
-
-/* Selected Date */
-.days-grid button.selected {
-  background-color: var(--praimary-color);
-  border: solid 2px transparent;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* today Date */
-.days-grid button.today {
-  background-color: transparent;
-  border: solid 2px var(--praimary-color);
-  color: var(--praimary-color);
-  font-weight: bold;
-}
-
-/* Inactive Days */
-.days-grid button.inactive {
-  color: #64748B;
-  cursor: pointer;
-}
-
-.days-grid button.inactive:hover {
-  background-color: #f0f0f0;
 }

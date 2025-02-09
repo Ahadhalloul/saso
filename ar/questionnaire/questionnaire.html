@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SASO</title>
+  <!-- -------------- arabic page style ------------- -->
+  <link rel="stylesheet" href="../../css/ar-style.css" />
+  <!-- -------------- english page style ------------- -->
+  <!-- <link rel="stylesheet" href="../../css/en-style.css" /> -->
+</head>
+
+<body>
+  <div class="overlay-bg"></div>
+  <div class="container">
+    <!-- -------------------Start sidebar menu --------------- -->
+    <div class="sidebar-container flex-column" id="main-sidebar">
+      <div class="sidebar-head flex-row">
+        <img class="logo" src="../../assets/logos/logo.png" alt="saso logo" />
+        <img class="collapse-icon" src="../../assets/icons/mi_menu.svg" alt="collapse icon" />
+        <img src="../../assets/icons/mi_menu.svg" alt="" class="sm-screen-close-icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="active">
+              <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />لوحة التحكم
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pointer space-btw" id="services-sub-menu">
+              <div class="flex-row gap-12">
+                <img src="../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />خدمات الهيئة
+              </div>
+              <div class="sub-menu-icon">
+                <img src="../../assets/icons/arrowdown2.png" alt="" />
+              </div>
+            </a>
+            <!-- start sub menu content -->
+            <ul class="sub-menu-list hide" id="services-list">
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#" class="">الاستشارات الفورية عن بعد</a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+            </ul>
+            <!-- end sub menu content -->
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />طلباتي
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/iconamoon_profile-light.svg" alt="" />حسابي
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+              المستندات
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+              والمساعدة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/carbon_report-data.svg" alt="" />التقارير
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../assets/icons/simple-line-icons_question.svg" alt="" />الأسئلة الشائعة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="..assets/icons/hugeicons_news.svg" alt="" />مركز
+              الأخبار
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----start collapsed sidebar-------- -->
+    <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+      <div class="sidebar-head">
+        <img class="collapse-icon" src="../../assets/icons/mi_menu-white.svg" alt="collapse icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="" class="active">
+              <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="">
+              <img src="../../assets/icons/iconamoon_profile-light.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="">
+              <img src="../../assets/icons/solar_help-linear.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/carbon_report-data.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/simple-line-icons_question.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../assets/icons/hugeicons_news.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----end collapsed sidebar-------- -->
+    <!-- -------------------End sidebar menu ----------------- -->
+    <!-- ------------------ Start header ---------------------- -->
+    <header class="header flex-row">
+      <div class="flex-row gap-30">
+        <div class="logo-menu-icons">
+          <img class="md-screen-menu-icon" src="../../assets/icons/mi_menu.svg" alt="" />
+          <img src="../../../../assets/logos/logo-medium.png" alt="logo" />
+        </div>
+        <div class="path flex-column">
+          <p>
+            اسم المنشأة <span class="blue-text"> / </span><a href="" class="active">لوحة التحكم</a>
+          </p>
+          <h2>لوحة التحكم</h2>
+        </div>
+      </div>
+      <div class="user-functions flex-row">
+        <div class="search flex-row">
+          <img src="../../assets/icons/searchnormal1.svg" alt="" />
+          <input type="text" placeholder="البحث" />
+        </div>
+        <img class="search-icon" src="../../assets/icons/searchnormal2.svg" alt="" />
+        <img src="../../../../assets/icons/hugeicons_settings-01.svg" alt="" />
+        <img src="../../../../assets/icons/iconoir_accessibility.svg" alt="" />
+        <div class="language flex-row">
+          <select>
+            <option value="arabic">ع</option>
+          </select>
+          <img src="../../../../assets/icons/arrowdown2.svg" alt="" />
+        </div>
+        <div class="user-info flex-row">
+          <div class="flex-row">
+            <div class="user-img-bg">
+              <img class="user-img" src="../../../../assets/images/user.png" alt="user image" />
+            </div>
+            <h5>محمد عبدالمجيد</h5>
+          </div>
+          <img src="../../../../assets/icons/arrowdown2.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!-- ------------------ End header ---------------------- -->
+    <!-- ------------------ Start main ---------------------- -->
+    <main class="main-container">
+      <div class="title-page">
+        <div class="title">
+          <button class="btn btn-icon">
+            <img src="../../assets/images/back-icon.svg" alt="" />
+          </button>
+          <h2>توصيات الجلسة</h2>
+        </div>
+      </div>
+      <div class="cards-container">
+
+        <!-- ----start session recommendation card-------- -->
+        <div class="layout-12">
+          <div class="row">
+
+            <div class="col-12">
+              <div class="card questionnaire">
+                <div class="card-content flex-column gap-30">
+                  <div class="flex-column gap-12">
+                    <h4>
+                      <span class="red-star">*</span>
+                      ما مدى رضاك عن الخدمة المقدمة؟
+                    </h4>
+                    <p>مقياس الرضا: من (١) إلى (٥) حيث تعني (٥) راض تماما و (١) غير راض تماماً</p>
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="flex-column gap-12">
+                    <h4>سؤال اختيار عن السبب الضعيف</h4>
+                    <div class="flex-row gap-30">
+                      <div class="flex-row gap-8">
+                        <input class="radio-btn" type="radio" name="session-problem" id="" checked="">
+                        <h4>نعم</h4>
+                      </div>
+                      <div class="flex-row gap-8">
+                        <input class="radio-btn" type="radio" name="session-problem" id="">
+                        <h4>لا</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="recommendation-textarea-con gap-30">
+                    <div class="flex-column gap-8">
+                      <h4>
+                        <span class="red-star">*</span>
+                        السبب
+                      </h4>
+
+                      <div class="text-area">
+                        <textarea name="" id="" placeholder="اكتب تفاصيل السبب"></textarea>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="flex-column gap-12">
+                    <h4>
+                      <span class="red-star">*</span>
+                      ما مدى سهولة الحصول على الخدمة؟
+                    </h4>
+                    <p>مقياس الرضا: من (١) إلى (٧) حيث تعني (٧) راض تماما و (١) غير راض تماماً</p>
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                          <div data-value="6">٦</div>
+                          <div data-value="7">٧</div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="flex-column gap-12">
+                    <h4>
+                      <span class="red-star">*</span>
+                      مؤشرات عامة
+                    </h4>
+                    <p>مقياس الرضا: من (١) إلى (٥) حيث تعني (٥) راض تماما و (١) غير راض تماماً</p>
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <h3 class="title">سرعة الحصول على الخدمة</h3>
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                        <div class="light-gray-bg">
+                          <button class="btn btn-secondary">لا ينطبق</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <h3 class="title">إجراءات الحصول على الخدمة</h3>
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                        <div class="light-gray-bg">
+                          <button class="btn btn-secondary">لا ينطبق</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <h3 class="title">قتاة تقديم الخدمة</h3>
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                        <div class="light-gray-bg">
+                          <button class="btn btn-secondary">لا ينطبق</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <h3 class="title">المخرج النهائي للخدمة</h3>
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                        <div class="light-gray-bg">
+                          <button class="btn btn-secondary">لا ينطبق</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="facility-standard flex-column gap-12">
+                      <div class="flex-row gap-20">
+                        <h3 class="title">قناة التواصل والدعم الفني</h3>
+                        <div class="rating numbers d-flex flex-row gap-8" data-standard="1">
+                          <div data-value="1">١</div>
+                          <div data-value="2">٢</div>
+                          <div data-value="3">٣</div>
+                          <div data-value="4">٤</div>
+                          <div data-value="5">٥</div>
+                        </div>
+                        <div class="light-gray-bg">
+                          <button class="btn btn-secondary">لا ينطبق</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="btns flex-row gap-12">
+                    <button class="btn btn-secondary">الغاء</button>
+                    <button class="btn btn-primary-text">ارسال<img src="../../assets/icons/right-arrow.svg"
+                        alt=""></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ---end session details card----------  -->
+      </div>
+    </main>
+    <!-- ------------------ End main ---------------------- -->
+
+    <!-- ------------------------------------------------------ -->
+  </div>
+  <!-- --------- main javascript -------- -->
+  <script src="../../js/main.js"></script>
+</body>
+
+</html>

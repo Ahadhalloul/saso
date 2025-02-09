@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASO</title>
+    <!-- -------------- arabic page style ------------- -->
+    <link rel="stylesheet" href="../../css/ar-style.css" />
+    <!-- -------------- english page style ------------- -->
+    <!-- <link rel="stylesheet" href="../../css/en-style.css" /> -->
+  </head>
+  <!-- add stop-scroll-popup class when popup appear  -->
+  <body class="stop-scroll-popup">
+    <!----- start popup cards--- -->
+    <div class="popup-container">
+      <!-- select time popup  -->
+      <div class="popup-card select-time-popup" id="select-time-popup">
+        <div class="flex-column gap-8">
+          <div class="flex-row space-btw">
+            <img class="icon-bg" src="../../assets/icons/add-circle.svg" alt="" />
+            <img src="../../assets/icons/close-icon.svg" alt="" />
+          </div>
+          <h4>٢٤ ديسمبر، ٢٠٢٤</h4>
+        </div>
+        <div class="flex-column gap-8">
+          <p>
+            <span class="red-star">*</span>موعد الجلسة (بتوقيت المملكة العربية
+            السعودية)
+          </p>
+          <div class="popup-time-con flex-row gap-8">
+            <div class="time">١٠:٢٠ ص</div>
+            <div class="time">١٠:٢٠ ص</div>
+            <div class="time">١٠:٢٠ ص</div>
+            <div class="time">١٠:٢٠ ص</div>
+            <div class="time">١٠:٢٠ ص</div>
+            <div class="time">١٠:٢٠ ص</div>
+          </div>
+        </div>
+        <div class="flex-column gap-8">
+          <p>الوقت الإضافي (بتوقيت المملكة العربية السعودية)</p>
+          <div class="input">
+            <input type="text" placeholder="قم بكتابة الوقت الإضافي" />
+          </div>
+        </div>
+        <div class="flex-row gap-8 btn-cont">
+          <button class="btn">الغاء</button>
+          <button class="btn black-bg flex-row gap-5" id="add-time-btn">
+            <img src="../../assets/icons/right-arrow.svg" alt="" />اضافة
+          </button>
+        </div>
+      </div>
+      <!-- -----------------------------------  -->
+      <!-- successful add popup  -->
+      <div class="popup-card success-add-popup hide" id="success-add-popup">
+        <div class="">
+          <img
+            class="icon-bg light-success-bg"
+            src="../../assets/icons/success-2.svg"
+            alt=""
+          />
+        </div>
+        <div class="flex-column gap-8">
+          <h4>تم اضافة جلستك بنجاح</h4>
+          <p>
+            يكتب المحتوى الإضافي هنا في حال ان رسالة الاشعار أو التنبيه تحتاج
+            الى شرح أو تفصيل.
+          </p>
+        </div>
+        <div class="flex-row gap-8 btn-cont">
+          <button class="btn">اضافة موعد جديد</button>
+          <button class="btn no-border light-gray-bg">الغاء</button>
+        </div>
+      </div>
+      <!-- --------------------------  -->
+    </div>
+    <!----- end popup cards--- -->
+    <!-- ------------------  -->
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <!-- -------------------Start sidebar menu --------------- -->
+      <div class="sidebar-container flex-column" id="main-sidebar">
+        <div class="sidebar-head flex-row">
+          <img class="logo" src="../../assets/logos/logo.png" alt="saso logo" />
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu.svg"
+            alt="collapse icon"
+          />
+          <img
+            src="../../assets/icons/mi_menu.svg"
+            alt=""
+            class="sm-screen-close-icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="#" class="active">
+                <img
+                  src="../../assets/icons/radix-icons_dashboard.svg"
+                  alt=""
+                />لوحة التحكم
+              </a>
+            </li>
+            <li>
+              <a href="#" class="pointer space-btw" id="services-sub-menu">
+                <div class="flex-row gap-12">
+                  <img
+                    src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                    alt=""
+                  />خدمات الهيئة
+                </div>
+                <div class="sub-menu-icon">
+                  <img src="../../assets/icons/arrowdown2.png" alt="" />
+                </div>
+              </a>
+              <!-- start sub menu content -->
+              <ul class="sub-menu-list hide" id="services-list">
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#" class="">الاستشارات الفورية عن بعد</a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+              </ul>
+              <!-- end sub menu content -->
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />طلباتي
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/iconamoon_profile-light.svg"
+                  alt=""
+                />حسابي
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+                المستندات
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+                والمساعدة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/carbon_report-data.svg"
+                  alt=""
+                />التقارير
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />الأسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="..assets/icons/hugeicons_news.svg" alt="" />مركز
+                الأخبار
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----start collapsed sidebar-------- -->
+      <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+        <div class="sidebar-head">
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu-white.svg"
+            alt="collapse icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="" class="active">
+                <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/iconamoon_profile-light.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/carbon_report-data.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/hugeicons_news.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----end collapsed sidebar-------- -->
+      <!-- -------------------End sidebar menu ----------------- -->
+      <!-- ------------------ Start header ---------------------- -->
+      <header class="header flex-row">
+        <div class="flex-row gap-30">
+          <div class="logo-menu-icons">
+            <img
+              class="md-screen-menu-icon"
+              src="../../assets/icons/mi_menu.svg"
+              alt=""
+            />
+            <img src="../../../../assets/logos/logo-medium.png" alt="logo" />
+          </div>
+          <div class="path flex-column">
+            <p>
+              اسم المنشأة <span class="blue-text"> / </span
+              ><a href="" class="active">لوحة التحكم</a>
+            </p>
+            <h2>لوحة التحكم</h2>
+          </div>
+        </div>
+        <div class="user-functions flex-row">
+          <div class="search flex-row">
+            <img src="../../assets/icons/searchnormal1.svg" alt="" />
+            <input type="text" placeholder="البحث" />
+          </div>
+          <img
+            class="search-icon"
+            src="../../assets/icons/searchnormal2.svg"
+            alt=""
+          />
+          <img src="../../../../assets/icons/hugeicons_settings-01.svg" alt="" />
+          <img src="../../../../assets/icons/iconoir_accessibility.svg" alt="" />
+          <div class="language flex-row">
+            <select>
+              <option value="arabic">ع</option>
+            </select>
+            <img src="../../../../assets/icons/arrowdown2.svg" alt="" />
+          </div>
+          <div class="user-info flex-row">
+            <div class="flex-row">
+              <div class="user-img-bg">
+                <img
+                  class="user-img"
+                  src="../../../../assets/images/user.png"
+                  alt="user image"
+                />
+              </div>
+              <h5>محمد عبدالمجيد</h5>
+            </div>
+            <img src="../../../../assets/icons/arrowdown2.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <!-- ------------------ End header ---------------------- -->
+      <!-- ------------------ Start main ---------------------- -->
+      <main class="main-container">
+        <div class="title-page">
+          <div class="title">
+            <button class="btn btn-icon">
+              <img src="../../assets/images/back-icon.svg" alt="" />
+            </button>
+            <h2>العمليات والتشغيل</h2>
+          </div>
+        </div>
+        <div class="cards-container sessions-timeline">
+          <!-- --- start session dates card  ---->
+          <div class="card">
+            <div class="card-head head-nav flex-row gap-30">
+              <div class="flex-row active gap-5">
+                <img src="../../assets/icons/home-5.svg" alt="" />
+                <h6>جميع الجلسات</h6>
+              </div>
+
+              <div class="flex-row gap-5">
+                <img src="../../assets/icons/home-5.svg" alt="" />
+                <h6>الجلسات القادمة</h6>
+              </div>
+
+              <div class="flex-row gap-5">
+                <img src="../../assets/icons/home-5.svg" alt="" />
+                <h6>الجلسات السابقة</h6>
+              </div>
+            </div>
+            <div class="card-content all-sessions">
+              <div class="flex-row space-btw">
+                <h3>جميع الجلسات</h3>
+                <div class="flex-row gap-12">
+                  <button class="functions-btn">
+                    <img src="../../assets/icons/pause-icon.svg" alt="" />
+                  </button>
+                  <button class="functions-btn selected">
+                    <img src="../../assets/icons/calander-6.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <!------ table ------>
+              <div class="table-responsive">
+                <table class="table sessions-dates-table">
+                  <thead>
+                    <tr>
+                      <th colspan="7">
+                        <div class="flex-row">
+                          <img src="../../assets/icons/pre-arrow.svg" alt="" />
+                          <h4>يوليو</h4>
+                          <h4>٢٠٢٥</h4>
+
+                          <img src="../../assets/icons/next-arrow.svg" alt="" />
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>الأحد</td>
+                      <td>الاثنين</td>
+                      <td>الثلاثاء</td>
+                      <td>الاربعاء</td>
+                      <td>الخميس</td>
+                      <td>الجمعة</td>
+                      <td>السبت</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div>
+                          <h4>١</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>٢</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>٣</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٤</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٥</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٦</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٧</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <h4>٨</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>٩</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>١٠</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١١</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١٢</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١٣</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١٤</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <h4>١٥</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>١٦</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>١٧</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١٨</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>١٩</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢٠</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢١</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <h4>٢٢</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>٢٣</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <h4>٢٤</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢٥</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢٦</h4>
+                          <div class="flex-column">
+                            <div class="time">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢٧</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٢٨</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div>
+                          <h4>٢٩</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٣٠</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <h4>٣١</h4>
+                          <div class="flex-column">
+                            <div class="time disabled">١٠:٣٠ ص</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- end table  -->
+            </div>
+          </div>
+          <!-- ----end session dates card ----- -->
+          <!-- ----start Timeline card-------- -->
+          <div class="card timeline">
+            <div class="card-head card-head-border">
+              <h3>الجدول الزمني</h3>
+            </div>
+            <div class="card-content">
+              <div class="card-content">
+                <div class="flex-row align-items-end space-btw">
+                  
+                  <div class="date-picker-wrapper lang-ar" id="datePickerWrapper">
+                    <!-- Dropdown Trigger -->
+                    <div class="date-picker-container" id="datePicker">
+                      <img class="calendar-icon" src="../../assets/icons/calendar-2.svg" alt="Calendar" />
+                      <span id="selectedDate">الأحد، ٩ فبراير</span>
+                      <i class="arrow-dropdown"></i>
+                    </div>
+                
+                    <!-- Dropdown Calendar -->
+                    <div class="calendar-dropdown" id="calendarDropdown">
+                      <div class="calendar-header">
+                        <div class="navegate">
+                          <button class="nav-arrow" id="nextMonth"><img src="../../assets/icons/arrow-right.svg" alt=""></button>
+                          <button class="nav-arrow" id="prevMonth"><img src="../../assets/icons/arrow-left.svg" alt=""></button>
+                        </div>
+                        <select id="monthYearSelect"></select>
+                      </div>
+                
+                      <div class="days-of-week" id="daysOfWeek"></div>
+                
+                      <div class="days-grid" id="daysGrid"></div>
+                    </div>
+                  </div>
+  
+                
+  
+                  <button class="btn btn-primary flex-row gap-5">
+                    <img src="../../assets/icons/add-icon.svg" alt="" />
+                    اضافة الموعد
+                  </button>
+  
+                  
+                  </div>
+                </div>
+
+                
+              <div class="timeline-list-container">
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="" />
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="" />
+                    </button>
+                    <div class="status light-success-bg">
+                      <img src="../../assets/icons/success.svg" alt="" />
+                      <p>اكتملت</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw error">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button class="disabled">
+                      <img src="../../assets/icons/mic.svg" alt="" />
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="" />
+                    </button>
+                    <div class="status light-error-bg">
+                      <img src="../../assets/icons/error.svg" alt="" />
+                      <p>لم تكتمل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="" />
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="" />
+                    </button>
+                    <div class="btn green-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="" />
+                    </button>
+                    <button>
+                      <img src="../../assets/icons/video.svg" alt="" />
+                    </button>
+                    <div class="btn green-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---end Timeline card----------  -->
+        </div>
+      </main>
+      <!-- ------------------ End main ---------------------- -->
+
+      <!-- ------------------------------------------------------ -->
+    </div>
+    <!-- //--------------- select time popup cards ------------ -->
+    <script>
+      const addTimeCard = document.querySelector("#select-time-popup");
+      const successAddCard = document.querySelector("#success-add-popup");
+      const addTimeBtn = document.querySelector("#add-time-btn");
+
+      addTimeBtn.addEventListener("click", () => {
+        addTimeCard.classList.add("hide");
+        successAddCard.classList.remove("hide");
+      });
+    </script>
+    <!-- // -------------------------------------- -->
+    <!-- --------- main javascript -------- -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

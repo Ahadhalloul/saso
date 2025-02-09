@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASO</title>
+    <!-- -------------- arabic page style ------------- -->
+    <link rel="stylesheet" href="../css/ar-style.css" />
+    <!-- -------------- english page style ------------- -->
+    <!-- <link rel="stylesheet" href="../css/en-style.css" /> -->
+  </head>
+  <body>
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <!-- -------------------Start sidebar menu --------------- -->
+      <div class="sidebar-container flex-column" id="main-sidebar">
+        <div class="sidebar-head flex-row">
+          <img class="logo" src="../assets/logos/logo.png" alt="saso logo" />
+          <img
+            class="collapse-icon"
+            src="../assets/icons/mi_menu.svg"
+            alt="collapse icon"
+          />
+          <img
+            src="../assets/icons/mi_menu.svg"
+            alt=""
+            class="sm-screen-close-icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="#" class="active">
+                <img src="../assets/icons/radix-icons_dashboard.svg" alt="" />لوحة
+                التحكم
+              </a>
+            </li>
+            <li>
+              <a href="#" class="pointer space-btw" id="services-sub-menu">
+                <div class="flex-row gap-12">
+                  <img
+                    src="../assets/icons/carbon_ibm-private-path-services.svg"
+                    alt=""
+                  />خدمات الهيئة
+                </div>
+                <div class="sub-menu-icon">
+                  <img src="../assets/icons/arrowdown2.png" alt="" />
+                </div>
+              </a>
+              <!-- start sub menu content -->
+              <ul class="sub-menu-list hide" id="services-list">
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#" class="">الاستشارات الفورية عن بعد</a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+              </ul>
+              <!-- end sub menu content -->
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />طلباتي
+              </a>
+            </li>
+          </ul>
+          <div class="drawer-line">
+            <img src="../assets/icons/Rectangle 1.png" alt="" />
+          </div>
+          <ul class="setting-list">
+            <li>
+              <a href="#">
+                <img
+                  src="../assets/icons/iconamoon_profile-light.svg"
+                  alt=""
+                />حسابي
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+                المستندات
+              </a>
+            </li>
+          </ul>
+          <div class="drawer-line">
+            <img src="../assets/icons/Rectangle 1.png" alt="" />
+          </div>
+          <ul class="support-list">
+            <li>
+              <a href="#">
+                <img src="../assets/icons/solar_help-linear.svg" alt="" />الدعم
+                والمساعدة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../assets/icons/carbon_report-data.svg"
+                  alt=""
+                />التقارير
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />الأسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../assets/icons/hugeicons_news.svg" alt="" />مركز الأخبار
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----start collapsed sidebar-------- -->
+      <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+        <div class="sidebar-head">
+          <img
+            class="collapse-icon"
+            src="../assets/icons/mi_menu-white.svg"
+            alt="collapse icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="" class="active">
+                <img src="../assets/icons/radix-icons_dashboard.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../assets/icons/carbon_ibm-private-path-services.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="collapse-drawer-line">
+            <img src="../assets/icons/Rectangle 1.png" alt="" />
+          </div>
+          <ul class="setting-list">
+            <li>
+              <a href="">
+                <img src="../assets/icons/iconamoon_profile-light.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/icons/f7_doc-on-doc.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <div class="collapse-drawer-line">
+            <img src="../assets/icons/Rectangle 1.png" alt="" />
+          </div>
+          <ul class="support-list">
+            <li>
+              <a href="">
+                <img src="../assets/icons/solar_help-linear.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/icons/carbon_report-data.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/icons/hugeicons_news.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----end collapsed sidebar-------- -->
+      <!-- -------------------End sidebar menu ----------------- -->
+      <!-- ------------------ Start header ---------------------- -->
+      <header class="header flex-row">
+        <div class="flex-row gap-30">
+          <div class="logo-menu-icons">
+            <img
+              class="md-screen-menu-icon"
+              src="../assets/icons/mi_menu.svg"
+              alt=""
+            />
+            <img src="../assets/logos/logo-medium.png" alt="logo" />
+          </div>
+          <div class="path flex-column">
+            <p>
+              اسم المنشأة <span class="blue-text"> / </span
+              ><a href="" class="active">لوحة التحكم</a>
+            </p>
+            <h2>لوحة التحكم</h2>
+          </div>
+        </div>
+        <div class="user-functions flex-row">
+          <div class="search flex-row">
+            <img src="./assets/icons/searchnormal1.svg" alt="" />
+            <input type="text" placeholder="البحث" />
+          </div>
+          <img
+            class="search-icon"
+            src="../assets/icons/searchnormal2.svg"
+            alt=""
+          />
+          <img src="../assets/icons/hugeicons_settings-01.svg" alt="" />
+          <img src="../assets/icons/iconoir_accessibility.svg" alt="" />
+          <div class="language flex-row">
+            <select>
+              <option value="arabic">ع</option>
+            </select>
+            <img src="../assets/icons/arrowdown2.svg" alt="" />
+          </div>
+          <div class="user-info flex-row">
+            <div class="flex-row">
+              <div class="user-img-bg">
+                <img
+                  class="user-img"
+                  src="../assets/images/user.png"
+                  alt="user image"
+                />
+              </div>
+              <h5>محمد عبدالمجيد</h5>
+            </div>
+            <img src="../assets/icons/arrowdown2.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <!-- ------------------ End header ---------------------- -->
+      <!-- ------------------ Start main ---------------------- -->
+      <main class="main-container">
+        <!-- start numeric statistics small cards -->
+        <div class="statistics-cards-container">
+          <div class="card flex-row">
+            <div class="flex-column">
+              <h6>طلبات</h6>
+              <h2>71</h2>
+            </div>
+            <div class="icon-bg info-border">
+              <img
+                src="../assets/icons/fluent_square-multiple-28-regular.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="card flex-row">
+            <div class="flex-column">
+              <h6>طلبات اكلملت</h6>
+              <h2>43</h2>
+            </div>
+            <div class="icon-bg success-border">
+              <img src="../assets/icons/mage_file-check.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card flex-row">
+            <div class="flex-column">
+              <h6>طلبات لم تكتمل</h6>
+              <h2>16</h2>
+            </div>
+            <div class="icon-bg warning-border">
+              <img src="../assets/icons/hugeicons_clock-05.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card flex-row">
+            <div class="flex-column">
+              <h6>طلبات تم رفضها</h6>
+              <h2>12</h2>
+            </div>
+            <div class="icon-bg error-border">
+              <img src="../assets/icons/mage_cancel.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- end numeric statistics small cards -->
+        <!-- start canter manager cards -->
+        <div class="canter-manager-cards-container">
+          <!-- start orders & beneficiaries  section   -->
+          <div class="charts-cards-container orders-beneficiaries-container">
+            <!----- first card  ----->
+            <div class="services-list-card orders-card card flex-column">
+              <div class="card-head flex-row">
+                <h3>الطلبات</h3>
+                <div class="flex-row">
+                  <button class="btn btn-primary">عرض الكل</button>
+                  <div class="light-gray-bg icon-bg filter-icon">
+                    <img src="../assets/icons/filter-outline.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex-row">آخر تحديث: اليوم ٢٩ سبتمبر، ٢٠٢٤</div>
+              <div class="workshops-list flex-row gap-30 space-btw">
+                <div class="services-list flex-column no-wrap">
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>لم يكتمل</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-error-bg">
+                        <img src="../assets/icons/error.svg" alt="" />
+                        <p>تم الرفض</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">اسم المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row status-box">
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>لم يكتمل</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- --------------  -->
+            <!-- second card -->
+            <div class="services-list-card beneficiaries-card card flex-column">
+              <div class="card-head flex-row">
+                <h3>المستفيدون</h3>
+                <div class="flex-row">
+                  <button class="btn btn-primary">عرض الكل</button>
+                  <div class="light-gray-bg icon-bg filter-icon">
+                    <img src="../assets/icons/filter-outline.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex-row">آخر تحديث: اليوم ٢٩ سبتمبر، ٢٠٢٤</div>
+              <div class="workshops-list flex-row gap-30 space-btw">
+                <div class="services-list flex-column no-wrap">
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>فعال</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>غير فعال</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>فعال</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-error-bg">
+                        <img src="../assets/icons/error.svg" alt="" />
+                        <p>موقوف</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>فعال</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="service-item flex-row">
+                    <div class="flex-row item space-btw">
+                      <h6>اسم الطلب يكتب هنا</h6>
+                      <div class="flex-row gap-12">
+                        <div class="flex-row">
+                          <img src="../assets/icons/user.svg" alt="" />
+                          <p class="date">اسم ممثل المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/elements-building.svg"
+                            alt=""
+                          />
+                          <p class="date">مجال المنشأة</p>
+                        </div>
+
+                        <div class="flex-row">
+                          <img
+                            src="../assets/icons/solar_calendar-outline.svg"
+                            alt=""
+                          />
+                          <p class="date">٢٢ نوفمبر، ٢٠٢٤</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row">
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>غير فعال</p>
+                      </div>
+                      <div class="functions-icon">
+                        <img src="../assets/icons/dotsVector.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ------------ -->
+          </div>
+          <!-- end orders & beneficiaries  section   -->
+          <!-- start Surveys/files  section -->
+          <div class="surveys-files-container flex-row">
+            <!-- --start surveys card---  -->
+            <div class="surveys-card">
+              <div class="sessions-head flex-row space-btw">
+                <h3>الاستبيانات</h3>
+                <div class="flex-row gap-10">
+                  <button class="btn btn-primary">عرض الكل</button>
+                  <div class="icon-bg filter-icon">
+                    <img src="../assets/icons/filter-outline.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="surveys-cards-container">
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>لم يكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-warning-bg">
+                        <img src="../assets/icons/warning.svg" alt="" />
+                        <p>لم يكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="light-green-bg icon-bg">
+                    <img src="../assets/icons/elements10.svg" alt="" />
+                  </div>
+                  <div class="flex-column gap-10">
+                    <h4>اسم المنشأة</h4>
+                    <p>اسم الخدمة واجبة الاستبيان</p>
+                    <div class="status-container flex-row">
+                      <div class="status light-gray-bg gray-border">
+                        <img
+                          src="../assets/icons/solar_calendar-outline.svg"
+                          alt=""
+                        />
+                        <p class="date">11 ديسمبر، 2024</p>
+                      </div>
+                      <div class="status light-success-bg">
+                        <img src="../assets/icons/success.svg" alt="" />
+                        <p>اكتمل</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ----end surveys section ----- -->
+
+            <!-- ----start files section ----- -->
+            <div class="files-card">
+              <div class="section-head">
+                <h3>مكتبة الملفات</h3>
+              </div>
+              <div class="card">
+                <div class="files-card-head flex-row space-btw">
+                  <div class="flex-row gap-8">
+                    <img src="../assets/icons/New.svg" alt="" />
+                    <p>جديد</p>
+                  </div>
+                  <img src="../assets/icons/More.svg" alt="" />
+                  <div class="flex-row gap-8">
+                    <p>تحميل</p>
+                    <img src="../assets/icons/Upload.svg" alt="" />
+                  </div>
+                  <div class="flex-row gap-8">
+                    <p>تعديل في العرض الشبكي</p>
+                    <img src="../assets/icons/Grid view.svg" alt="" />
+                  </div>
+                  <div class="flex-row gap-12">
+                    <div class="flex-row gap-8">
+                      <p>كل الملفات</p>
+                      <img src="../assets/icons/List.svg" alt="" />
+                    </div>
+                    <img src="../assets/icons/Info.svg" alt="" />
+                  </div>
+                </div>
+                <table class="files-table">
+                  <thead>
+                    <th>
+                      <div class="flex-row gap-10">
+                        <img src="../assets/icons/genericfile.svg" alt="" />
+                        <div class="flex-row gap-5">
+                          <h4>الاسم</h4>
+                          <img
+                            src="../assets/icons/List header chevron.svg"
+                            alt=""
+                          />
+                          <img src="../assets/icons/Sort arrow.svg" alt="" />
+                        </div>
+                      </div>
+                    </th>
+
+                    <th>
+                      <div class="flex-row gap-5">
+                        <h4>تم تعديله</h4>
+                        <img
+                          src="../assets/icons/List header chevron.svg"
+                          alt=""
+                        />
+                        <img src="../assets/icons/Sort arrow.svg" alt="" />
+                      </div>
+                    </th>
+
+                    <th>
+                      <div class="flex-row gap-5">
+                        <h4>تم تعديله بواسطة</h4>
+                        <img
+                          src="../assets/icons/List header chevron.svg"
+                          alt=""
+                        />
+                        <img src="../assets/icons/Sort arrow.svg" alt="" />
+                      </div>
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/pdf.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/pptx.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/docx.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/pptx.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/xlsx.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/pdf.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="flex-row gap-10">
+                          <img src="../assets/icons/docx.svg" alt="" />
+                          <h5>اسم الملف</h5>
+                        </div>
+                      </td>
+                      <td>خاصية الملف</td>
+                      <td>خاصية الملف</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- ----end files section ----- -->
+          </div>
+        </div>
+      </main>
+      <!-- ------------------ End main ---------------------- -->
+
+      <!-- ------------------------------------------------------ -->
+    </div>
+    <!-- --------- main javascript -------- -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

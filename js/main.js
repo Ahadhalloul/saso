@@ -212,6 +212,254 @@ document.querySelectorAll(".light-gray-bg button").forEach(button => {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+// document.addEventListener("DOMContentLoaded", function () {
+//   const datePicker = document.getElementById("datePicker");
+//   const dateInput = document.getElementById("dateInput");
+//   const selectedDate = document.getElementById("selectedDate");
+
+//   // Function to format date in Arabic
+//   function formatDateToArabic(date) {
+//       const options = { weekday: 'long', day: 'numeric', month: 'long' };
+//       return date.toLocaleDateString('ar-EG', options);
+//   }
+
+//   // Set default date (today's date)
+//   const today = new Date();
+//   const todayISO = today.toISOString().split('T')[0]; // Format YYYY-MM-DD for input[type="date"]
+//   dateInput.value = todayISO;
+//   selectedDate.textContent = formatDateToArabic(today); // Display formatted date
+
+//   // Trigger the native date picker when clicking the container
+//   datePicker.addEventListener("click", function () {
+//       dateInput.showPicker(); // Opens the date picker UI
+//   });
+
+//   // Update the displayed date when user selects a date
+//   dateInput.addEventListener("change", function () {
+//       const date = new Date(this.value);
+//       selectedDate.textContent = formatDateToArabic(date);
+//   });
+// });
+
+// const monthYear = document.getElementById('monthYear');
+//         const calendarDays = document.getElementById('calendarDays');
+
+//         let currentDate = new Date();
+
+//         function renderCalendar(date) {
+//             calendarDays.innerHTML = '';
+//             monthYear.textContent = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+//             const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+//             const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+//             const startDay = firstDay.getDay();
+//             const totalDays = lastDay.getDate();
+
+//             for (let i = 0; i < startDay; i++) {
+//                 calendarDays.innerHTML += '<div></div>';
+//             }
+
+//             for (let day = 1; day <= totalDays; day++) {
+//                 const dayElement = document.createElement('div');
+//                 dayElement.className = 'day';
+//                 dayElement.textContent = day;
+
+//                 if (day === 3) dayElement.classList.add('highlight');
+//                 if (day === 19) dayElement.classList.add('selected');
+
+//                 dayElement.addEventListener('click', () => {
+//                     document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
+//                     dayElement.classList.add('selected');
+//                 });
+
+//                 calendarDays.appendChild(dayElement);
+//             }
+//         }
+
+//         function prevMonth() {
+//             currentDate.setMonth(currentDate.getMonth() - 1);
+//             renderCalendar(currentDate);
+//         }
+
+//         function nextMonth() {
+//             currentDate.setMonth(currentDate.getMonth() + 1);
+//             renderCalendar(currentDate);
+//         }
+
+//         renderCalendar(currentDate);
+
+const datePickerWrapper = document.getElementById("datePickerWrapper");
+const datePicker = document.getElementById("datePicker");
+const selectedDateEl = document.getElementById("selectedDate");
+const calendarDropdown = document.getElementById("calendarDropdown");
+const monthYearSelect = document.getElementById("monthYearSelect");
+const daysOfWeekEl = document.getElementById("daysOfWeek");
+const daysGrid = document.getElementById("daysGrid");
+const prevMonthBtn = document.getElementById("prevMonth");
+const nextMonthBtn = document.getElementById("nextMonth");
+
+// Global State
+let selectedDate = new Date();
+let currentMonth = selectedDate.getMonth();
+let currentYear = selectedDate.getFullYear();
+
+// Language Data
+const languages = {
+  ar: {
+    months: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+    days: ["أحد", "إثن", "ثلا", "أرب", "خم", "جمع", "سبت"],
+    format: (date) => date.toLocaleDateString('ar-EG', { weekday: 'long', day: 'numeric', month: 'long' }),
+  },
+  en: {
+    months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    format: (date) => date.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' }),
+  }
+};
+
+// Get current language
+function getCurrentLanguage() {
+  return datePickerWrapper.classList.contains("lang-ar") ? "ar" : "en";
+}
+
+// Render Calendar
+function renderCalendar() {
+  const lang = getCurrentLanguage();
+  const { months, days, format } = languages[lang];
+
+  selectedDateEl.textContent = format(selectedDate);
+  monthYearSelect.innerHTML = "";
+  daysOfWeekEl.innerHTML = "";
+
+  // Populate Month-Year Dropdown
+  for (let year = currentYear - 5; year <= currentYear + 5; year++) {
+    for (let month = 0; month < 12; month++) {
+      const option = document.createElement("option");
+      option.value = `${year}-${month}`;
+      option.textContent = `${months[month]} ${year}`;
+      if (year === currentYear && month === currentMonth) option.selected = true;
+      monthYearSelect.appendChild(option);
+    }
+  }
+
+  // Render Days of the Week
+  days.forEach(day => {
+    const dayEl = document.createElement("span");
+    dayEl.textContent = day;
+    daysOfWeekEl.appendChild(dayEl);
+  });
+
+  // Render Days Grid
+  daysGrid.innerHTML = "";
+  const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+  const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+  const today = new Date(); // Get today's date
+
+  // Previous Month Days
+  for (let i = firstDay - 1; i >= 0; i--) {
+    const dayButton = document.createElement("button");
+    dayButton.textContent = prevMonthDays - i;
+    dayButton.classList.add("inactive");
+    daysGrid.appendChild(dayButton);
+  }
+
+  // Current Month Days
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dayButton = document.createElement("button");
+    dayButton.textContent = day;
+
+    // Add 'today' class if it's today's date
+    if (
+      day === today.getDate() &&
+      currentMonth === today.getMonth() &&
+      currentYear === today.getFullYear()
+    ) {
+      dayButton.classList.add("today");
+    }
+
+    // Add 'selected' class if it's the selected date
+    if (
+      day === selectedDate.getDate() &&
+      currentMonth === selectedDate.getMonth() &&
+      currentYear === selectedDate.getFullYear()
+    ) {
+      dayButton.classList.add("selected");
+    }
+
+    // Event listener to select the date
+    dayButton.addEventListener("click", () => {
+      selectedDate = new Date(currentYear, currentMonth, day);
+
+      // Remove 'selected' class from all buttons
+      document.querySelectorAll(".days-grid button").forEach(btn => btn.classList.remove("selected"));
+
+      // Add 'selected' class to the clicked button
+      dayButton.classList.add("selected");
+
+      selectedDateEl.textContent = format(selectedDate);
+      calendarDropdown.style.display = "none";
+    });
+
+    daysGrid.appendChild(dayButton);
+  }
+
+  // Next Month Days to Fill
+  const totalCells = daysGrid.children.length;
+  const remainingCells = 42 - totalCells; // 6 rows * 7 days
+
+  for (let day = 1; day <= remainingCells; day++) {
+    const dayButton = document.createElement("button");
+    dayButton.textContent = day;
+    dayButton.classList.add("inactive");
+    daysGrid.appendChild(dayButton);
+  }
+}
+
+// Event Listeners
+datePicker.addEventListener("click", (e) => {
+  e.stopPropagation();
+  calendarDropdown.style.display = calendarDropdown.style.display === "block" ? "none" : "block";
+});
+
+monthYearSelect.addEventListener("change", (e) => {
+  const [year, month] = e.target.value.split("-").map(Number);
+  currentYear = year;
+  currentMonth = month;
+  renderCalendar();
+});
+
+prevMonthBtn.addEventListener("click", () => {
+  currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+  if (currentMonth === 11) currentYear--;
+  renderCalendar();
+});
+
+nextMonthBtn.addEventListener("click", () => {
+  currentMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+  if (currentMonth === 0) currentYear++;
+  renderCalendar();
+});
+
+function toggleLanguage() {
+  datePickerWrapper.classList.toggle("lang-ar");
+  datePickerWrapper.classList.toggle("lang-en");
+  renderCalendar();
+}
+
+document.addEventListener("click", (e) => {
+  if (!datePickerWrapper.contains(e.target)) {
+    calendarDropdown.style.display = "none";
+  }
+});
+
+// Initial Render
+renderCalendar();
+
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
 // <!-- Toast -->
 function closeToast() {
   document.getElementById("toast").classList.add("hidden");
@@ -235,4 +483,3 @@ window.addEventListener("click", function (e) {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
-
