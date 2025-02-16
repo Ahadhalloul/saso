@@ -25,6 +25,15 @@
   box-sizing: border-box;
 }
 
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.pdf-viewer-container embed {
+  height: 100%;
+  min-height: 1024px;
+}
+
 /* -----------Grid System----------- */
 
 /* Row */
@@ -590,6 +599,24 @@ a {
   gap: 20px;
 }
 
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+}
+input[type="checkbox"]:checked {
+  background-color: #1B8354;
+  border-color: #1B8354;
+  background-image: url("../assets/images/ok.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* ---------------Start sidebar menu --------------- */
 .sidebar-container {
   grid-area: sidebar;
@@ -3346,6 +3373,32 @@ input.radio-btn {
   background-color: #166a45;
 }
 
+.btn-neutral-text {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px 16px;
+  border-radius: 4px;
+  background-color: #0d121c;
+  border: solid 0px;
+  color: #fff;
+  border: solid 1px transparent;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 6px;
+}
+
+.btn-neutral-text img {
+  height: 24px;
+  width: 24px;
+}
+
+.btn-neutral-text:hover {
+  background-color: #1F2A37;
+}
+
 .btn-secondary-outline {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 16px;
@@ -3390,6 +3443,15 @@ input.radio-btn {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+}
+
+.card-title-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: solid 1px #E4E4E4;
 }
 
 .card-title .title-text h5 {
@@ -4135,6 +4197,44 @@ nav .pagination .more .page-link {
   flex-direction: row-reverse;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .tab-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: auto;
+    min-width: 320px;
+    max-width: 451px;
+    scroll-padding-left: 10px;
+    padding-bottom: 5px;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.tab-buttons::-webkit-scrollbar {
+    height: 5px;
+}
+
+.tab-buttons::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 }
 
 .tab-buttons-2 {
@@ -4144,6 +4244,50 @@ nav .pagination .more .page-link {
 
 .tab-btn i.icon-tab {
   background-image: url(../assets/images/tabs-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.icon-data {
+  background-image: url(../assets/icons/data-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.icon-paragraph {
+  background-image: url(../assets/icons/paragraph-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.icon-file {
+  background-image: url(../assets/icons/file.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.icon-certificate {
+  background-image: url(../assets/icons/certificate-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.icon-qr {
+  background-image: url(../assets/icons/QR-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.tab-btn i.icon-img {
+  background-image: url(../assets/icons/img-icon.svg);
   background-repeat: no-repeat;
   display: block;
   height: 15px;
@@ -4250,6 +4394,22 @@ nav .pagination .more .page-link {
 
 /* Collapsible Styles */
 /* Accordion Styles */
+.new-data-accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.product-img {
+  aspect-ratio: 6/4;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.new-data-accordion:last-child {
+  margin-bottom: 0px;
+}
 .accordion {
   background: #fff;
   overflow: hidden;
@@ -4364,6 +4524,8 @@ nav .pagination .more .page-link {
   color: #1b8354;
   text-decoration: underline;
 }
+
+
 
 /* Modal Styles */
 .modal {
@@ -4718,12 +4880,42 @@ nav .pagination .more .page-link {
 /* -------------form---------------Mlewis- */
 
 /* -------------filter-card---------------Mlewis- */
-.filter-cards .row {
-  flex-wrap: inherit;
-  align-items: end;
+#advancedSearch .filter-group {
   margin-bottom: 24px;
-  margin-left: -8px;
-  margin-right: -8px;
+}
+.filter-cards .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.filter-cards .search-icon img {
+  position: absolute;
+  right: 1rem;
+}
+.filter-cards .search-icon input {
+  padding: .375rem 2.75rem .375rem 1rem;
+}
+
+.card-search .filter-group .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.card-search .filter-group .search-icon img {
+  position: absolute;
+  right: 1rem;
+}
+.card-search .filter-group .search-icon input {
+  padding: .375rem 2.75rem .375rem 1rem;
+}
+
+.filter-cards {
+  margin-bottom: 24px;
+}
+.filter-cards .row {
+  align-items: end;
 }
 
 .filter-group {
@@ -4736,6 +4928,50 @@ nav .pagination .more .page-link {
 .filter-actions {
   display: flex;
   gap: 16px;
+}
+
+.card-search .form-check {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-search .check-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-search .check {
+  margin-bottom: 16px;
+}
+.card-search .filter-group {
+  margin-bottom: 20px;
+}
+.card-search .filter-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.filter-tags i.remove-icon {
+    background-image: url(../../saso/assets/icons/remove-icon.svg);
+    height: 14px;
+    width: 14px;
+    display: block;
+}
+.card-search .filter-tags .search-tag {
+  background-color: #e7f1ff;
+    border: solid 1px #b2ddff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #1849a9;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 @media (max-width: 992px) {
