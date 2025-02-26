@@ -11,6 +11,56 @@
   <!-- <link rel="stylesheet" href="../../../css/en-style.css" /> -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- Progress Bar -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function arabicToEnglishNumbers(str) {
+            const arabicNumbers = {
+                '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4',
+                '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9'
+            };
+            return str.replace(/[٠-٩]/g, (digit) => arabicNumbers[digit]);
+        }
+    
+        function updateProgressFromText() {
+            const progressContainer = document.getElementById("progressContainer");
+            const progressBar = document.getElementById("progressBar");
+            const progressCircle = document.getElementById("progressCircle");
+    
+            if (!progressContainer || !progressBar || !progressCircle) {
+                console.error("One or more elements not found!");
+                return;
+            }
+    
+            // Extract text and convert Arabic numbers to English
+            let percentageText = progressCircle.textContent.trim();
+            let percentageEnglish = arabicToEnglishNumbers(percentageText);
+            let percentage = parseInt(percentageEnglish) || 0;
+    
+            // Ensure the value is within the range of 0 to 100
+            percentage = Math.max(0, Math.min(percentage, 100));
+    
+            // Handle RTL or LTR direction
+            if (progressContainer.classList.contains("pb-rtl")) {
+                progressBar.style.width = percentage + "%";
+                progressCircle.style.right = percentage + "%";
+            } else {
+                progressBar.style.width = percentage + "%";
+                progressCircle.style.left = percentage + "%";
+            }
+    
+            // Display an image if progress reaches 100%
+            if (percentage === 100) {
+                progressCircle.innerHTML = `<img src="../../../assets/icons/bp-completed.svg" alt="Done">`;
+            }
+        }
+    
+        // Run the function to update progress based on the initial text value
+        updateProgressFromText();
+    });
+    
+    </script>
+
 </head>
 
 <body>
@@ -283,6 +333,14 @@
                   <div id="content3" class="accordion-content open">
 
                     <div class="achievement-section">
+
+                      <!-- Progress Bar -->
+                      <!-- Change pb-rtl to pb-ltr for LTR mode -->
+                      <div class="progress-container pb-rtl" id="progressContainer">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-circle" id="progressCircle">٢%</div>
+                      </div>
+
                       <div class="row">
                         <div class="col-12">
                           <h4>انحاز ممثل المتشأة</h4>
