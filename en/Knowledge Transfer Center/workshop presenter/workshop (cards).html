@@ -6,16 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SASO</title>
   <!-- -------------- arabic page style ------------- -->
-  <link rel="stylesheet" href="../../../css/ar-style.css" />
-  <!-- -------------- english page style ------------- -->
-  <!-- <link rel="stylesheet" href="../../../css/en-style.css" /> -->
+    <!-- <link rel="stylesheet" href="../css/ar-style.css" /> -->
+    <!-- -------------- english page style ------------- -->
+    <link rel="stylesheet" href="../../../css/en-style-test.css" />
 
 
 </head>
 
 <body>
+  <!-- -------------------Start Toast --------------- -->
+  <div class="toast success" id="toast">
+    <div class="toast-head">
+      <div class="message">
+        <div class="toast-icon">
+          <img src="../../../assets/images/done-icon.svg" alt="">
+        </div>
+        <div class="message-text">
+          <h3 class="message-tile">تم رفع وحفظ التسجيلات بنجاح</h3>
+          <p class="message-p">يكتب المحتوى الإضافي هنا في حال ان رسالة الاشعار أو التنبيه تحتاج الى شرح أو تفصيل.</p>
+        </div>
+      </div>
+      <button class="close" onclick="closeToast()"><img src="../../../assets/icons/close-icon.svg" alt=""></button>
+    </div>
+  </div>
+  <!-- -------------------End Toast --------------- -->
 
-<p style="font-family: ssaudi_riyal;">$</p>
   <div class="overlay-bg"></div>
   <div class="container">
     <!-- -------------------Start sidebar menu --------------- -->
@@ -328,29 +343,12 @@
 
                       <div class="card-content">
 
-                        <div class="attached-files-con">
-                          <div class="flex-column upload-files-con">
-                            <div>
-                              <img src="../../assets/icons/upload-file.svg" alt="">
-                            </div>
-                            <div class="flex-column gap-8">
-                              <h4>اسحب و أفلت الملفات هنا للرفع</h4>
-                              <p class="gray-text">
-                                Maximum file size allowed is 2MB, supported file formats
-                                include .jpg, .png, and .pdf.
-                              </p>
-                            </div>
-                            <button class="btn gray-border">تحميل ملفات من جهازك</button>
-                          </div>
-
-                        </div>
-
                         <div class="primary-cards">
 
                           <div class="row">
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -370,11 +368,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -382,7 +375,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -402,11 +395,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -414,7 +402,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -434,11 +422,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -446,7 +429,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -466,11 +449,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -478,7 +456,7 @@
                             </div>
     
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -498,11 +476,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -510,7 +483,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -530,11 +503,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -542,7 +510,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -562,11 +530,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -574,7 +537,7 @@
                             </div>
                 
                             <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
+                              <div class="con-card">
                                 <div class="card-body">
                                   <!-- Icon Section -->
                                   <div class="img-container">
@@ -594,11 +557,6 @@
                                       <h4>اسم المواصفة</h4>
                                       <p>رقم المواصفة هنا</p>
                                     </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
                                   </div>
                 
                                 </div>
@@ -612,8 +570,8 @@
                         
 
                         <div class="btns flex-row gap-12 mt-24">
-                          <button class="btn btn-secondary flex-row gap-8">الغاء</button>
-                          <button class="btn btn-primary  flex-row gap-8"><img src="../../../assets/icons/edit-icon.svg" alt="">تعديل</button>
+                          <button class="btn btn-primary flex-row gap-8">
+                            <img src="../../../assets/icons/edit-icon.svg" alt="">تعديل</button>
                         </div>
                       </div>
             
@@ -624,6 +582,116 @@
               </div>
             </div>
 
+            <div id="tab3" class="tab">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header" data-target="content3">ما تم تحقيقه</button>
+                  <div id="content3" class="accordion-content open">
+
+                    <div class="achievement-section">
+
+                      
+                      <!-- Progress Bar -->
+                      <!-- Change pb-rtl to pb-ltr for LTR mode -->
+                      <div class="progress-container pb-rtl" id="progressContainer">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-circle" id="progressCircle">٢%</div>
+                      </div>
+
+                      
+
+                      <div class="row">
+                        <div class="col-12">
+                          <h4>انجازاتي</h4>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                          <div class="primary-cards">
+                            <div class="con-card card-shadow employee-chart">
+                              <div class="flex-row space-btw">
+
+                                <div class="employee-data">
+                                  <h5>اسم الموظف يكتب هنا</h5>
+                                  <p>تاريخ البدء في الورشة</p>
+                                  <div class="status light-info-bg mb-0">
+                                    <img src="../../../assets/icons/solar_calendar-outline.svg" alt="">
+                                    <p>١٢ ابريل ٢٠٢٥</p>
+                                  </div>
+                                </div>
+
+                                <div class="chart">
+                                  <canvas class="wChart" data-completed="15" data-notcompleted="5" width="74" height="74"></canvas>
+                                  <div class="status light-success-bg mb-0">
+                                    <img src="../../../assets/icons/rec-v.svg" alt="">
+                                    <p>٨ تسجيلات</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="tab4" class="tab">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header" data-target="content4">تقرير الورشة</button>
+                  <div id="content4" class="accordion-content open">
+
+                    <div class="card-title">
+                      <div class="title-text flex-row space-btw gap-10">
+                        <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/export-b-icon.svg" alt=""></button>
+                        <h5>اسم تقرير الورشة.PDF</h5>
+                      </div>
+                      <div class="cat">
+                        <button class="btn btn-primary-text">استخلاص الملف<img src="../../../assets/icons/summary-icon.svg" alt=""></button>
+                      </div>
+                    </div>
+
+                    <div class="pdf-viewer-container">
+                      <embed src="https://cdn.prod.website-files.com/65fa22606ece141248b61294/66817734b6817ed383b61f6a_placeholder_pdf.pdf" type="application/pdf" width="100%" height="100%">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="tab5" class="tab">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header" data-target="content5">تقرير الورشة</button>
+                  <div id="content5" class="accordion-content open">
+
+                    <div class="card-title">
+                      <div class="title-text flex-row space-btw gap-10">
+                        <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/export-b-icon.svg" alt=""></button>
+                        <h5>اسم شهادة الورشة.PDF</h5>
+                      </div>
+                      <div class="cat">
+                        <button class="btn btn-primary-text">استخلاص الملف<img src="../../../assets/icons/summary-icon.svg" alt=""></button>
+                      </div>
+                    </div>
+
+                    <div class="pdf-viewer-container">
+                      <embed src="https://cdn.prod.website-files.com/65fa22606ece141248b61294/66817734b6817ed383b61f6a_placeholder_pdf.pdf" type="application/pdf" width="100%" height="100%">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
 
           </div>
 

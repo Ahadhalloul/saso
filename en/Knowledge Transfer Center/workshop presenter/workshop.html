@@ -6,16 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SASO</title>
   <!-- -------------- arabic page style ------------- -->
-  <link rel="stylesheet" href="../../../css/ar-style.css" />
-  <!-- -------------- english page style ------------- -->
-  <!-- <link rel="stylesheet" href="../../../css/en-style.css" /> -->
-
+    <!-- <link rel="stylesheet" href="../css/ar-style.css" /> -->
+    <!-- -------------- english page style ------------- -->
+    <link rel="stylesheet" href="../../../css/en-style-test.css" />
 
 </head>
 
 <body>
+  <!-- -------------------Start Toast --------------- -->
+  <div class="toast success" id="toast">
+    <div class="toast-head">
+      <div class="message">
+        <div class="toast-icon">
+          <img src="../../../assets/images/done-icon.svg" alt="">
+        </div>
+        <div class="message-text">
+          <h3 class="message-tile">تم رفع وحفظ التسجيلات بنجاح</h3>
+          <p class="message-p">يكتب المحتوى الإضافي هنا في حال ان رسالة الاشعار أو التنبيه تحتاج الى شرح أو تفصيل.</p>
+        </div>
+      </div>
+      <button class="close" onclick="closeToast()"><img src="../../../assets/icons/close-icon.svg" alt=""></button>
+    </div>
+  </div>
+  <!-- -------------------End Toast --------------- -->
 
-<p style="font-family: ssaudi_riyal;">$</p>
   <div class="overlay-bg"></div>
   <div class="container">
     <!-- -------------------Start sidebar menu --------------- -->
@@ -242,11 +256,11 @@
 
         <div class="tabs">
           <div class="tab-buttons mt-0">
-            <button class="tab-btn" data-tab="tab1">تفاصيل الورشة<i class="icon-data"></i></button>
-            <button class="tab-btn active" data-tab="tab2">تسجيلات الورشة<i class="icon-rec"></i></button>
+            <button class="tab-btn active" data-tab="tab1">تفاصيل الورشة<i class="icon-data"></i></button>
+            <button class="tab-btn" data-tab="tab2">تسجيلات الورشة<i class="icon-rec"></i></button>
           </div>
           <div class="tab-content">
-            <div id="tab1" class="tab">
+            <div id="tab1" class="tab active">
 
               <div class="accordion">
                 <div class="accordion-item">
@@ -319,7 +333,7 @@
 
             </div>
 
-            <div id="tab2" class="tab active">
+            <div id="tab2" class="tab">
               <div class="accordion">
                 <div class="accordion-item">
                   <button class="accordion-header" data-target="content2">تسجيلات الورشة</button>
@@ -342,278 +356,56 @@
                             </div>
                             <button class="btn gray-border">تحميل ملفات من جهازك</button>
                           </div>
-
-                        </div>
-
-                        <div class="primary-cards">
-
-                          <div class="row">
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                          <div class="attached-files">
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-    
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
+                            <div class="input flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../../assets/icons/success-check.svg" alt="">
+                                اسم الملف.mp4
                               </div>
+                              <img src="../../../assets/icons/close-icon.svg" alt="">
                             </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
-                              </div>
-                            </div>
-                
-                            <div class="col-12 col-md-4 col-lg-3">
-                              <div class="con-card card-shadow">
-                                <div class="card-body">
-                                  <!-- Icon Section -->
-                                  <div class="img-container">
-                                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img">
-                                  </div>
-                                  <!-- Title -->
-                                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
-                
-                                  <div class="flex-column space-btw mb-0">
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                    <div class="flex-row gap-10">
-                                      <img src="../../../assets/icons/file.svg" alt="">
-                                      <h4>اسم المواصفة</h4>
-                                      <p>رقم المواصفة هنا</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="flex-row gap-16 mt-24">
-                                    <button class="btn btn-secondary-2 btn-icon"><img src="../../../assets/icons/eye-icon.svg" alt="view"></button>
-                                    <button class="btn btn-neutral-text btn-icon"><img src="../../../assets/icons/delete-icon.svg" alt="delete"></button>
-                                  </div>
-                
-                                </div>
-                              </div>
-                            </div>
-                
-                
                           </div>
-                
                         </div>
-                        
 
                         <div class="btns flex-row gap-12 mt-24">
-                          <button class="btn btn-secondary flex-row gap-8">الغاء</button>
-                          <button class="btn btn-primary  flex-row gap-8"><img src="../../../assets/icons/edit-icon.svg" alt="">تعديل</button>
+                          <button class="btn btn-secondary">الغاء</button>
+                          <button class="btn btn-primary flex-row gap-8">
+                            <img src="../../../assets/icons/right-arrow.svg" alt="">حفظ وارسال</button>
                         </div>
                       </div>
             
@@ -623,7 +415,6 @@
 
               </div>
             </div>
-
 
           </div>
 

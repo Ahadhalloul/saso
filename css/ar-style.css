@@ -4828,6 +4828,11 @@ nav .pagination .more .page-link {
   width: 100%;
   position: relative;
 }
+.modal-dialog .table-responsive {
+  height: 100%;
+  max-height: 500px;
+  overflow: scroll;
+}
 
 .modal-maxw960 {
   max-width: 960px;

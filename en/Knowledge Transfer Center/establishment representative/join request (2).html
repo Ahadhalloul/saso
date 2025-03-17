@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SASO</title>
+  <!-- -------------- arabic page style ------------- -->
+    <!-- <link rel="stylesheet" href="../css/ar-style.css" /> -->
+    <!-- -------------- english page style ------------- -->
+    <link rel="stylesheet" href="../../../css/en-style-test.css" />
+</head>
+
+<body>
+
+  <div class="toast success" id="toast">
+    <div class="toast-head">
+      <div class="message">
+        <div class="toast-icon">
+          <img src="../../../assets/images/done-icon.svg" alt="">
+        </div>
+        <div class="message-text">
+          <h3 class="message-tile">تم ارسال طلبك بنجاح</h3>
+          <p class="message-p">يكتب المحتوى الإضافي هنا في حال ان رسالة الاشعار أو التنبيه تحتاج الى شرح أو تفصيل.</p>
+        </div>
+      </div>
+      <button class="close" onclick="closeToast()"><img src="../../../assets/icons/close-icon.svg" alt=""></button>
+    </div>
+  </div>
+
+  <div class="overlay-bg"></div>
+  <div class="container">
+    <!-- -------------------Start sidebar menu --------------- -->
+    <div class="sidebar-container flex-column" id="main-sidebar">
+      <div class="sidebar-head flex-row">
+        <img class="logo" src="../../../assets/logos/logo.png" alt="saso logo" />
+        <img class="collapse-icon" src="../../../assets/icons/mi_menu.svg" alt="collapse icon" />
+        <img src="../../../assets/icons/mi_menu.svg" alt="" class="sm-screen-close-icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="active">
+              <img src="../../../assets/icons/radix-icons_dashboard.svg" alt="" />لوحة
+              التحكم
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pointer space-btw" id="services-sub-menu">
+              <div class="flex-row gap-12">
+                <img src="../../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />خدمات الهيئة
+              </div>
+              <div class="sub-menu-icon">
+                <img src="../../../assets/icons/arrowdown2.png" alt="" />
+              </div>
+            </a>
+            <!-- start sub menu content -->
+            <ul class="sub-menu-list hide" id="services-list">
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#" class="">الاستشارات الفورية عن بعد</a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+            </ul>
+            <!-- end sub menu content -->
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />طلباتي
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/iconamoon_profile-light.svg" alt="" />حسابي
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+              المستندات
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+              والمساعدة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/carbon_report-data.svg" alt="" />التقارير
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/simple-line-icons_question.svg" alt="" />الأسئلة الشائعة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/hugeicons_news.svg" alt="" />مركز الأخبار
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----start collapsed sidebar-------- -->
+    <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+      <div class="sidebar-head">
+        <img class="collapse-icon" src="../../../assets/icons/mi_menu-white.svg" alt="collapse icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="" class="active">
+              <img src="../../../assets/icons/radix-icons_dashboard.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/iconamoon_profile-light.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/f7_doc-on-doc.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/solar_help-linear.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/carbon_report-data.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/simple-line-icons_question.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/hugeicons_news.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----end collapsed sidebar-------- -->
+    <!-- -------------------End sidebar menu ----------------- -->
+    <!-- ------------------ Start header ---------------------- -->
+    <header class="header flex-row">
+      <div class="flex-row gap-30">
+        <div class="logo-menu-icons">
+          <img class="md-screen-menu-icon" src="../../../assets/icons/mi_menu.svg" alt="" />
+          <img src="../../../assets/logos/logo-medium.png" alt="logo" />
+        </div>
+        <div class="path flex-column">
+          <p>
+            اسم المنشأة <span class="blue-text"> / </span><a href="" class="active">لوحة التحكم</a>
+          </p>
+          <h2>لوحة التحكم</h2>
+        </div>
+      </div>
+      <div class="user-functions flex-row">
+        <div class="search flex-row">
+          <img src="./assets/icons/searchnormal1.svg" alt="" />
+          <input type="text" placeholder="البحث" />
+        </div>
+        <img class="search-icon" src="../../../assets/icons/searchnormal2.svg" alt="" />
+        <img src="../../../assets/icons/hugeicons_settings-01.svg" alt="" />
+        <img src="../../../assets/icons/iconoir_accessibility.svg" alt="" />
+        <div class="language flex-row">
+          <select>
+            <option value="arabic">ع</option>
+          </select>
+          <img src="../../../assets/icons/arrowdown2.svg" alt="" />
+        </div>
+        <div class="user-info flex-row">
+          <div class="flex-row">
+            <div class="user-img-bg">
+              <img class="user-img" src="../../../assets/images/user.png" alt="user image" />
+            </div>
+            <h5>محمد عبدالمجيد</h5>
+          </div>
+          <img src="../../../assets/icons/arrowdown2.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!-- ------------------ End header ---------------------- -->
+    <!-- ------------------ Start main ---------------------- -->
+    <main class="main-container">
+
+      <div class="title-page">
+        <div class="title">
+          <button class="btn btn-icon"><img src="../../../assets/images/back-icon.svg" alt=""></button>
+          <h2>تقديم طلب الانضمام - اسم الورشة التوعوية <div class="status light-gray-bg gray-border"><p>مسجلة</p></div></h2>
+        </div>
+        <div class="cta">
+          <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/export-b-icon.svg" alt=""></button>
+          <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/share-icon.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="service-title">
+          <h5>اختيار موظفين المنشأة</h5>
+        </div>
+
+        <div class="filter-search-videos">
+          <div class="row">
+            <div class="col-12">
+              <p>موظفين المنشأة</p>
+            </div>
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-10 col-lg-3">
+              <div class="primary-cards">
+                <div class="con-card card-shadow">
+                  <p>اسم الموظف يكتب هنا</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-2 col-lg-3">
+              <div class="filter-actions">
+                <button class="btn btn-primary-text" id="openModal"><img src="../../../assets/icons/add-icon.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+
+          <div class="col-12 mb-24">
+
+              <div class="primary-cards">
+                <div class="con-card mt-0">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../../assets/icons/specifications-icon.svg" alt="img" class="icon-img" />
+                    </div>
+                    <!-- Title -->
+                    <h5>المواصفات المرتبطة بالورشة</h5>
+                    <div class="flex-column space-btw">
+                      <div class="flex-row gap-10">
+                        <img src="../../../assets/icons/file.svg" alt="">
+                        <h4>اسم المواصفة</h4>
+                        <p>رقم المواصفة هنا</p>
+                      </div>
+                      <div class="flex-row gap-10">
+                        <img src="../../../assets/icons/file.svg" alt="">
+                        <h4>اسم المواصفة</h4>
+                        <p>رقم المواصفة هنا</p>
+                      </div>
+                      <div class="flex-row gap-10">
+                        <img src="../../../assets/icons/file.svg" alt="">
+                        <h4>اسم المواصفة</h4>
+                        <p>رقم المواصفة هنا</p>
+                      </div>
+                    </div>        
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col-12 mb-24">
+
+            <div class="primary-cards">
+              <div class="con-card mt-0">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/details-icon.svg" alt="img" class="icon-img">
+                  </div>
+                  <!-- Title -->
+                  <h5>المواصفات المرتبطة بالورشة</h5>
+                  <p class="text mb-0">إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي كما يمكنك العثور على العديد من الأدوات الأخرى التي تساعدك على تنفيذ العديد من المهام ببساطة وسهولة، هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً . إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي كما يمكنك العثور على العديد من الأدوات الأخرى التي تساعدك على تنفيذ العديد من المهام ببساطة وسهولة، هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً . </p>
+      
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+          <div class="col-12 mb-24">
+
+              <div class="primary-cards">
+                <div class="con-card mt-0">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="photo-container">
+                      <img src="../../../assets/icons/Image-avatar.svg" alt="img" class="avatar-img" />
+                    </div>
+                    <!-- Title -->
+                    <h5 class="mb-16">اسم مقدم الورشة</h5>
+                    <p class="text mb-0">إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي. </p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="service-title">
+          <h5>تسجيلات الورشة</h5>
+        </div>
+
+        <div class="primary-cards">
+
+          <div class="row">
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="img-container">
+                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="img-container">
+                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="img-container">
+                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="img-container">
+                    <img src="../../../assets/images/video-img.png" alt="img" class="photo-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان تسجيل الورشة<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="button-group mt-24">
+          <button type="button" class="btn btn-secondary-outline">الرجوع</button>
+          <button type="button" id="openModal" class="btn btn-primary-text">ارسال الطلب<img src="../../../assets/icons/right-arrow.svg" alt=""></button>
+      </div>
+
+      </div>
+
+
+    </main>
+    <!-- ------------------ End main ---------------------- -->
+
+    <!-- ------------------------------------------------------ -->
+  </div>
+
+  <!-- --------- Modal -------- -->
+     <!-- Modal -->
+     <div id="modal" class="modal">
+      <div class="modal-dialog modal-dialog-centered modal-maxw960">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <img src="../../../assets/icons/add-circle.svg" alt="">
+                  <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
+              </div>
+              <div class="modal-body">
+                  <h5>موظفين المنشأة</h5>
+
+                  <div class="check mb-16">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        يرجى الضغط على مربع الاختيار اذا كنت تريد الانضمام الى الورشة
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="filter-group mb-16">
+                    <label for="productive-time" class="form-label">بحث بإسم الموظف</label>
+                    <input type="text" class="form-input" placeholder="اسم الموظف">
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn neutral icon">ازالة<img src="../../../assets/images/remove-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text">
+                              <p>اسم الموظف يكتب هنا</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="action-table">
+                              <button class="btn primary icon">اضف<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+                            </div>
+                          </td>
+                        </tr>
+    
+                      </tbody>
+                    </table>
+                  </div>
+
+
+              </div>
+
+              <div class="cardfooter">
+        
+                <nav class="pag-table" aria-label="Pagination">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link Previous" href="#"><i class="previous-io"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item more"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">999</a></li>
+                        <li class="page-item"><a class="page-link Next" href="#"><i class="next-io"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+              <div class="modal-footer">
+                <button class="btn btn-neutral">اضافة<i class="leading-icon-w"></i></button>
+                  <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- --------- main javascript -------- -->
+  <script src="../../../js/main.js"></script>
+</body>
+
+</html>
