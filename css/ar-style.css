@@ -4176,6 +4176,16 @@ nav .pagination .more .page-link {
   overflow: hidden;
 }
 
+.primary-cards .con-card .news-title {
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: normal;
+  height: 52px;
+  overflow: hidden;
+}
+
 .primary-cards .con-card h5 {
   color: #303030;
   font-size: 1.125rem;
@@ -6023,4 +6033,74 @@ form .form-group .time-list span.info-tag {
 .pb-ltr .progress-circle:has(img)  {
   right: 0%;
   transition: right 1s ease-in-out, left 1s ease-in-out;
+}
+.hero-service .tages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.5rem
+}
+.hero-service .tag-btn {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4.5px 12px;
+  background-color: #fff;
+  border: solid 1px #d2d6db;
+  border-radius: 4px;
+  color: #161616
+}
+
+.hero-service .tag-btn:hover {
+  background-color: #f3f4f6;
+  color: #161616
+}
+
+.hero-service .news-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem
+}
+
+.hero-service .news-info span {
+  font-size: 18px;
+  font-weight: 300;
+  color: #1f2a37
+}
+
+.section-title .head-title .text-title h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 26px
+}
+
+.section-title .text-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #1f2a37;
+  margin-bottom: 0px
+}
+.details-section .details .title h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161616
+}
+
+.details-section .details .description p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #1f2a37;
+  margin-bottom: 20px
+}
+
+.details-section .details .title {
+  margin-bottom: 32px;
+  margin-top: 32px
+}
+
+.details-section .details .title:first-of-type {
+  margin-top: 0px
+}
+.details-section {
+  padding: 40px 0;
 }
