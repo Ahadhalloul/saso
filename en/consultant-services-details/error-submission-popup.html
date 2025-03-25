@@ -268,7 +268,7 @@
               src="../../assets/icons/mi_menu.svg"
               alt=""
             />
-            <img src="../../../../assets/logos/logo-medium.png" alt="logo" />
+            <img src="../../assets/logos/logo-medium.png" alt="logo" />
           </div>
           <div class="path flex-column">
             <p>
@@ -288,26 +288,46 @@
             src="../../assets/icons/searchnormal2.svg"
             alt=""
           />
-          <img src="../../../../assets/icons/hugeicons_settings-01.svg" alt="" />
-          <img src="../../../../assets/icons/iconoir_accessibility.svg" alt="" />
+          <img src="../../assets/icons/hugeicons_settings-01.svg" alt="" />
+
+          <div class="accessibility flex-row gap-20">
+            <div class="accessibility-dropdown-wrapper">
+              <button class="accessibility-button-header btn-transparent">
+                <img src="../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
+              </button>
+            
+              <div class="accessibility-dropdown" id="accessibilityDropdown">
+                <button id="increaseFontBtn">
+                  <img src="../../assets/icons/increase-font.svg" alt="Increase Font Size" />
+                </button>
+                <button id="decreaseFontBtn">
+                  <img src="../../assets/icons/decrease-font.svg" alt="Decrease Font Size" />
+                </button>
+              </div>
+            </div>
+            <button id="toggleGrayscaleBtn" class="btn-transparent">
+              <img src="../../assets/icons/color-blindness-icon.svg" alt="Toggle Contrast Modes" />
+            </button>
+          </div>
+
           <div class="language flex-row">
             <select>
               <option value="arabic">ع</option>
             </select>
-            <img src="../../../../assets/icons/arrowdown2.svg" alt="" />
+            <img src="../../assets/icons/arrowdown2.svg" alt="" />
           </div>
           <div class="user-info flex-row">
             <div class="flex-row">
               <div class="user-img-bg">
                 <img
                   class="user-img"
-                  src="../../../../assets/images/user.png"
+                  src="../../assets/images/user.png"
                   alt="user image"
                 />
               </div>
               <h5>محمد عبدالمجيد</h5>
             </div>
-            <img src="../../../../assets/icons/arrowdown2.png" alt="" />
+            <img src="../../assets/icons/arrowdown2.png" alt="" />
           </div>
         </div>
       </header>
@@ -473,5 +493,6 @@
     <!-- ---------------------------------------------------  -->
     <!-- --------- main javascript -------- -->
     <script src="../../js/main.js"></script>
+    <script src="../../js/accessibility_widget.js"></script>
   </body>
 </html>

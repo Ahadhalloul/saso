@@ -212,83 +212,6 @@ document.querySelectorAll(".light-gray-bg button").forEach(button => {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
-// document.addEventListener("DOMContentLoaded", function () {
-//   const datePicker = document.getElementById("datePicker");
-//   const dateInput = document.getElementById("dateInput");
-//   const selectedDate = document.getElementById("selectedDate");
-
-//   // Function to format date in Arabic
-//   function formatDateToArabic(date) {
-//       const options = { weekday: 'long', day: 'numeric', month: 'long' };
-//       return date.toLocaleDateString('ar-EG', options);
-//   }
-
-//   // Set default date (today's date)
-//   const today = new Date();
-//   const todayISO = today.toISOString().split('T')[0]; // Format YYYY-MM-DD for input[type="date"]
-//   dateInput.value = todayISO;
-//   selectedDate.textContent = formatDateToArabic(today); // Display formatted date
-
-//   // Trigger the native date picker when clicking the container
-//   datePicker.addEventListener("click", function () {
-//       dateInput.showPicker(); // Opens the date picker UI
-//   });
-
-//   // Update the displayed date when user selects a date
-//   dateInput.addEventListener("change", function () {
-//       const date = new Date(this.value);
-//       selectedDate.textContent = formatDateToArabic(date);
-//   });
-// });
-
-// const monthYear = document.getElementById('monthYear');
-//         const calendarDays = document.getElementById('calendarDays');
-
-//         let currentDate = new Date();
-
-//         function renderCalendar(date) {
-//             calendarDays.innerHTML = '';
-//             monthYear.textContent = date.toLocaleString('default', { month: 'long', year: 'numeric' });
-
-//             const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-//             const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-
-//             const startDay = firstDay.getDay();
-//             const totalDays = lastDay.getDate();
-
-//             for (let i = 0; i < startDay; i++) {
-//                 calendarDays.innerHTML += '<div></div>';
-//             }
-
-//             for (let day = 1; day <= totalDays; day++) {
-//                 const dayElement = document.createElement('div');
-//                 dayElement.className = 'day';
-//                 dayElement.textContent = day;
-
-//                 if (day === 3) dayElement.classList.add('highlight');
-//                 if (day === 19) dayElement.classList.add('selected');
-
-//                 dayElement.addEventListener('click', () => {
-//                     document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
-//                     dayElement.classList.add('selected');
-//                 });
-
-//                 calendarDays.appendChild(dayElement);
-//             }
-//         }
-
-//         function prevMonth() {
-//             currentDate.setMonth(currentDate.getMonth() - 1);
-//             renderCalendar(currentDate);
-//         }
-
-//         function nextMonth() {
-//             currentDate.setMonth(currentDate.getMonth() + 1);
-//             renderCalendar(currentDate);
-//         }
-
-//         renderCalendar(currentDate);
-
 const datePickerWrapper = document.getElementById("datePickerWrapper");
 const datePicker = document.getElementById("datePicker");
 const selectedDateEl = document.getElementById("selectedDate");
@@ -459,6 +382,7 @@ document.addEventListener("click", (e) => {
 renderCalendar();
 
 
+
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
 // <!-- Toast -->
@@ -484,3 +408,4 @@ window.addEventListener("click", function (e) {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+

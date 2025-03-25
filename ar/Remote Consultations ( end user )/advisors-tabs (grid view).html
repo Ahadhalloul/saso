@@ -197,7 +197,25 @@
         </div>
         <img class="search-icon" src="../../assets/icons/searchnormal2.svg" alt="" />
         <img src="../../assets/icons/hugeicons_settings-01.svg" alt="" />
-        <img src="../../assets/icons/iconoir_accessibility.svg" alt="" />
+        <div class="accessibility flex-row gap-20">
+          <div class="accessibility-dropdown-wrapper">
+            <button class="accessibility-button-header btn-transparent">
+              <img src="../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
+            </button>
+          
+            <div class="accessibility-dropdown" id="accessibilityDropdown">
+              <button id="increaseFontBtn">
+                <img src="../../assets/icons/increase-font.svg" alt="Increase Font Size" />
+              </button>
+              <button id="decreaseFontBtn">
+                <img src="../../assets/icons/decrease-font.svg" alt="Decrease Font Size" />
+              </button>
+            </div>
+          </div>
+          <button id="toggleGrayscaleBtn" class="btn-transparent">
+            <img src="../../assets/icons/color-blindness-icon.svg" alt="Toggle Contrast Modes" />
+          </button>
+        </div>
         <div class="language flex-row">
           <select>
             <option value="arabic">ع</option>
@@ -532,6 +550,7 @@
   </div>
   <!-- --------- main javascript -------- -->
   <script src="../../js/main.js"></script>
+  <script src="../../js/accessibility_widget.js"></script>
 </body>
 
 </html>
