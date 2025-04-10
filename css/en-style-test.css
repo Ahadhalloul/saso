@@ -14,7 +14,7 @@
   --gray-text-color: #6a7383;
   --defult-cards-gap: 15px;
   --light-gray-color: #5756568c;
-  --green-image-filter: brightness(0) saturate(100%) invert(37%) sepia(87%)
+   --green-image-filter: brightness(0) saturate(100%) invert(37%) sepia(87%)
     saturate(348%) hue-rotate(101deg) brightness(93%) contrast(98%);
   --box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.05),
     0px 1px 2px 0px rgba(16, 24, 40, 0.05);
@@ -74,7 +74,17 @@
   padding-right: calc(var(--bs-gutter-x, 0) * 0.5);
   padding-left: calc(var(--bs-gutter-x, 0) * 0.5);
 }
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%; 
+}
 
+@media (min-width: 768px) {
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%; 
+  }
+}
 .col-1,
 .col-2,
 .col-3,
@@ -1344,10 +1354,17 @@ input[type="checkbox"]:checked {
   margin-top: 30px;
   width: max-content;
   align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-service-box h3 {
+  text-align: center;
 }
 .no-service-box p {
   color: #6a7383;
   font-size: 12px;
+  text-align: center;
 }
 .charts-cards-container .card {
   min-height: 360px;
@@ -3739,9 +3756,54 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+  
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+.primary-cards.xscard .con-card {
+  margin-top: 0;
+}
+.primary-cards.xscard .grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 24px;
+}
+
+
+@media (min-width: 768px) {
+  .primary-cards.xscard .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+
+@media (min-width: 992px) {
+  .primary-cards.xscard .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.primary-cards.xscard .con-card .title {
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  min-height: auto;
+}
+
+.primary-cards.xscard .con-card .space-btw {
+  gap: 8px;
+}
+.primary-cards.xscard .con-card .space-btw .status p {
+  font-size: .75rem;
+}
+.primary-cards.xscard .con-card .space-btw p {
+  font-size: 1rem;
 }
 
 .primary-cards .con-card .video-title {
@@ -3749,9 +3811,15 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+  
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card .news-title {
@@ -3759,9 +3827,15 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card h5 {
@@ -3769,12 +3843,30 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
+
 .primary-cards .con-card .text {
   font-size: 1rem;
   font-weight: 300;
   color: #333333;
   margin-bottom: 1.5rem;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 1.5;
   height: 48px;
   overflow: hidden;
@@ -4121,6 +4213,14 @@ nav .pagination .more .page-link {
   height: 15px;
   width: 15px;
 }
+.tab-btn i.icon-products {
+  background-image: url(../assets/icons/icon-products.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
 .tab-btn i.icon-home {
   background-image: url(../assets/icons/home-5.svg);
   background-repeat: no-repeat;
@@ -4751,6 +4851,13 @@ nav .pagination .more .page-link {
   justify-content: start;
 }
 
+.filter-cards .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .filter-cards .search-icon img {
   position: absolute;
   left: 1rem;
@@ -4854,6 +4961,137 @@ nav .pagination .more .page-link {
     margin-bottom: 24px;
   }
 }
+
+/* -------------search-card---------------Mlewis- */
+#advancedSearch .search-group {
+  margin-bottom: 24px;
+}
+.search-cards .group-input {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+.search-cards .group-input .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.search-cards .group-input .search-icon img {
+  position: absolute;
+  left: 1rem;
+}
+
+.search-cards .search-icon input {
+  padding: .375rem 1rem .375rem  2.75rem;
+}
+
+.card-search .search-group .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.card-search .search-group .search-icon img {
+  position: absolute;
+  right: 1rem;
+}
+
+.card-search .search-group .search-icon input {
+  padding: .375rem 2.75rem .375rem 1rem;
+}
+
+.search-cards {
+  margin-bottom: 24px;
+}
+
+.search-cards .row {
+  align-items: end;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.search-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.card-search .form-check {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-search .check-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-search .check {
+  margin-bottom: 16px;
+}
+
+.card-search .search-group {
+  margin-bottom: 20px;
+}
+
+.card-search .search-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-tags i.remove-icon {
+  background-image: url(../../saso/assets/icons/remove-icon.svg);
+  height: 14px;
+  width: 14px;
+  display: block;
+}
+
+.card-search .search-tags .search-tag {
+  background-color: #e7f1ff;
+  border: solid 1px #b2ddff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #1849a9;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (min-width: 992px) {
+  .group-input {
+    max-width: 400px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .group-input {
+    max-width: 400px;   
+  }
+}
+
+@media (min-width: 1400px) {
+  .group-input {
+    max-width: 400px; 
+  }
+}
+
 /* -------------advisors-card---------------Mlewis- */
 
 /* -------------advisors-card-info---------------Mlewis- */

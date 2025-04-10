@@ -75,7 +75,17 @@
   padding-right: calc(var(--bs-gutter-x, 0) * 0.5);
   padding-left: calc(var(--bs-gutter-x, 0) * 0.5);
 }
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%; 
+}
 
+@media (min-width: 768px) {
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%; 
+  }
+}
 .col-1,
 .col-2,
 .col-3,
@@ -1218,6 +1228,7 @@ input[type="checkbox"]:checked {
   display: flex;
   align-items: center;
 }
+
 .btn-transparent img {
   height: 23px;
   width: 23px;
@@ -3526,10 +3537,12 @@ input.radio-btn {
 .btn-icon {
   padding: 8px !important;
 }
+
 .btn-icon img {
   height: 24px;
   width: 24px;
 }
+
 /* --buttons-- */
 
 /* -------------cards---------------Mlewis- */
@@ -3547,6 +3560,7 @@ input.radio-btn {
   align-items: center;
   margin-bottom: 1.5rem;
 }
+
 .card-footer h5 {
   font-size: 1.125rem;
 }
@@ -4169,6 +4183,8 @@ nav .pagination .more .page-link {
 .primary-cards .con-card .icon-container .icon-img {
   -o-object-fit: contain;
   object-fit: contain;
+  height: 24px;
+  width: 24px;
 }
 
 .primary-cards .con-card .title {
@@ -4176,9 +4192,54 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+  
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+.primary-cards.xscard .con-card {
+  margin-top: 0;
+}
+.primary-cards.xscard .grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 24px;
+}
+
+
+@media (min-width: 768px) {
+  .primary-cards.xscard .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+
+@media (min-width: 992px) {
+  .primary-cards.xscard .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.primary-cards.xscard .con-card .title {
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  min-height: auto;
+}
+
+.primary-cards.xscard .con-card .space-btw {
+  gap: 8px;
+}
+.primary-cards.xscard .con-card .space-btw .status p {
+  font-size: .75rem;
+}
+.primary-cards.xscard .con-card .space-btw p {
+  font-size: 1rem;
 }
 
 .primary-cards .con-card .video-title {
@@ -4186,9 +4247,15 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+  
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card .news-title {
@@ -4196,9 +4263,15 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  line-height: normal;
-  height: 52px;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card h5 {
@@ -4206,6 +4279,15 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card .text {
@@ -4213,9 +4295,15 @@ nav .pagination .more .page-link {
   font-weight: 300;
   color: #333333;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
-  height: 48px;
+
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .primary-cards .con-card .btn-primary {
@@ -4583,6 +4671,13 @@ nav .pagination .more .page-link {
   height: 15px;
   width: 15px;
 }
+.tab-btn i.icon-products {
+  background-image: url(../assets/icons/icon-products.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
 
 .tab-btn i.icon-home {
   background-image: url(../assets/icons/home-5.svg);
@@ -4853,6 +4948,7 @@ nav .pagination .more .page-link {
   width: 100%;
   position: relative;
 }
+
 .modal-dialog .table-responsive {
   height: 100%;
   max-height: 500px;
@@ -4876,12 +4972,14 @@ nav .pagination .more .page-link {
 .modal-body {
   direction: rtl;
 }
+
 .modal-body .form-check {
   display: flex;
   gap: 16px;
   align-items: center;
   margin-bottom: 8px;
 }
+
 .modal-content .cardfooter {
   direction: rtl;
   margin: 8px 0;
@@ -5233,6 +5331,13 @@ nav .pagination .more .page-link {
   justify-content: start;
 }
 
+.filter-cards .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .filter-cards .search-icon img {
   position: absolute;
   right: 1rem;
@@ -5332,6 +5437,136 @@ nav .pagination .more .page-link {
     flex-direction: column;
     gap: 24px;
     margin-bottom: 24px;
+  }
+}
+
+/* -------------search-card---------------Mlewis- */
+#advancedSearch .search-group {
+  margin-bottom: 24px;
+}
+.search-cards .group-input {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+.search-cards .group-input .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.search-cards .group-input .search-icon img {
+  position: absolute;
+  right: 1rem;
+}
+
+.search-cards .search-icon input {
+  padding: .375rem 2.75rem .375rem 1rem;
+}
+
+.card-search .search-group .search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.card-search .search-group .search-icon img {
+  position: absolute;
+  right: 1rem;
+}
+
+.card-search .search-group .search-icon input {
+  padding: .375rem 2.75rem .375rem 1rem;
+}
+
+.search-cards {
+  margin-bottom: 24px;
+}
+
+.search-cards .row {
+  align-items: end;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.search-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.card-search .form-check {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-search .check-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-search .check {
+  margin-bottom: 16px;
+}
+
+.card-search .search-group {
+  margin-bottom: 20px;
+}
+
+.card-search .search-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-tags i.remove-icon {
+  background-image: url(../../saso/assets/icons/remove-icon.svg);
+  height: 14px;
+  width: 14px;
+  display: block;
+}
+
+.card-search .search-tags .search-tag {
+  background-color: #e7f1ff;
+  border: solid 1px #b2ddff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #1849a9;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (min-width: 992px) {
+  .group-input {
+    max-width: 400px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .group-input {
+    max-width: 400px;   
+  }
+}
+
+@media (min-width: 1400px) {
+  .group-input {
+    max-width: 400px; 
   }
 }
 
@@ -5906,17 +6141,19 @@ form .form-group .time-list span.info-tag {
 .days-grid button.inactive:hover {
   background-color: #f0f0f0;
 }
+
 #dateInput {
   position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    padding: 5px 16px;
-    height: 36px;
-    width: 100%;
-    right: 0;
-    min-width: -moz-available;
-    min-width: -webkit-fill-available;
+  opacity: 0;
+  pointer-events: none;
+  padding: 5px 16px;
+  height: 36px;
+  width: 100%;
+  right: 0;
+  min-width: -moz-available;
+  min-width: -webkit-fill-available;
 }
+
 .filter-search-videos .row {
   align-items: end;
   margin-bottom: 1.5rem;
@@ -5969,23 +6206,29 @@ form .form-group .time-list span.info-tag {
 .employee-chart .status-container .status {
   margin: 0;
 }
+
 .employee-data {
   margin-bottom: 8px;
 }
+
 .employee-data h5 {
   margin-bottom: 8px !important;
   font-size: 1.125rem;
 }
+
 .employee-data p {
   margin-bottom: 8px !important;
   font-size: .875rem;
 }
+
 .achievement-section .space-btw {
   margin: 0px !important;
 }
+
 .employee-data .status p {
   margin: 0 !important;
 }
+
 .employee-chart .chart .status {
   margin: 8px 0px 0px 0px;
   display: flex;
@@ -6058,16 +6301,18 @@ form .form-group .time-list span.info-tag {
   transition: right 1s ease-in-out, left 1s ease-in-out;
 }
 
-.pb-ltr .progress-circle:has(img)  {
+.pb-ltr .progress-circle:has(img) {
   right: 0%;
   transition: right 1s ease-in-out, left 1s ease-in-out;
 }
+
 .hero-service .tages {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 1.5rem
 }
+
 .hero-service .tag-btn {
   font-size: 14px;
   font-weight: 400;
@@ -6108,6 +6353,7 @@ form .form-group .time-list span.info-tag {
   color: #1f2a37;
   margin-bottom: 0px
 }
+
 .details-section .details .title h4 {
   font-size: 24px;
   font-weight: 600;
@@ -6129,6 +6375,7 @@ form .form-group .time-list span.info-tag {
 .details-section .details .title:first-of-type {
   margin-top: 0px
 }
+
 .details-section {
   padding: 40px 0;
 }
@@ -6165,12 +6412,15 @@ form .form-group .time-list span.info-tag {
   border-radius: 4px;
   padding: 6px;
 }
+
 .accessibility-dropdown button:hover {
   background-color: var(--praimary-color);
 }
+
 .accessibility-dropdown button:hover img {
   filter: invert(1) brightness(2);
 }
+
 .accessibility-dropdown button img {
   width: 1.5rem;
   height: 1.5rem;
@@ -6190,4 +6440,3 @@ form .form-group .time-list span.info-tag {
   opacity: 1;
   pointer-events: auto;
 }
-
