@@ -24,7 +24,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.p-0 {
+  padding: 0px !important;
+}
+.b-none {
+  border: none !important;
+}
+.m-0 {
+  margin: 0px !important;
+}
 .mt-0 {
   margin-top: 0px !important;
 }
@@ -2808,7 +2816,7 @@ input.radio-btn {
 }
 
 /*-- progress box -- */
-.session-recommendation-card .progress-indicator {
+.progress-indicator {
   border-radius: 4px;
   border: 1px solid #067647;
   background: #f7fdf5;
@@ -3346,12 +3354,21 @@ input.radio-btn {
 }
 
 .title-page .title h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
   font-weight: 600;
   color: #484848;
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.title-page .title h2 .status {
+  padding: 4px 12px;
+}
+.title-page .title h2 .status p {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  width: max-content;
 }
 
 .title-page .title h2 span {
@@ -3401,7 +3418,13 @@ input.radio-btn {
   align-items: center;
   gap: 16px;
 }
-
+@media (max-width: 768px) {
+  .title-page {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem; 
+  }
+}
 /* ----title page---- */
 
 /* --buttons-- */
@@ -3475,6 +3498,22 @@ input.radio-btn {
   align-items: center;
   flex-direction: row-reverse;
   gap: 6px;
+}
+.btn-neutral-icon {
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #0d121c;
+  border: solid 0px;
+  color: #fff;
+  border: solid 1px transparent;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.btn-neutral-icon img {
+  height: 24px;
+  width: 24px;
 }
 
 .btn-neutral-text img {
@@ -6439,4 +6478,329 @@ form .form-group .time-list span.info-tag {
 .accessibility-dropdown-wrapper:hover .accessibility-dropdown {
   opacity: 1;
   pointer-events: auto;
+}
+/* Main container */
+.technical-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Left card styling */
+.spec-card {
+  flex: 1 1 300px;
+  background: #ffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.05), 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.spec-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid var(--Border-border-neutral-primary, #D2D6DB);
+  padding-bottom: 16px;
+  margin-bottom: 1.25rem;
+}
+
+.copy-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+/* Tooltip inside the button */
+.tooltip-text {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  position: absolute;
+  top: -35px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #f3f4f6;
+  color: #384250;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Show tooltip */
+.copy-button.show-tooltip .tooltip-text {
+  opacity: 1;
+}
+.spec-number {
+  color: #1d7f2d;
+
+}
+.spec-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.spec-xcol {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+/* Each Row */
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Title (Text + Icon) */
+.spec-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1d1d1d;
+
+}
+.spec-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.spec-info  .spec-value {
+  display: inline-block;
+}
+.spec-info p {
+  margin-top: .75rem;
+}
+.spec-info p.arabic-text {
+  direction: rtl;
+}
+.spec-info p.english-text {
+  direction: ltr;
+}
+.spec-title img {
+  height: 32px;
+  width: 32px;
+}
+
+/* Value */
+.spec-value {
+  display: flex;
+  align-items: center;
+}
+
+/* Info */
+.info-span {
+  background-color: #f0f2f5;
+  border: 1px solid #d1d5db;
+  color: #333;
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Mandatory Button */
+.mandatory-span {
+  background-color: #fff7e6;
+  color: #b76e00;
+  border: 1px solid #ffc107;
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.english-text p {
+  direction: ltr;
+}
+.arabic-text p {
+  direction: rtl;
+}
+/* Specification Scope Sections */
+.spec-scope {
+  margin-top: 20px;
+}
+
+.spec-scope h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #1d1d1d;
+}
+
+.spec-scope p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .spec-value {
+    width: 100%;
+  }
+
+  .info-button, .mandatory-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Right content area */
+.right-content {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 16px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.05), 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+/* Specification info */
+.spec-info-card h4 {
+  color: var(--Text-text--default, #161616);
+  text-align: start;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--Border-border-neutral-primary, #D2D6DB);
+  display: flex;
+  gap: 1rem;
+}
+
+.spec-info-card h4 span {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.info-value {
+  color: #555;
+}
+
+/* Technical lists buttons */
+.technical-lists h4 {
+  margin-bottom: 16px;
+}
+
+.lists-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-button {
+  background: #ffffff;
+  border: 1px solid #b2ddff;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  color: #1849a9;
+  cursor: pointer;
+}
+
+/* Related services grid */
+.related-services h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.services-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1 1 200px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.service-card p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.service-button {
+  background-color: #198754;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.accordion-content .spec-row {
+  justify-content: start;
+  gap: 24px;
+}
+.spec-value .status p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .technical-page {
+    flex-direction: column;
+  }
+}
+.question-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.question-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.question-form .form-group .flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.question-form .form-group .flex-row h4 {
+  color: #161616;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.question-form .form-group .flex-row h4 {
+  color: #161616;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
