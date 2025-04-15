@@ -1019,7 +1019,7 @@ input[type="checkbox"]:checked {
 }
 /* ----------  */
 .status {
-  padding: 2px 9px;
+  padding: 2px 8px;
   border-radius: var(--sm-border-radius);
   width: fit-content;
   display: flex;
@@ -1735,7 +1735,7 @@ table.files-table tr:first-child td {
 }
 
 /* ------------start consultant services details------------------ */
-.primary-cards .con-card.card-shadow {
+.primary-cards.card-shadow .con-card {
   border: none;
   box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
     0px 2px 4px -2px rgba(16, 24, 40, 0.06);
@@ -3271,7 +3271,7 @@ input.radio-btn {
 
 .cardfooter {
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
   padding: 20px 0px;
   margin-top: 16px;
@@ -3791,10 +3791,32 @@ nav .pagination .more .page-link {
   margin-bottom: 1.5rem;
 }
 
+.primary-cards .con-card .pro-img-container {
+  margin-bottom: 1.5rem;
+}
+.primary-cards .con-card .images-img  {
+  margin-bottom: 1.5rem;
+}
+
+.primary-cards .con-card .pro-img-container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  display: block;
+  object-fit: cover;
+}
 .primary-cards .con-card .img-container img {
   aspect-ratio: 16/9;
   width: 100%;
   height: 12.25rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.primary-cards .con-card .images-img img {
+  aspect-ratio: 163 / 125;
+  width: 100%;
+  height: 15.625rem;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -3885,6 +3907,21 @@ nav .pagination .more .page-link {
   font-size: 1rem;
 }
 
+.primary-cards .con-card .images-title {
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+
+  min-height: auto;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
 .primary-cards .con-card .video-title {
   color: #303030;
   font-size: 1.125rem;
@@ -3947,8 +3984,21 @@ nav .pagination .more .page-link {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5;
-  height: 48px;
+}
+.primary-cards .con-card .images-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 0px;
+
+  min-height: auto;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 .primary-cards .con-card .btn-primary {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -4217,15 +4267,14 @@ nav .pagination .more .page-link {
   gap: 4px;
   white-space: nowrap;
 }
-@media (max-width: 900px) {
+
+@media (max-width: 1680px) {
   .tab-buttons {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    width: auto;
-    min-width: 320px;
-    max-width: 451px;
+    width: 100%;
     scroll-padding-left: 10px;
     padding-bottom: 5px;
     gap: 8px;
@@ -4242,8 +4291,7 @@ nav .pagination .more .page-link {
   }
 
   .tab-btn {
-    flex: 0 0 auto;
-    white-space: nowrap;
+    
     padding: 10px 15px;
     border: none;
     background: #f8f9fa;
@@ -4274,6 +4322,14 @@ nav .pagination .more .page-link {
 }
 .tab-btn i.certificate-tab {
   background-image: url(../assets/icons/certificate-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.cer-tab {
+  background-image: url(../assets/icons/cer-icon-tab.svg);
   background-repeat: no-repeat;
   display: block;
   height: 15px;
@@ -4314,6 +4370,30 @@ nav .pagination .more .page-link {
 
 .tab-btn i.icon-certificate {
   background-image: url(../assets/icons/certificate.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.tec-icon-tab {
+  background-image: url(../assets/icons/tec-icon-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.pro-tec-icon-tab {
+  background-image: url(../assets/icons/pro-tec-icon-tab.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.images-icon-tab {
+  background-image: url(../assets/icons/images-icon-tab.svg);
   background-repeat: no-repeat;
   display: block;
   height: 15px;
@@ -4514,6 +4594,15 @@ nav .pagination .more .page-link {
   border: solid 1px transparent;
   gap: 1rem;
 }
+.sub-child-accordion-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.sub-child-accordion-header .flex-row {
+  gap: 1rem;
+}
 
 .accordion-header .status {
   padding: 2px 9px;
@@ -4567,8 +4656,45 @@ nav .pagination .more .page-link {
   box-shadow: none;
 }
 
+.sub-child-accordion .sub-accordion .accordion-item .accordion-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  direction: ltr;
+
+}
+
+.sub-child-accordion .sub-accordion .accordion-item .accordion-header::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../assets/images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 0;
+  margin-left: 0;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
 .accordion-item:has(.accordion-content.open) {
   background-color: #e5e7eb;
+}
+
+.accordion-item:has(.accordion-content.sub-open) {
+  background-color: #e5e7eb;
+}
+
+.sub-child-accordion .accordion-content.sub-open .sub-accordion .accordion-item:has(.accordion-content.sub-open) {
+  background-color: transparent !important;
 }
 
 .accordion-header:hover {
@@ -4586,7 +4712,21 @@ nav .pagination .more .page-link {
   transition: transform 0.2s ease-in-out;
 }
 
-.accordion-item:has(.accordion-content.open) .accordion-header::after {
+.accordion:not(.sub-child-accordion):not(.sub-sub-child-accordion)>.accordion-item:has(> .accordion-content.open)>.accordion-header::after {
+  transform: rotate(180deg);
+}
+
+
+.accordion.sub-child-accordion>.accordion-item:has(> .accordion-content.sub-open)>.accordion-header::after {
+  transform: rotate(180deg);
+}
+
+
+.sub-accordion .sub-accordion .accordion.sub-sub-child-accordion>.accordion-item:has(> .accordion-content.sub-open)>.accordion-header::after {
+  transform: rotate(180deg);
+}
+
+.sub-child-accordion .sub-accordion .accordion-item:has(> .accordion-content.sub-open)>.accordion-header::after {
   transform: rotate(180deg);
 }
 
@@ -4617,7 +4757,8 @@ nav .pagination .more .page-link {
 }
 
 /* Open State for Content */
-.accordion-content.open {
+.accordion-content.open,
+.accordion-content.sub-open {
   display: block;
 }
 
@@ -6199,6 +6340,12 @@ form .form-group .time-list span.info-tag {
   pointer-events: auto;
 }
 /* Main container */
+.technical-page .content {
+  flex-direction: column;
+  flex: 2 1 600px;
+  display: flex;
+  gap: 24px;
+}
 .technical-page {
   display: flex;
   flex-wrap: wrap;
@@ -6226,7 +6373,7 @@ form .form-group .time-list span.info-tag {
   background-color: transparent;
   color: white;
   border: none;
-  padding: 6px 12px;
+
   font-size: 14px;
   border-radius: 6px;
   cursor: pointer;
@@ -6392,6 +6539,18 @@ form .form-group .time-list span.info-tag {
   box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.05), 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
+.right-content .spec-info-card .status {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 4px;
+}
+.right-content .spec-info-card .status p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 /* Specification info */
 .spec-info-card h4 {
   color: var(--Text-text--default, #161616);
@@ -6452,13 +6611,23 @@ form .form-group .time-list span.info-tag {
 }
 
 /* Related services grid */
+.related-services {
+  border-top: solid 1px #D2D6DB;
+  padding-top: 24px;
+}
 .related-services h4 {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-
+.related-services .status p {
+  font-size: .75rem;
+  font-weight: 500;
+}
+.related-services .cta {
+  justify-content: start;
+}
 .services-grid {
   display: flex;
   gap: 16px;
@@ -6544,6 +6713,14 @@ form .form-group .time-list span.info-tag {
   margin-bottom: 15px;
   gap: 10px;
 }
+.custom-tree li .flex-row img {
+  height: 2rem;
+  width: 2rem;
+}
+.custom-tree li .flex-row h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
 .custom-tree li .flex-row {
   display: flex;
   align-items: center;
@@ -6552,10 +6729,116 @@ form .form-group .time-list span.info-tag {
 .custom-tree li.branch-item {
   margin-left: 2.25rem;
 }
-
-
-
 .icon-circle img {
   width: 32px;
   height: 32px;
+}
+
+.ptc-card {
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+@media (max-width: 1024px) {
+  .ptc-card, .ptc-card .right-card {
+      width: 100%;
+      flex-direction: column;
+  }
+}
+.ptc-card .right-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 24px;
+  padding-right: 48px;
+}
+
+.ptc-card .left-card .pro-images {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+  margin-top: 3.375rem;
+}
+
+.ptc-card .left-card .pro-logo img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.ptc-card .left-card .iso-logo img {
+  height: 10rem;
+  width: 5.125rem;
+  object-fit: cover;
+}
+
+.ptc-card .title h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.ptc-card .right-card .accordion .accordion-item.branch-item {
+  margin-left: 2.625rem;
+}
+.ptc-card .right-card > .custom-tree {
+  margin-right: 3rem;
+}
+.ptc-card .right-card .accordion > .custom-tree {
+  margin-right: 0px important;
+}
+
+.pqj-services > h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.specification-info {
+  margin-bottom: 1rem;
+}
+
+.specification-info .specification-name h4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: #161616;
+}
+
+.specification-info .custom-tree li .flex-row h4 span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 400;
+  color: #161616;
+}
+
+.specification-info .cta {
+  margin: 0;
+}
+
+.specification-info .custom-tree li .flex-row h4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pqj-services .sub-child-accordion {
+  margin-left: 5.25rem;
+}
+@media screen and (max-width: 768px) {
+  .accordion-content ul li {
+    display: grid;
+  }
+  .btn-neutral-t-i {
+    width: fit-content;
+  }
+  .accordion-content {
+    padding: 0px;
+  }
+  .accordion-content > ul > li {
+    display: flex;
+    flex-direction: row;
+  }
 }

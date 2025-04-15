@@ -103,19 +103,34 @@ tabButtons.forEach((button) => {
 
 document.querySelectorAll(".accordion-header").forEach((button) => {
   button.addEventListener("click", () => {
-    const targetContent = document.getElementById(button.dataset.target);
+    const targetId = button.dataset.target;
+    const targetContent = document.getElementById(targetId);
+    if (!targetContent) return;
 
-    // Close other open accordions
-    document.querySelectorAll(".accordion-content").forEach((content) => {
+    const currentAccordion = button.closest(".accordion");
+
+    // Check if it's a sub level (1st or 2nd)
+    const isSubAccordion =
+      currentAccordion.classList.contains("sub-accordion") ||
+      currentAccordion.classList.contains("sub-child-accordion") ||
+      currentAccordion.classList.contains("sub-sub-child-accordion");
+
+    const openClass = isSubAccordion ? "sub-open" : "open";
+
+    // Close other sections in the same accordion
+    currentAccordion.querySelectorAll(".accordion-content").forEach((content) => {
       if (content !== targetContent) {
-        content.classList.remove("open");
+        content.classList.remove("open", "sub-open");
       }
     });
 
-    // Toggle the clicked accordion content
-    targetContent.classList.toggle("open");
+    // Toggle correct class
+    targetContent.classList.toggle(openClass);
   });
 });
+
+
+// ----------------------------// ----------------------------
 
 // Get the modal elements
 const modal = document.getElementById("modal");
