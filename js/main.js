@@ -132,33 +132,54 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
 
 // ----------------------------// ----------------------------
 
-// Get the modal elements
-const modal = document.getElementById("modal");
-const openModalButtons = document.querySelectorAll("#openModal"); // Select all buttons with id "openModal"
-const closeModalButtons = document.querySelectorAll(
-  "#closeModal, #closeModalFooter"
-);
+// Select all buttons that open modals
+const openModalButtons = document.querySelectorAll("#openModal");
 
-// Open modal function
 openModalButtons.forEach((button) => {
+  const modalId = button.dataset.modal || "modal"; // default modal
+  const targetModal = document.getElementById(modalId);
+
+  if (!targetModal) return;
+
+  // Open modal
   button.addEventListener("click", () => {
-    modal.classList.add("show");
+    targetModal.classList.add("show");
+
+    // Add ESC key handler when modal opens
+    const escHandler = (event) => {
+      if (event.key === "Escape") {
+        targetModal.classList.remove("show");
+        document.removeEventListener("keydown", escHandler);
+      }
+    };
+
+    document.addEventListener("keydown", escHandler);
+  });
+
+  // Close by close buttons inside modal
+  const closeButtons = targetModal.querySelectorAll("#closeModal, #closeModalFooter");
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+
+      const parentModal = button.closest(".modal");
+    if (parentModal) parentModal.classList.remove("show");
+
+    document.querySelectorAll(".modal.show").forEach((m) => {
+      if (m !== targetModal) m.classList.remove("show");
+    });
+
+      targetModal.classList.remove("show");
+    });
+  });
+
+  // Close when clicking outside the modal-dialog
+  window.addEventListener("click", (event) => {
+    if (event.target === targetModal) {
+      targetModal.classList.remove("show");
+    }
   });
 });
 
-// Close modal function
-closeModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    modal.classList.remove("show");
-  });
-});
-
-// Close modal when clicking outside the modal dialog
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.classList.remove("show");
-  }
-});
 
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
