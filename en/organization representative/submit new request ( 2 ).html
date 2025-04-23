@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASO</title>
+    <!-- -------------- arabic page style ------------- -->
+    <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
+    <!-- -------------- english page style ------------- -->
+    <link rel="stylesheet" href="../../css/en-style-test.css" />
+  </head>
+  <body>
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <!-- -------------------Start sidebar menu --------------- -->
+      <div class="sidebar-container flex-column" id="main-sidebar">
+        <div class="sidebar-head flex-row">
+          <img class="logo" src="../../assets/logos/logo.png" alt="saso logo" />
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu.svg"
+            alt="collapse icon"
+          />
+          <img
+            src="../../assets/icons/mi_menu.svg"
+            alt=""
+            class="sm-screen-close-icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="#" class="active">
+                <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />لوحة
+                التحكم
+              </a>
+            </li>
+            <li>
+              <a href="#" class="pointer space-btw" id="services-sub-menu">
+                <div class="flex-row gap-12">
+                  <img
+                    src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                    alt=""
+                  />خدمات الهيئة
+                </div>
+                <div class="sub-menu-icon">
+                  <img src="../../assets/icons/arrowdown2.png" alt="" />
+                </div>
+              </a>
+              <!-- start sub menu content -->
+              <ul class="sub-menu-list hide" id="services-list">
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#" class="">الاستشارات الفورية عن بعد</a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+              </ul>
+              <!-- end sub menu content -->
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />طلباتي
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/iconamoon_profile-light.svg"
+                  alt=""
+                />حسابي
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+                المستندات
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+                والمساعدة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/carbon_report-data.svg"
+                  alt=""
+                />التقارير
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />الأسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/hugeicons_news.svg" alt="" />مركز الأخبار
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----start collapsed sidebar-------- -->
+      <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+        <div class="sidebar-head">
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu-white.svg"
+            alt="collapse icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="" class="active">
+                <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/iconamoon_profile-light.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/carbon_report-data.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/hugeicons_news.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----end collapsed sidebar-------- -->
+      <!-- -------------------End sidebar menu ----------------- -->
+      <!-- ------------------ Start header ---------------------- -->
+      <header class="header flex-row">
+        <div class="flex-row gap-30">
+          <div class="logo-menu-icons">
+            <img
+              class="md-screen-menu-icon"
+              src="../../assets/icons/mi_menu.svg"
+              alt=""
+            />
+            <img src="../../assets/logos/logo-medium.png" alt="logo" />
+          </div>
+          <div class="path flex-column">
+            <p>
+              اسم المنشأة <span class="blue-text"> / </span
+              ><a href="" class="active">لوحة التحكم</a>
+            </p>
+            <h2>لوحة التحكم</h2>
+          </div>
+        </div>
+        <div class="user-functions flex-row">
+          <div class="search flex-row">
+            <img src="./assets/icons/searchnormal1.svg" alt="" />
+            <input type="text" placeholder="البحث" />
+          </div>
+          <img
+            class="search-icon"
+            src="../../assets/icons/searchnormal2.svg"
+            alt=""
+          />
+          <img src="../../assets/icons/hugeicons_settings-01.svg" alt="" />
+          
+          <div class="accessibility flex-row gap-20">
+            <div class="accessibility-dropdown-wrapper">
+              <button class="accessibility-button-header btn-transparent">
+                <img src="../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
+              </button>
+            
+              <div class="accessibility-dropdown" id="accessibilityDropdown">
+                <button id="increaseFontBtn">
+                  <img src="../../assets/icons/increase-font.svg" alt="Increase Font Size" />
+                </button>
+                <button id="decreaseFontBtn">
+                  <img src="../../assets/icons/decrease-font.svg" alt="Decrease Font Size" />
+                </button>
+              </div>
+            </div>
+            <button id="toggleGrayscaleBtn" class="btn-transparent">
+              <img src="../../assets/icons/color-blindness-icon.svg" alt="Toggle Contrast Modes" />
+            </button>
+          </div>
+
+          <div class="language flex-row">
+            <select>
+              <option value="arabic">ع</option>
+            </select>
+            <img src="../../assets/icons/arrowdown2.svg" alt="" />
+          </div>
+          <div class="user-info flex-row">
+            <div class="flex-row">
+              <div class="user-img-bg">
+                <img
+                  class="user-img"
+                  src="../../assets/images/user.png"
+                  alt="user image"
+                />
+              </div>
+              <h5>محمد عبدالمجيد</h5>
+            </div>
+            <img src="../../assets/icons/arrowdown2.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <!-- ------------------ End header ---------------------- -->
+      <!-- ------------------ Start main ---------------------- -->
+      <main class="main-container">
+
+        <div class="title-page">
+          <div class="title">
+            <button class="btn btn-icon"><img src="../../assets/images/back-icon.svg" alt=""></button>
+            <h2>ﺑﺮﻧﺎﻣﺞ ﺗﺄﻫﻴل</h2>
+          </div>
+        </div>
+
+        <div class="card new-request-card">
+
+            <div class="title-text-icon-card">
+              <h4>تقديم طلب جديد<img src="../../assets/icons/title-icon.svg" alt=""></h4>
+            </div>
+
+            <div class="card-content-request">
+              <div class="sub-title-text">
+                <p>اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﺄﻫﻴﻠﻲ اﻟﻤﻄﻠﻮب</p>
+              </div>
+
+                
+                <div class="form">
+
+                  <div class="check">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 9001
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 14001
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 45001
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 22301
+                      </label>
+                    </div>
+  
+                  </div>
+  
+                </div>
+                <div class="form">
+
+                  <div class="check">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 50001
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 17025
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 17020
+                      </label>
+                    </div>
+  
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        ISO 22483
+                      </label>
+                    </div>
+  
+                  </div>
+  
+                </div>
+
+                <div class="form flex-column">
+
+                  <div class="check">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        حياك
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <div class="input-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          مواصفات فنية للمنتج
+                        </label>
+                      </div>
+                      <div class="input-text">
+                        <input class="form-input" type="text" placeholder="نص تلميحي">
+                      </div>
+                    </div>
+
+                    <div class="form-check">
+                      <div class="input-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          علامة الجودة
+                        </label>
+                      </div>
+                      <div class="input-text">
+                        <input class="form-input" type="text" placeholder="نص تلميحي">
+                      </div>
+                    </div>
+
+                    <div class="form-check">
+                      <div class="input-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          أﺧﺮى
+                        </label>
+                      </div>
+                      <div class="input-text">
+                        <input class="form-input" type="text" placeholder="نص تلميحي">
+                      </div>
+                    </div>
+
+  
+                  </div>
+  
+                </div>
+
+
+              <div class="btns flex-row gap-12">
+                <button class="btn btn-gray">إلغاء</button>
+                <button class="btn btn-primary">حفظ واكمال</button>
+              </div>
+
+            </div>
+
+        </div>
+
+
+      </main>
+      <!-- ------------------ End main ---------------------- -->
+
+      <!-- ------------------------------------------------------ -->
+    </div>
+    <!-- --------- Modal -------- -->
+     <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <img src="../../assets/images/redirect-icon.svg" alt="">
+                  <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
+              </div>
+              <div class="modal-body">
+                  <h5>سيتم توجيهك الآن الى ePing</h5>
+                  <p>للتعرف على اتفاقية التعارف المتبادل يجب ان تغادر منصة SASO وسيتم توجيهك الى ePing للتعرف على اتفاقية التعارف المتبادل يجب ان تغادر منصة SASO وسيتم توجيهك الى ePing</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-neutral">الموافقة <i class="leading-icon-w"></i></button>
+                  <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- --------- main javascript -------- -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

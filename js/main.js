@@ -227,6 +227,51 @@ document.querySelectorAll(".light-gray-bg button").forEach(button => {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+
+  // Update the visibility status of the "Not selected yet" message
+  function updateEmptyMessage(tbody) {
+    const dataRows = [...tbody.querySelectorAll("tr")]
+      .filter(tr => !tr.classList.contains("no-data-message"));
+    const messageRow = tbody.querySelector(".no-data-message");
+
+    if (dataRows.length === 0) {
+      messageRow.style.display = "table-row";
+    } else {
+      messageRow.style.display = "none";
+    }
+  }
+
+  // Apply the code to every table on the page
+  document.querySelectorAll(".table").forEach(table => {
+    const tbody = table.querySelector("tbody");
+
+    // Delete a row when the button is clicked
+    tbody.addEventListener("click", function (e) {
+      if (e.target.closest(".delete-row-btn")) {
+        const row = e.target.closest("tr");
+        if (row) row.remove();
+        updateEmptyMessage(tbody);
+      }
+    });
+
+    // "Delete All" button
+    const deleteAllBtn = table.querySelector(".delete-all-btn");
+    if (deleteAllBtn) {
+      deleteAllBtn.addEventListener("click", () => {
+        [...tbody.querySelectorAll("tr")]
+          .filter(tr => !tr.classList.contains("no-data-message"))
+          .forEach(row => row.remove());
+        updateEmptyMessage(tbody);
+      });
+    }
+
+    // Initial check on page load
+    updateEmptyMessage(tbody);
+  });
+
+
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
 const datePickerWrapper = document.getElementById("datePickerWrapper");
 const datePicker = document.getElementById("datePicker");
 const selectedDateEl = document.getElementById("selectedDate");
