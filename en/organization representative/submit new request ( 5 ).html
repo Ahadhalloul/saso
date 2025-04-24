@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="../../css/en-style-test.css" />
   </head>
   <body>
+    <div class="toast success" id="toast">
+      <div class="toast-head">
+        <div class="message">
+          <div class="toast-body">
+            <div class="toast-icon">
+              <img src="../../assets/images/done-icon.svg" alt="">
+            </div>
+            <div class="message-text">
+              <h3 class="message-tile">تم ارسال طلبك بنجاح</h3>
+              <p class="message-p">يرجي مراجعة البريد الالكتروني لتحديد موعد زيارة المنشأة</p>
+              <div class="btns flex-row gap-12">
+                <button class="btn btn-gray">الغاء</button>
+                <button class="btn btn-neutral">توجيه للبريد الالكتروني</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <button class="close" onclick="closeToast()"><img src="../../assets/icons/close-icon.svg" alt=""></button>
+      </div>
+    </div>
+
     <div class="overlay-bg"></div>
     <div class="container">
       <!-- -------------------Start sidebar menu --------------- -->

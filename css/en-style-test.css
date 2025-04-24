@@ -68,6 +68,9 @@
 .mt-16 {
   margin-top: 1rem;
 }
+.mt-12 {
+  margin-top: .75rem;
+}
 
 .pdf-viewer-container embed {
   height: 100%;
@@ -2397,6 +2400,25 @@ input.radio-btn {
   transition: opacity 0.5s ease-in-out;
   direction: ltr;
   z-index: 999;
+}
+
+
+.toast .toast-body {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 12px;
+} 
+.toast .message .message-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.toast .toast-body  .message-text p {
+  margin-bottom: 0px !important;
+}
+.toast .toast-body  .message-text .btns {
+  margin-top: 12px;
 }
 .toast.success {
   border-left: solid 8px #079455;
@@ -6549,7 +6571,7 @@ form .form-group .time-list span.info-tag {
   display: inline-block;
 }
 .spec-row  .spec-value .status {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 .spec-info p {
   margin-top: .75rem;
@@ -7329,21 +7351,45 @@ form .form-group .time-list span.info-tag {
 .request-details .spec-xcol .spec-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   gap: 1.5rem;
+}
+.card.new-request-card .spec-xcol.justify-content-end .spec-row {
+  display: flex;
+  justify-content: end;
+  text-align: end;
+}
+.card.new-request-card .spec-xcol.justify-content-end .ex-row {
+  display: flex;
+  justify-content: start;
+  text-align: end;
 }
 .request-details .spec-row .spec-title h4{
   color: var(--Text-text-display, #1F2A37);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  width: 150px;
+  width: 100%;
+  min-width: 150px;
 }
-.request-details .spec-row .spec-value .text-value p{
+.request-details .spec-row .spec-value .text-value p {
   color: var(--Text-text-display, #1F2A37);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
+.request-details .spec-row .spec-value .text-value img {
+  height: 26px;
+  width: 26px;
+  border: 2px solid var(--Border-border-white, #FFF);
+  object-fit: cover;
+  border-radius: var(--radius-round, 9999px);
+}
 .text-icon .text-value {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: .5rem;
+}
+.request-details .spec-row .spec-value .text-value:has(img) {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -7399,4 +7445,68 @@ form .form-group .time-list span.info-tag {
 .spec-value:has(.report-view-down) {
   width: 100%;
   min-width: 318px;
+}
+
+.tooltipex-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltipex-text {
+  position: absolute;
+  bottom: 118%;
+  left: 55%;
+  transform: translateX(0%);
+  background-color: #1F2A37;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+  width: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tooltipex-container:hover .tooltipex-text {
+  opacity: 1;
+}
+
+.tooltipex-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 14px;
+  background: url(../assets/icons/beak-icon-tooltip.svg) no-repeat center;
+}
+
+.tt-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tt-title h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+.tooltipex-text p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 22px;
+}
+.tt-title img {
+  height: 1.125rem;
+  width: 1.125rem;
 }

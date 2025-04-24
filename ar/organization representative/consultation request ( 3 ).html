@@ -318,37 +318,142 @@
                   <button class="accordion-header" data-target="content1">تفاصيل الطلب</button>
                   <div id="content1" class="accordion-content p-0 open">
 
-                    <div class="spec-xcol">
-                      <div class="spec-row">
-                        <div class="spec-title">
-                          <h4>رقم الطلب</h4>
-                        </div>
-                        <div class="spec-value">
-                          <div class="text-value"><p>رقم الطلب</p></div>
-                        </div>
-                      </div>
-                      <div class="spec-row">
-                        <div class="spec-title">
-                          <h4>تاريخ ارسال الطلب</h4>
-                        </div>
-                        <div class="spec-value">
-                          <div class="text-value"><p>تاريخ الطلب</p></div>
-                        </div>
-                      </div>
-                      <div class="spec-row">
-                        <div class="spec-title">
-                          <h4>حالة الطلب</h4>
-                        </div>
-                        <div class="spec-value">
-                          <div class="status light-error-bg">
-                            <img src="../../assets/icons/error.svg" alt="">
-                            <p>مرفوض</p>
+                    <div class="request-details">
+                      <div class="spec-xcol">
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>رقم الطلب</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="text-value"><p>رقم الطلب:</p></div>
                           </div>
                         </div>
-                        <div class="spec-value">
-                          <div class="status light-warning-bg">
-                            <img src="../../assets/icons/warning.svg" alt="">
-                            <p>منتهي الصلاحية</p>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>اسم المنشأة:</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="text-value"><p>اسم المنشأة</p></div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>تاريخ ارسال الطلب:</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-info-bg">
+                              <img src="../../assets/icons/calendar-status-icon.svg" alt="">
+                              <p>٢٤ يناير، ٢٠٢٥</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>حالة الطلب</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-gray-bg gray-border">
+                              <img src="../../assets/icons/replay-status-icon.svg" alt="">
+                              <p>الرد على العرض الفني والمالي</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>صلاحية الطلب</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-success-bg">
+                              <img src="../../assets/icons/success.svg" alt="">
+                              <p>٩٠ يوم</p>
+                            </div>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-warning-bg">
+                              <img src="../../assets/icons/warning.svg" alt="">
+                              <p>٣٠ يوم</p>
+                            </div>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-error-bg">
+                              <img src="../../assets/icons/status-error-icon.svg" alt="">
+                              <p>١٠ أيام</p>
+                            </div>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-gray-bg gray-border">
+                              <img src="../../assets/icons/status-finished-icon.svg" alt="">
+                              <p>تم الاعتماد</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="spec-xcol justify-content-end">
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>السجل التجاري للمنشأة و/أو الترخيص الصناعي</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="file-view-down flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                اسم الملف.pdf
+                              </div>
+                              <div class="cta-cel">
+                                <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>شهادة منشآت</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="spec-value">
+                              <div class="file-view-down flex-row space-btw">
+                                <div class="flex-row gap-10">
+                                  <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                  اسم الملف.pdf
+                                </div>
+                                <div class="cta-cel">
+                                  <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>الهيكل التنظيمي للمنشأة</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="file-view-down flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                اسم الملف.pdf
+                              </div>
+                              <div class="cta-cel">
+                                <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>وثائق دعائية بالمنشأة</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="file-view-down flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                اسم الملف.pdf
+                              </div>
+                              <div class="cta-cel">
+                                <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
