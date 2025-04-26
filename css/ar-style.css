@@ -8539,3 +8539,76 @@ form .form-group .time-list span.info-tag {
   padding-left: 0px;
   padding-right: 0px;
 }
+
+.man-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.man-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.man-align-center {
+  align-items: center;
+}
+.man-align-start {
+  align-items: start;
+}
+.man-align-end {
+  align-items: end;
+}
+.man-justify-content-start {
+  justify-content: start;
+}
+.man-justify-content-end {
+  justify-content: end;
+}
+.man-justify-content-sbtw {
+  justify-content: space-between;
+}
+.warning-ms {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border: solid 1px #B42318;
+  border-radius: 4px;
+}
+.warning-ms-text {
+  background-color: #F3F4F6;
+  border-radius: 0px 0px 4px 4px;
+  border-top: none;
+  padding: 8px;
+}
+.warning-ms-text span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.warning-ms .file-view-down {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-top: solid 0px transparent !important;
+  border-right: solid 0px transparent !important;
+  border-left: solid 0px transparent !important;
+}
+span.file-ui {
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748B;
+}
+
+.edit-request {
+  border: solid 1px #D2D6DB;
+  border-radius: 16px;
+  padding: 1rem;
+}
+.edit-request h4 {
+  color: #303030;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.edit-request p {
+  color: #161616;
+  font-size: 16px;
+  font-weight: 400;
+}
