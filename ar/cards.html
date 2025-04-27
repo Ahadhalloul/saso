@@ -10,6 +10,24 @@
     <!-- <link rel="stylesheet" href="../css/en-style.css" /> -->
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          const loading = document.getElementById("loading");
+          if (loading) {
+            loading.style.opacity = 0;
+            
+            setTimeout(function() {
+              loading.style.display = "none";
+            }, 500);
+          }
+        }, 2000);
+      });
+      </script>
+    <div class="loading-overlay" id="loading">
+      <img src="../assets/icons/loading.svg" alt="Loading..." class="loading-icon">
+  </div>
+  
     <div class="overlay-bg"></div>
     <div class="container">
       <!-- -------------------Start sidebar menu --------------- -->
