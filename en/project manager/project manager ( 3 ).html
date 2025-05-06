@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
     <!-- -------------- english page style ------------- -->
     <link rel="stylesheet" href="../../css/en-style-test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="overlay-bg"></div>
@@ -925,21 +926,7 @@
               <div class="contract-section">
                 <div class="row">
 
-                  <div class="col-12 col-lg-3">
-                    <div class="flex-row">
-                      <div class="filter-group">
-                        <label for="productive-time" class="form-label">قائمة التحقق</label>
-                        <select id="productive-time" class="form-select">
-                          <option>اسم قائمة التحقق</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                        </select>
-                      </div>
-                    </div>
-                </div>
-
-                  <div class="col-12 col-lg-3">
+                  <div class="col-12 col-lg-4">
                     <label for="session-goal" class="form-label"><span class="required">*</span> تاريخ انطلاق المشروع</label>
                     <div class="input-text">
                       <input class="form-input" type="text" placeholder="يوم/شهر/سنة">
@@ -947,7 +934,7 @@
                     </div>
                   </div>
   
-                  <div class="col-12 col-lg-3">
+                  <div class="col-12 col-lg-4">
                     <label for="session-goal" class="form-label"><span class="required">*</span> تاريخ نهاية المشروع</label>
                     <div class="input-text">
                       <input class="form-input" type="text" placeholder="نص تلميحي">
@@ -955,7 +942,7 @@
                     </div>
                   </div>
   
-                  <div class="col-12 col-lg-3">
+                  <div class="col-12 col-lg-4">
                     <div class="attach-files">
                       <label for="session-goal" class="form-label"><span class="required">*</span> رفع ملف خطة العمل</label>
                       <span>Maximum file size allowed is 2MB, supported file formats include .jpg, .png, and .pdf.</span>
@@ -973,120 +960,14 @@
 
             </div>
 
-
-
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" data-target="content66">الملاحظات</button>
-          <div id="content66" class="accordion-content open">
-
-            <div class="row">
-
-              <div class="col-12 col-lg-4 mb-24">
-
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظاتي</h5>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button id="openModal" data-modal="modal1" class="btn btn-secondary-outline">اضف ملاحظة</button>
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-    
-              <div class="col-12 col-lg-4 mb-24">
-
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظات ممثل المؤسسة</h5>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-
-              <div class="col-12 col-lg-4 mb-24">
-
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظات مدير المركز </h5>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-    
-    
+            <div class="btns flex-row gap-12 mt-24">
+              <button id="openModal" data-modal="modal2" class="btn btn-gray">مسح</button>
+              <button class="btn btn-primary">ارسال</button>
             </div>
 
-
           </div>
         </div>
+
       </div>
 
   </div>

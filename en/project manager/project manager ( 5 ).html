@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
     <!-- -------------- english page style ------------- -->
     <link rel="stylesheet" href="../../css/en-style-test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="overlay-bg"></div>
@@ -304,7 +305,7 @@
       <div class="progress-indicator m-0">
         <div class="progressbar-container">
           <ul class="progressbar">
-            <li class="active">زيارة المنشأة<span>من ١٠ يناير إلى ١٠ مارس</span></li>
+            <li class="done">زيارة المنشأة<span>من ١٠ يناير إلى ١٠ مارس</span></li>
             <li>تحليل الفجوة <span>من ١٠ يناير إلى ١٠ مارس</span></li>
             <li>التدريب <span>من ١٠ يناير إلى ١٠ مارس</span></li>
             <li>التطوير والتنفيذ <span>من ١٠ يناير إلى ١٠ مارس</span></li>
@@ -808,7 +809,7 @@
       <div class="accordion">
 
         <div class="accordion-item">
-          <button class="accordion-header" data-target="content44">الفريق المسؤول</button>
+          <button class="accordion-header" data-target="content44">فريق المشروع</button>
           <div id="content44" class="accordion-content open">
 
             <table class="table without-cta">
@@ -887,18 +888,17 @@
           <button class="accordion-header" data-target="content55">وثائق الإعتماد</button>
           <div id="content55" class="accordion-content open">
 
-            <div class="title-text-icon-card b-none">
-              <h4>خطة العمل<img src="../../assets/icons/dec-icon-title.svg" alt=""></h4>
+            <div class="man-flex-row man-align-center man-justify-content-sbtw mb-14">
+              <div class="title-text-icon-card b-none p-0">
+                <h4>خطة العمل<img src="../../assets/icons/dec-icon-title.svg" alt=""></h4>
+              </div>
+              <div class="btns flex-row">
+                <button class="btn btn-gray-icon">عرض الملاحظات<img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
+              </div>
             </div>
 
             <div class="spacxd-row mb-16">
-              <div class="xd-col">
-               <label class="form-label">قائمة التحقق:</label>
-               <div class="status light-info-bg m-0 lg-size">
-                <img src="../../assets/icons/file-name-card-icon.svg" alt="">
-                <p>اسم قائمة التحقق</p>
-              </div>
-              </div>
+
               <div class="xd-col">
                 <label class="form-label">تاريخ انطلاق المشروع:</label>
                 <div class="status light-info-bg m-0 lg-size">
@@ -936,118 +936,67 @@
                </div>
            </div>
 
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" data-target="content66">الملاحظات</button>
-          <div id="content66" class="accordion-content open">
-
-            <div class="row">
-
-              <div class="col-12 col-lg-4 mb-24">
-
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظاتي</h5>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button id="openModal" data-modal="modal1" class="btn btn-secondary-outline">اضف ملاحظة</button>
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-    
-              <div class="col-12 col-lg-4 mb-24">
-
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظات ممثل المؤسسة</h5>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
+           <div class="notes-card mt-24">
+            <div class="man-flex-col gap-12">
+              <div class="man-flex-row man-align-center gap-16">
+                <img src="../../assets/icons/edit-icon-title.svg" alt="img" class="icon-img">
+                <h5>ملاحظة مدير المركز</h5>
               </div>
 
-              <div class="col-12 col-lg-4 mb-24">
+              <p class="text mb-0 mh-auto">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية  خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية  خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
 
-                <div class="primary-cards">
-                  <div class="con-card card-shadow mt-0">
-                    <div class="card-body">
-                      <!-- Icon Section -->
-                      <div class="icon-container">
-                        <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
-                      </div>
-                      <!-- Title -->
-                      <h5 class="mh-auto text-mb-16">ملاحظات مدير المركز </h5>
+              <div class="xd-col">
+                <label class="form-label">ملف خطة العمل:</label>
+                <div class="file-view-down flex-row space-btw">
+                 <div class="flex-row gap-10">
+                   <img src="../../assets/icons/file-icon-g.svg" alt="">
+                   اسم الملف.csv
+                 </div>
+                 <div class="cta-cel">
+                   <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                   <a href="#"><img src="../../assets/icons/pencil-edit-card.svg" alt=""></a>
+                   <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                 </div>
+               </div>
+               </div>
 
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="p-16 bb-content">
-                        <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
-                        <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
-                      </div>
-
-                      <div class="btns flex-row gap-12 mt-24">
-                        <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-    
+               <div class="man-flex-row man-align-center gap-16">
+                <img src="../../assets/icons/edit-icon-title.svg" alt="img" class="icon-img">
+                <h5>ملاحظتي</h5>
               </div>
-    
-    
+
+              <p class="text mb-0 mh-auto">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية  خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية  خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
+
+              <div class="xd-col">
+                <label class="form-label">ملف خطة العمل:</label>
+                <div class="file-view-down flex-row space-btw">
+                 <div class="flex-row gap-10">
+                   <img src="../../assets/icons/file-icon-g.svg" alt="">
+                   اسم الملف.csv
+                 </div>
+                 <div class="cta-cel">
+                   <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                   <a href="#"><img src="../../assets/icons/pencil-edit-card.svg" alt=""></a>
+                   <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                 </div>
+               </div>
+               </div>
+
+
+
+               <div class="btns flex-row gap-12 mt-16">
+                <button class="btn btn-secondary-outline">اضف ملاحظة</button>
+              </div>
+
+
+
             </div>
-
+          </div>
 
           </div>
         </div>
+
+
       </div>
 
   </div>

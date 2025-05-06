@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASO</title>
     <!-- -------------- arabic page style ------------- -->
-    <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
+    <link rel="stylesheet" href="../../css/ar-style.css" />
     <!-- -------------- english page style ------------- -->
-    <link rel="stylesheet" href="../../css/en-style-test.css" />
+    <!-- <link rel="stylesheet" href="../../css/en-style-test.css" /> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="overlay-bg"></div>
@@ -295,9 +297,9 @@
 
         <div class="card new-request-card">
 
-            <div class="title-text-icon-card">
-              <h4>اسم المشروع<img src="../../assets/icons/product-name-icon.svg" alt=""></h4>
-            </div>
+          <div class="title-text-icon-card">
+            <h4>اسم المشروع<img src="../../assets/icons/product-name-icon.svg" alt=""></h4>
+          </div>
 
             <div class="card-content-request">
               
@@ -305,10 +307,10 @@
                 <div class="progressbar-container">
                   <ul class="progressbar">
                     <li class="done">طلب استشارة فنية</li>
-                    <li class="active">عرض فني ومالي</li>
-                    <li>موافقة العرض الفني والمالي</li>
-                    <li>تم بدء الخدمة</li>
-                    <li>اتمام الخدمة بنجاح</li>
+                    <li class="done">عرض فني ومالي</li>
+                    <li class="done">موافقة العرض الفني والمالي</li>
+                    <li class="done">تم بدء الخدمة</li>
+                    <li class="active">اتمام الخدمة بنجاح</li>
                   </ul>
                 </div>
               </div>
@@ -322,19 +324,17 @@
                       <div class="spec-xcol">
                         <div class="spec-row">
                           <div class="spec-title">
-                            <h4>رقم الطلب</h4>
+                            <h4>رقم الطلب:</h4>
                           </div>
                           <div class="spec-value">
-                            <div class="text-value"><p>رقم الطلب:</p></div>
+                            <div class="text-value"><p>رقم الطلب</p></div>
                           </div>
                         </div>
                         <div class="spec-row">
                           <div class="spec-title">
                             <h4>اسم المنشأة:</h4>
                           </div>
-                          <div class="spec-value">
-                            <div class="text-value"><p>اسم المنشأة</p></div>
-                          </div>
+                          <div class="text-value"><p>اسم المنشأة</p></div>
                         </div>
                         <div class="spec-row">
                           <div class="spec-title">
@@ -352,41 +352,36 @@
                             <h4>حالة الطلب</h4>
                           </div>
                           <div class="spec-value">
-                            <div class="status light-gray-bg gray-border">
-                              <img src="../../assets/icons/replay-status-icon.svg" alt="">
-                              <p>الرد على العرض الفني والمالي</p>
+                            <div class="status light-success-bg">
+                              <img src="../../assets/icons/success.svg" alt="">
+                              <p>تم الاعتماد</p>
                             </div>
                           </div>
                         </div>
                         <div class="spec-row">
                           <div class="spec-title">
-                            <h4>صلاحية الطلب</h4>
+                            <h4>تاريخ بداية العقد:</h4>
                           </div>
                           <div class="spec-value">
-                            <div class="status light-success-bg">
-                              <img src="../../assets/icons/success.svg" alt="">
-                              <p>٩٠ يوم</p>
-                            </div>
-                          </div>
-                          <div class="spec-value">
-                            <div class="status light-warning-bg">
-                              <img src="../../assets/icons/warning.svg" alt="">
-                              <p>٣٠ يوم</p>
-                            </div>
-                          </div>
-                          <div class="spec-value">
-                            <div class="status light-error-bg">
-                              <img src="../../assets/icons/status-error-icon.svg" alt="">
-                              <p>١٠ أيام</p>
-                            </div>
-                          </div>
-                          <div class="spec-value">
-                            <div class="status light-gray-bg gray-border">
-                              <img src="../../assets/icons/status-finished-icon.svg" alt="">
-                              <p>تم الاعتماد</p>
+                            <div class="status light-info-bg">
+                              <img src="../../assets/icons/calendar-status-icon.svg" alt="">
+                              <p>٢٤ يناير، ٢٠٢٥</p>
                             </div>
                           </div>
                         </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>تاريخ  انتهاء العقد:</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-info-bg">
+                              <img src="../../assets/icons/calendar-status-icon.svg" alt="">
+                              <p>٢٤ يناير، ٢٠٢٥</p>
+                            </div>
+                          </div>
+                        </div>
+
+
                       </div>
 
                       <div class="spec-xcol justify-content-end">
@@ -457,9 +452,97 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="spec-xcol justify-content-end">
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>العرض الفني والمال</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="file-view-down flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                اسم الملف.pdf
+                              </div>
+                              <div class="cta-cel">
+                                <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>العقد الرسمي</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="spec-value">
+                              <div class="file-view-down flex-row space-btw">
+                                <div class="flex-row gap-10">
+                                  <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                  اسم الملف.pdf
+                                </div>
+                                <div class="cta-cel">
+                                  <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spec-row">
+                          <div class="spec-title">
+                            <h4>خطة العمل</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="file-view-down flex-row space-btw">
+                              <div class="flex-row gap-10">
+                                <img src="../../assets/icons/file-icon-g.svg" alt="">
+                                اسم الملف.pdf
+                              </div>
+                              <div class="cta-cel">
+                                <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="spec-row ex-row">
+                          <div class="spec-title">
+                            <h4>مدير المشروع:</h4>
+                          </div>
+                          <div class="spec-value text-icon">
+                            <div class="text-value"><p>اسم مدير المشروع</p> <img src="../../assets/icons/Image-avatar.svg" alt=""></div>
+                          </div>
+                        </div>
+
+                        <div class="spec-row ex-row">
+                          <div class="spec-title">
+                            <h4>تاريخ إنطلاق المشروع:</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-info-bg">
+                              <img src="../../assets/icons/calendar-status-icon.svg" alt="">
+                              <p>٢٤ يناير، ٢٠٢٥</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="spec-row ex-row">
+                          <div class="spec-title">
+                            <h4>تاريخ انتهاء المشروع:</h4>
+                          </div>
+                          <div class="spec-value">
+                            <div class="status light-info-bg">
+                              <img src="../../assets/icons/calendar-status-icon.svg" alt="">
+                              <p>٢٤ يناير، ٢٠٢٥</p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
                     
-                    <div class="tabs mt-24">
+                    
+                    <div class="tabs">
                       <div class="tab-buttons tab-buttons-2 mt-0">
                         <button class="tab-btn active" data-tab="tab1">ﻋﻤﻠﻴﺎت اﻟﻤﻨﺸﺄة <i class="node-tab"></i></button>
                         <button class="tab-btn" data-tab="tab2">بيانات البرنامج <i class="file-tab"></i></button>  
@@ -519,28 +602,197 @@
               </div>
 
               <div class="accordion-item">
-                <button class="accordion-header" data-target="content44">العرض الفني والمالي</button>
+                <button class="accordion-header" data-target="content44">خطة العمل</button>
                 <div id="content44" class="accordion-content open">
+
+                  <div class="progress-indicator m-0">
+                    <div class="progressbar-container">
+                      <ul class="progressbar">
+                        <li class="done">تحليل الفجوة <span>من ١٠ يناير إلى ١٠ مارس</span></li>
+                        <li class="done">التدريب <span>من ١٠ يناير إلى ١٠ مارس</span></li>
+                        <li class="done">التطوير والتنفيذ <span>من ١٠ يناير إلى ١٠ مارس</span></li>
+                        <li class="active">التقييم <span>من ١٠ يناير إلى ١٠ مارس</span></li>
+                      </ul>
+                    </div>
+                  </div>
                   
-                  <div class="flex-row space-btw">
-
-                    <div class="file-view-down flex-row space-btw">
-                      <div class="flex-row gap-10">
-                        <img src="../../assets/icons/file-icon-g.svg" alt="">
-                        اسم الملف.csv
-                      </div>
-                      <div class="cta-cel">
-                        <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
-                        <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
-                      </div>
+                  <div class="secondary-card-style pad-16">
+                    <div class="title-text-icon-card b-none p-0 mb-16 mt-32">
+                      <h4>تقارير المشروع<img src="../../assets/icons/contract-icon-title.svg" alt=""></h4>
+                    </div>
+      
+                    <div class="reports-section">
                       
+                      <div class="row">
+                        <div class="col-lg-8">
+      
+                            <div class="row">
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+            
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+            
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-md-6 col-lg-4">
+                                <div class="report-view-down flex-row space-btw">
+                                  <div class="flex-row gap-10">
+                                    <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                    اسم التقرير.pdf
+                                  </div>
+                                  <div class="cta-cel">
+                                    <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                    <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="col-12">
+                                <div class="man-flex-row">
+                                  <div class="man-flex-col">
+                                    <div class="title-text-icon-card b-none p-0 mb-16">
+                                      <h4>التقرير النهائي<img src="../../assets/icons/contract-icon-title.svg" alt=""></h4>
+                                    </div>
+              
+                                    <div class="spacxd-row mb-16">
+                                      <div class="xd-col">
+                                        <div class="file-view-down flex-row space-btw">
+                                         <div class="flex-row gap-10">
+                                           <img src="../../assets/icons/report-file-icon.svg" alt="">
+                                           اسم التقرير.pdf
+                                         </div>
+                                         <div class="cta-cel">
+                                           <a href="#"><img src="../../assets/icons/eye-icon.svg" alt=""></a>
+                                           <a href="#"><img src="../../assets/icons/pencil-edit-card.svg" alt=""></a>
+                                           <a href="#"><img src="../../assets/icons/download-icon.svg" alt=""></a>
+                                         </div>
+                                       </div>
+                                       </div>
+                                       <div class="xd-col">
+                                         <div class="status light-success-bg m-0">
+                                           <img src="../../assets/icons/success.svg" alt="">
+                                           <p>تم الاعتماد</p>
+                                         </div>
+                                        </div>
+            
+                                   </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+          
+                            </div>
+      
+                           
+                            
+      
+                        </div>
+      
+                        <div class="col-lg-4">
+                          <div class="chart">
+                            <canvas id="qualityAreaChart" width="920" height="920" style="display: block; box-sizing: border-box; height: 460px; width: 460px;"></canvas>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-
-                    <div class="btns flex-row gap-12">
-                      <button id="openModal" data-modal="modal2" class="btn btn-gray">رفض</button>
-                      <button class="btn btn-primary">موافقة</button>
-                      <button id="openModal" data-modal="modal3" class="btn btn-neutral">طلب تعديل</button>
-                    </div>
+      
                   </div>
 
                 </div>
@@ -552,7 +804,7 @@
 
                 <div class="row">
 
-                  <div class="col-12 col-lg-6 mb-24">
+                  <div class="col-12 col-lg-4 mb-24">
 
                     <div class="primary-cards">
                       <div class="con-card card-shadow mt-0">
@@ -585,7 +837,7 @@
         
                   </div>
         
-                  <div class="col-12 col-lg-6 mb-24">
+                  <div class="col-12 col-lg-4 mb-24">
 
                     <div class="primary-cards">
                       <div class="con-card card-shadow mt-0">
@@ -596,6 +848,38 @@
                           </div>
                           <!-- Title -->
                           <h5 class="mh-auto text-mb-16">ملاحظات مدير المركز</h5>
+
+                          <div class="p-16 bb-content">
+                            <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
+                            <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
+                          </div>
+
+                          <div class="p-16 bb-content">
+                            <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
+                            <button type="button" class="btn btn-gray-s p-0-8">عرض المزيد</button>
+                          </div>
+
+                          <div class="btns flex-row gap-12 mt-24">
+                            <button class="btn btn-gray-icon">عرض الكل <img src="../../assets/icons/view-all-icon-btn.svg" alt=""></button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+
+                  <div class="col-12 col-lg-4 mb-24">
+
+                    <div class="primary-cards">
+                      <div class="con-card card-shadow mt-0">
+                        <div class="card-body">
+                          <!-- Icon Section -->
+                          <div class="icon-container">
+                            <img src="../../assets/icons/note-icon-card.svg" alt="img" class="icon-img">
+                          </div>
+                          <!-- Title -->
+                          <h5 class="mh-auto text-mb-16">ملاحظات مدير المشروع</h5>
 
                           <div class="p-16 bb-content">
                             <p class="text mb-0 mh-auto mb-8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</p>
@@ -631,6 +915,18 @@
 
         </div>
 
+        <div class="card new-request-card mt-24">
+          <div class="title-text-icon-card">
+            <h4>استبيان تقييم الخدمة<img src="../../assets/icons/reports-icon-title.svg" alt=""></h4>
+          </div>
+
+          <p>قم بتقييم الخدمة المقدمة لك من خلال منصة هيئة المواصفات السعودية.</p>
+
+          <div class="btns flex-row gap-12 mt-24">
+            <button class="btn btn-gray">الرجوع</button>
+            <button class="btn btn-primary">ابدأ الاستبيان</button>
+          </div>
+        </div>
 
       </main>
       <!-- ------------------ End main ---------------------- -->
@@ -639,125 +935,25 @@
     </div>
     <!-- --------- Modal -------- -->
      <!-- Modal -->
-    <div id="modal1" class="modal">
-      <div class="modal-dialog modal-dialog-centered modal-maxw960">
+     <div id="modal2" class="modal">
+      <div class="modal-dialog modal-dialog-centered modal-maxw600">
           <div class="modal-content">
               <div class="modal-header">
-                  <img src="../../assets/icons/note-icon-modal.svg" alt="">
+                  <img src="../../assets/icons/redirect-icon.svg" alt="">
                   <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
               </div>
               <div class="modal-body">
-                  <h5>ملاحظات مدير المركز</h5>
-
-                  <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header" data-target="contentm1">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-                        <div id="contentm1" class="accordion-content">
-
-                          <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                          <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                          
-
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                      <button class="accordion-header" data-target="contentm2">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-                      <div id="contentm2" class="accordion-content">
-
-                        <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                        <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                        
-
-                      </div>
-                  </div>
-                  <div class="accordion-item">
-                    <button class="accordion-header" data-target="contentm3">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-                    <div id="contentm3" class="accordion-content">
-
-                      <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                      <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                      
-
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                  <button class="accordion-header" data-target="contentm4">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-                  <div id="contentm4" class="accordion-content">
-
-                    <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                    <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                    
-
-                  </div>
-              </div>
-
-              <div class="accordion-item">
-                <button class="accordion-header" data-target="contentm5">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-                <div id="contentm5" class="accordion-content">
-
-                  <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                  <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                  
-
-                </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" data-target="contentm6">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-              <div id="contentm6" class="accordion-content">
-
-                <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-                <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-                
-
-              </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-header" data-target="contentm7">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-            <div id="contentm7" class="accordion-content">
-
-              <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-              <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-              
-
-            </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" data-target="contentm8">خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية. خطط مبتكرة لزيادة المبيعات وتعزيز وجودك في السوق بفعالية.</button>
-          <div id="contentm8" class="accordion-content">
-
-            <p>المرجع الوطني الاول للمعلومات والخدمات الحكومية الرقمية كافة في المملكة العربية السعودية والمصدر المتخصص في التسهيل على المواطنين والمقيمين ورجال الأعمال والزوّار للبحث والوصول بكل سهولة ويسر.</p>
-            <button class="btn btn-secondary-outline">اضف ملاحظة</button>
-            
-
-          </div>
-      </div>
-    
-                </div>
+                  <h5>انت على وشك القيام برفض العرض الفني والمالي</h5>
+                  <p>يرجي التأكد من اختيارك، ان كنت تريد تعديل العرض. ان كنت تريد الاستمرار في رفض العرض قم بالموافقة</p>
               </div>
               <div class="modal-footer">
-                <div class="cardfooter">
-
-                  <nav class="pag-table" aria-label="Pagination">
-                      <ul class="pagination">
-                          <li class="page-item"><a class="page-link Previous" href="#"><i class="previous-io"></i></a></li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item more"><a class="page-link" href="#">...</a></li>
-                          <li class="page-item"><a class="page-link" href="#">999</a></li>
-                          <li class="page-item"><a class="page-link Next" href="#"><i class="next-io"></i></a></li>
-                      </ul>
-                  </nav>
-              </div>
+                <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">اوافق <i class="leading-icon-w"></i></button>
+                  <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
               </div>
           </div>
       </div>
   </div>
-  <div id="modal2" class="modal">
+  <div id="modalsub2" class="modal">
     <div class="modal-dialog modal-dialog-centered modal-maxw600">
         <div class="modal-content">
             <div class="modal-header">
@@ -765,52 +961,176 @@
                 <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
             </div>
             <div class="modal-body">
-                <h5>انت على وشك القيام برفض العرض الفني والمالي</h5>
+                <h5>رفض العرض الفني والمالي</h5>
                 <p>يرجي التأكد من اختيارك، ان كنت تريد تعديل العرض. ان كنت تريد الاستمرار في رفض العرض قم بالموافقة</p>
             </div>
             <div class="modal-footer">
-              <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">اوافق <i class="leading-icon-w"></i></button>
+              <button class="btn btn-neutral">تأكيد وموافقة <i class="leading-icon-w"></i></button>
                 <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
             </div>
         </div>
     </div>
 </div>
-<div id="modalsub2" class="modal">
-  <div class="modal-dialog modal-dialog-centered modal-maxw600">
-      <div class="modal-content">
-          <div class="modal-header">
-              <img src="../../assets/icons/redirect-icon.svg" alt="">
-              <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
-          </div>
-          <div class="modal-body">
-              <h5>رفض العرض الفني والمالي</h5>
-              <p>يرجي التأكد من اختيارك، ان كنت تريد تعديل العرض. ان كنت تريد الاستمرار في رفض العرض قم بالموافقة</p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-neutral">تأكيد وموافقة <i class="leading-icon-w"></i></button>
-              <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
-          </div>
-      </div>
-  </div>
-</div>
-<div id="modal3" class="modal">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-              <img src="../../assets/icons/redirect-icon.svg" alt="">
-              <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
-          </div>
-          <div class="modal-body">
-              <h5>هل تريد تعديل العرض الفني والمالي؟</h5>
-              <p>ان كنت تريد تعديل العرض قم بالموافقة.</p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-neutral">اوافق <i class="leading-icon-w"></i></button>
-              <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+     <div id="modal3" class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <img src="../../assets/icons/redirect-icon.svg" alt="">
+                  <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
+              </div>
+              <div class="modal-body">
+                  <h5>هل تريد تعديل العرض الفني والمالي؟</h5>
+                  <p>ان كنت تريد تعديل العرض قم بالموافقة.</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-neutral">اوافق <i class="leading-icon-w"></i></button>
+                  <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+              </div>
           </div>
       </div>
-  </div>
-</div>
+    </div>
+    <!-----------charts js  ---------->
+<script>
+  // ----start radar chart---------
+  const qualityAreasChart = document.getElementById("qualityAreaChart");
+  const radarChart = new Chart(qualityAreasChart, {
+    type: "radar",
+    data: {
+      labels: [
+        "تحليل",
+        "تدريب",
+        "تنفيذ",
+        "مستوى النضج",
+        "شهادات",
+        "مواصفات",
+      ],
+      datasets: [
+        {
+          label: "",
+          data: [0, 9, 2, 5, 0, 2],
+          backgroundColor: ["rgba(27, 131, 84, 0.25)"],
+          borderColor: ["#1B8354"],
+          pointBackgroundColor: "rgba(27, 131, 84, 0.25)",
+          pointBorderColor: "#1B8354",
+        },
+      ],
+    },
+    options: {
+      scales: {
+        r: {
+          pointLabels: {
+            font: {
+              size: 16,
+            },
+          },
+          ticks: {
+            //   color: "#fff",
+            //   backdropColor: "#1849A9",
+            //   backdropPadding: 5,
+          },
+        },
+      },
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+      },
+      elements: {
+        line: {
+          borderWidth: 4,
+        },
+        point: {
+          pointBorderWidth: 5,
+          pointRadius: 6,
+        },
+      },
+    },
+  });
+  // ----end radar chart---------
+  // ----start consultant pie chart ---------
+  const consultantsChart = document.getElementById("consultantsChart");
+  const doughnutChart = new Chart(consultantsChart, {
+    type: "doughnut",
+    data: {
+      labels: ["جلسات اكتملت", "جلسات لم تكتمل"],
+      datasets: [
+        {
+          label: "",
+          data: [17, 3],
+          backgroundColor: ["#1B8354", "#F7D54D"],
+          borderWidth: 8,
+          borderRadius: 8,
+          hoverBorderColor: "#fff",
+          cutout: "65%",
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+      },
+    },
+  });
+  // ----end consultants pie chart---------
+
+  const managementQualityChart = document.getElementById(
+    "biDirectionalBarChart"
+  );
+
+  const biDirectionalBarChart = new Chart(managementQualityChart, {
+    type: "bar",
+    data: {
+      labels: ["يناير", "فبراير", "مارس", "ابريل"],
+      datasets: [
+        {
+          label: "مواصفة غير متوافقة",
+          data: [-30, -45, 30, 60],
+          backgroundColor: "#D92D20",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1,
+        },
+        {
+          label: "مواصفة متوافقة",
+          data: [70, -55, 40, 20],
+          backgroundColor: "#1B8354",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      indexAxis: "y",
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          ticks: {
+            display: false,
+            // callback: (value) => Math.abs(value), // Display absolute values on X-axis
+          },
+        },
+      },
+    },
+  });
+</script>
     <!-- --------- main javascript -------- -->
     <script src="../../js/main.js"></script>
   </body>
