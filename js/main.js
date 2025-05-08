@@ -129,7 +129,29 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
   });
 });
 
+// ----------------------------// Q&A----------------------------
+document.querySelectorAll(".qa-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const qaItem = button.closest(".qa-item");
+    const isOpen = qaItem.classList.contains("open");
 
+    document.querySelectorAll(".qa-item").forEach((item) => {
+      item.classList.remove("open");
+    });
+
+    if (!isOpen) {
+      qaItem.classList.add("open");
+    }
+  });
+});
+
+// ----------------------------// ----------------------------
+
+function toggleTable(button) {
+  const wrapper = button.closest('.dropdown-wrapper');
+  wrapper.classList.toggle('open');
+}
+// ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
 
 // Select all buttons that open modals
@@ -246,6 +268,20 @@ document.querySelectorAll(".light-gray-bg button").forEach(button => {
       }
   });
 });
+// ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
+// const progressIndicator = document.querySelector('.progress-indicator');
+// const lis = document.querySelectorAll('.progressbar li');
+
+
+// const match = [...lis].slice(1).some(li => li.classList.contains('done'));
+
+// if (match) {
+//   progressIndicator.classList.add('has-progress');
+// } else {
+//   progressIndicator.classList.remove('has-progress');
+// }
+
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
 
@@ -488,5 +524,17 @@ window.addEventListener("click", function (e) {
   }
 });
 // ----------------------------// ----------------------------
+// ----------------------------// ----------------------------
+window.addEventListener('DOMContentLoaded', () => {
+const progressIndicator = document.querySelector('.progress-indicator');
+const lis = document.querySelectorAll('.progressbar li');
+const match = [...lis].slice(1).some(li => li.classList.contains('done'));
+
+if (match) {
+  progressIndicator.classList.add('has-progress');
+} else {
+  progressIndicator.classList.remove('has-progress');
+}
+});
 // ----------------------------// ----------------------------
 
