@@ -243,8 +243,6 @@
           <h2>البطاقة الفنية للمنتج</h2>
         </div>
         <div class="cta">
-          <button class="btn btn-primary-text">نظام منح الشهادات <img src="../../assets/icons/cert-icon-btn.svg"
-              alt=""></button>
           <button class="btn btn-neutral-icon"><img src="../../assets/icons/print-icon-w.svg" alt=""></button>
 
         </div>
@@ -274,20 +272,12 @@
               </li>
             </ul>
 
-            <div class="accordion">
+            <div class="accordion accordion-ex">
               <div class="accordion-item branch-item">
                 <button class="accordion-header" data-target="content1">اسم الشهادة</button>
                 <div id="content1" class="accordion-content open">
 
                   <ul class="custom-tree">
-                    <li class="main-item">
-                      <div class="flex-row">
-                        <img src="../../assets/icons/ser-name-icon.svg" alt="اسم الشهادة">
-                        <h4>اسم الشهادة</h4>
-                      </div>
-                      <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img
-                          src="../../assets/icons/right-arrow.svg" alt=""></button>
-                    </li>
                     <li class="main-item">
                       <div class="flex-row">
                         <img src="../../assets/icons/certificate-issuing-authority.svg" alt="الجهة المانحة للشهادة">
@@ -296,15 +286,16 @@
                     </li>
                   </ul>
 
+
                 </div>
               </div>
-              <div class="accordion-item main-item">
+              <div class="accordion-item branch-item">
                 <button class="accordion-header" data-target="content2">اسم الشهادة</button>
                 <div id="content2" class="accordion-content">
 
                 </div>
               </div>
-              <div class="accordion-item main-item">
+              <div class="accordion-item branch-item">
                 <button class="accordion-header" data-target="content3">اسم الشهادة</button>
                 <div id="content3" class="accordion-content">
 
@@ -314,14 +305,13 @@
 
           </div>
 
+
           <div class="left-card">
             <div class="pro-images">
               <div class="pro-logo">
                 <img src="../../assets/images/video-img.png" alt="product image">
               </div>
-              <div class="iso-logo">
-                <img src="../../assets/images/iso-logo.png" alt="ISO image">
-              </div>
+
             </div>
           </div>
 
@@ -335,13 +325,13 @@
 
           <div class="tabs">
             <div class="tab-buttons tab-buttons-2 mt-0">
-              <button class="tab-btn" data-tab="tab1">المتطلبات الفنية للمورد<i class="tec-icon-tab"></i></button>
-              <button class="tab-btn active" data-tab="tab2">المتطلبات الفنية للمنتج<i
-                  class="pro-tec-icon-tab"></i></button>
+              <button class="tab-btn active" data-tab="tab1">المتطلبات الفنية للمورد<i
+                  class="tec-icon-tab"></i></button>
+              <button class="tab-btn" data-tab="tab2">المتطلبات الفنية للمنتج<i class="pro-tec-icon-tab"></i></button>
               <button class="tab-btn" data-tab="tab3">صور المنتج<i class="images-icon-tab"></i></button>
             </div>
             <div class="tab-content">
-              <div id="tab1" class="tab">
+              <div id="tab1" class="tab active">
 
                 <div class="accordion">
                   <div class="accordion-item">
@@ -370,63 +360,40 @@
                               <img src="../../assets/icons/ser-name-icon.svg" alt="اسم الترميز الجمركي">
                               <h4>شهادات المطابقة المطلوبة للمنتج وفقاً للوائح الفنية</h4>
                             </div>
+                            <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img src="../../assets/icons/right-arrow.svg" alt=""></button>
                           </li>
                         </ul>
 
                       </div>
 
-                      <div class="accordion sub-accordion sub-child-accordion">
+
+                      <div class="accordion accordion-ex-2 sub-accordion sub-child-accordion">
                         <div class="accordion-item">
-                          <button class="accordion-header" data-target="contentSub1">اسم الشهادة</button>
-                          <div id="contentSub1" class="accordion-content sub-open p-0">
+                          <button class="accordion-header" data-target="contentSub10">اسم الشهادة</button>
+                          <div id="contentSub10" class="accordion-content sub-open">
 
-                            <div class="accordion sub-accordion">
-                              <div class="accordion-item">
-                                <button class="accordion-header" data-target="contentSub10">اسم الشهادة</button>
-                                <div id="contentSub10" class="accordion-content sub-open">
-
-                                  <ul class="custom-tree">
-                                    <li class="main-item">
-                                      <div class="flex-row">
-                                        <img src="../../assets/icons/ser-name-icon.svg" alt="اسم الشهادة">
-                                        <h4>اسم الشهادة</h4>
-                                      </div>
-                                      <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img
-                                          src="../../assets/icons/right-arrow.svg" alt=""></button>
-                                    </li>
-                                    <li class="branch-item">
-                                      <div class="flex-row">
-                                        <img src="../../assets/icons/code-name-icon.svg" alt="اسم الترميز الجمركي">
-                                        <h4>اسم الترميز الجمركي</h4>
-                                      </div>
-                                      <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img
-                                          src="../../assets/icons/right-arrow.svg" alt=""></button>
-                                    </li>
-                                    <li class="branch-item">
-                                      <div class="flex-row">
-                                        <img src="../../assets/icons/certificate-issuing-authority.svg"
-                                          alt="الجهة المانحة للشهادة">
-                                        <h4>الجهة المانحة للشهادة</h4>
-                                      </div>
-                                    </li>
-                                  </ul>
-
+                            <ul class="custom-tree">
+                              <li class="branch-item">
+                                <div class="flex-row">
+                                  <img src="../../assets/icons/certificate-issuing-authority.svg" alt="الجهة المانحة للشهادة">
+                                  <h4>الجهة المانحة للشهادة</h4>
                                 </div>
-                              </div>
-                              <div class="accordion-item">
-                                <button class="accordion-header" data-target="contentSub11">اسم الشهادة</button>
-                                <div id="contentSub11" class="accordion-content">
+                              </li>
+                            </ul>
 
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <button class="accordion-header" data-target="contentSub12">اسم الشهادة</button>
-                                <div id="contentSub12" class="accordion-content">
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <button class="accordion-header" data-target="contentSub11">اسم الشهادة</button>
+                          <div id="contentSub11" class="accordion-content">
 
-                                </div>
-                              </div>
+                          </div>
+                        </div>
 
-                            </div>
+                        <div class="accordion-item">
+                          <button class="accordion-header" data-target="contentSub12">اسم الشهادة</button>
+                          <div id="contentSub12" class="accordion-content">
 
                           </div>
                         </div>
@@ -436,13 +403,14 @@
                     </div>
                   </div>
                   <div class="accordion-item">
-                    <button class="accordion-header" data-target="content8">اسم الشهادة</button>
+                    <button class="accordion-header" data-target="content8">اسم المواصفة </button>
                     <div id="content8" class="accordion-content">
 
                     </div>
                   </div>
+
                   <div class="accordion-item">
-                    <button class="accordion-header" data-target="content9">اسم الشهادة</button>
+                    <button class="accordion-header" data-target="content9">اسم المواصفة </button>
                     <div id="content9" class="accordion-content">
 
                     </div>
@@ -451,131 +419,138 @@
                 </div>
 
               </div>
-              <div id="tab2" class="tab active">
+              <div id="tab2" class="tab">
 
-                <div class="accordion">
-                  <div class="accordion-item">
-                    <button class="accordion-header" data-target="content00">اسم المواصفة</button>
-                    <div id="content00" class="accordion-content open">
+                <div class="accordion-item">
+                  <button class="accordion-header" data-target="content10">اللوائح الفنية المرتبطة بالمواصفة</button>
+                  <div id="content10" class="accordion-content open">
 
-                      <div class="specification-info">
-                        <ul class="custom-tree">
-                          <li class="main-item">
-                            <div class="flex-row">
-                              <img src="../../assets/icons/spec-file.svg" alt="اسم الشهادة">
-                              <h4>اسم المواصفة<span>رقم المواصفة</span></h4>
-                            </div>
-                            <div class="cta">
-                              <button class="btn btn-secondary-outline">شراء المواصفة</button>
-                              <button class="btn btn-primary-text">قياس مستوى النضج<img
-                                  src="../../assets/icons/fast-icon-w.svg" alt=""></button>
-                            </div>
-                          </li>
-                        </ul>
-
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <button class="accordion-header" data-target="content10">اسم المواصفة</button>
-                    <div id="content10" class="accordion-content">
-
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <button class="accordion-header" data-target="content20">اسم المواصفة</button>
-                    <div id="content20" class="accordion-content">
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-          </div>
-
-          <div class="card mt-24">
-            <div class="related-services b-none p-0">
-              <h4>خدمات ذات صلة</h4>
-              <div class="primary-cards">
-
-                <div class="row">
-
-                  <div class="col-12 col-md-4 col-lg-2">
-                    <div class="con-card">
-                      <div class="card-body">
-                        <!-- Icon Section -->
-                        <div class="icon-container">
-                          <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                    <div class="spec-xcol">
+                      <div class="spec-row">
+                        <div class="spec-title">
+                          <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
+                          <h4>اللائحة الفنية</h4>
                         </div>
-                        <!-- Title -->
-                        <h5 class="title">التأهيل والتدريب</h5>
-
-                        <!-- Button -->
-                        <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4 col-lg-2">
-                    <div class="con-card">
-                      <div class="card-body">
-                        <!-- Icon Section -->
-                        <div class="icon-container">
-                          <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                        <div class="spec-value">
+                          <div class="status light-info-bg">
+                            <p>اسم اللائحة</p>
+                          </div>
                         </div>
-                        <!-- Title -->
-                        <h5 class="title">الدورات التدريبية</h5>
-
-                        <!-- Button -->
-                        <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4 col-lg-2">
-                    <div class="con-card">
-                      <div class="card-body">
-                        <!-- Icon Section -->
-                        <div class="icon-container">
-                          <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                      <div class="spec-row">
+                        <div class="spec-title">
+                          <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
+                          <h4>اللائحة الفنية</h4>
                         </div>
-                        <!-- Title -->
-                        <h5 class="title">ورش توعوية</h5>
-
-                        <!-- Button -->
-                        <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4 col-lg-2">
-                    <div class="con-card">
-                      <div class="card-body">
-                        <!-- Icon Section -->
-                        <div class="icon-container">
-                          <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                        <div class="spec-value">
+                          <div class="status light-info-bg">
+                            <p>اسم اللائحة</p>
+                          </div>
                         </div>
-                        <!-- Title -->
-                        <h5 class="title">استشارات فورية</h5>
-
-                        <!-- Button -->
-                        <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
+                      </div>
+                      <div class="spec-row">
+                        <div class="spec-title">
+                          <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
+                          <h4>اللائحة الفنية</h4>
+                        </div>
+                        <div class="spec-value">
+                          <div class="status light-info-bg">
+                            <p>اسم اللائحة</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
+
+                  </div>
                 </div>
 
               </div>
+
             </div>
+
+
           </div>
+        </div>
+      </div>
+
+      <div class="card mt-24">
+        <div class="related-services b-none p-0">
+          <h4>خدمات ذات صلة</h4>
+          <div class="primary-cards">
+
+            <div class="row">
+
+              <div class="col-12 col-md-4 col-lg-2">
+                <div class="con-card">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                    </div>
+                    <!-- Title -->
+                    <h5 class="title">التأهيل والتدريب</h5>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-2">
+                <div class="con-card">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                    </div>
+                    <!-- Title -->
+                    <h5 class="title">الدورات التدريبية</h5>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-2">
+                <div class="con-card">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                    </div>
+                    <!-- Title -->
+                    <h5 class="title">ورش توعوية</h5>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-2">
+                <div class="con-card">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../assets/icons/success-2.svg" alt="Icon" class="icon-img">
+                    </div>
+                    <!-- Title -->
+                    <h5 class="title">استشارات فورية</h5>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary-text">اطلب الخدمة</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
 
     </main>
     <!-- ------------------ End main ---------------------- -->

@@ -206,38 +206,38 @@ openModalButtons.forEach((button) => {
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
 // consultant services details cards nav
-const consultantServiceCard = document.querySelectorAll(
-  ".consultant-service-card"
-);
+// const consultantServiceCard = document.querySelectorAll(
+//   ".consultant-service-card"
+// );
 
-const specialConsultantCardContent = document.getElementById(
-  "special-card-content"
-);
-const businessSupportContent = document.getElementById(
-  "business-support-content"
-);
-const partnershipContent = document.getElementById("partnership-card-content");
-consultantServiceCard.forEach((e) => {
-  e.addEventListener("click", () => {
-    for (let i = 0; i < consultantServiceCard.length; i++) {
-      consultantServiceCard[i].classList.add("disabled-card");
-    }
-    e.classList.remove("disabled-card");
-    if (e.id == "consultant-service-card1") {
-      specialConsultantCardContent.classList.remove("hide");
-      businessSupportContent.classList.add("hide");
-      partnershipContent.classList.add("hide");
-    } else if (e.id == "consultant-service-card2") {
-      businessSupportContent.classList.remove("hide");
-      specialConsultantCardContent.classList.add("hide");
-      partnershipContent.classList.add("hide");
-    } else if (e.id == "consultant-service-card3") {
-      partnershipContent.classList.remove("hide");
-      specialConsultantCardContent.classList.add("hide");
-      businessSupportContent.classList.add("hide");
-    }
-  });
-});
+// const specialConsultantCardContent = document.getElementById(
+//   "special-card-content"
+// );
+// const businessSupportContent = document.getElementById(
+//   "business-support-content"
+// );
+// const partnershipContent = document.getElementById("partnership-card-content");
+// consultantServiceCard.forEach((e) => {
+//   e.addEventListener("click", () => {
+//     for (let i = 0; i < consultantServiceCard.length; i++) {
+//       consultantServiceCard[i].classList.add("disabled-card");
+//     }
+//     e.classList.remove("disabled-card");
+//     if (e.id == "consultant-service-card1") {
+//       specialConsultantCardContent.classList.remove("hide");
+//       businessSupportContent.classList.add("hide");
+//       partnershipContent.classList.add("hide");
+//     } else if (e.id == "consultant-service-card2") {
+//       businessSupportContent.classList.remove("hide");
+//       specialConsultantCardContent.classList.add("hide");
+//       partnershipContent.classList.add("hide");
+//     } else if (e.id == "consultant-service-card3") {
+//       partnershipContent.classList.remove("hide");
+//       specialConsultantCardContent.classList.add("hide");
+//       businessSupportContent.classList.add("hide");
+//     }
+//   });
+// });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
 // <!-- Rating -->
@@ -537,4 +537,3 @@ if (match) {
 }
 });
 // ----------------------------// ----------------------------
-

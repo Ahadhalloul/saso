@@ -289,20 +289,18 @@
 
         <div class="card">
 
-        <div class="chart-container">
+            <div class="chart-container">
+              <canvas id="myChart" width="300" height="300"></canvas>
+              <div class="legend">
+                  <div class="legend-item"><div class="legend-color" style="background-color: #A2E2B2;"></div> مواصفات متوافقة</div>
+                  <div class="legend-item"><div class="legend-color" style="background-color: #F4C6C6;"></div> منتجات غير مؤهلة</div>
+                  <div class="legend-item"><div class="legend-color" style="background-color: #B8E0F3;"></div> غير مكتمل</div>
+                  <div class="legend-item"><div class="legend-color" style="background-color: #E5E5E5;"></div> غير موثقة</div>
+                  <div class="legend-item"><div class="legend-color" style="background-color: #FBEFA5;"></div> تحت المراجعة</div>
+              </div>
+            </div>
 
-          <canvas id="myChart" width="300" height="300"></canvas>
-          <div class="legend">
-            <div class="legend-item"><div class="legend-color" style="background-color: #A2E2B2;"></div> مواصفات متوافقة</div>
-            <div class="legend-item"><div class="legend-color" style="background-color: #F4C6C6;"></div> منتجات غير مؤهلة</div>
-            <div class="legend-item"><div class="legend-color" style="background-color: #B8E0F3;"></div> غير مكتمل</div>
-            <div class="legend-item"><div class="legend-color" style="background-color: #E5E5E5;"></div> غير موثقة</div>
-            <div class="legend-item"><div class="legend-color" style="background-color: #FBEFA5;"></div> تحت المراجعة</div>
           </div>
-        
-        </div>
-
-      </div>
         
         <script>
           const ctx = document.getElementById('myChart').getContext('2d');
