@@ -9082,3 +9082,38 @@ button[disabled] {
   color: #9DA4AE;
   background-color: #E5E7EB;
 }
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+#myChart {
+  width: 100%;
+  height: 300px !important;
+}
