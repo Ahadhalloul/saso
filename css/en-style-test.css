@@ -4647,11 +4647,16 @@ nav .pagination .more .page-link {
 }
 
 /* Tabs Styles */
+.tabs {
+  display: grid;
+}
 
 .tab-buttons {
   display: flex;
   gap: 32px;
   margin: 32px 0px;
+  position: relative;
+  z-index: 100;
 }
 
 .tab-btn {
@@ -8651,7 +8656,7 @@ form.search-form .filter-group {
   width: 100%;
   max-width: 100%;
   height: 60vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .pdf-viewer-container iframe {
@@ -8663,6 +8668,7 @@ form.search-form .filter-group {
 .select-wrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 16px;
 }
 
 .select-wrapper .icon {
@@ -8697,4 +8703,11 @@ form.search-form .filter-group {
   background-position: left 10px center; /* لأن RTL */
   background-size: 16px;
   cursor: pointer;
+}
+
+.modal .attach-files span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748B;
+  margin-bottom: 8px;
 }

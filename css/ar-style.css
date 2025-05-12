@@ -9284,13 +9284,14 @@ form.search-form .filter-group {
   width: 100%;
   max-width: 100%;
   height: 60vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .pdf-viewer-container iframe {
   width: 100%;
   height: 100%;
   border: none;
+  max-width: 100%;
 }
 
 .select-wrapper {
