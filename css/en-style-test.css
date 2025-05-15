@@ -2301,6 +2301,15 @@ table .status {
   padding: 16px;
   z-index: 1000;
   display: none;
+  color: #161616;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#details-dropdown strong {
+  color: #161616;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 #details-dropdown button {
@@ -2758,7 +2767,7 @@ input.radio-btn {
 }
 .toast .message .message-text .message-p {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #384250;
   margin-bottom: 4px;
 }
@@ -4851,10 +4860,27 @@ nav .pagination .more .page-link {
   height: 15px;
   width: 15px;
 }
+.tab-btn i.user-tab {
+  background-image: url(../assets/icons/user.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
 .tab-btn i.order-m-tab {
   background-image: url(../assets/icons/order-m-icon-tab.svg);
   background-repeat: no-repeat;
   display: block;
+  height: 15px;
+  width: 15px;
+}
+
+.tab-btn i.project-managers-tab {
+  background-image: url(../assets/icons/date-icon.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-size: contain;
   height: 15px;
   width: 15px;
 }
@@ -5081,6 +5107,7 @@ nav .pagination .more .page-link {
   font-family: "IBM Plex Sans Arabic";
   font-size: 14px;
   font-weight: 600;
+  z-index: 200;
 }
 
 .tab-buttons-2 .tab-btn.active,
@@ -5642,7 +5669,7 @@ nav .pagination .more .page-link {
 
 .form-label span.label-info {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #6A7383;
 }
 
@@ -5737,7 +5764,7 @@ nav .pagination .more .page-link {
 .form-select:disabled {
   color: #9DA4AE;
   background-color: #fff;
-  background-image: url(../assets/images/select-arrow-disabled.svg);
+  background-image: url(../assets/icons/select-arrow-disabled.svg);
   border: 1px solid #9DA4AE;
 }
 
@@ -6043,7 +6070,6 @@ nav .pagination .more .page-link {
 }
 .advisor-card-info .selected-date {
   text-align: center;
-  padding: 1rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6188,7 +6214,7 @@ form .form-group .time-list {
 }
 form .form-group .time-list span.info-tag {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   color: #161616;
   background-color: #F3F4F6;
   border: solid 1px #DADDE1;
@@ -6197,7 +6223,7 @@ form .form-group .time-list span.info-tag {
 }
 .form-group p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   color: #161616;
 }
 .file-upload-container {
@@ -6251,7 +6277,11 @@ form .form-group .time-list span.info-tag {
   display: flex;
   align-items: center;
   gap: 10px;
-  direction: ltr;
+}
+.uploaded-file .info p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
 }
 
 .uploaded-file .info .success-up-icon {
@@ -6407,6 +6437,10 @@ form .form-group .time-list span.info-tag {
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+
+.time-info-tag .info {
+  display: contents;
 }
 
 .time-info-tag .info-tag {
@@ -8654,7 +8688,7 @@ button[disabled] {
   border-bottom: solid 3px #D2D6DB;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
   z-index: 200;
   width: 100%;

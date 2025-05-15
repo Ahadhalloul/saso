@@ -270,6 +270,27 @@ document.querySelectorAll(".light-gray-bg button").forEach(button => {
 });
 // ----------------------------// ----------------------------
 // ----------------------------// ----------------------------
+// 
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".pdf-viewer-container");
+  const embed = container.querySelector("embed");
+
+  if (embed) {
+    const src = embed.getAttribute("src");
+
+    //  from embed to iframe 
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("src", src);
+    iframe.setAttribute("width", "100%");
+    iframe.setAttribute("height", "100%");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("type", "application/pdf");
+    iframe.style.border = "none";
+
+    container.replaceChild(iframe, embed);
+  }
+});
+// ----------------------------// ----------------------------
 // const progressIndicator = document.querySelector('.progress-indicator');
 // const lis = document.querySelectorAll('.progressbar li');
 
