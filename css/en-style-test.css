@@ -794,6 +794,7 @@ input[type="checkbox"]:checked {
   align-items: center;
   gap: 12px;
   color: var(--primary-text-color);
+  font-size: 16px;
   font-weight: 600;
   padding-left: 20px;
   padding-right: 8px;
@@ -1720,8 +1721,19 @@ table .services-list-card .employee-list-imgs div {
 }
 .news-list-card .news-content h5 {
   margin-top: 10px;
-  font-weight: 400;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  min-height: 3em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
+
 .charts-cards-container.facility-emp .services-list-card .services-list {
   gap: 14px;
 }
@@ -2288,6 +2300,7 @@ table .status {
   border-radius: 8px;
   padding: 16px;
   z-index: 1000;
+  display: none;
 }
 
 #details-dropdown button {
@@ -3610,7 +3623,7 @@ input.radio-btn {
 }
 .card-title .title-text h5 {
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   color: #000;
   direction: ltr;
@@ -3685,7 +3698,7 @@ input.radio-btn {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction:row-reverse;
+  flex-direction:row;
   gap: 16px;
   justify-content: center;
 }
@@ -3715,7 +3728,7 @@ nav .pagination .page-item .page-link {
   border: 0px solid;
   background: transparent;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #161616;
   padding: 5px;
 }
@@ -3737,7 +3750,7 @@ nav .pagination .page-item .Next {
 }
 
 nav .pagination .page-item .Next i.next-io {
-  transform: scaleX(-1);
+  transform: scaleX(1);
   display: block;
   background-image: url(../../saso/assets/images/next.svg);
   height: 20px;
@@ -3753,7 +3766,7 @@ nav .pagination .page-item .Previous {
 }
 
 nav .pagination .page-item .Previous i.previous-io {
-  transform: scaleX(-1);
+  transform: scaleX(1);
   display: block;
   background-image: url(../../saso/assets/images/Previous.svg);
   height: 20px;
@@ -3974,7 +3987,7 @@ nav .pagination .more .page-link {
 
 .table tbody tr td .text p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   color: #161616;
   width: auto;
 }
@@ -4013,7 +4026,7 @@ nav .pagination .more .page-link {
   border-radius: 4px;
   color: #1849a9;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   flex-direction:row-reverse;
   direction: ltr;
@@ -4068,8 +4081,8 @@ nav .pagination .more .page-link {
   border-radius: 4px;
   color: #1F2A37;
   font-size: 12px;
-  font-weight: 500;
-  display: inline-flex;
+  font-weight: 400;
+  display: flex;
   align-items: center;
   gap: 8px;
   flex-direction:row-reverse;
@@ -5566,7 +5579,7 @@ nav .pagination .more .page-link {
 
 .advisors-card h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: #1f2a37;
   text-align: center;
 }
@@ -6087,7 +6100,12 @@ nav .pagination .more .page-link {
   border-radius: 4px;
   padding: 5px 12px;
   border: solid 1px #e5e7eb;
-  direction: ltr;
+}
+
+.webex-section p {
+  color: #161616;
+  font-size: .875rem;
+  font-weight: 500;
 }
 
 .webex-section img {
