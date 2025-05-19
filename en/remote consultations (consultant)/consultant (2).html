@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASO</title>
+    <!-- -------------- arabic page style ------------- -->
+    <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
+    <!-- -------------- english page style ------------- -->
+    <link rel="stylesheet" href="../../css/en-style-test.css" />
+  </head>
+  <body>
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <!-- -------------------Start sidebar menu --------------- -->
+      <div class="sidebar-container flex-column" id="main-sidebar">
+        <div class="sidebar-head flex-row">
+          <img class="logo" src="../../assets/logos/logo.png" alt="saso logo" />
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu.svg"
+            alt="collapse icon"
+          />
+          <img
+            src="../../assets/icons/mi_menu.svg"
+            alt=""
+            class="sm-screen-close-icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="#" class="active">
+                <img
+                  src="../../assets/icons/radix-icons_dashboard.svg"
+                  alt=""
+                />لوحة التحكم
+              </a>
+            </li>
+            <li>
+              <a href="#" class="pointer space-btw" id="services-sub-menu">
+                <div class="flex-row gap-12">
+                  <img
+                    src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                    alt=""
+                  />خدمات الهيئة
+                </div>
+                <div class="sub-menu-icon">
+                  <img src="../../assets/icons/arrowdown2.png" alt="" />
+                </div>
+              </a>
+              <!-- start sub menu content -->
+              <ul class="sub-menu-list hide" id="services-list">
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#" class="">الاستشارات الفورية عن بعد</a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+                <li>
+                  <a href="#">اسم الخدمة يكتب هنا </a>
+                </li>
+              </ul>
+              <!-- end sub menu content -->
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />طلباتي
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/iconamoon_profile-light.svg"
+                  alt=""
+                />حسابي
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+                المستندات
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="#">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+                والمساعدة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/carbon_report-data.svg"
+                  alt=""
+                />التقارير
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />الأسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="..assets/icons/hugeicons_news.svg" alt="" />مركز
+                الأخبار
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----start collapsed sidebar-------- -->
+      <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+        <div class="sidebar-head">
+          <img
+            class="collapse-icon"
+            src="../../assets/icons/mi_menu-white.svg"
+            alt="collapse icon"
+          />
+        </div>
+        <div class="menu-content flex-column">
+          <ul class="menu-list">
+            <li>
+              <a href="" class="active">
+                <img src="../../assets/icons/radix-icons_dashboard.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/carbon_ibm-private-path-services.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/fluent_branch-request-16-regular.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <h5>الإعدادات</h5>
+          <ul class="setting-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/iconamoon_profile-light.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/f7_doc-on-doc.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <h5>الدعم</h5>
+          <ul class="support-list">
+            <li>
+              <a href="">
+                <img src="../../assets/icons/solar_help-linear.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/carbon_report-data.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="../../assets/icons/simple-line-icons_question.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/icons/hugeicons_news.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ----end collapsed sidebar-------- -->
+      <!-- -------------------End sidebar menu ----------------- -->
+      <!-- ------------------ Start header ---------------------- -->
+      <header class="header flex-row">
+        <div class="flex-row gap-30">
+          <div class="logo-menu-icons">
+            <img
+              class="md-screen-menu-icon"
+              src="../../assets/icons/mi_menu.svg"
+              alt=""
+            />
+            <img src="../../assets/logos/logo-medium.png" alt="logo" />
+          </div>
+          <div class="path flex-column">
+            <p>
+              اسم المنشأة <span class="blue-text"> / </span
+              ><a href="" class="active">لوحة التحكم</a>
+            </p>
+            <h2>لوحة التحكم</h2>
+          </div>
+        </div>
+        <div class="user-functions flex-row">
+          <div class="search flex-row">
+            <img src="../../assets/icons/searchnormal1.svg" alt="" />
+            <input type="text" placeholder="البحث" />
+          </div>
+          <img
+            class="search-icon"
+            src="../../assets/icons/searchnormal2.svg"
+            alt=""
+          />
+          <img src="../../assets/icons/hugeicons_settings-01.svg" alt="" />
+          <div class="accessibility flex-row gap-20">
+            <div class="accessibility-dropdown-wrapper">
+              <button class="accessibility-button-header btn-transparent">
+                <img src="../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
+              </button>
+            
+              <div class="accessibility-dropdown" id="accessibilityDropdown">
+                <button id="increaseFontBtn">
+                  <img src="../../assets/icons/increase-font.svg" alt="Increase Font Size" />
+                </button>
+                <button id="decreaseFontBtn">
+                  <img src="../../assets/icons/decrease-font.svg" alt="Decrease Font Size" />
+                </button>
+              </div>
+            </div>
+            <button id="toggleGrayscaleBtn" class="btn-transparent">
+              <img src="../../assets/icons/color-blindness-icon.svg" alt="Toggle Contrast Modes" />
+            </button>
+          </div>
+          <div class="language flex-row">
+            <select>
+              <option value="arabic">ع</option>
+            </select>
+            <img src="../../assets/icons/arrowdown2.svg" alt="" />
+          </div>
+          <div class="user-info flex-row">
+            <div class="flex-row">
+              <div class="user-img-bg">
+                <img
+                  class="user-img"
+                  src="../../assets/images/user.png"
+                  alt="user image"
+                />
+              </div>
+              <h5>محمد عبدالمجيد</h5>
+            </div>
+            <img src="../../assets/icons/arrowdown2.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <!-- ------------------ End header ---------------------- -->
+      <!-- ------------------ Start main ---------------------- -->
+      <main class="main-container">
+        <div class="title-page">
+          <div class="title">
+            <button class="btn btn-icon">
+              <img src="../../assets/images/back-icon.svg" alt="" />
+            </button>
+            <h2>العمليات والتشغيل</h2>
+          </div>
+        </div>
+
+        <div class="cards-container sessions-timeline">
+          <!-- --- start session dates card  ---->
+          <div class="card">
+
+            <div class="tabs">
+              <div class="tab-buttons tab-buttons-2 mt-0 mb-0">
+                <button class="tab-btn active" data-tab="tab1">جميع الجلسات<i class="icon-home"></i></button>
+                <button class="tab-btn" data-tab="tab2">الجلسات القادمة<i class="icon-home"></i></button>
+                <button class="tab-btn" data-tab="tab3">الجلسات السابقة<i class="icon-home"></i></button>
+              </div>
+
+              <div class="tab-content">
+                <div id="tab1" class="tab active">
+                  <div class="card-content all-sessions">
+                    
+                      
+                     
+
+                      <div class="custom-tabs">
+                        <div class="custom-tabs-header flex-row space-btw">
+                          <h3>جميع الجلسات</h3>
+                          <div class="flex-row gap-12">
+                            <button class="view-switch-btn" data-target="list-view">
+                              <img src="../../assets/icons/pause-icon.svg" alt="">
+                            </button>
+                            <button class="view-switch-btn is-selected" data-target="grid-view">
+                              <img src="../../assets/icons/calander-6.svg" alt="">
+                            </button>
+                          </div>
+                        </div>
+                      
+                        <div class="custom-tabs-body">
+                          <div id="grid-view" class="tab-view is-active">
+                            <div class="table-responsive">
+                              <table class="table sessions-dates-table lang-ar">
+                                <thead>
+                                  <tr>
+                                    <th colspan="7">
+                                      <div class="flex-row">
+                                        <button class="next-month"><i class="arrow-next"></i></button>
+                                        <h4 class="month-name">يوليو</h4>
+                                        <h4 class="year">٢٠٢٥</h4>
+                                        <button class="prev-month"><i class="arrow-prev"></i></button>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="calendar-body">
+                                  <tr>
+                                    <td>الأحد</td>
+                                    <td>الاثنين</td>
+                                    <td>الثلاثاء</td>
+                                    <td>الأربعاء</td>
+                                    <td>الخميس</td>
+                                    <td>الجمعة</td>
+                                    <td>السبت</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <div id="details-dropdown"></div>
+        
+                            <script>
+                              (function () {
+                                const monthNames = {
+                                  ar: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+                                  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                                };
+                              
+                                const daysOfWeek = {
+                                  ar: ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
+                                  en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                                };
+                              
+                                const arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+                              
+                                const schedule = {
+                                                        "2025-05-01": [
+                                                          { time_ar: "٦:٣٠ م", time_en: "6:30 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركه أ", company_en: "Company A", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-02": [
+                                                          { time_ar: "١٠:٣٠ ص", time_en: "10:30 AM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة جيم", company_en: "Jim Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٨:٠٠ ص", time_en: "8:00 AM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة هـ", company_en: "Company H", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٢:٠٠ م", time_en: "2:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة جيم", company_en: "Jim Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-03": [
+                                                          { time_ar: "٤:٠٠ م", time_en: "4:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة و", company_en: "Company W", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٩:٣٠ ص", time_en: "9:30 AM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة دال", company_en: "Dal Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٤:٠٠ م", time_en: "4:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة جيم", company_en: "Jim Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-04": [
+                                                          { time_ar: "٨:٠٠ ص", time_en: "8:00 AM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة و", company_en: "Company W", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٤:٠٠ م", time_en: "4:00 PM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة هـ", company_en: "Company H", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "١٢:٠٠ م", time_en: "12:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة باء", company_en: "Company B", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "١٠:٣٠ ص", time_en: "10:30 AM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة و", company_en: "Company W", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-05": [
+                                                          { time_ar: "١٢:٠٠ م", time_en: "12:00 PM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة ألف", company_en: "Company A", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-06": [
+                                                          { time_ar: "٩:٣٠ ص", time_en: "9:30 AM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة ألف", company_en: "Company A", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٦:٣٠ م", time_en: "6:30 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة جيم", company_en: "Jim Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-07": [
+                                                          { time_ar: "١١:٠٠ ص", time_en: "11:00 AM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة باء", company_en: "Company B", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" },
+                                                          { time_ar: "٣:٠٠ م", time_en: "3:00 PM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة دال", company_en: "Dal Company", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-08": [
+                                                          { time_ar: "١٢:٠٠ م", time_en: "12:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة هـ", company_en: "Company H", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-09": [
+                                                          { time_ar: "٨:٣٠ ص", time_en: "8:30 AM", disabled: true, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة و", company_en: "Company W", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-10": [
+                                                          { time_ar: "٢:٣٠ م", time_en: "2:30 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة ألف", company_en: "Company A", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ],
+                                                        "2025-05-28": [
+                                                          { time_ar: "٤:٠٠ م", time_en: "4:00 PM", disabled: false, field_ar: "العمليات والتشغيل", field_en: "Operations and Management", company_ar: "شركة باء", company_en: "Company B", representative_ar: "محمد عبد الله", representative_en: "Mohammed Abdullah" }
+                                                        ]
+                                                      };
+                              
+                                function convertToArabicNumerals(number) {
+                                  return number.toString().split('').map(digit => arabicNumbers[parseInt(digit)] || digit).join('');
+                                }
+                              
+                                let currentDate = new Date();
+                                let activeDropdown = null;
+                              
+                                function getCurrentLanguage() {
+                                  const table = document.querySelector('.sessions-dates-table');
+                                  return table.classList.contains('lang-en') ? 'en' : 'ar';
+                                }
+                              
+                                function generateTimes(lang, date) {
+                                  const times = schedule[date] || [];
+                                  return times.map(timeObj => {
+                                    const time = lang === 'ar' ? timeObj.time_ar : timeObj.time_en;
+                                    const timeClass = timeObj.disabled ? 'disabled' : '';
+                                    const field = lang === 'ar' ? timeObj.field_ar : timeObj.field_en;
+                                    const company = lang === 'ar' ? timeObj.company_ar : timeObj.company_en;
+                                    const representative = lang === 'ar' ? timeObj.representative_ar : timeObj.representative_en;
+                              
+                                    return `<div class="time ${timeClass}" data-date="${date}" data-field="${field}" data-company="${company}" data-representative="${representative}" data-time="${time}" ${timeObj.disabled ? 'onclick="toggleBookingDetails(event, this)"' : ''}>${time}</div>`;
+                                  }).join('');
+                                }
+                              
+                                window.toggleBookingDetails = function (event, element) {
+                                  const lang = getCurrentLanguage();
+                                  const dropdown = document.getElementById('details-dropdown');
+                              
+                                  if (activeDropdown && activeDropdown !== element) {
+                                    dropdown.style.display = 'none';
+                                  }
+                              
+                                  if (dropdown.style.display === 'block' && activeDropdown === element) {
+                                    dropdown.style.display = 'none';
+                                    activeDropdown = null;
+                                    return;
+                                  }
+                              
+                                  activeDropdown = element;
+                                  dropdown.style.display = 'block';
+                                  const rect = element.getBoundingClientRect();
+                                  dropdown.style.top = (rect.bottom + window.scrollY) + 'px';
+                                  dropdown.style.left = (rect.left + window.scrollX) + 'px';
+                              
+                                  const field = element.dataset.field;
+                                  const date = element.dataset.date;
+                                  const time = element.dataset.time;
+                                  const company = element.dataset.company;
+                                  const representative = element.dataset.representative;
+                              
+                                  dropdown.innerHTML = `
+                                    <strong>${lang === 'ar' ? 'اسم المجال' : 'Field'}:</strong> ${field}<br>
+                                    <strong>${lang === 'ar' ? 'اليوم' : 'Date'}:</strong> ${lang === 'ar' ? convertToArabicNumerals(date) : date}<br>
+                                    <strong>${lang === 'ar' ? 'الميعاد' : 'Time'}:</strong> ${time}<br>
+                                    <strong>${lang === 'ar' ? 'اسم المؤسسة' : 'Company'}:</strong> ${company}<br>
+                                    <strong>${lang === 'ar' ? 'اسم ممثل المؤسسة' : 'Representative'}:</strong> ${representative}<br>
+                                    <button class="btn btn-neutral">${lang === 'ar' ? ' تفاصيل الحجز' : 'View Booking Details'}</button>
+                                  `;
+                                };
+                              
+                                document.addEventListener('click', (event) => {
+                                  const dropdown = document.getElementById('details-dropdown');
+                                  if (activeDropdown && !activeDropdown.contains(event.target) && !dropdown.contains(event.target)) {
+                                    dropdown.style.display = 'none';
+                                    activeDropdown = null;
+                                  }
+                                });
+                              
+                                document.querySelector('.prev-month').addEventListener('click', () => {
+                                  currentDate.setMonth(currentDate.getMonth() - 1);
+                                  renderCalendar();
+                                });
+                              
+                                document.querySelector('.next-month').addEventListener('click', () => {
+                                  currentDate.setMonth(currentDate.getMonth() + 1);
+                                  renderCalendar();
+                                });
+                              
+                                function renderCalendar() {
+                                  const lang = getCurrentLanguage();
+                                  const year = currentDate.getFullYear();
+                                  const month = currentDate.getMonth();
+                                  const firstDay = new Date(year, month, 1).getDay();
+                                  const daysInMonth = new Date(year, month + 1, 0).getDate();
+                              
+                                  document.querySelector('.month-name').innerText = monthNames[lang][month];
+                                  document.querySelector('.year').innerText = lang === 'ar' ? convertToArabicNumerals(year) : year;
+                              
+                                  const calendarBody = document.querySelector('.calendar-body');
+                                  calendarBody.innerHTML = `<tr>${daysOfWeek[lang].map(day => `<td>${day}</td>`).join('')}</tr>`;
+                              
+                                  let date = 1;
+                                  for (let i = 0; i < 6; i++) {
+                                    const row = document.createElement('tr');
+                              
+                                    for (let j = 0; j < 7; j++) {
+                                      const cell = document.createElement('td');
+                                      if (i === 0 && j < firstDay) {
+                                        cell.innerHTML = "";
+                                      } else if (date <= daysInMonth) {
+                                        const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+                                        const displayDate = lang === 'ar' ? convertToArabicNumerals(date) : date;
+                                        cell.innerHTML = `<div><h4>${displayDate}</h4>${generateTimes(lang, fullDate)}</div>`;
+                                        date++;
+                                      }
+                                      row.appendChild(cell);
+                                    }
+                              
+                                    calendarBody.appendChild(row);
+                                  }
+                                }
+                              
+                                renderCalendar();
+                              })();
+                              
+                            </script>
+                            <div class="cardfooter">
+        
+                              <nav class="pag-table" aria-label="Pagination">
+                                  <ul class="pagination">
+                                      <li class="page-item"><a class="page-link Previous" href="#"><i class="previous-io"></i></a></li>
+                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item more"><a class="page-link" href="#">...</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">999</a></li>
+                                      <li class="page-item"><a class="page-link Next" href="#"><i class="next-io"></i></a></li>
+                                  </ul>
+                              </nav>
+                          </div>
+                          </div>
+                          <div id="list-view" class="tab-view">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>اسم المستفيد</th>
+                                    <th>وسيلة التواصل</th>
+                                    <th>حالة الجلسة</th>
+                                    <th>تاريخ الحجز</th>
+                                    <th>ميعاد الجلسة</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-error-bg">
+                                        <p>لم تكتمل</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-8">
+                                        <div class="time">
+                                          <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                        </div>
+                                        <!---- add more time dropdown box -- -->
+                          <div class="more-time" id="more-time-btn">
+                            <img src="../../assets/icons/More.svg" alt="" />
+                            <div
+                              class="more-time-box flex-column gap-5 hide"
+                              id="more-time-box"
+                            >
+                              <h4>ميعاد الجلسة</h4>
+                              <div class="time">
+                                <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                              </div>
+                              <div class="time">
+                                <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                              </div>
+                              <div class="time">
+                                <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                              </div>
+                              <div class="time">
+                                <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ----------------------  -->
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      <div class="text">
+                                        <p>حسن يوسف علي</p>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="communication">
+                                        <span class="webex-tag">
+                                          Webex
+                                          <img src="../../assets/icons/monitor.svg" alt="">
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="status light-success-bg">
+                                        <p>اكتملت</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="text">
+                                        <p>٢٤ /١٢/ ٢٠٢٤</p>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="time">
+                                        <span class="dates-tag">٤:٠٠ - ٥:٠٠ م</span>
+                                      </div>
+                                    </td>
+              
+                                    <td>
+                                      <div class="flex-row gap-30">
+                                        <div class="action-table">
+                                          <button class="btn primary">تفاصيل الجلسة</button>
+                                        </div>
+                                        <div class="functions-icon light-gray-bg">
+                                          <img src="../../assets/icons/more-vert.svg" alt="">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="cardfooter">
+        
+                              <nav class="pag-table" aria-label="Pagination">
+                                  <ul class="pagination">
+                                      <li class="page-item"><a class="page-link Previous" href="#"><i class="previous-io"></i></a></li>
+                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item more"><a class="page-link" href="#">...</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">999</a></li>
+                                      <li class="page-item"><a class="page-link Next" href="#"><i class="next-io"></i></a></li>
+                                  </ul>
+                              </nav>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                  </div>
+                </div>
+                <div id="tab2" class="tab"></div>
+                <div id="tab3" class="tab"></div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- ----end session dates card ----- -->
+          <!-- ----start Timeline card-------- -->
+          <div class="card timeline">
+            <div class="card-head card-head-border">
+              <h3>الجدول الزمني</h3>
+            </div>
+            <div class="card-content">
+              <div class="flex-row align-items-end space-btw">
+                
+                <div class="date-picker-wrapper lang-ar" id="datePickerWrapper">
+                  <!-- Dropdown Trigger -->
+                  <div class="date-picker-container" id="datePicker">
+                    <img class="calendar-icon" src="../../assets/icons/calander-6.svg" alt="Calendar" />
+                    <span id="selectedDate">الأحد، ٩ فبراير</span>
+                    <img src="../../assets/icons/down-arrow-sm.svg" alt="Dropdown" />
+                  </div>
+              
+                  <!-- Dropdown Calendar -->
+                  <div class="calendar-dropdown" id="calendarDropdown">
+                    <div class="calendar-header">
+                      <div class="navegate">
+                        <button class="nav-arrow" id="nextMonth"><img src="../../assets/icons/arrow-right.svg" alt=""></button>
+                        <button class="nav-arrow" id="prevMonth"><img src="../../assets/icons/arrow-left.svg" alt=""></button>
+                        
+                      </div>
+                      <select id="monthYearSelect"></select>
+                    </div>
+              
+                    <div class="days-of-week" id="daysOfWeek"></div>
+              
+                    <div class="days-grid" id="daysGrid"></div>
+                  </div>
+                </div>
+
+              
+
+                <button class="btn btn-primary flex-row gap-5">
+                  <img src="../../assets/icons/add-icon.svg" alt="">
+                  اضافة الموعد
+                </button>
+
+                
+                </div>
+              </div>
+
+
+              <div class="timeline-list-container">
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="">
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="">
+                    </button>
+                    <div class="status light-success-bg">
+                      <img src="../../assets/icons/success.svg" alt="">
+                      <p>اكتملت</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw error">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button class="disabled">
+                      <img src="../../assets/icons/mic.svg" alt="">
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="">
+                    </button>
+                    <div class="status light-error-bg">
+                      <img src="../../assets/icons/error.svg" alt="">
+                      <p>لم تكتمل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="">
+                    </button>
+                    <button class="disabled">
+                      <img src="../../assets/icons/video.svg" alt="">
+                    </button>
+                    <div class="btn green-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw success">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                    <h5>اسم المستفيد يكتب هنا</h5>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <button>
+                      <img src="../../assets/icons/mic.svg" alt="">
+                    </button>
+                    <button>
+                      <img src="../../assets/icons/video.svg" alt="">
+                    </button>
+                    <div class="btn green-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item flex-row space-btw">
+                  <div class="flex-row gap-12">
+                    <div class="time">١٠:٢٠ ص</div>
+                  </div>
+                  <div class="flex-row gap-5">
+                    <div class="btn black-bg">
+                      <p>تفاصيل</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </main>
+      <!-- ------------------ End main ---------------------- -->
+
+      <!-- ------------------------------------------------------ -->
+    </div>
+    <!-- --------- main javascript -------- -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/accessibility_widget.js"></script>
+  </body>
+</html>

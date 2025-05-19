@@ -2119,6 +2119,7 @@ table.files-table tr:first-child td {
   border: 1px solid #d2d6db;
   border-radius: var(--sm-border-radius);
   padding: 4px;
+  display: flex;
 }
 .sessions-timeline .card-content .functions-btn {
   background-color: #fff;
@@ -2506,13 +2507,18 @@ table .status {
 .session-details-card h4 {
   color: #161616;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .attached-files-con h4 {
   color: #161616;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+}
+.session-details-card p {
+  color: #161616;
+  font-size: 16px;
+  font-weight: 300
 }
 .session-details-card .gray-text {
   text-align: center;
@@ -2547,7 +2553,7 @@ input.radio-btn {
   height: 80px;
   padding: 12px 16px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: var(--sm-border-radius);
   border: 1px solid #9da4ae;
   direction: ltr;
@@ -2711,6 +2717,21 @@ input.radio-btn {
   direction: ltr;
   z-index: 999;
 }
+.toast-ex {
+  position: fixed;
+  top: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+  transition: opacity 0.5s ease-in-out;
+  direction: rtl;
+  z-index: 999;
+  width: 311px;
+  max-width: 100%;
+}
+
 
 
 .toast .toast-body {
@@ -2947,7 +2968,18 @@ input.radio-btn {
   padding: 2px 8px 0px 8px;
   border-radius: var(--sm-border-radius);
   position: relative;
+  cursor: pointer;
+  display: flex;
 }
+.more-time-btn {
+  background-color: #f3f4f6;
+  padding: 4px;
+  border-radius: var(--sm-border-radius);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
 .more-time .more-time-box {
   position: absolute;
   top: 0;
@@ -5554,7 +5586,7 @@ nav .pagination .more .page-link {
 }
 .modal-body p {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #384250;
   margin-bottom: 16px;
   text-align: end;
@@ -5653,7 +5685,7 @@ nav .pagination .more .page-link {
 .form-label {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: #161616;
   margin-bottom: 8px;
   display: inline-flex;
@@ -8790,7 +8822,59 @@ form.search-form .filter-group {
 
 .modal .attach-files span {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #64748B;
   margin-bottom: 8px;
+}
+
+/* Header (buttons + title) */
+.custom-tabs-header {
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.view-switch-btn {
+  background: transparent;
+  border: 1px solid #D2D6DB;
+  padding: 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+}
+
+.view-switch-btn:hover {
+  background-color: #D2D6DB;
+}
+
+.view-switch-btn.is-selected {
+  background-color: #E5E7EB;
+}
+
+/* Tab content area */
+.tab-view {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-view.is-active {
+  display: block;
+}
+
+/* Optional fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal .time-list .time {
+  background-color: #f9fafb;
+  border: solid 1px #e5e7eb;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #1f2a37;
+  font-size: 16px;
+  font-weight: 500;
+  width: max-content;
+  cursor: pointer;
 }
