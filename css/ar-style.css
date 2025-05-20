@@ -3,28 +3,28 @@
 @font-face {
     font-family: 'IBM';
     src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-Regular.ttf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IBM';
-    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-Bold.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'IBM';
-    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-SemiBold.ttf");
+    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-Medium.ttf");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'IBM';
-    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-SemiBold.ttf");
+    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-Bold.ttf");
     font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url("../../saso/assets/fonts/IBMARABIC/IBMPlexSansArabic-SemiBold.ttf");
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -46,14 +46,14 @@
 }
 
 * {
-  font-family: "IBM", sans-serif;
+  font-family: "IBM", sans-serif !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 span, h1, h2, h3, h4, h5, h6, p, a, li, label, button {
-  font-family: "IBM", sans-serif;
+  font-family: "IBM", sans-serif !important;
 }
 
 .loading-overlay {
@@ -223,6 +223,10 @@ span, h1, h2, h3, h4, h5, h6, p, a, li, label, button {
 .m-l-12-r-12 {
   margin-left: -12px !important;
   margin-right: -12px !important;
+}
+.f-size-14 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
 }
 /* -----------Grid System----------- */
 
@@ -786,7 +790,7 @@ a {
 }
 
 .gap-10 {
-  gap: 10px;
+  gap: 9px;
 }
 
 .gap-30 {
@@ -1517,7 +1521,7 @@ input[type="checkbox"]:checked {
   cursor: pointer;
   white-space: nowrap;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .btn-primary {
@@ -1954,7 +1958,7 @@ table .employee-list-imgs div {
 
 .news-list-card .news-content h5 {
   margin-top: 10px;
-  font-weight: 300;
+  font-weight: 400;
   color: #333333;
   margin-bottom: 1.5rem;
   min-height: 3em;
@@ -2494,7 +2498,7 @@ table .status {
 
 .timeline-item .btn p {
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .table.sessions-dates-table thead tr th div {
@@ -2610,7 +2614,7 @@ table .status {
   display: none;
   color: #161616;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #details-dropdown strong {
@@ -2686,7 +2690,7 @@ table .status {
 .popup-card p {
   color: #161616;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   width: 330px;
 }
 
@@ -2705,7 +2709,7 @@ table .status {
 .input input::placeholder {
   color: #6c737f;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .input input:focus {
@@ -2906,7 +2910,7 @@ input.radio-btn {
 
 .contract-section .input-text span {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #384250;
   margin-top: 12px;
   display: block;
@@ -2939,7 +2943,24 @@ input.radio-btn {
   background: #f3f4f6;
   margin-bottom: 20px;
 }
-
+.upload-files-con h4 {
+  color: #1F2A37;
+  text-align: center;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.upload-files-con p {
+  color: #384250 !important;
+  text-align: center;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+.upload-files-con button {
+  color: #161616 !important;
+  text-align: center;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
 .session-details-card .btn {
   font-size: 16px;
 }
@@ -3136,7 +3157,7 @@ input.radio-btn {
 
 .toast .message .message-text .message-p {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #384250;
   margin-bottom: 16px;
 }
@@ -4226,7 +4247,7 @@ nav .pagination .page-item .page-link {
   border: 0px solid;
   background: transparent;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #161616;
   padding: 5px;
 }
@@ -4486,7 +4507,7 @@ nav .pagination .more .page-link {
 
 .table tbody tr td .text p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #161616;
   width: max-content;
 }
@@ -4724,6 +4745,11 @@ nav .pagination .more .page-link {
   display: flex;
   flex-direction: column;
 }
+.primary-cards .con-card p {
+  font-size: 1.125rem;
+  color: var(--text-display);
+  font-weight: 600;
+}
 
 .primary-cards .con-card.card-shadow {
   border: none;
@@ -4798,14 +4824,15 @@ nav .pagination .more .page-link {
 }
 
 .primary-cards .con-card .space-btw h4 {
-  font-size: 1rem;
+  font-size: .9688rem;
   color: var(--text-display);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .primary-cards .con-card .space-btw p {
   color: var(--text-display);
-  font-size: 1rem;
+  font-size: .9375rem;
+  font-weight: 400;
 }
 
 .primary-cards .con-card .icon-container .icon-img {
@@ -4941,7 +4968,7 @@ nav .pagination .more .page-link {
 
 .primary-cards .con-card .text {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #333333;
   margin-bottom: 1.5rem;
 
@@ -5071,13 +5098,15 @@ nav .pagination .more .page-link {
   .primary-cards .flex-row p {
     width: max-content;
   }
-
+}
+@media screen and (max-width: 1024px) {
   .primary-cards .flex-row {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    align-items: start;
+    gap: 8px;
   }
 }
+
 
 .h-card {
   background-color: #F9FAFB;
@@ -5139,6 +5168,7 @@ nav .pagination .more .page-link {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  background-color: #F9FAFB;
 }
 
 .hero-service .content {
@@ -5737,7 +5767,7 @@ nav .pagination .more .page-link {
   border: none;
   width: 100%;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "IBM Plex Sans Arabic";
   transition: background-color 0.3s ease;
   display: flex;
@@ -5896,7 +5926,7 @@ nav .pagination .more .page-link {
 .accordion-content p {
   margin: 0;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #1f2a37;
   line-height: 24px;
 }
@@ -5982,7 +6012,7 @@ nav .pagination .more .page-link {
 
 .modal-dialog .table-responsive {
   height: 100%;
-  max-height: 500px;
+  max-height: 300px;
   overflow: scroll;
 }
 
@@ -6134,7 +6164,7 @@ nav .pagination .more .page-link {
 
 .modal-body p {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #384250;
   margin-bottom: 16px;
   text-align: start;
@@ -6233,7 +6263,7 @@ nav .pagination .more .page-link {
 .form-label {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #161616;
   margin-bottom: 8px;
   display: inline-block;
@@ -6248,7 +6278,7 @@ nav .pagination .more .page-link {
 
 .form-label span.label-info {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #6A7383;
 }
 
@@ -6796,7 +6826,7 @@ form .form-group .time-list {
 
 form .form-group .time-list span.info-tag {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #161616;
   background-color: #F3F4F6;
   border: solid 1px #DADDE1;
@@ -6806,7 +6836,7 @@ form .form-group .time-list span.info-tag {
 
 .form-group p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #161616;
 }
 
@@ -6839,7 +6869,7 @@ form .form-group .time-list span.info-tag {
 
 .file-upload-container .content p {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: #384250;
 }
 
@@ -7255,6 +7285,16 @@ form .form-group .time-list span.info-tag {
   display: contents;
 }
 
+.video-cover {
+  display: flex;
+}
+.video-cover img {
+  width: 100%;
+  max-height: 370px;
+  border-radius: 8px;
+  object-fit: none;
+}
+
 .view-videos .video-player iframe {
   border-radius: 16px;
   min-height: 480px;
@@ -7275,6 +7315,7 @@ form .form-group .time-list span.info-tag {
 @media (max-width: 992px) {
   .video-info {
     margin-bottom: 24px;
+    margin-top: 24px;
     display: block;
   }
 }
@@ -7364,12 +7405,19 @@ form .form-group .time-list span.info-tag {
 }
 
 .pb-rtl .progress-circle {
-  right: 100%;
+  right: 0%;
+  transition: right 1s ease-in-out, left 1s ease-in-out;
+}
+
+.pb-rtl .progress-circle:has(img) {
+  right: 0%;
+  transition: left 1s ease-in-out, right 1s ease-in-out;
 }
 
 /* LTR Mode (Left to Right) */
 .pb-ltr .progress-bar {
   left: 0;
+  background: #1B8354;
 }
 
 .pb-ltr .progress-circle {
@@ -8323,7 +8371,11 @@ form .form-group .time-list span.info-tag {
 .form-request .flex-form {
   width: 50%;
 }
-
+.attached-files .input {
+  color: #161616;
+  font-size: 14px;
+  font-weight: 500;
+}
 .form-request .check .form-check {
   display: flex;
   flex-direction: row;
@@ -9469,7 +9521,7 @@ form.search-form .filter-group {
 
 .modal .attach-files span {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #64748B;
   margin-bottom: 8px;
 }

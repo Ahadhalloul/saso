@@ -558,7 +558,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------// ----------------------------
 // <!-- Toast -->
 function closeToast() {
-  document.getElementById("toast").classList.add("hidden");
+  const toast = document.getElementById("toast");
+  if (toast) {
+    toast.classList.add("hidden");
+  }
 }
 
 setTimeout(closeToast, 5000); // Auto close after 5 seconds

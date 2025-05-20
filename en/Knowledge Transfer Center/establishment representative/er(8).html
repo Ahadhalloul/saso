@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SASO</title>
+  <!-- -------------- arabic page style ------------- -->
+  <!-- <link rel="stylesheet" href="../../../css/ar-style.css" /> -->
+  <!-- -------------- english page style ------------- -->
+  <link rel="stylesheet" href="../../../css/en-style-test.css" />
+</head>
+
+<body>
+  <div class="overlay-bg"></div>
+  <div class="container">
+    <!-- -------------------Start sidebar menu --------------- -->
+    <div class="sidebar-container flex-column" id="main-sidebar">
+      <div class="sidebar-head flex-row">
+        <img class="logo" src="../../../assets/logos/logo.png" alt="saso logo" />
+        <img class="collapse-icon" src="../../../assets/icons/mi_menu.svg" alt="collapse icon" />
+        <img src="../../../assets/icons/mi_menu.svg" alt="" class="sm-screen-close-icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="active">
+              <img src="../../../assets/icons/radix-icons_dashboard.svg" alt="" />لوحة
+              التحكم
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pointer space-btw" id="services-sub-menu">
+              <div class="flex-row gap-12">
+                <img src="../../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />خدمات الهيئة
+              </div>
+              <div class="sub-menu-icon">
+                <img src="../../../assets/icons/arrowdown2.png" alt="" />
+              </div>
+            </a>
+            <!-- start sub menu content -->
+            <ul class="sub-menu-list hide" id="services-list">
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#" class="">الاستشارات الفورية عن بعد</a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+              <li>
+                <a href="#">اسم الخدمة يكتب هنا </a>
+              </li>
+            </ul>
+            <!-- end sub menu content -->
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />طلباتي
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/iconamoon_profile-light.svg" alt="" />حسابي
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/f7_doc-on-doc.svg" alt="" />مكتبة
+              المستندات
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/solar_help-linear.svg" alt="" />الدعم
+              والمساعدة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/carbon_report-data.svg" alt="" />التقارير
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/simple-line-icons_question.svg" alt="" />الأسئلة الشائعة
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/icons/hugeicons_news.svg" alt="" />مركز الأخبار
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----start collapsed sidebar-------- -->
+    <div class="collapsed-sidebar flex-column hide" id="collapsed-sidebar">
+      <div class="sidebar-head">
+        <img class="collapse-icon" src="../../../assets/icons/mi_menu-white.svg" alt="collapse icon" />
+      </div>
+      <div class="menu-content flex-column">
+        <ul class="menu-list">
+          <li>
+            <a href="" class="active">
+              <img src="../../../assets/icons/radix-icons_dashboard.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/carbon_ibm-private-path-services.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/fluent_branch-request-16-regular.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الإعدادات</h5>
+        <ul class="setting-list">
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/iconamoon_profile-light.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/f7_doc-on-doc.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <h5>الدعم</h5>
+        <ul class="support-list">
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/solar_help-linear.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/carbon_report-data.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/simple-line-icons_question.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icons/hugeicons_news.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----end collapsed sidebar-------- -->
+    <!-- -------------------End sidebar menu ----------------- -->
+    <!-- ------------------ Start header ---------------------- -->
+    <header class="header flex-row">
+      <div class="flex-row gap-30">
+        <div class="logo-menu-icons">
+          <img class="md-screen-menu-icon" src="../../../assets/icons/mi_menu.svg" alt="" />
+          <img src="../../../assets/logos/logo-medium.png" alt="logo" />
+        </div>
+        <div class="path flex-column">
+          <p>
+            اسم المنشأة <span class="blue-text"> / </span><a href="" class="active">لوحة التحكم</a>
+          </p>
+          <h2>لوحة التحكم</h2>
+        </div>
+      </div>
+      <div class="user-functions flex-row">
+        <div class="search flex-row">
+          <img src="../../../assets/icons/searchnormal1.svg" alt="" />
+          <input type="text" placeholder="البحث" />
+        </div>
+        <img class="search-icon" src="../../../assets/icons/searchnormal2.svg" alt="" />
+        <img src="../../../assets/icons/hugeicons_settings-01.svg" alt="" />
+        <div class="accessibility flex-row gap-20">
+          <div class="accessibility-dropdown-wrapper">
+            <button class="accessibility-button-header btn-transparent">
+              <img src="../../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
+            </button>
+          
+            <div class="accessibility-dropdown" id="accessibilityDropdown">
+              <button id="increaseFontBtn">
+                <img src="../../../assets/icons/increase-font.svg" alt="Increase Font Size" />
+              </button>
+              <button id="decreaseFontBtn">
+                <img src="../../../assets/icons/decrease-font.svg" alt="Decrease Font Size" />
+              </button>
+            </div>
+          </div>
+          <button id="toggleGrayscaleBtn" class="btn-transparent">
+            <img src="../../../assets/icons/color-blindness-icon.svg" alt="Toggle Contrast Modes" />
+          </button>
+        </div>
+        <div class="language flex-row">
+          <select>
+            <option value="arabic">ع</option>
+          </select>
+          <img src="../../../assets/icons/arrowdown2.svg" alt="" />
+        </div>
+        <div class="user-info flex-row">
+          <div class="flex-row">
+            <div class="user-img-bg">
+              <img class="user-img" src="../../../assets/images/user.png" alt="user image" />
+            </div>
+            <h5>محمد عبدالمجيد</h5>
+          </div>
+          <img src="../../../assets/icons/arrowdown2.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!-- ------------------ End header ---------------------- -->
+    <!-- ------------------ Start main ---------------------- -->
+    <main class="main-container">
+
+      <div class="title-page">
+        <div class="title">
+          <button class="btn btn-icon"><img src="../../../assets/images/back-icon.svg" alt=""></button>
+          <h2>اسم الورشة التوعوية <div class="status light-success-bg"><p>مباشر</p></div></h2>
+        </div>
+        <div class="cta">
+          <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/export-b-icon.svg" alt=""></button>
+          <button class="btn btn-secondary-outline-icon"><img src="../../../assets/icons/share-icon.svg" alt=""></button>
+          <button class="btn btn-primary-text">الانضمام إلى الورشة<img src="../../../assets/images/addnew-icon.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="view-videos">
+          <div class="video-container">
+            <div class="row">
+
+              <div class="col-12 col-lg-9">
+                <div class="video-cover">
+                  <img src="../../../assets/images/video-img.png" alt="">
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-3">
+                <div class="video-info">
+                  <div class="primary-cards card-shadow">
+                    <div class="con-card mt-0">
+                      <div class="card-body">
+                        <!-- Icon Section -->
+                        <div class="icon-container">
+                          <img src="../../../assets/icons/fluent_video-clip-32-regular.png" alt="img" class="icon-img" />
+                        </div>
+                        <!-- Title -->
+                        <h5 class="mh-auto">المواصفات المرتبطة بالورشة</h5>
+            
+                        <div class="flex-column space-btw">
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                          <div class="flex-row gap-10">
+                            <img src="../../../assets/icons/file.svg" alt="">
+                            <h4>اسم المواصفة</h4>
+                            <p>رقم المواصفة هنا</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        
+          </div>
+        </div>
+        
+        <div class="row">
+
+          <div class="col-12 mb-24">
+
+              <div class="primary-cards card-shadow">
+                <div class="con-card mt-0">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="icon-container">
+                      <img src="../../../assets/icons/details-icon.svg" alt="img" class="icon-img" />
+                    </div>
+                    <!-- Title -->
+                    <h5 class="mh-auto">تفاصيل الورشة</h5>
+                    <p class="text mb-0">إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي كما يمكنك العثور على العديد من الأدوات الأخرى التي تساعدك على تنفيذ العديد من المهام ببساطة وسهولة، هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً . إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي كما يمكنك العثور على العديد من الأدوات الأخرى التي تساعدك على تنفيذ العديد من المهام ببساطة وسهولة، هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً . </p>
+        
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col-12 col-lg-6 mb-24">
+
+              <div class="primary-cards card-shadow">
+                <div class="con-card mt-0">
+                  <div class="card-body">
+                    <!-- Icon Section -->
+                    <div class="photo-container">
+                      <img src="../../../assets/icons/Image-avatar.svg" alt="img" class="avatar-img" />
+                    </div>
+                    <!-- Title -->
+                    <h5 class="mb-16 mh-auto">اسم مقدم الورشة</h5>
+                    <p class="text mb-0">إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي. </p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col-12 col-lg-6 mb-24">
+
+            <div class="primary-cards card-shadow">
+              <div class="con-card mt-0">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/calendar-03.svg" alt="img" class="icon-img">
+                  </div>
+                  <!-- Title -->
+                  <h5 class="mh-auto">تاريخ الورشة</h5>
+                  
+                  <div class="status-container flex-row gap-5 mt-24 mb-16">
+                    <span>من</span>
+                    <div class="status light-info-bg mb-0">
+                      <img src="../../../assets/icons/solar_calendar-outline.svg" alt="">
+                      <p>١٥ مايو، ٢٠٢٥</p>
+                    </div>
+                    <span>الى</span>
+                    <div class="status light-info-bg mb-0">
+                      <img src="../../../assets/icons/solar_calendar-outline.svg" alt="">
+                      <p>١٥ مايو، ٢٠٢٥</p>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        </div>
+
+
+        <div class="service-title">
+          <h5>ورش ذات علاقة</h5>
+        </div>
+
+        <div class="primary-cards card-shadow">
+
+          <div class="row">
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/user-multiple.svg" alt="img" class="icon-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان الورشة التوعوية<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+                  <!-- Button -->
+                  <button type="button" class="btn btn-primary-text">ابدأ الآن</button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/user-multiple.svg" alt="img" class="icon-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان الورشة التوعوية<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+                  <!-- Button -->
+                  <button type="button" class="btn btn-primary-text">ابدأ الآن</button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/user-multiple.svg" alt="img" class="icon-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان الورشة التوعوية<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+                  <!-- Button -->
+                  <button type="button" class="btn btn-primary-text">ابدأ الآن</button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="con-card">
+                <div class="card-body">
+                  <!-- Icon Section -->
+                  <div class="icon-container">
+                    <img src="../../../assets/icons/user-multiple.svg" alt="img" class="icon-img" />
+                  </div>
+                  <!-- Title -->
+                  <h5 class="video-title">عنوان الورشة التوعوية<br>يكتب هنا</h5>
+
+                  <div class="flex-column space-btw">
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                    <div class="flex-row gap-10">
+                      <img src="../../../assets/icons/file.svg" alt="">
+                      <h4>اسم المواصفة</h4>
+                      <p>رقم المواصفة هنا</p>
+                    </div>
+                  </div>
+                  <!-- Button -->
+                  <button type="button" class="btn btn-primary-text">ابدأ الآن</button>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </main>
+    <!-- ------------------ End main ---------------------- -->
+
+    <!-- ------------------------------------------------------ -->
+  </div>
+  <!-- --------- main javascript -------- -->
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/accessibility_widget.js"></script>
+</body>
+
+</html>
