@@ -4779,6 +4779,11 @@ nav .pagination .more .page-link {
 .primary-cards .con-card .pro-img-container {
   margin-bottom: 1.5rem;
 }
+.primary-cards .con-card:first-child p {
+  font-size: 1rem;
+  color: var(--text-display);
+  font-weight: 400;
+}
 
 .primary-cards .con-card .images-img {
   margin-bottom: 1.5rem;
@@ -4845,7 +4850,7 @@ nav .pagination .more .page-link {
 .primary-cards .con-card .title {
   color: #303030;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 
   min-height: 3em;
@@ -5767,10 +5772,11 @@ nav .pagination .more .page-link {
   border: none;
   width: 100%;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "IBM Plex Sans Arabic";
   transition: background-color 0.3s ease;
   display: flex;
+  align-items: center;
   border: solid 1px transparent;
   gap: 1rem;
 }
@@ -5818,21 +5824,21 @@ nav .pagination .more .page-link {
 .status-weak {
   color: #721C24;
   border: solid 1px #FECDCA;
-  background-color: #F8D7DA;
+  background-color: #FEF3F2;
 }
 
 /* Basic application status */
 .status-basic {
   color: #0C5460;
   border: solid 1px #B2DDFF;
-  background-color: #D1ECF1;
+  background-color: #EFF8FF;
 }
 
 /* Professional application status */
 .status-professional {
   color: #155724;
-  border: solid 1px #D4EDDA;
-  background-color: #ABEFC6;
+  border: solid 1px #ABEFC6;
+  background-color: #ECFDF3;
 }
 
 .accordion-header:focus {

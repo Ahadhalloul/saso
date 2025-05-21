@@ -202,7 +202,7 @@
             <button class="accessibility-button-header btn-transparent">
               <img src="../../assets/icons/visually-impaired-icon.svg" alt="Accessibility Options" />
             </button>
-          
+
             <div class="accessibility-dropdown" id="accessibilityDropdown">
               <button id="increaseFontBtn">
                 <img src="../../assets/icons/increase-font.svg" alt="Increase Font Size" />
@@ -240,7 +240,7 @@
       <div class="title-page">
         <div class="title">
           <button class="btn btn-icon"><img src="../../assets/images/back-icon.svg" alt=""></button>
-          <h2>قياس مستوى نضج ذاتي لمواصفات نظم الإدارة والجودة</h2>
+          <h2>قياس مستوى نضج ذاتي لمواصفة المنتج</h2>
         </div>
 
       </div>
@@ -249,28 +249,45 @@
 
         <!-- Right Content (Specification Details, Technical Lists, Related Services) -->
         <div class="right-content">
-      
-          <!-- Specification Basic Details -->
-          <div class="spec-info-card p-0">
-            <h4 class="b-none p-0">نتيجة نموذج مستوى نضج ذاتي<span>اسم المواصفة</span></h4>
-          </div>
 
-          <div class="h-card">
-            <h4>نتيجة قياس مستوى النضج:<img src="../../assets/icons/ranking-icon.svg" alt=""></h4>
-            <div class="status status-weak"><p>غير متوافق</p><img src="../../assets/icons/error.svg" alt=""></div></h4>
-          </div>
+          <div class="card">
 
-          <div class="tabs">
-            <div class="tab-buttons mt-0">
-                <button class="tab-btn active" data-tab="tab1">تحليل نتيجة قياس مستوى النضج<i class="analysis-tab"></i></button>
-            </div>
-            <div class="tab-content">
-                <div id="tab1" class="tab active">
-                  
-                  <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header" data-target="content1">اسم البند <div class="status status-average"><p>تطبيق متوسط</p></div></button>
+            <div class="man-flex-col gap-24">
+
+              <!-- Specification Basic Details -->
+              <div class="spec-info-card p-0">
+                <h4 class="b-none p-0">نتيجة نموذج مستوى نضج ذاتي<span>اسم المواصفة</span></h4>
+              </div>
+
+              <div class="h-card">
+                <h4>نتيجة قياس مستوى النضج:<img src="../../assets/icons/ranking-icon.svg" alt=""></h4>
+                <div class="status status-professional">
+                  <p>مؤهل</p><img src="../../assets/icons/done-icon-g.svg" alt="">
+                </div>
+                </h4>
+              </div>
+
+              <div class="tabs">
+                <div class="tab-buttons mt-0">
+                  <button class="tab-btn" data-tab="tab1">تحليل نتيجة قياس مستوى النضج<i class="analysis-tab"></i></button>
+                  <button class="tab-btn active" data-tab="tab2">شهادات المطابقة المطلوبة للمنتج وفقاً للوائح الفنية<i
+                      class="certificate-tab"></i></button>
+                </div>
+                <div class="tab-content">
+                  <div id="tab1" class="tab">
+
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content1">اسم البند <div
+                            class="status status-average">
+                            <p>تطبيق متوسط</p>
+                          </div></button>
                         <div id="content1" class="accordion-content open">
+
+                          <div class="spec-title">
+                            <img src="../../assets/icons/spec-file.svg" alt="application icon">
+                            <h4>البرنامج الموصي به للبند</h4>
+                          </div>
 
                           <div class="primary-cards">
                             <div class="row mt-0 custom-row">
@@ -283,7 +300,7 @@
                                     </div>
                                     <!-- Title -->
                                     <h5 class="video-title">عنوان الورشة التوعوية <br>يكتب هنا</h5>
-                  
+
                                     <div class="flex-column space-btw">
                                       <div class="flex-row gap-10">
                                         <div class="flex-row gap-10">
@@ -320,11 +337,12 @@
                                   <div class="card-body">
                                     <!-- Icon Section -->
                                     <div class="img-container">
-                                      <img src="../../assets/images/video-img.png" alt="img" class="photo-img" style="height: 6rem;">
+                                      <img src="../../assets/images/video-img.png" alt="img" class="photo-img"
+                                        style="height: 6rem;">
                                     </div>
                                     <!-- Title -->
                                     <h5 class="news-title">عنوان الفيديو التوعوي<br>يكتب هنا</h5>
-                
+
                                     <div class="flex-column space-btw">
                                       <div class="flex-row gap-10">
                                         <div class="flex-row gap-10">
@@ -343,7 +361,7 @@
                                     </div>
 
                                     <!-- Button -->
-                                    <button type="button" class="btn btn-primary-text">قراءة المزيد</button>
+                                    <button type="button" class="btn btn-primary-text">شاهد الفيديو</button>
                                   </div>
                                 </div>
                               </div>
@@ -352,11 +370,12 @@
                                   <div class="card-body">
                                     <!-- Icon Section -->
                                     <div class="img-container">
-                                      <img src="../../assets/images/video-img.png" alt="img" class="photo-img" style="height: 6rem;">
+                                      <img src="../../assets/images/video-img.png" alt="img" class="photo-img"
+                                        style="height: 6rem;">
                                     </div>
                                     <!-- Title -->
                                     <h5 class="news-title">عنوان الدورة التدريبية<br>يكتب هنا</h5>
-                
+
                                     <div class="flex-column space-btw">
                                       <div class="flex-row gap-10">
                                         <div class="flex-row gap-10">
@@ -381,77 +400,178 @@
                           </div>
 
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" data-target="content2">اسم البند <div class="status status-weak"><p>تطبيق ضعيف</p></div></button>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content2">اسم البند <div
+                            class="status status-best-practices">
+                            <p>أفضل الممارسات</p>
+                          </div></button>
                         <div id="content2" class="accordion-content">
 
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" data-target="content3">اسم البند <div class="status status-weak"><p>تطبيق ضعيف</p></div></button>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content3">اسم البند <div
+                            class="status status-weak">
+                            <p>تطبيق ضعيف</p>
+                          </div></button>
                         <div id="content3" class="accordion-content">
 
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content3">اسم البند <div
+                            class="status status-basic">
+                            <p>تطبيق أساسي</p>
+                          </div></button>
+                        <div id="content3" class="accordion-content">
+
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content3">اسم البند <div
+                            class="status status-professional">
+                            <p>تطبيق محترف</p>
+                          </div></button>
+                        <div id="content3" class="accordion-content">
+
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                  <div id="tab2" class="tab active">
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content6">اسم الشهادة</button>
+                        <div id="content6" class="accordion-content open">
+
+                          <ul class="custom-tree">
+                            <li class="main-item">
+                              <div class="flex-row">
+                                <img src="../../assets/icons/ser-name-icon.svg" alt="اسم الشهادة">
+                                <h4>اسم الشهادة</h4>
+                              </div>
+                              <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img
+                                  src="../../assets/icons/right-arrow.svg" alt=""></button>
+                            </li>
+                            <li class="branch-item">
+                              <div class="flex-row">
+                                <img src="../../assets/icons/code-name-icon.svg" alt="اسم الترميز الجمركي">
+                                <h4>اسم الترميز الجمركي</h4>
+                              </div>
+                              <button id="openModal" class="btn btn-neutral-t-i">التوجيه لسابر <img
+                                  src="../../assets/icons/right-arrow.svg" alt=""></button>
+                            </li>
+                            <li class="branch-item">
+                              <div class="flex-row">
+                                <img src="../../assets/icons/certificate-issuing-authority.svg"
+                                  alt="الجهة المانحة للشهادة">
+                                <h4>الجهة المانحة للشهادة</h4>
+                              </div>
+                            </li>
+                          </ul>
+
+
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content7">اسم الشهادة</button>
+                        <div id="content7" class="accordion-content">
+
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content7">اسم الشهادة</button>
+                        <div id="content8" class="accordion-content">
+
+                        </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <button class="accordion-header" data-target="content3">اسم البند <div class="status status-average"><p>تطبيق متوسط</p></div></button>
-                      <div id="content3" class="accordion-content">
+                  </div>
+                  <div id="tab3" class="tab">
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button class="accordion-header" data-target="content8">خدمات ذات الصلة</button>
+                        <div id="content8" class="accordion-content open">
+
+                          <div class="primary-cards shadow">
+
+                            <div class="row">
+
+                              <div class="col-12 col-md-4 col-lg-3">
+                                <div class="con-card">
+                                  <div class="card-body">
+                                    <!-- Icon Section -->
+                                    <div class="icon-container">
+                                      <img src="../../assets/images/plaza.svg" alt="Icon" class="icon-img">
+                                    </div>
+                                    <!-- Title -->
+                                    <h5 class="title">برنامج تأهيل المنشآت</h5>
+                                    <!-- Description -->
+                                    <p class="text">
+                                      نساعدك في بناء خطط استراتيجية لتحقيق أهدافك بوضوح وفعالية.
+                                    </p>
+                                    <!-- Button -->
+                                    <button type="button" class="btn btn-primary-text">تفاصيل الخدمة</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
 
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <button class="accordion-header" data-target="content3">اسم البند <div class="status status-weak"><p>تطبيق ضعيف</p></div></button>
-                    <div id="content3" class="accordion-content">
+                </div>
 
-                    </div>
-                </div>
-    
-                </div>
-                
-    
-                </div>
+
+              </div>
+
+              <div class="btns flex-row gap-12">
+                <button class="btn btn-gray">إلغاء</button>
+                <button class="btn btn-primary">شراء المواصفة</button>
+              </div>
 
             </div>
-            
-    
           </div>
 
-          <div class="btns flex-row gap-12">
-            <button class="btn btn-gray">إلغاء</button>
-            <button class="btn btn-primary">شراء المواصفة</button>
-          </div>
-      
         </div>
-      
+
         <script>
           function copySpecCode() {
             var specCode = document.getElementById("specCode").innerText;
             var button = document.getElementById("copyButton");
             var tooltip = document.getElementById("tooltipText");
-          
-            navigator.clipboard.writeText(specCode).then(function() {
-          
+
+            navigator.clipboard.writeText(specCode).then(function () {
+
               // Check the class of the button
               if (button.classList.contains("lang-ar")) {
                 tooltip.innerText = "تم النسخ!";
               } else if (button.classList.contains("lang-en")) {
                 tooltip.innerText = "Copied!";
               }
-          
+
               // Show tooltip
               button.classList.add("show-tooltip");
-          
+
               // Hide tooltip after 2 seconds
-              setTimeout(function() {
+              setTimeout(function () {
                 button.classList.remove("show-tooltip");
               }, 2000);
-          
-            }, function(err) {
+
+            }, function (err) {
               console.error("Failed to copy text: ", err);
             });
           }
-          
+
         </script>
         <!-- Left Card (Specification Information) -->
         <div class="spec-card">
@@ -463,38 +583,39 @@
             </button>
           </div>
 
-            <div class="spec-col">
-              <!-- Specification Info Rows -->
-              <div class="spec-row">
-                <div class="spec-title">
-                  <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
-                  <h4>رقم المواصفة</h4>
-                </div>
-                <div class="spec-value">
-                  <div class="status light-info-bg"><span>نظم إدارة</span></div>
+          <div class="spec-col">
+            <!-- Specification Info Rows -->
+            <div class="spec-row">
+              <div class="spec-title">
+                <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
+                <h4>رقم المواصفة</h4>
+              </div>
+              <div class="spec-value">
+                <div class="status light-info-bg">
+                  <p>اسم اللائحة</p>
                 </div>
               </div>
+            </div>
 
-              <div class="spec-info">
-                <div class="spec-title">
-                  <img src="../../assets/icons/spec-file.svg" alt="application icon">
-                  <h4>اسم المواصفة بالعربية</h4>
-                </div>
-                <div class="spec-value arabic-text">
-                  <p>سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور.</p>
-                </div>
+            <div class="spec-info">
+              <div class="spec-title">
+                <img src="../../assets/icons/spec-file.svg" alt="application icon">
+                <h4>اسم المواصفة بالعربية</h4>
               </div>
+              <div class="spec-value arabic-text">
+                <p>سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور.</p>
+              </div>
+            </div>
 
-              <div class="spec-info">
-                <div class="spec-title">
-                  <img src="../../assets/icons/spec-file.svg" alt="application icon">
-                  <h4>اسم المواصفة بالإنجليزية</h4>
-                </div>
-                <div class="spec-value english-text">
-                  <p>The Manufacturers Portal is a comprehensive platform.</p>
-                </div>
-              </div>          
-
+            <div class="spec-info">
+              <div class="spec-title">
+                <img src="../../assets/icons/spec-file.svg" alt="application icon">
+                <h4>اسم المواصفة بالإنجليزية</h4>
+              </div>
+              <div class="spec-value english-text">
+                <p>The Manufacturers Portal is a comprehensive platform.</p>
+              </div>
+            </div>
 
             <div class="spec-row">
               <div class="spec-title">
@@ -515,7 +636,7 @@
                 <span class="info-span">24 يناير 2025</span>
               </div>
             </div>
-          
+
             <div class="spec-row">
               <div class="spec-title">
                 <img src="../../assets/icons/spec-factory.svg" alt="sector icon">
@@ -525,7 +646,7 @@
                 <span class="info-span">اسم القطاع</span>
               </div>
             </div>
-          
+
             <div class="spec-row">
               <div class="spec-title">
                 <img src="../../assets/icons/spec-calendar.svg" alt="calendar icon">
@@ -535,7 +656,7 @@
                 <span class="info-span">2024-2025</span>
               </div>
             </div>
-          
+
             <div class="spec-row">
               <div class="spec-title">
                 <img src="../../assets/icons/spec-apps.svg" alt="application icon">
@@ -545,7 +666,7 @@
                 <span class="mandatory-span">إلزامي</span>
               </div>
             </div>
-          
+
             <!-- Specification Scope Arabic -->
             <div class="spec-info">
               <div class="spec-title">
@@ -553,10 +674,11 @@
                 <h4>مجال المواصفة بالعربية</h4>
               </div>
               <div class="spec-value arabic-text">
-                <p>سيت تيبرسايكيابس يوندي أومينس أسق ناتيس أيرور سيت فوليبتاتيم أكسانتيم دولاريميكو لايودانتيوم، توتام ريم أيرآم.</p>
+                <p>سيت تيبرسايكيابس يوندي أومينس أسق ناتيس أيرور سيت فوليبتاتيم أكسانتيم دولاريميكو لايودانتيوم، توتام
+                  ريم أيرآم.</p>
               </div>
             </div>
-          
+
             <!-- Specification Scope English -->
             <div class="spec-info">
               <div class="spec-title">
@@ -564,41 +686,43 @@
                 <h4>مجال المواصفة بالإنجليزية</h4>
               </div>
               <div class="spec-value english-text">
-                <p>The Manufacturers Portal is a comprehensive platform that aims to facilitate industrial processes and provide the necessary support to companies at all stages of production.</p>
+                <p>The Manufacturers Portal is a comprehensive platform that aims to facilitate industrial processes and
+                  provide the necessary support to companies at all stages of production.</p>
               </div>
-            </div>          
             </div>
+          </div>
 
         </div>
-      
+
       </div>
-      
-      
+
+
 
 
     </main>
     <!-- ------------------ End main ---------------------- -->
- <!-- Modal -->
- <div id="modal" class="modal">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
           <div class="modal-header">
             <div class="modal-icon">
               <img src="../../assets/icons/redirect-icon.svg" alt="">
             </div>
-              <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
+            <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
           </div>
           <div class="modal-body">
-              <h5>سيتم توجيهك إلى سابر</h5>
-              <p>هناك بعض المتطلبات الاولية قبل الذهاب الي سابر برجاء الذهاب الي نظام منح الشهادات.</p>
+            <h5>سيتم توجيهك إلى سابر</h5>
+            <p>هناك بعض المتطلبات الاولية قبل الذهاب الي سابر برجاء الذهاب الي نظام منح الشهادات.</p>
           </div>
           <div class="modal-footer">
             <button class="btn btn-neutral">التوجيه إلى سابر <i class="leading-icon-w"></i></button>
-              <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+            <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i
+                class="leading-icon-b"></i></button>
           </div>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
     <!-- ------------------------------------------------------ -->
   </div>
   <!-- --------- main javascript -------- -->
