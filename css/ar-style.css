@@ -228,6 +228,10 @@ span, h1, h2, h3, h4, h5, h6, p, a, li, label, button {
   font-size: 14px !important;
   font-weight: 500 !important;
 }
+.space-16 .col-12 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
 /* -----------Grid System----------- */
 
 /* Row */
@@ -772,7 +776,9 @@ ul li {
 a {
   text-decoration: none;
 }
-
+.d-none {
+  display: none !important;
+}
 .pointer {
   cursor: pointer;
 }
@@ -4112,7 +4118,9 @@ input.radio-btn {
   height: 24px;
   width: 24px;
 }
-
+.bg-color-gray {
+  background-color: #F9FAFB !important;
+}
 /* --buttons-- */
 
 /* -------------cards---------------Mlewis- */
@@ -5165,6 +5173,13 @@ nav .pagination .more .page-link {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 2rem;
+}
+.service-title h2 {
+  color: #161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .hero-service {
@@ -6408,7 +6423,18 @@ nav .pagination .more .page-link {
 /* -------------form---------------Mlewis- */
 
 /* -------------filter-card---------------Mlewis- */
+.filter-cards {
+  border: solid 1px #d2d6db;
+  border-radius: 8px;
+  padding: 16px;
+}
 #advancedSearch .filter-group {
+  margin-bottom: 24px;
+}
+.filter-cards .filter-group {
+  margin-bottom: 24px;
+}
+.filter-cards .filter-actions {
   margin-bottom: 24px;
 }
 
@@ -9448,10 +9474,10 @@ form.search-form .filter-group {
 }
 
 .cel-card {
+  background-color: #F9FAFB;
   border: solid 1px #D2D6DB;
   border-radius: 4px;
   padding: .5rem;
-  background: #FFF;
   display: flex;
   flex-direction: row;
   align-items: center;
