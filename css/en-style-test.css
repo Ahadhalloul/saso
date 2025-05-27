@@ -9295,5 +9295,30 @@ form.search-form .filter-group {
   color: #161616;
   margin: 1.5rem 0;
   padding: .5rem 1rem;
-  border-left: solid 3px #1B8354;
+  border-right: solid 3px #1B8354;
+}
+
+@media screen and (max-width: 768px) {
+  .request-details .spec-row .spec-title h4 {
+    width: 100%;
+    min-width: 100%;
+  }
+  .request-details .spec-row .spec-value {
+    width: auto;
+  }
+  .card.new-request-card .spec-xcol {
+    width: 100%;
+  }
+  .card.new-request-card .spec-xcol .spec-row {
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card.new-request-card .spec-xcol.justify-content-end .spec-row {
+    justify-content: space-between;
+    text-align: start;
+  }
 }

@@ -892,12 +892,16 @@
           <button class="accordion-header" data-target="content55">وثائق الإعتماد</button>
           <div id="content55" class="accordion-content open">
 
-            <div class="title-text-icon-card b-none">
-              <h4>خطة العمل<img src="../../../assets/icons/dec-icon-title.svg" alt=""></h4>
+            <div class="man-flex-row man-align-center man-justify-content-sbtw mb-14 mt-16">
+              <div class="title-text-icon-card b-none p-0">
+                <h4>خطة العمل<img src="../../../assets/icons/dec-icon-title.svg" alt=""></h4>
+              </div>
+              <div class="btns flex-row">
+                <button class="btn btn-gray-icon">عرض الملاحظات<img src="../../../assets/icons/view-all-icon-btn.svg" alt=""></button>
+              </div>
             </div>
 
             <div class="spacxd-row mb-16">
-
               <div class="xd-col">
                 <label class="form-label">تاريخ انطلاق المشروع:</label>
                 <div class="status light-info-bg m-0 lg-size">
@@ -1044,7 +1048,7 @@
 
       <div class="accordion-item">
         <button class="accordion-header" data-target="content66">اسم المرحلة ٤</button>
-        <div id="content66" class="accordion-content open">
+        <div id="content66" class="accordion-content">
 
           <div class="man-flex-row man-align-center man-justify-content-sbtw mb-14 mt-16">
             <div class="title-text-icon-card b-none p-0">
@@ -1200,58 +1204,60 @@
 
   </div>
 
-    <div class="row m-l-12-r-12">
-      <div class="col-12 col-lg-6">
-        <div class="card new-request-card card-content-request mt-20">
+  <div class="row m-l-12-r-12">
+    <div class="col-12 col-lg-6">
+      <div class="card new-request-card card-content-request mt-20">
 
-          <div class="title-text-col grey-bg mxy-16 h-100">
-            <h4 class="ptb-8">مخطط الرادار</h4>
-          </div>
-
-          <div class="chart-radar-new mb-16">
-            <div class="chart">
-              <canvas id="qualityAreaChart" width="550" height="550" style="display: block; box-sizing: border-box; height: auto; width: 100%;"></canvas>
-            </div>
-          </div>
-
+        <div class="title-text-col grey-bg mxy-16 h-100">
+          <h4 class="ptb-8">مخطط الرادار</h4>
         </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card new-request-card gap-0 mt-20">
 
-          <div class="title-text-col grey-bg mxy-16 h-100">
-            <h4 class="ptb-8">التقرير النهائي</h4>
+        <div class="chart-radar-new mb-16">
+          <div class="chart">
+            <canvas id="qualityAreaChart" width="1100" height="1100" style="display: block; box-sizing: border-box; height: 550px; width: 550px;"></canvas>
           </div>
+        </div>
 
-          <div class="contract-section mxy-16">
-            <div class="row pxy-10">
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card new-request-card gap-0 mt-20">
 
-              <div class="col-12">
-                <div class="attach-files">
-                  <label for="session-goal" class="form-label"><span class="required">*</span> رفع ملف نتائج
-                    المرحلة</label>
-                  <span class="hint-text">Maximum file size allowed is 2MB, supported file formats include .jpg,
-                    .png, and .pdf.</span>
-                  <div class="flex-row">
-                    <label class="custom-file-upload mt-16">
-                      تصفح الملفات
-                      <input type="file">
-                    </label>
-                  </div>
-                </div>
+        <div class="title-text-col grey-bg mxy-16 h-100">
+          <h4 class="ptb-8">التقرير النهائي</h4>
+        </div>
+
+        <div class="contract-section mxy-16">
+
+          <div class="contract-section">
+            <div class="attach-files">
+              <label for="session-goal" class="form-label"><span class="required">*</span> رفع ملف نتائج
+                المرحلة</label>
+              <span class="hint-text">Maximum file size allowed is 2MB, supported file formats include .jpg,
+                .png, and .pdf.</span>
+              <div class="flex-row">
+                <label class="custom-file-upload mt-16">
+                  تصفح الملفات
+                  <input type="file">
+                </label>
               </div>
-
             </div>
-
+  
+            </div>
+  
             <div class="btns flex-row gap-12 mt-24">
               <button class="btn btn-secondary-outline">الفاء</button>
               <button class="btn btn-primary">ارسال</button>
             </div>
           </div>
 
+
+
         </div>
+
       </div>
     </div>
+  </div>
 
 </main>
       <!-- ------------------ End main ---------------------- -->
@@ -1432,7 +1438,6 @@
       </div>
   </div>
 </div>
-<!-----------charts js  ---------->
 <script>
   // ----start radar chart---------
   const qualityAreasChart = document.getElementById("qualityAreaChart");
