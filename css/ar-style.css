@@ -3266,8 +3266,8 @@ input.radio-btn {
   margin: 25px 0px;
 }
 .progress-indicator:has(.progressbar li.done:nth-child(1)) {
-  border: 1px solid #067647;
-  background: #f7fdf5;
+  border: 1px solid #067647 !important;
+  background: #f7fdf5 !important;
 }
 .progressbar-container {
   width: 50%;
