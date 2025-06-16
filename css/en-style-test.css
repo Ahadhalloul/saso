@@ -75,7 +75,9 @@ span, h1, h2, h3, h4, h5, h6, p, a, li, label, button {
   height: 80px;
   animation: spin 1s linear infinite;
 }
-
+.ltr {
+  direction: ltr !important;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -2565,8 +2567,8 @@ textarea::placeholder {
 }
 
 input.radio-btn {
-  width: 20px;
-  height: 20px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 50%;
   border: 1px solid #6c737f;
   accent-color: #1b8354;
@@ -4669,6 +4671,7 @@ nav .pagination .more .page-link {
   flex-direction: row;
   align-items: center;
   justify-content: start;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .hex-card {
@@ -5298,8 +5301,8 @@ nav .pagination .more .page-link {
   padding: 16px;
   border: none;
   width: 100%;
-  font-size: 1rem;;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   font-family: "IBM Plex Sans Arabic";
   transition: background-color 0.3s ease;
   display: flex;
@@ -7191,6 +7194,7 @@ form .form-group .time-list span.info-tag {
   border-radius: 6px;
   cursor: pointer;
   position: relative;
+  height: 1.5rem;
 }
 /* Tooltip inside the button */
 .tooltip-text {
@@ -7203,7 +7207,7 @@ form .form-group .time-list span.info-tag {
   color: #384250;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 1rem;;
+  font-size: 1rem;
   font-weight: 500;
   opacity: 0;
   pointer-events: none;
@@ -7281,7 +7285,7 @@ form .form-group .time-list span.info-tag {
 
 /* Info */
 .info-span {
-  background-color: #f0f2f5;
+  background-color: #f9fafb;
   border: 1px solid #d1d5db;
   color: #333;
   padding: 3px 12px;
@@ -7496,7 +7500,7 @@ form .form-group .time-list span.info-tag {
 .question-form .form-group .flex-row {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 14px;
 }
 .question-form .form-group .flex-row h4 {
   color: #161616;
@@ -8860,6 +8864,11 @@ button[disabled] {
   font-weight: 500;
 }
 
+.spec-row .spec-value .status span {
+  font-size: 1rem !important;
+  font-weight: 500;
+}
+
 .accordion-ex>:not(.accordion-content.open) .accordion-header::after {
   content: "";
   display: block;
@@ -9320,5 +9329,56 @@ form.search-form .filter-group {
   .card.new-request-card .spec-xcol.justify-content-end .spec-row {
     justify-content: space-between;
     text-align: start;
+  }
+}
+
+/* New Update 16/6/2024 */
+
+.accordion-item.custom-accordion-item {
+  position: relative;
+}
+
+.accordion-item.custom-accordion-item .cc-ex {
+  position: absolute;
+  top: 12px;
+  left: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.accordion-item.custom-accordion-item .cc-ex .spec-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.question-form h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #166A45;
+  margin-bottom: 8px;
+}
+h5.radio-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1F2A37;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mt-md-24 {
+    margin-top: 24px !important;
+  }
+  .h-card.mb-24 .spec-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .h-card.mb-24 .spec-row .spec-value {
+    width: auto;
   }
 }
