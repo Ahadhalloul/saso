@@ -1932,7 +1932,7 @@ table .employee-list-imgs div {
 }
 
 .charts-cards-container .services-list-card.workshops {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .consults-list-card .services-list {
@@ -2629,10 +2629,19 @@ table .status {
   font-weight: 400;
 }
 
-#details-dropdown strong {
+#details-dropdown p {
   color: #161616;
   font-size: 1rem;
   font-weight: 400;
+  margin-bottom: .75rem;
+}
+#details-dropdown p:last-of-type {
+  margin-bottom: 0rem;
+}
+#details-dropdown p strong {
+  color: #161616;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 #details-dropdown button {
@@ -3898,6 +3907,13 @@ button.btn.icon {
   padding: 0 .375rem !important;
   height: 2rem !important;
   width: 2rem !important;
+  display: flex;
+  align-items: center;
+}
+#modal .action-table button.btn.icon {
+  padding: 0 .375rem !important;
+  height: 2rem !important;
+  width: auto !important;
   display: flex;
   align-items: center;
 }

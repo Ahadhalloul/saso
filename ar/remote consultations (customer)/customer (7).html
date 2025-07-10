@@ -434,7 +434,21 @@
                             function convertToArabicNumerals(number) {
                               return number.toString().split('').map(digit => arabicNumbers[parseInt(digit)] || digit).join('');
                             }
-                          
+
+                            function formatArabicDate(dateStr) {
+                              const parts = dateStr.split('-'); // ["2025", "05", "09"]
+                              const year = convertToArabicNumerals(parts[0]);
+                              const month = convertToArabicNumerals(parts[1]);
+                              const day = convertToArabicNumerals(parts[2]);
+                              return `${day}-${month}-${year}`;
+                            }
+                            function formatEnglishNumericDate(dateStr) {
+                              const parts = dateStr.split('-'); // ["2025", "05", "09"]
+                              const year = parts[0];
+                              const month = parts[1];
+                              const day = parts[2];
+                              return `${month}-${day}-${year}`; // => 05/09/2025
+                            }
                             let currentDate = new Date();
                             let activeDropdown = null;
                           
@@ -471,10 +485,49 @@
                               }
                           
                               activeDropdown = element;
+                              // Make the dropdown temporarily visible to calculate its dimensions
+                              dropdown.style.visibility = 'hidden';
                               dropdown.style.display = 'block';
-                              const rect = element.getBoundingClientRect();
-                              dropdown.style.top = (rect.bottom + window.scrollY) + 'px';
-                              dropdown.style.left = (rect.left + window.scrollX) + 'px';
+
+                              // Get the dimensions of the dropdown and the triggering element
+                              const dropdownRect = dropdown.getBoundingClientRect();
+                              const targetRect = element.getBoundingClientRect();
+
+                              const dropdownWidth = dropdownRect.width;
+                              const dropdownHeight = dropdownRect.height;
+                              const windowWidth = window.innerWidth;
+                              const windowHeight = window.innerHeight;
+
+                              // Set the initial top and left positions
+                              let top = targetRect.bottom + window.scrollY;
+                              let left = targetRect.left + window.scrollX;
+
+                              // If dropdown would overflow below the viewport, display it above the element
+                              if (top + dropdownHeight > windowHeight + window.scrollY) {
+                                top = targetRect.top + window.scrollY - dropdownHeight;
+                              }
+
+                              // If dropdown would overflow beyond the right edge, align it to the left
+                              if (left + dropdownWidth > windowWidth + window.scrollX) {
+                                left = targetRect.right + window.scrollX - dropdownWidth;
+                              }
+
+                              // Make the dropdown visible with the final position
+                              dropdown.style.top = `${top}px`;
+                              dropdown.style.left = `${left}px`;
+                              dropdown.style.visibility = 'visible';
+                              dropdown.style.display = 'block';
+
+                              if (top + dropdownHeight > windowHeight + window.scrollY) {
+                                top = rect.top + window.scrollY - dropdownHeight;
+                              }
+
+                              if (left + dropdownWidth > windowWidth + window.scrollX) {
+                                left = rect.right + window.scrollX - dropdownWidth;
+                              }
+
+                              dropdown.style.top = top + 'px';
+                              dropdown.style.left = left + 'px';
                           
                               const field = element.dataset.field;
                               const date = element.dataset.date;
@@ -483,11 +536,11 @@
                               const representative = element.dataset.representative;
                           
                               dropdown.innerHTML = `
-                                <strong>${lang === 'ar' ? 'اسم المجال' : 'Field'}:</strong> ${field}<br>
-                                <strong>${lang === 'ar' ? 'اليوم' : 'Date'}:</strong> ${lang === 'ar' ? convertToArabicNumerals(date) : date}<br>
-                                <strong>${lang === 'ar' ? 'الميعاد' : 'Time'}:</strong> ${time}<br>
-                                <strong>${lang === 'ar' ? 'اسم المؤسسة' : 'Company'}:</strong> ${company}<br>
-                                <strong>${lang === 'ar' ? 'اسم ممثل المؤسسة' : 'Representative'}:</strong> ${representative}<br>
+                                <p><strong>${lang === 'ar' ? 'اسم المجال' : 'Field'}:</strong> ${field}</p>
+                                <p><strong>${lang === 'ar' ? 'التاريخ' : 'Date'}:</strong> ${lang === 'ar' ? formatArabicDate(date) : formatEnglishNumericDate(date)}</p>
+                                <p><strong>${lang === 'ar' ? 'الميعاد' : 'Time'}:</strong> ${time}</p>
+                                <p><strong>${lang === 'ar' ? 'اسم المؤسسة' : 'Company'}:</strong> ${company}</p>
+                                <p><strong>${lang === 'ar' ? 'اسم ممثل المؤسسة' : 'Representative'}:</strong> ${representative}</p>
                                 <button class="btn btn-neutral">${lang === 'ar' ? ' تفاصيل الحجز' : 'View Booking Details'}</button>
                               `;
                             };
