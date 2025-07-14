@@ -1546,7 +1546,7 @@ input[type="checkbox"]:checked {
 .btn-secondary {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   background-color: transparent;
-  color: var(--text-display);
+  color: var(--text-display) !important;
   border: 1px solid #d2d6db;
 }
 

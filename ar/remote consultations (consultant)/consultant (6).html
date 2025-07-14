@@ -1071,12 +1071,7 @@
                 <h5>اسم المستفيد يكتب هنا</h5>
               </div>
               <div class="flex-row gap-5">
-                <button>
-                  <img src="../../assets/icons/mic.svg" alt="">
-                </button>
-                <button class="disabled">
-                  <img src="../../assets/icons/video.svg" alt="">
-                </button>
+                <button id="openModal" data-modal="modaldelete" class="btn btn-secondary">الغاء</button>
                 <div class="status light-success-bg">
                   <img src="../../assets/icons/success.svg" alt="">
                   <p>اكتملت</p>
@@ -1090,12 +1085,7 @@
                 <h5>اسم المستفيد يكتب هنا</h5>
               </div>
               <div class="flex-row gap-5">
-                <button class="disabled">
-                  <img src="../../assets/icons/mic.svg" alt="">
-                </button>
-                <button class="disabled">
-                  <img src="../../assets/icons/video.svg" alt="">
-                </button>
+                <button id="openModal" data-modal="modaldelete" class="btn btn-secondary">الغاء</button>
                 <div class="status light-error-bg">
                   <img src="../../assets/icons/error.svg" alt="">
                   <p>لم تكتمل</p>
@@ -1120,12 +1110,7 @@
                 <h5>اسم المستفيد يكتب هنا</h5>
               </div>
               <div class="flex-row gap-5">
-                <button>
-                  <img src="../../assets/icons/mic.svg" alt="">
-                </button>
-                <button class="disabled">
-                  <img src="../../assets/icons/video.svg" alt="">
-                </button>
+                <button id="openModal" data-modal="modaldelete" class="btn btn-secondary">الغاء</button>
                 <div class="btn green-bg">
                   <p>تفاصيل</p>
                 </div>
@@ -1149,12 +1134,7 @@
                 <h5>اسم المستفيد يكتب هنا</h5>
               </div>
               <div class="flex-row gap-5">
-                <button>
-                  <img src="../../assets/icons/mic.svg" alt="">
-                </button>
-                <button>
-                  <img src="../../assets/icons/video.svg" alt="">
-                </button>
+                <button id="openModal" data-modal="modaldelete" class="btn btn-secondary">الغاء</button>
                 <div class="btn green-bg">
                   <p>تفاصيل</p>
                 </div>
@@ -1244,22 +1224,13 @@
         </div>
         <div class="modal-body">
           <h5>الغاء الجلسة</h5>
-
-
-          <div class="dropdown-wrapper">
-
-            <div class="filter-group mb-16 mt-16">
-              <label for="productive-time" class="form-label">سبب الغاء الجلسة</label>
-              <textarea rows="3" class="form-input-textarea" id="employeeNote" placeholder="نص السبب"></textarea>
-            </div>
-
-          </div>
+          <p>سيتم حذف هذه الجلسة نهائيًا ولا يمكن التراجع عن هذا الإجراء.</p>
 
         </div>
         <div class="modal-footer">
-          <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">حفظ <i
+          <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">تأكيد الإلغاء<i
               class="leading-icon-w"></i></button>
-          <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+          <button class="btn btn-secondary-outline" id="closeModalFooter">تراجع <i class="leading-icon-b"></i></button>
         </div>
       </div>
     </div>
