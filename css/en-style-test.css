@@ -740,8 +740,8 @@ a {
 }
 
 input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #ccc;
   appearance: none;
   cursor: pointer;
@@ -753,7 +753,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   background-color: #1B8354;
   border-color: #1B8354;
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -761,13 +761,13 @@ input[type="checkbox"]:checked {
 .form-check.black-style input[type="checkbox"]:checked {
   background-color: #0D121C;
   border-color: #161616;
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
  input[type="checkbox"]:disabled:checked {
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-color: #E5E7EB !important;
   border-color: transparent !important;
   cursor: not-allowed;
@@ -7903,7 +7903,12 @@ form .form-group .time-list span.info-tag {
 .form-request .flex-form {
   width: 50%;
 }
-.form-request .check .form-check{
+.attached-files .input {
+  color: #161616;
+  font-size: .875rem;;
+  font-weight: 500;
+}
+.form-request .check .form-check {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7927,6 +7932,12 @@ form .form-group .time-list span.info-tag {
   }
   .form-request .flex-col{
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .gap-24-ex {
+    gap: 1.5rem;
   }
 }
 
@@ -8414,7 +8425,7 @@ form .form-group .time-list span.info-tag {
   align-items: end;
 }
 .man-justify-content-start {
-  justify-content: start;
+  justify-content: start !important;
 }
 .man-justify-content-end {
   justify-content: end;
@@ -8971,10 +8982,11 @@ form.search-form .filter-group {
 }
 
 .cel-card {
+  background-color: #F9FAFB;
   border: solid 1px #D2D6DB;
   border-radius: 4px;
   padding: .5rem;
-  background: #FFF;
+
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -9385,6 +9397,12 @@ h5.radio-title {
   margin-bottom: 8px;
 }
 
+.question-form .radio-btn:checked + .radio-title {
+  color: #161616;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1024px) {
   .mt-md-24 {
     margin-top: 24px !important;
@@ -9399,4 +9417,48 @@ h5.radio-title {
   .h-card.mb-24 .spec-row .spec-value {
     width: auto;
   }
+}
+.ser-title h5 {
+  color: #161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0 0;
+}
+
+.grid-ser {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.question-form-custom {
+  border-radius: 4px;
+  background: #F9FAFB;
+  border: solid 1px #9DA4AE;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.service-col {
+  cursor: pointer;
+}
+.service-col .con-card {
+  margin-top: 0;
+}
+.service-col.active-ex .con-card {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  border: solid 0px transparent !important;
+  border-radius: 1rem;
+  box-shadow: none;
+  background-color: #E5E7EB;
+}
+.service-col.active-ex .con-card .form-check-input {
+  background-color: transparent;
+  border: none;
+}
+
+.primary-cards .ser-title h5 {
+  margin: 1.5rem 0;
 }

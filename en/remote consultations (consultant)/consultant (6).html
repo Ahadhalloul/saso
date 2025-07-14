@@ -7,8 +7,8 @@
   <title>SASO</title>
   <!-- -------------- arabic page style ------------- -->
   <!-- <link rel="stylesheet" href="../../css/ar-style.css" /> -->
-    <!-- -------------- english page style ------------- -->
-    <link rel="stylesheet" href="../../css/en-style-test.css" />
+  <!-- -------------- english page style ------------- -->
+  <link rel="stylesheet" href="../../css/en-style.css" />
 </head>
 
 <body>
@@ -572,6 +572,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -616,6 +617,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -660,6 +662,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -704,6 +707,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -748,6 +752,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -792,6 +797,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -836,6 +842,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -880,6 +887,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -924,6 +932,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -968,6 +977,7 @@
                                 <td>
                                   <div class="flex-row gap-30">
                                     <div class="action-table">
+                                      <button id="openModal" data-modal="modaldelete" class="btn secondary">الغاء</button>
                                       <button class="btn primary">تفاصيل الجلسة</button>
                                     </div>
                                     <div class="functions-icon light-gray-bg">
@@ -1218,6 +1228,36 @@
         </div>
         <div class="modal-footer">
           <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">اضافة <i
+              class="leading-icon-w"></i></button>
+          <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="modaldelete" class="modal">
+    <div class="modal-dialog modal-dialog-centered modal-maxw600">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="../../assets/icons/cancel-modal.svg" alt="">
+          <button class="btn-close" id="closeModal"><i class="icon-close"></i></button>
+        </div>
+        <div class="modal-body">
+          <h5>الغاء الجلسة</h5>
+
+
+          <div class="dropdown-wrapper">
+
+            <div class="filter-group mb-16 mt-16">
+              <label for="productive-time" class="form-label">سبب الغاء الجلسة</label>
+              <textarea rows="3" class="form-input-textarea" id="employeeNote" placeholder="نص السبب"></textarea>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button id="openModal" data-modal="modalsub2" class="btn btn-neutral">حفظ <i
               class="leading-icon-w"></i></button>
           <button class="btn btn-secondary-outline" id="closeModalFooter">الغاء <i class="leading-icon-b"></i></button>
         </div>

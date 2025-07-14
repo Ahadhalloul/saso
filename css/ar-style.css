@@ -829,8 +829,8 @@ a {
 }
 
 input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #ccc;
   appearance: none;
   cursor: pointer;
@@ -842,7 +842,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   background-color: #1B8354;
   border-color: #1B8354;
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -850,13 +850,13 @@ input[type="checkbox"]:checked {
 .form-check.black-style input[type="checkbox"]:checked {
   background-color: #0D121C;
   border-color: #161616;
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
  input[type="checkbox"]:disabled:checked {
-  background-image: url("../assets/images/ok.svg");
+  background-image: url("../assets/icons/checkmark.svg");
   background-color: #E5E7EB !important;
   border-color: transparent !important;
   cursor: not-allowed;
@@ -4907,7 +4907,6 @@ nav .pagination .more .page-link {
   text-overflow: ellipsis;
   line-height: 1.5;
 }
-
 .primary-cards.xscard .con-card {
   margin-top: 0;
 }
@@ -9035,7 +9034,7 @@ form .form-group .time-list span.info-tag {
   align-items: end;
 }
 .man-justify-content-start {
-  justify-content: start;
+  justify-content: start !important;
 }
 .man-justify-content-end {
   justify-content: end;
@@ -10027,4 +10026,48 @@ h5.radio-title {
   .h-card.mb-24 .spec-row .spec-value {
     width: auto;
   }
+}
+.ser-title h5 {
+  color: #161616;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0 0;
+}
+
+.grid-ser {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.question-form-custom {
+  border-radius: 4px;
+  background: #F9FAFB;
+  border: solid 1px #9DA4AE;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.service-col {
+  cursor: pointer;
+}
+.service-col .con-card {
+  margin-top: 0;
+}
+.service-col.active-ex .con-card {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  border: solid 0px transparent !important;
+  border-radius: 1rem;
+  box-shadow: none;
+  background-color: #E5E7EB;
+}
+.service-col.active-ex .con-card .form-check-input {
+  background-color: transparent;
+  border: none;
+}
+
+.primary-cards .ser-title h5 {
+  margin: 1.5rem 0;
 }
