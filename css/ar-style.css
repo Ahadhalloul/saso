@@ -171,6 +171,9 @@ span, h1, h2, h3, h4, h5, h6, p, a, li, label, button {
 .mt-32 {
   margin-top: 2rem;
 }
+.mt-64 {
+  margin-top: 4rem !important;
+}
 .mb-32 {
   margin-top: 2rem;
 }
@@ -1503,7 +1506,7 @@ input[type="checkbox"]:checked {
   background-color: var(--secondary-bg-color);
   width: 100%;
   box-shadow: var(--box-shadow);
-  padding: 16px;
+  padding: 1.5rem;
 }
 
 .main-container .card .row {
@@ -5211,9 +5214,9 @@ nav .pagination .more .page-link {
 .service-title h5 {
   color: #161616;
   font-family: "IBM Plex Sans Arabic";
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 .service-title h2 {
   color: #161616;
@@ -5390,9 +5393,7 @@ nav .pagination .more .page-link {
   }
 
   .tab-btn {
-    padding: 10px 15px;
-    border: none;
-    background: #f8f9fa;
+    padding: .75rem 1rem;
     cursor: pointer;
     border-radius: 5px;
     font-size: .875rem;;
@@ -5400,10 +5401,6 @@ nav .pagination .more .page-link {
 
 }
 
-/* .tab-buttons-2 {
-  border-bottom: solid 3px #d2d6db;
-  margin-top: 0px;
-} */
 
 .tab-btn i.icon-tab {
   background-image: url(../assets/images/tabs-icon.svg);
@@ -5759,7 +5756,7 @@ nav .pagination .more .page-link {
   border-bottom: solid 3px #1b8354;
   color: #161616;
   font-family: "IBM Plex Sans Arabic";
-  font-size: .875rem;;
+  font-size: .875rem;
   font-weight: 600;
   z-index: 200;
 }
@@ -10070,4 +10067,123 @@ h5.radio-title {
 
 .primary-cards .ser-title h5 {
   margin: 1.5rem 0;
+}
+
+.card .new-update {
+  display: flex;
+  gap: 1.5rem;
+}
+.card .new-update .div-right {
+  flex: 0 0 calc(70% - 12px);
+}
+.card .new-update .div-left {
+  flex: 0 0 calc(30% - 12px);
+  border: solid 1px #D2D6DB;
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .card .new-update {
+    flex-direction: column;
+  }
+  .div-left, .div-right {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.div-left .plan-cel {
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px #D2D6DB;
+}
+.div-left .title-plan {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .25rem;
+}
+.div-left .title-plan img {
+  height: 1.3438rem;
+  width: 1.3438rem;
+}
+.div-left .title-plan h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1F2A37;
+}
+
+.div-left .plan-cel .plan-name p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1F2A37;
+  margin-right: 1.8125rem;
+}
+.plan-list {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.plan-details {
+  color: #1F2A37;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.div-left .plan-details .plan-link a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--praimary-color);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.div-left .plan-details .plan-item h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1F2A37;
+}
+.div-left .plan-details .plan-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .25rem;
+}
+.div-left .plan-details .plan-link i.link-icon {
+  background-image: url(../assets/icons/link-icon.svg);
+  height: 1.25rem;
+  width: 1.25rem;
+  display: block;
+}
+
+.tab-btn {
+  position: relative;            
+  display: inline-flex;
+  align-items: center;
+  border: solid 3px transparent !important;               
+  padding: .5rem 1rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  color: #161616;
+  font: 600 .875rem/1.6 "IBM Plex Sans Arabic", sans-serif;
+}
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;                    
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); 
+  transform-origin: center;
+  width: calc(100% - 30px);                   
+  height: 3px;                    
+  background: #1b8354;
+  border-radius: 999px;        
+  transition: transform .25s ease;
+}
+
+.tab-btn.active::after,
+.tab-btn:hover::after {
+  transform: translateX(-50%) scaleX(1);
 }
