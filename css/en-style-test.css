@@ -810,8 +810,8 @@ input[type="checkbox"]:checked {
   cursor: pointer;
 }
 .sidebar-container .menu-content {
-  padding: 30px 20px;
-  gap: 10px;
+  padding: 1rem;
+  gap: 8px;
   line-height: 2.5;
 }
 .sidebar-container .menu-content ul li {
@@ -822,17 +822,25 @@ input[type="checkbox"]:checked {
   align-items: center;
   gap: 12px;
   color: var(--primary-text-color);
-  font-size: 1rem;;
-  font-weight: 600;
-  padding-left: 20px;
-  padding-right: 8px;
-  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.sidebar-container .menu-content ul li a img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+#services-sub-menu > div.sub-menu-icon > img {
+    height: .75rem;
+    width: .75rem;
 }
 .sidebar-container .menu-content ul li a:hover {
   background-color: #f3f4f6;
   border-radius: var(--sm-border-radius);
   position: relative;
   flex-direction: row;
+  font-weight: 700;
 }
 .sidebar-container .menu-content ul li a:hover::before {
   position: absolute;
@@ -866,12 +874,41 @@ input[type="checkbox"]:checked {
 .sidebar-container .menu-content ul li a.active img {
   filter: var(--green-image-filter);
 }
-
+.sidebar-container .menu-content ul li a img {
+  height: 24px;
+  width: 24px;
+}
 .sidebar-container .menu-content h5 {
   margin-top: 10px;
   color: #9da4ae;
   font-weight: 600;
-  font-size: 1rem;;
+  font-size: 1rem;
+}
+
+.sidebar-container .menu-content div.border {
+  margin: 0 auto;
+  display: block;       
+  width: 100%;
+  box-sizing: border-box; 
+  border: none;        
+  border-top: 1px solid #D2D6DB;
+}
+
+.menu-content.flex-column div.border {
+  margin: 0 auto;
+  display: block;       
+  width: calc(100% - 16px);
+  box-sizing: border-box;  
+  border: none;        
+  border-top: 1px solid #D2D6DB;
+}
+.collapsed-sidebar .menu-content.flex-column div.border {
+  margin: 0 auto;
+  display: block;       
+  width: 100%;
+  box-sizing: border-box;  
+  border: none;        
+  border-top: 1px solid #D2D6DB;
 }
 
 .sidebar-container .sub-menu-list {
