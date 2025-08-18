@@ -303,7 +303,7 @@
 
         <div class="service-title flex-row space-btw align-content-center mb-16">
           <h5 class="mb-0">عن الخدمة</h5>
-          <button id="openModal" data-modal="modaladd" class="btn btn-primary">بدء الخدمة</button>
+          <button id="goToTabsBtn" data-target-tab="services" class="btn btn-primary">بدء الخدمة</button>
         </div>
 
         <div class="service-description">
@@ -813,10 +813,25 @@
 
       <!-- ------------------------------------------------------ -->
     </div>
+    <script>
+      // Button at the top of the page
+    document.getElementById("goToTabsBtn").addEventListener("click", function() {
+      // 1) Remove the "active" class from all tab buttons and all tab contents
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
+
+      // 2) Add the "active" class to the second tab button (tab2) and its content
+      document.querySelector('.tab-btn[data-tab="tab2"]').classList.add("active");
+      document.getElementById("tab2").classList.add("active");
+
+      // 3) Scroll smoothly to the tabs section
+      document.querySelector(".tabs").scrollIntoView({ behavior: "smooth" });
+    });
+    </script>
     <!-- --------- Modal -------- -->
   <!-- Modal -->
 
-  <div id="modaladd" class="modal">
+  <!-- <div id="modaladd" class="modal">
     <div class="modal-dialog modal-dialog-centered modal-maxw600">
       <div class="modal-content">
         <div class="modal-header">
@@ -852,7 +867,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
     <!-- --------- main javascript -------- -->
     <script src="../../js/main.js"></script>
     <script src="../../js/accessibility_widget.js"></script>
